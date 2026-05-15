@@ -107,8 +107,8 @@
     },
     {
       "id": "top_bagno_calcare",
-      "topic": "Top bagno con calcare incrostato",
-      "pexels_queries": ["marble bathroom counter", "marble vanity sink", "white marble bathroom"],
+      "topic": "Top bagno con calcare incrostato (marmo giallo)",
+      "pexels_queries": ["yellow marble bathroom", "siena marble vanity", "golden marble countertop", "amber marble sink", "yellow stone bathroom counter"],
       "overlay_alpha": 0.28,
       "hook_line1": "Il calcare sul marmo",
       "hook_line2": "non se ne va con lo straccio.",
