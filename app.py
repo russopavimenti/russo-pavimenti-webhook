@@ -15,6 +15,7 @@ Endpoints:
   GET  /health             Liveness probe (for Render health checks)
   GET  /                   Status page
 """
+import html
 import logging
 import threading
 import time
@@ -92,16 +93,26 @@ def _handle_approve(cb_data: str, chat_id: int, message_id: int) -> None:
     result = publish_image(image_url, caption)
 
     if not result.get("ok"):
-        log.error(f"publish failed: {result.get('error')}")
+        err_str = str(result.get("error", "unknown error"))
+        log.error(f"publish failed: {err_str}")
         tg.edit_message_buttons(
             chat_id, message_id,
             [[{"text": "❌ Pubblicazione fallita", "callback_data": "noop"}]],
         )
-        tg.send_message(
-            f"❌ <b>Pubblicazione fallita</b> per <code>{post_id}</code>\n\n"
-            f"<code>{str(result.get('error'))[:1500]}</code>",
+        # First attempt: HTML-escaped detail. Fallback: plain text.
+        err_escaped = html.escape(err_str[:1500])
+        post_id_escaped = html.escape(post_id)
+        r = tg.send_message(
+            f"❌ <b>Pubblicazione fallita</b> per <code>{post_id_escaped}</code>\n\n"
+            f"<code>{err_escaped}</code>",
             chat_id=chat_id,
         )
+        if not r.get("ok"):
+            log.warning(f"telegram html send failed: {r}; retrying plain")
+            tg.call("sendMessage", {
+                "chat_id": chat_id,
+                "text": f"❌ Pubblicazione fallita per {post_id}\n\n{err_str[:1500]}",
+            })
         return
 
     permalink = result.get("permalink") or ""
@@ -218,6 +229,20 @@ def index():
 @app.route("/health", methods=["GET"])
 def health():
     return jsonify({"ok": True})
+
+
+@app.route(f"/debug/{WEBHOOK_PATH_SECRET}/logs", methods=["GET"])
+def debug_logs():
+    """Return last 300 lines of webhook log for debugging. Protected by path secret."""
+    log_file = LOG_DIR / "webhook.log"
+    if not log_file.exists():
+        return jsonify({"error": "no log file yet"}), 404
+    try:
+        with open(log_file, "r", encoding="utf-8", errors="replace") as f:
+            lines = f.readlines()
+        return jsonify({"lines": lines[-300:], "total_lines": len(lines)})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 
 @app.route(f"/webhook/{WEBHOOK_PATH_SECRET}", methods=["POST"])
