@@ -217,7 +217,7 @@ def _handle_text_message(message: dict) -> None:
 
 # === Flask routes ===
 
-VERSION_MARKER = "v10-pexels-debug"
+VERSION_MARKER = "v11-env-check"
 
 @app.route("/", methods=["GET"])
 def index():
@@ -246,6 +246,27 @@ def debug_logs():
         return jsonify({"lines": lines[-300:], "total_lines": len(lines)})
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+
+
+@app.route(f"/debug/{WEBHOOK_PATH_SECRET}/env-check", methods=["GET"])
+def debug_env_check():
+    """Show which env vars are SET (not values, just presence + length)."""
+    import os
+    checks = {}
+    for k in [
+        "TELEGRAM_BOT_TOKEN", "TELEGRAM_CHAT_ID", "COMPOSIO_API_KEY",
+        "TELEGRAM_WEBHOOK_SECRET", "WEBHOOK_PATH_SECRET",
+        "IG_USER_ID", "GITHUB_TOKEN",
+        "ANTHROPIC_API_KEY", "ANTHROPIC_MODEL",
+        "PEXELS_API_KEY",
+    ]:
+        v = os.environ.get(k, "")
+        checks[k] = {
+            "set": bool(v),
+            "len": len(v),
+            "first6": v[:6] if v else "",
+        }
+    return jsonify(checks)
 
 
 @app.route(f"/debug/{WEBHOOK_PATH_SECRET}/test-search", methods=["GET"])
