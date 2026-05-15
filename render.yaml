@@ -31,6 +31,10 @@ services:
         sync: false
       - key: ANTHROPIC_MODEL
         value: claude-sonnet-4-5-20250929
+      # Pexels API key (free, get at https://www.pexels.com/api/new/)
+      # Required for agent to find photos — HTML scrape is blocked from cloud IPs.
+      - key: PEXELS_API_KEY
+        sync: false
 
       # === Public IDs / config ===
       - key: IG_USER_ID

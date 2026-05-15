@@ -1,13 +1,16 @@
 """
-Pexels stock photo search via public HTML scrape.
+Pexels stock photo search.
 
-No API key required. Scrapes the public search page and extracts
-image URLs of the form https://images.pexels.com/photos/<id>/pexels-photo-<id>.jpeg
+Uses the official Pexels API when PEXELS_API_KEY is configured (preferred —
+works from any IP including Render). Falls back to HTML scrape otherwise
+(useful for local dev but blocked from many cloud IPs).
 
-Limits: rate-limited by Pexels CDN; results may vary; HTML structure may change.
-For volume use, switch to official Pexels API (free w/ registration).
+Get a free API key: https://www.pexels.com/api/new/ (instant, no credit card).
+Free tier: 200 requests/hour.
 """
+import json
 import logging
+import os
 import re
 import urllib.parse
 import urllib.request
@@ -17,12 +20,39 @@ log = logging.getLogger("pexels")
 
 _USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
 
+PEXELS_API_KEY = os.environ.get("PEXELS_API_KEY", "").strip()
 
-def search(query: str, limit: int = 8) -> List[Dict]:
-    """
-    Search Pexels for `query`. Returns list of dicts with `id` and `url`.
-    Each url is a clean Pexels CDN URL (no query params).
-    """
+
+def _search_via_api(query: str, limit: int) -> List[Dict]:
+    """Official Pexels API — reliable, works from any IP."""
+    url = (
+        "https://api.pexels.com/v1/search?"
+        f"query={urllib.parse.quote(query)}&per_page={limit}&orientation=square"
+    )
+    req = urllib.request.Request(
+        url, headers={"Authorization": PEXELS_API_KEY},
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=15) as r:
+            data = json.loads(r.read())
+    except Exception as e:
+        log.warning(f"pexels API error: {e}")
+        return []
+
+    out: List[Dict] = []
+    for photo in data.get("photos", []):
+        pid = str(photo.get("id", ""))
+        # photo.src has multiple sizes: original, large2x, large, medium, small, portrait, landscape, tiny
+        src = photo.get("src", {})
+        url_clean = src.get("large") or src.get("medium") or src.get("original", "")
+        if pid and url_clean:
+            out.append({"id": pid, "url": url_clean})
+    log.info(f"pexels API '{query}' → {len(out)} results")
+    return out
+
+
+def _search_via_scrape(query: str, limit: int) -> List[Dict]:
+    """Fallback: scrape public search HTML. Blocked from many cloud IPs."""
     encoded = urllib.parse.quote(query)
     page_url = f"https://www.pexels.com/search/{encoded}/"
     try:
@@ -32,10 +62,9 @@ def search(query: str, limit: int = 8) -> List[Dict]:
         with urllib.request.urlopen(req, timeout=15) as r:
             html = r.read().decode("utf-8", errors="replace")
     except Exception as e:
-        log.warning(f"pexels search error: {e}")
+        log.warning(f"pexels scrape error: {e}")
         return []
 
-    # Pattern: https://images.pexels.com/photos/<ID>/pexels-photo-<ID>.jpeg
     pat = re.compile(
         r"https://images\.pexels\.com/photos/(\d+)/pexels-photo-\1\.(jpeg|jpg|png)",
         re.IGNORECASE,
@@ -56,13 +85,25 @@ def search(query: str, limit: int = 8) -> List[Dict]:
         })
         if len(out) >= limit:
             break
-    log.info(f"pexels '{query}' → {len(out)} results")
+    log.info(f"pexels scrape '{query}' → {len(out)} results")
     return out
 
 
+def search(query: str, limit: int = 8) -> List[Dict]:
+    """Search Pexels. Prefers API if configured, falls back to scrape."""
+    if PEXELS_API_KEY:
+        return _search_via_api(query, limit)
+    return _search_via_scrape(query, limit)
+
+
 def download(url: str, dest_path: str, width: int = 1200) -> bool:
-    """Download a Pexels image (auto-resized to `width`) to dest_path."""
-    target = f"{url}?auto=compress&cs=tinysrgb&w={width}"
+    """Download a Pexels image to dest_path."""
+    # If url already has query params (API returns sized URLs), keep as-is.
+    # If it's a clean CDN URL, append size param for compression.
+    if "?" in url:
+        target = url
+    else:
+        target = f"{url}?auto=compress&cs=tinysrgb&w={width}"
     try:
         req = urllib.request.Request(
             target, headers={"User-Agent": _USER_AGENT}

@@ -217,7 +217,7 @@ def _handle_text_message(message: dict) -> None:
 
 # === Flask routes ===
 
-VERSION_MARKER = "v8-agent-progress-msgs"
+VERSION_MARKER = "v9-pexels-official-api"
 
 @app.route("/", methods=["GET"])
 def index():
@@ -246,6 +246,22 @@ def debug_logs():
         return jsonify({"lines": lines[-300:], "total_lines": len(lines)})
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+
+
+@app.route(f"/debug/{WEBHOOK_PATH_SECRET}/test-search", methods=["GET"])
+def debug_test_search():
+    """Test pexels.search to confirm whether scraping works from Render IP."""
+    import pexels
+    q = request.args.get("q", "marble")
+    try:
+        results = pexels.search(q, limit=6)
+        return jsonify({"query": q, "count": len(results), "results": results})
+    except Exception as e:
+        import traceback
+        return jsonify({
+            "query": q, "error": repr(e),
+            "traceback": traceback.format_exc(),
+        }), 500
 
 
 @app.route(f"/debug/{WEBHOOK_PATH_SECRET}/connections", methods=["GET"])
