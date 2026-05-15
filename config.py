@@ -42,11 +42,16 @@ TELEGRAM_BOT_TOKEN = _require("TELEGRAM_BOT_TOKEN")
 TELEGRAM_CHAT_ID = int(_require("TELEGRAM_CHAT_ID"))
 COMPOSIO_API_KEY = _require("COMPOSIO_API_KEY")
 
-# Anthropic API key — optional. When present, the webhook routes text
-# messages to a Claude agent that can search photos, re-render posts,
-# and reply autonomously. Without it, the webhook falls back to logging.
+# Anthropic API key — optional. When present AND AGENT_AUTONOMOUS_MODE=1,
+# the webhook routes text messages to a Claude agent. Otherwise messages
+# are just persisted to GitHub inbox/ for Claude-on-Mac to read.
 ANTHROPIC_API_KEY = _optional("ANTHROPIC_API_KEY")
 ANTHROPIC_MODEL = _optional("ANTHROPIC_MODEL", "claude-sonnet-4-5-20250929")
+
+# Default mode (15/5/2026): autonomous agent OFF. User prefers to handle
+# modifications via Claude-on-Mac reading inbox/. Set AGENT_AUTONOMOUS_MODE=1
+# to re-enable autonomous agent without removing ANTHROPIC_API_KEY.
+AGENT_AUTONOMOUS_MODE = _optional("AGENT_AUTONOMOUS_MODE", "0") == "1"
 
 # Telegram webhook header secret — Telegram sends this in
 # X-Telegram-Bot-Api-Secret-Token header on every webhook request.

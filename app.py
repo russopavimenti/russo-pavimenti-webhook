@@ -31,6 +31,7 @@ from config import (
     WEBHOOK_PORT,
     LOG_DIR,
     ANTHROPIC_API_KEY,
+    AGENT_AUTONOMOUS_MODE,
 )
 
 # === Logging ===
@@ -183,10 +184,10 @@ def _handle_text_message(message: dict) -> None:
         "received_at": int(time.time()),
     }
 
-    # Persist to GitHub inbox for auditing / fallback
-    inbox.commit_message(msg_data)
+    # Persist to GitHub inbox for auditing / Claude-on-Mac pickup
+    persisted = inbox.commit_message(msg_data)
 
-    if ANTHROPIC_API_KEY:
+    if ANTHROPIC_API_KEY and AGENT_AUTONOMOUS_MODE:
         # Autonomous mode: Claude agent processes the request directly
         tg.send_message(
             "👀 <i>Sto pensando...</i>",
@@ -205,19 +206,26 @@ def _handle_text_message(message: dict) -> None:
                 chat_id=chat_id,
             )
     else:
-        # Fallback: just ACK and wait for Claude on Mac to read inbox
+        # Mac-mediated mode: ACK + wait for Claude-on-Mac to read inbox
         preview = (text[:200] + ("..." if len(text) > 200 else ""))
-        tg.send_message(
-            "📥 <b>Richiesta ricevuta</b>\n\n"
-            "L'assistente Mac la processerà al prossimo accesso.\n\n"
-            f"<i>Anteprima registrata:</i>\n<blockquote>{preview}</blockquote>",
-            chat_id=chat_id,
-        )
+        if persisted:
+            tg.send_message(
+                "📥 <b>Richiesta ricevuta</b>\n\n"
+                "Claude la legge appena sei online sul Mac e ti risponde qui.\n\n"
+                f"<i>Anteprima salvata:</i>\n<blockquote>{preview}</blockquote>",
+                chat_id=chat_id,
+            )
+        else:
+            tg.send_message(
+                "⚠️ Messaggio ricevuto ma non sono riuscito a salvarlo su GitHub. "
+                "Riscrivi tra poco.",
+                chat_id=chat_id,
+            )
 
 
 # === Flask routes ===
 
-VERSION_MARKER = "v13-pexels-ua-fix"
+VERSION_MARKER = "v14-claude-on-mac-mode"
 
 @app.route("/", methods=["GET"])
 def index():
