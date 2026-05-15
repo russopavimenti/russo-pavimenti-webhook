@@ -30,9 +30,8 @@ services:
     healthCheckPath: /health
     buildCommand: pip install --upgrade pip && pip install -r requirements.txt
     startCommand: gunicorn -b 0.0.0.0:$PORT --workers 1 --threads 4 --timeout 120 app:app
-    envVarGroups:
-      - russo-pavimenti-shared
     envVars:
+      - fromGroup: russo-pavimenti-shared
       - key: PYTHON_VERSION
         value: 3.11.9
 
@@ -70,9 +69,8 @@ services:
     schedule: "0 6 * * *"
     buildCommand: pip install --upgrade pip && pip install -r requirements.txt
     startCommand: python daily_post_cron.py
-    envVarGroups:
-      - russo-pavimenti-shared
     envVars:
+      - fromGroup: russo-pavimenti-shared
       - key: PYTHON_VERSION
         value: 3.11.9
       - key: DAILY_SLOT
@@ -87,9 +85,8 @@ services:
     schedule: "30 10 * * *"
     buildCommand: pip install --upgrade pip && pip install -r requirements.txt
     startCommand: python daily_post_cron.py
-    envVarGroups:
-      - russo-pavimenti-shared
     envVars:
+      - fromGroup: russo-pavimenti-shared
       - key: PYTHON_VERSION
         value: 3.11.9
       - key: DAILY_SLOT
@@ -104,9 +101,8 @@ services:
     schedule: "30 15 * * *"
     buildCommand: pip install --upgrade pip && pip install -r requirements.txt
     startCommand: python daily_post_cron.py
-    envVarGroups:
-      - russo-pavimenti-shared
     envVars:
+      - fromGroup: russo-pavimenti-shared
       - key: PYTHON_VERSION
         value: 3.11.9
       - key: DAILY_SLOT
