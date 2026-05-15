@@ -245,6 +245,18 @@ def run(user_text: str, user_name: str = "Nino") -> None:
             tinput = tu.input or {}
             log.info(f"tool call: {tname}({json.dumps(tinput)[:200]})")
             print(f"[agent] tool: {tname}({json.dumps(tinput)[:200]})", flush=True)
+            # Surface progress to user on Telegram too
+            stage_map = {
+                "search_pexels": "🔍 Cerco foto su Pexels...",
+                "apply_image_change": "🖼️ Aggiorno la foto del post...",
+                "apply_text_change": "✏️ Aggiorno il testo del post...",
+                "apply_caption_change": "📝 Aggiorno la caption...",
+            }
+            if tname in stage_map:
+                try:
+                    tg.send_message(stage_map[tname])
+                except Exception:
+                    pass
             handler = tools.TOOL_HANDLERS.get(tname)
             if not handler:
                 tool_result_blocks.append({
@@ -291,6 +303,7 @@ def run(user_text: str, user_name: str = "Nino") -> None:
         # loop continues
 
     log.warning("agent loop hit max turns")
+    print(f"[agent] HIT MAX TURNS ({MAX_TURNS}). Last messages: {messages[-2:]!r:.1000}", flush=True)
     tg.send_message(
         "⚠️ L'AI ha esaurito i passi disponibili. "
         "Controlla cosa è cambiato sul bot — può essere già fatto."

@@ -217,7 +217,7 @@ def _handle_text_message(message: dict) -> None:
 
 # === Flask routes ===
 
-VERSION_MARKER = "v7-agent-tighter-loop"
+VERSION_MARKER = "v8-agent-progress-msgs"
 
 @app.route("/", methods=["GET"])
 def index():
