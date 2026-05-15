@@ -47,7 +47,10 @@ def _run(*cmd, cwd=None):
     subprocess.check_call(cmd, cwd=cwd or THIS_DIR)
 
 
-def register(post_id: str, png_path: Path, caption: str, topic: str) -> dict:
+def register(
+    post_id: str, png_path: Path, caption: str, topic: str,
+    hook_line1: str = "", hook_line2: str = "",
+) -> dict:
     POSTS_DIR.mkdir(exist_ok=True)
     safe = post_id.replace("/", "_").replace("..", "_")
 
@@ -69,6 +72,8 @@ def register(post_id: str, png_path: Path, caption: str, topic: str) -> dict:
         "image_url": image_url,
         "caption": caption,
         "topic": topic,
+        "hook_line1": hook_line1,
+        "hook_line2": hook_line2,
         "created_at": datetime.now(timezone.utc).isoformat(),
     }
     target_json.write_text(
@@ -133,13 +138,18 @@ def main():
     p.add_argument("--png", required=True, type=Path)
     p.add_argument("--caption-file", required=True, type=Path)
     p.add_argument("--topic", default="")
+    p.add_argument("--hook-line1", default="", help="Prima riga del testo nel post (bianca)")
+    p.add_argument("--hook-line2", default="", help="Seconda riga del testo (lime)")
     p.add_argument("--send-telegram-preview", action="store_true")
     a = p.parse_args()
 
     _load_secrets()
 
     caption = a.caption_file.read_text().rstrip()
-    meta = register(a.post_id, a.png, caption, a.topic)
+    meta = register(
+        a.post_id, a.png, caption, a.topic,
+        hook_line1=a.hook_line1, hook_line2=a.hook_line2,
+    )
 
     print(f"\n✅ Registered: posts/{a.post_id}.json")
     print(f"   image_url: {meta['image_url']}")

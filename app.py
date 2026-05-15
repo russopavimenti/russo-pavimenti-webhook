@@ -29,6 +29,7 @@ from config import (
     TELEGRAM_WEBHOOK_SECRET,
     WEBHOOK_PORT,
     LOG_DIR,
+    ANTHROPIC_API_KEY,
 )
 
 # === Logging ===
@@ -171,21 +172,34 @@ def _handle_text_message(message: dict) -> None:
         "received_at": int(time.time()),
     }
 
-    persisted = inbox.commit_message(msg_data)
+    # Persist to GitHub inbox for auditing / fallback
+    inbox.commit_message(msg_data)
 
-    if persisted:
+    if ANTHROPIC_API_KEY:
+        # Autonomous mode: Claude agent processes the request directly
+        tg.send_message(
+            "👀 <i>Sto pensando...</i>",
+            chat_id=chat_id,
+        )
+        try:
+            import claude_agent
+            claude_agent.run(
+                user_text=text,
+                user_name=user.get("first_name") or "Nino",
+            )
+        except Exception as e:
+            log.exception("agent run failed")
+            tg.send_message(
+                f"⚠️ Errore agent: <code>{str(e)[:300]}</code>",
+                chat_id=chat_id,
+            )
+    else:
+        # Fallback: just ACK and wait for Claude on Mac to read inbox
         preview = (text[:200] + ("..." if len(text) > 200 else ""))
         tg.send_message(
             "📥 <b>Richiesta ricevuta</b>\n\n"
-            "Claude la leggerà al prossimo accesso e ti risponderà qui.\n\n"
+            "L'assistente Mac la processerà al prossimo accesso.\n\n"
             f"<i>Anteprima registrata:</i>\n<blockquote>{preview}</blockquote>",
-            chat_id=chat_id,
-        )
-    else:
-        tg.send_message(
-            "⚠️ Messaggio ricevuto ma <b>non sono riuscito a salvarlo</b> "
-            "su GitHub (probabilmente il PAT non ha ancora i permessi di "
-            "scrittura). Riscrivi tra poco, Claude sta sistemando.",
             chat_id=chat_id,
         )
 

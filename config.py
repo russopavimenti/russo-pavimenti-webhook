@@ -42,6 +42,12 @@ TELEGRAM_BOT_TOKEN = _require("TELEGRAM_BOT_TOKEN")
 TELEGRAM_CHAT_ID = int(_require("TELEGRAM_CHAT_ID"))
 COMPOSIO_API_KEY = _require("COMPOSIO_API_KEY")
 
+# Anthropic API key — optional. When present, the webhook routes text
+# messages to a Claude agent that can search photos, re-render posts,
+# and reply autonomously. Without it, the webhook falls back to logging.
+ANTHROPIC_API_KEY = _optional("ANTHROPIC_API_KEY")
+ANTHROPIC_MODEL = _optional("ANTHROPIC_MODEL", "claude-sonnet-4-5-20250929")
+
 # Telegram webhook header secret — Telegram sends this in
 # X-Telegram-Bot-Api-Secret-Token header on every webhook request.
 TELEGRAM_WEBHOOK_SECRET = _require("TELEGRAM_WEBHOOK_SECRET")
