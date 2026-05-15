@@ -31,7 +31,14 @@ def _search_via_api(query: str, limit: int) -> List[Dict]:
         f"query={urllib.parse.quote(query)}&per_page={limit}"
     )
     req = urllib.request.Request(
-        url, headers={"Authorization": PEXELS_API_KEY},
+        url,
+        headers={
+            "Authorization": PEXELS_API_KEY,
+            # Cloudflare on Pexels blocks bare urllib User-Agent → 403 code 1010.
+            # Use a regular browser UA so the request passes WAF.
+            "User-Agent": _USER_AGENT,
+            "Accept": "application/json",
+        },
     )
     log.info(f"pexels API call: {url} (key_present={bool(PEXELS_API_KEY)})")
     print(f"[pexels] API call query={query!r} key_set={bool(PEXELS_API_KEY)}", flush=True)
