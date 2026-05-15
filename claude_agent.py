@@ -59,16 +59,23 @@ Hai questi tool:
 - apply_caption_change: cambia la caption Instagram (no re-render)
 - reply_to_user: manda un messaggio testuale (per spiegazioni, ack, domande)
 
-Procedura tipica:
-1. Capisci cosa l'utente vuole modificare
-2. Manda PRIMA un breve reply_to_user che spiega cosa fai ("Cerco foto chiare con marmo + macchia 🔍")
-3. Esegui i tool (search → scegli → apply)
-4. Concludi con reply_to_user che riassume e invita a controllare la preview
+PROCEDURA OBBLIGATORIA — segui esattamente questi passaggi, in ordine:
 
+PASSO 1: chiamata UNICA a reply_to_user con un breve ack ("Cerco foto X 🔍")
+
+PASSO 2: chiamata UNICA a search_pexels con una query ben pensata. NON fare query multiple — se i risultati non ti convincono, scegli comunque il migliore tra quelli mostrati.
+
+PASSO 3: chiamata UNICA al tool apply_*_change appropriato.
+   - apply_image_change per cambi foto
+   - apply_text_change per cambi testo nelle 2 righe sul post
+   - apply_caption_change per cambi caption Instagram
+
+PASSO 4: chiamata UNICA finale a reply_to_user per concludere (es. "Pronta v2, controlla la preview qui sopra ✅")
+
+NON chiamare lo stesso tool due volte. NON cercare foto multiple volte. NON cercare conferma — agisci.
 NON dire mai "Claude leggerà al prossimo accesso" — sei TU Claude, stai rispondendo ORA.
-Non chiedere conferma — agisci, l'utente confermerà cliccando "Approva" sulla preview.
 
-Sii efficiente: max 1-2 chiamate search_pexels, max 1 apply_X tool per cambio richiesto.
+Massimo 4 chiamate di tool totali. Se non trovi quello che cerchi al primo search, scegli comunque.
 """
 
 
@@ -178,8 +185,10 @@ def run(user_text: str, user_name: str = "Nino") -> None:
         {"role": "user", "content": initial_user_msg}
     ]
 
-    for turn in range(8):  # safety cap on agent iterations
+    MAX_TURNS = 15
+    for turn in range(MAX_TURNS):  # safety cap on agent iterations
         log.info(f"agent turn {turn + 1}")
+        print(f"[agent] turn {turn + 1}/{MAX_TURNS}", flush=True)
         try:
             resp = client.messages.create(
                 model=ANTHROPIC_MODEL,
@@ -235,6 +244,7 @@ def run(user_text: str, user_name: str = "Nino") -> None:
             tname = tu.name
             tinput = tu.input or {}
             log.info(f"tool call: {tname}({json.dumps(tinput)[:200]})")
+            print(f"[agent] tool: {tname}({json.dumps(tinput)[:200]})", flush=True)
             handler = tools.TOOL_HANDLERS.get(tname)
             if not handler:
                 tool_result_blocks.append({
@@ -246,8 +256,10 @@ def run(user_text: str, user_name: str = "Nino") -> None:
                 continue
             try:
                 result = handler(**tinput)
+                print(f"[agent] tool {tname} → ok: {str(result)[:200]}", flush=True)
             except Exception as e:
                 log.exception(f"tool {tname} crashed")
+                print(f"[agent] tool {tname} CRASHED: {e}", flush=True)
                 tool_result_blocks.append({
                     "type": "tool_result",
                     "tool_use_id": tu.id,
