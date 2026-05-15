@@ -1,0 +1,81 @@
+name: Daily Russo Pavimenti Post
+
+# 3 cron triggers daily — UTC times mapped to Italy local hours.
+# Italy is CEST (UTC+2) in summer, CET (UTC+1) in winter.
+# Current schedule targets CEST (summer). Adjust +1 hour during winter DST.
+#   08:00 IT (CEST) = 06:00 UTC
+#   12:30 IT (CEST) = 10:30 UTC
+#   17:30 IT (CEST) = 15:30 UTC
+#
+# GitHub Actions cron can be delayed by minutes during peak load — this is normal.
+# For exact-time guarantees we'd need a paid scheduler; +/- 15 min is acceptable.
+
+on:
+  schedule:
+    - cron: '0 6 * * *'    # morning
+    - cron: '30 10 * * *'  # lunch
+    - cron: '30 15 * * *'  # evening
+  workflow_dispatch:
+    inputs:
+      slot:
+        description: 'Manual slot (morning/lunch/evening)'
+        required: false
+        default: 'morning'
+        type: choice
+        options:
+          - morning
+          - lunch
+          - evening
+
+jobs:
+  generate-post:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write   # needed for daily_post_cron.py to commit posts/<id>.{png,json}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Determine slot
+        id: slot
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "slot=${{ github.event.inputs.slot }}" >> "$GITHUB_OUTPUT"
+          else
+            HOUR=$(date -u +%H)
+            if [ "$HOUR" -lt 9 ]; then
+              echo "slot=morning" >> "$GITHUB_OUTPUT"
+            elif [ "$HOUR" -lt 13 ]; then
+              echo "slot=lunch" >> "$GITHUB_OUTPUT"
+            else
+              echo "slot=evening" >> "$GITHUB_OUTPUT"
+            fi
+          fi
+          echo "Selected slot: $(cat $GITHUB_OUTPUT)"
+
+      - name: Run daily post generator
+        env:
+          DAILY_SLOT: ${{ steps.slot.outputs.slot }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          # Use the built-in Actions token. Has contents:write thanks to
+          # the `permissions: contents: write` at job level above.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPO_OWNER: russopavimenti
+          GITHUB_REPO_NAME: russo-pavimenti-webhook
+          GITHUB_BRANCH: main
+        run: python daily_post_cron.py

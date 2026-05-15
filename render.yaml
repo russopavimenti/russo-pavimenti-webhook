@@ -1,24 +1,7 @@
-# Render Blueprint — deploys the webhook + 3 daily-post cron jobs.
+# Render Blueprint — deploys the webhook only.
+# Daily cron jobs moved to GitHub Actions (.github/workflows/daily-posts.yml)
+# because Render doesn't include cron in the free tier.
 # https://render.com/docs/blueprint-spec
-
-# === Shared env vars across web + cron services ===
-envVarGroups:
-  - name: russo-pavimenti-shared
-    envVars:
-      - key: TELEGRAM_BOT_TOKEN
-        sync: false
-      - key: TELEGRAM_CHAT_ID
-        sync: false
-      - key: GITHUB_TOKEN
-        sync: false
-      - key: PEXELS_API_KEY
-        sync: false
-      - key: GITHUB_REPO_OWNER
-        value: russopavimenti
-      - key: GITHUB_REPO_NAME
-        value: russo-pavimenti-webhook
-      - key: GITHUB_BRANCH
-        value: main
 
 services:
   - type: web
@@ -31,11 +14,14 @@ services:
     buildCommand: pip install --upgrade pip && pip install -r requirements.txt
     startCommand: gunicorn -b 0.0.0.0:$PORT --workers 1 --threads 4 --timeout 120 app:app
     envVars:
-      - fromGroup: russo-pavimenti-shared
       - key: PYTHON_VERSION
         value: 3.11.9
 
-      # === Webhook-only secrets ===
+      # === Secrets (must be set MANUALLY in Render dashboard) ===
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: TELEGRAM_CHAT_ID
+        sync: false
       - key: COMPOSIO_API_KEY
         sync: false
       - key: TELEGRAM_WEBHOOK_SECRET
@@ -47,60 +33,21 @@ services:
         sync: false
       - key: ANTHROPIC_MODEL
         value: claude-sonnet-4-5-20250929
+      # Pexels API key
+      - key: PEXELS_API_KEY
+        sync: false
+      # GitHub PAT for private repo content read (kept here for compatibility)
+      - key: GITHUB_TOKEN
+        sync: false
 
+      # === Public IDs / config ===
       - key: IG_USER_ID
         value: "26664442679877111"
+      - key: GITHUB_REPO_OWNER
+        value: russopavimenti
+      - key: GITHUB_REPO_NAME
+        value: russo-pavimenti-webhook
+      - key: GITHUB_BRANCH
+        value: main
       - key: COMPOSIO_ENTITY_ID
         value: default
-
-  # === 3 daily cron jobs ===
-  # Schedule is UTC. Italy = UTC+2 (summer/CEST) or UTC+1 (winter/CET).
-  # Current values target SUMMER time. Adjust +1 hour during winter DST.
-  #   08:00 IT (CEST) = 06:00 UTC
-  #   12:30 IT (CEST) = 10:30 UTC
-  #   17:30 IT (CEST) = 15:30 UTC
-
-  - type: cron
-    name: russo-daily-morning
-    runtime: python
-    region: frankfurt
-    branch: main
-    schedule: "0 6 * * *"
-    buildCommand: pip install --upgrade pip && pip install -r requirements.txt
-    startCommand: python daily_post_cron.py
-    envVars:
-      - fromGroup: russo-pavimenti-shared
-      - key: PYTHON_VERSION
-        value: 3.11.9
-      - key: DAILY_SLOT
-        value: morning
-
-  - type: cron
-    name: russo-daily-lunch
-    runtime: python
-    region: frankfurt
-    branch: main
-    schedule: "30 10 * * *"
-    buildCommand: pip install --upgrade pip && pip install -r requirements.txt
-    startCommand: python daily_post_cron.py
-    envVars:
-      - fromGroup: russo-pavimenti-shared
-      - key: PYTHON_VERSION
-        value: 3.11.9
-      - key: DAILY_SLOT
-        value: lunch
-
-  - type: cron
-    name: russo-daily-evening
-    runtime: python
-    region: frankfurt
-    branch: main
-    schedule: "30 15 * * *"
-    buildCommand: pip install --upgrade pip && pip install -r requirements.txt
-    startCommand: python daily_post_cron.py
-    envVars:
-      - fromGroup: russo-pavimenti-shared
-      - key: PYTHON_VERSION
-        value: 3.11.9
-      - key: DAILY_SLOT
-        value: evening
