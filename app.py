@@ -17,9 +17,11 @@ Endpoints:
 """
 import logging
 import threading
+import time
 from flask import Flask, request, jsonify, abort
 
 import github_storage
+import inbox
 import telegram_api as tg
 from publisher import publish_image
 from config import (
@@ -150,6 +152,44 @@ def _handle_discard(cb_data: str, chat_id: int, message_id: int) -> None:
     )
 
 
+def _handle_text_message(message: dict) -> None:
+    """User sent a text message to the bot. Persist to GitHub inbox + echo."""
+    chat_id = message.get("chat", {}).get("id")
+    user = message.get("from", {}) or {}
+    text = message.get("text") or message.get("caption") or ""
+    if not text:
+        return  # ignore stickers, photos w/o caption, etc.
+
+    msg_data = {
+        "telegram_message_id": message.get("message_id"),
+        "chat_id": chat_id,
+        "user_id": user.get("id"),
+        "username": user.get("username"),
+        "first_name": user.get("first_name"),
+        "text": text,
+        "date": message.get("date"),
+        "received_at": int(time.time()),
+    }
+
+    persisted = inbox.commit_message(msg_data)
+
+    if persisted:
+        preview = (text[:200] + ("..." if len(text) > 200 else ""))
+        tg.send_message(
+            "📥 <b>Richiesta ricevuta</b>\n\n"
+            "Claude la leggerà al prossimo accesso e ti risponderà qui.\n\n"
+            f"<i>Anteprima registrata:</i>\n<blockquote>{preview}</blockquote>",
+            chat_id=chat_id,
+        )
+    else:
+        tg.send_message(
+            "⚠️ Messaggio ricevuto ma <b>non sono riuscito a salvarlo</b> "
+            "su GitHub (probabilmente il PAT non ha ancora i permessi di "
+            "scrittura). Riscrivi tra poco, Claude sta sistemando.",
+            chat_id=chat_id,
+        )
+
+
 # === Flask routes ===
 
 @app.route("/", methods=["GET"])
@@ -180,6 +220,15 @@ def webhook():
     update = request.get_json(silent=True) or {}
     log.info(f"update: keys={list(update.keys())}")
 
+    # === Text message handler (user typing to the bot) ===
+    msg = update.get("message")
+    if msg and (msg.get("text") or msg.get("caption")):
+        threading.Thread(
+            target=_handle_text_message, args=(msg,), daemon=True,
+        ).start()
+        return jsonify({"ok": True})
+
+    # === Callback query handler (button click) ===
     cbq = update.get("callback_query")
     if not cbq:
         return jsonify({"ok": True})
