@@ -245,6 +245,73 @@ def debug_logs():
         return jsonify({"error": str(e)}), 500
 
 
+@app.route(f"/debug/{WEBHOOK_PATH_SECRET}/test-publish", methods=["GET"])
+def debug_test_publish():
+    """Run the actual publish flow with the queryparam post_id and return
+    the result + full traceback via HTTP. For remote diagnosis."""
+    import traceback
+    post_id = request.args.get("post_id", "daily_02_macchie_vino")
+    info = {"post_id": post_id, "stage": "init"}
+
+    try:
+        info["stage"] = "load_post"
+        post = github_storage.get_post(post_id)
+        if not post:
+            return jsonify({**info, "error": "post not found"}), 404
+
+        info["image_url"] = post.get("image_url")
+        info["caption_len"] = len(post.get("caption", ""))
+
+        info["stage"] = "import_composio"
+        from composio import Composio
+        info["composio_imported"] = True
+
+        info["stage"] = "client_init"
+        from config import COMPOSIO_API_KEY, IG_USER_ID, COMPOSIO_ENTITY_ID
+        client = Composio(api_key=COMPOSIO_API_KEY)
+        info["client_type"] = type(client).__name__
+        info["has_actions"] = hasattr(client, "actions")
+        info["has_get_entity"] = hasattr(client, "get_entity")
+        info["has_tools"] = hasattr(client, "tools")
+
+        # try to resolve Action enum
+        info["stage"] = "resolve_action"
+        try:
+            from composio import Action
+            info["has_Action"] = True
+            info["Action_type"] = type(Action).__name__
+            try:
+                a = Action["INSTAGRAM_POST_IG_USER_MEDIA"]
+                info["action_bracket"] = repr(a)
+            except Exception as e:
+                info["action_bracket_err"] = repr(e)
+            try:
+                a = Action("INSTAGRAM_POST_IG_USER_MEDIA")
+                info["action_call"] = repr(a)
+            except Exception as e:
+                info["action_call_err"] = repr(e)
+            try:
+                info["action_no_auth"] = getattr(a, "no_auth", "<not present>")
+            except Exception as e:
+                info["action_no_auth_err"] = repr(e)
+        except ImportError as e:
+            info["Action_import_err"] = repr(e)
+
+        # Attempt actual publish
+        info["stage"] = "publish_image"
+        result = publish_image(
+            post["image_url"], post["caption"], max_wait_seconds=60,
+        )
+        info["publish_result"] = result
+
+        return jsonify(info)
+
+    except Exception as e:
+        info["exception"] = repr(e)
+        info["traceback"] = traceback.format_exc()
+        return jsonify(info), 500
+
+
 @app.route(f"/webhook/{WEBHOOK_PATH_SECRET}", methods=["POST"])
 def webhook():
     # Defense layer 1: header secret (Telegram signs every webhook)
