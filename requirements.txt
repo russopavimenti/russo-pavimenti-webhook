@@ -1,7 +1,9 @@
 flask==3.1.3
 gunicorn==23.0.0
-composio-core>=0.6.0,<1.0
+# composio v3 SDK (new package). The legacy composio-core has stale Action
+# enum metadata for Instagram (INSTAGRAM_POST_IG_USER_MEDIA reports as
+# "deprecated" because the enum registry is outdated). v3 uses tools.execute.
+composio>=0.8
 requests>=2.31
 anthropic>=0.40,<1.0
-# Pillow temporarily disabled — agent rendering tools degrade gracefully.
-# Restore once we identify what's failing the Render free-tier build.
+Pillow>=10.4,<12

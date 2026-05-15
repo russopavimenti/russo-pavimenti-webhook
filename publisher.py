@@ -1,10 +1,11 @@
 """
-Instagram publisher — uses Composio Python SDK to publish on @pavimenti_russo.
+Instagram publisher — uses Composio v3 Python SDK.
 
-Bug fix (15/5/2026): the SDK requires Action enum objects, not plain strings.
-Plain strings cause: "str object has no attribute 'no_auth'" because the SDK
-internally accesses action.no_auth. We use Action[name] (enum lookup) with
-fallbacks for resilience across SDK versions.
+Migration note (15/5/2026):
+  We previously used composio-core (legacy v1). Its Action enum registry
+  is stale and reports INSTAGRAM_POST_IG_USER_MEDIA as deprecated even
+  though the v3 backend still serves it. Switched to `composio` (v3 SDK)
+  which uses tools.execute(slug=..., arguments=..., user_id=...).
 """
 import logging
 
@@ -13,84 +14,63 @@ from config import COMPOSIO_API_KEY, IG_USER_ID, COMPOSIO_ENTITY_ID
 log = logging.getLogger("publisher")
 
 
-def _resolve_action(name: str):
-    """Convert action name string into the type Composio SDK expects.
-
-    Tries (in order):
-      1. Action[name]  — enum lookup by member name (composio-core ≥0.5)
-      2. Action(name)  — enum constructor with raw value
-      3. raw string    — as last resort (older SDKs accepted strings)
-    """
-    try:
-        from composio import Action
-    except ImportError:
-        return name
-
-    # Try enum member access by name
-    try:
-        return Action[name]
-    except (KeyError, AttributeError):
-        pass
-
-    # Try enum constructor (value-based)
-    try:
-        return Action(name)
-    except (ValueError, KeyError):
-        pass
-
-    log.warning(f"Action {name!r} not found in enum, passing as raw string")
-    return name
-
-
-def _execute(client, action_name: str, params: dict) -> dict:
-    """Execute a Composio tool with version-robust patterns."""
-    action = _resolve_action(action_name)
-
-    # Pattern A: entity.execute (newer SDKs)
-    try:
-        entity = client.get_entity(id=COMPOSIO_ENTITY_ID)
-        return entity.execute(action=action, params=params)
-    except AttributeError:
-        pass  # entity may not have execute() in some versions
-    except TypeError:
-        pass  # signature differs
-
-    # Pattern B: client.actions.execute
-    return client.actions.execute(
-        action=action,
-        params=params,
-        entity_id=COMPOSIO_ENTITY_ID,
+def _execute(client, slug: str, arguments: dict) -> dict:
+    """Execute a Composio tool via v3 SDK."""
+    return client.tools.execute(
+        slug=slug,
+        arguments=arguments,
+        user_id=COMPOSIO_ENTITY_ID,
     )
 
 
-def _unwrap_id(response: dict) -> str:
+def _unwrap_id(response) -> str:
+    """Pull an 'id' field from common Composio v3 response shapes.
+    The SDK may return either a dict or a Pydantic model — handle both."""
+    if response is None:
+        return ""
+    # Pydantic model: convert to dict
+    if hasattr(response, "model_dump"):
+        response = response.model_dump()
     if not isinstance(response, dict):
         return ""
-    data = response.get("data") or {}
+    # Try common shapes
+    data = response.get("data")
     if isinstance(data, dict):
         if "id" in data:
             return str(data["id"])
-        inner = data.get("response") or {}
-        if isinstance(inner, dict):
-            inner_data = inner.get("data") or {}
-            if isinstance(inner_data, dict) and "id" in inner_data:
-                return str(inner_data["id"])
+        nested = data.get("response") or data.get("data")
+        if isinstance(nested, dict):
+            if "id" in nested:
+                return str(nested["id"])
+            nested2 = nested.get("data")
+            if isinstance(nested2, dict) and "id" in nested2:
+                return str(nested2["id"])
+    # Maybe id is at the top level
+    if "id" in response:
+        return str(response["id"])
     return ""
 
 
-def _unwrap_permalink(response: dict) -> str:
+def _unwrap_permalink(response) -> str:
+    if response is None:
+        return ""
+    if hasattr(response, "model_dump"):
+        response = response.model_dump()
     if not isinstance(response, dict):
         return ""
-    data = response.get("data") or {}
-    if isinstance(data, dict):
-        if "permalink" in data:
-            return str(data["permalink"])
-        inner = data.get("response") or {}
-        if isinstance(inner, dict):
-            inner_data = inner.get("data") or {}
-            if isinstance(inner_data, dict) and "permalink" in inner_data:
-                return str(inner_data["permalink"])
-    return ""
+
+    def _find(obj, key):
+        if isinstance(obj, dict):
+            if key in obj:
+                return obj[key]
+            for v in obj.values():
+                found = _find(v, key)
+                if found:
+                    return found
+        return None
+
+    val = _find(response, "permalink")
+    return str(val) if val else ""
 
 
 def publish_image(image_url: str, caption: str, max_wait_seconds: int = 90) -> dict:
@@ -111,6 +91,15 @@ def publish_image(image_url: str, caption: str, max_wait_seconds: int = 90) -> d
     except Exception as e:
         return {"ok": False, "error": f"Composio client init failed: {e}"}
 
+    if not hasattr(client, "tools"):
+        return {
+            "ok": False,
+            "error": (
+                "Composio client has no .tools attribute — old SDK installed? "
+                "Need composio>=0.8 (v3), not composio-core."
+            ),
+        }
+
     # === Step 1: create media container ===
     try:
         r1 = _execute(client, "INSTAGRAM_POST_IG_USER_MEDIA", {
@@ -124,7 +113,10 @@ def publish_image(image_url: str, caption: str, max_wait_seconds: int = 90) -> d
 
     creation_id = _unwrap_id(r1)
     if not creation_id:
-        return {"ok": False, "error": f"no creation_id in response: {r1!r}"}
+        return {
+            "ok": False,
+            "error": f"no creation_id in response. raw={r1!r:.500}",
+        }
     log.info(f"container created: {creation_id}")
 
     # === Step 2: publish container ===
@@ -147,7 +139,7 @@ def publish_image(image_url: str, caption: str, max_wait_seconds: int = 90) -> d
         return {
             "ok": False,
             "creation_id": creation_id,
-            "error": f"no media_id in response: {r2!r}",
+            "error": f"no media_id in response. raw={r2!r:.500}",
         }
     log.info(f"published: {media_id}")
 
