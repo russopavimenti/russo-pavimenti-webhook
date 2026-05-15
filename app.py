@@ -217,7 +217,7 @@ def _handle_text_message(message: dict) -> None:
 
 # === Flask routes ===
 
-VERSION_MARKER = "v11-env-check"
+VERSION_MARKER = "v12-pexels-raw-debug"
 
 @app.route("/", methods=["GET"])
 def index():
@@ -271,18 +271,48 @@ def debug_env_check():
 
 @app.route(f"/debug/{WEBHOOK_PATH_SECRET}/test-search", methods=["GET"])
 def debug_test_search():
-    """Test pexels.search to confirm whether scraping works from Render IP."""
-    import pexels
+    """Test pexels.search. ALSO direct Pexels API call to see raw response."""
+    import os, urllib.request, urllib.parse, json, traceback
     q = request.args.get("q", "marble")
+
+    info = {"query": q}
+    key = os.environ.get("PEXELS_API_KEY", "").strip()
+    info["key_set"] = bool(key)
+    info["key_len"] = len(key)
+
+    # Direct API call so we see status code + raw response
+    url = f"https://api.pexels.com/v1/search?query={urllib.parse.quote(q)}&per_page=3"
     try:
-        results = pexels.search(q, limit=6)
-        return jsonify({"query": q, "count": len(results), "results": results})
+        req = urllib.request.Request(url, headers={"Authorization": key})
+        with urllib.request.urlopen(req, timeout=15) as r:
+            info["http_status"] = r.status
+            body = r.read().decode("utf-8")
+            info["raw_body_first_500"] = body[:500]
+            try:
+                d = json.loads(body)
+                info["total_results"] = d.get("total_results")
+                info["photos_count"] = len(d.get("photos", []))
+            except Exception:
+                pass
+    except urllib.request.HTTPError as e:
+        info["http_status"] = e.code
+        try:
+            info["error_body"] = e.read().decode("utf-8")[:500]
+        except Exception:
+            info["error_body"] = ""
     except Exception as e:
-        import traceback
-        return jsonify({
-            "query": q, "error": repr(e),
-            "traceback": traceback.format_exc(),
-        }), 500
+        info["exception"] = repr(e)
+        info["traceback"] = traceback.format_exc()
+
+    # Also run my wrapper for comparison
+    import pexels
+    try:
+        wrapper_results = pexels.search(q, limit=3)
+        info["wrapper_count"] = len(wrapper_results)
+    except Exception as e:
+        info["wrapper_err"] = repr(e)
+
+    return jsonify(info)
 
 
 @app.route(f"/debug/{WEBHOOK_PATH_SECRET}/connections", methods=["GET"])
