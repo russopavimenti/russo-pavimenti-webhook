@@ -63,7 +63,6 @@ services:
   - type: cron
     name: russo-daily-morning
     runtime: python
-    plan: free
     region: frankfurt
     branch: main
     schedule: "0 6 * * *"
@@ -79,7 +78,6 @@ services:
   - type: cron
     name: russo-daily-lunch
     runtime: python
-    plan: free
     region: frankfurt
     branch: main
     schedule: "30 10 * * *"
@@ -95,7 +93,6 @@ services:
   - type: cron
     name: russo-daily-evening
     runtime: python
-    plan: free
     region: frankfurt
     branch: main
     schedule: "30 15 * * *"
