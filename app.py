@@ -217,7 +217,7 @@ def _handle_text_message(message: dict) -> None:
 
 # === Flask routes ===
 
-VERSION_MARKER = "v5-skip-version-check"
+VERSION_MARKER = "v6-discover-user-id"
 
 @app.route("/", methods=["GET"])
 def index():
@@ -246,6 +246,56 @@ def debug_logs():
         return jsonify({"lines": lines[-300:], "total_lines": len(lines)})
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+
+
+@app.route(f"/debug/{WEBHOOK_PATH_SECRET}/connections", methods=["GET"])
+def debug_connections():
+    """List Composio connected accounts to find the right user_id for Instagram."""
+    import traceback
+    info = {}
+    try:
+        from composio import Composio
+        from config import COMPOSIO_API_KEY
+        client = Composio(api_key=COMPOSIO_API_KEY)
+
+        # Try multiple list endpoints in the v3 SDK
+        for attr in ("connected_accounts", "connections", "accounts"):
+            if hasattr(client, attr):
+                info[f"has_{attr}"] = True
+                obj = getattr(client, attr)
+                for method in ("list", "get_all", "all"):
+                    if hasattr(obj, method):
+                        try:
+                            result = getattr(obj, method)()
+                            # Handle Pydantic models
+                            if hasattr(result, "model_dump"):
+                                result = result.model_dump()
+                            info[f"{attr}.{method}"] = str(result)[:3000]
+                            break
+                        except Exception as e:
+                            info[f"{attr}.{method}_err"] = repr(e)
+                break
+
+        # Also list via direct HTTP API
+        import urllib.request, json as j
+        from config import COMPOSIO_API_KEY
+        try:
+            req = urllib.request.Request(
+                "https://backend.composio.dev/api/v3/connected_accounts",
+                headers={"x-api-key": COMPOSIO_API_KEY},
+            )
+            with urllib.request.urlopen(req, timeout=15) as r:
+                data = j.loads(r.read())
+            info["http_v3_response"] = data
+        except Exception as e:
+            info["http_v3_err"] = repr(e)
+
+        return jsonify(info)
+    except Exception as e:
+        return jsonify({
+            "error": repr(e),
+            "traceback": traceback.format_exc(),
+        }), 500
 
 
 @app.route(f"/debug/{WEBHOOK_PATH_SECRET}/test-publish", methods=["GET"])
