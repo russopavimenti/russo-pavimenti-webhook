@@ -1,0 +1,2 @@
+# This folder stores post metadata + images for the webhook to read.
+# Files are written here by the Mac-side tool when Claude renders new posts.

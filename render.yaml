@@ -1,0 +1,44 @@
+# Render Blueprint — deploys the webhook as a free web service.
+# https://render.com/docs/blueprint-spec
+
+services:
+  - type: web
+    name: russo-pavimenti-webhook
+    runtime: python
+    plan: free
+    region: frankfurt   # closer to Italy than Oregon default
+    branch: main
+    healthCheckPath: /health
+    buildCommand: pip install --upgrade pip && pip install -r requirements.txt
+    startCommand: gunicorn -b 0.0.0.0:$PORT --workers 1 --threads 4 --timeout 120 app:app
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+
+      # === Secrets (must be set MANUALLY in Render dashboard) ===
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: TELEGRAM_CHAT_ID
+        sync: false
+      - key: COMPOSIO_API_KEY
+        sync: false
+      - key: TELEGRAM_WEBHOOK_SECRET
+        sync: false
+      - key: WEBHOOK_PATH_SECRET
+        sync: false
+
+      # === Public IDs / config ===
+      - key: IG_USER_ID
+        value: "26664442679877111"
+      - key: GITHUB_REPO_OWNER
+        value: russopavimenti
+      - key: GITHUB_REPO_NAME
+        value: russo-pavimenti-webhook
+      - key: GITHUB_BRANCH
+        value: main
+      - key: COMPOSIO_ENTITY_ID
+        value: default
+
+      # Optional — needed only if repo is private
+      - key: GITHUB_TOKEN
+        sync: false
