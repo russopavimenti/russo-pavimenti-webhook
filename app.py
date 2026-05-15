@@ -217,7 +217,7 @@ def _handle_text_message(message: dict) -> None:
 
 # === Flask routes ===
 
-VERSION_MARKER = "v4-composio-v3-sdk"
+VERSION_MARKER = "v5-skip-version-check"
 
 @app.route("/", methods=["GET"])
 def index():

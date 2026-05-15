@@ -15,12 +15,27 @@ log = logging.getLogger("publisher")
 
 
 def _execute(client, slug: str, arguments: dict) -> dict:
-    """Execute a Composio tool via v3 SDK."""
-    return client.tools.execute(
-        slug=slug,
-        arguments=arguments,
-        user_id=COMPOSIO_ENTITY_ID,
-    )
+    """Execute a Composio tool via v3 SDK.
+
+    Tries several signatures because the v3 SDK is rapidly evolving:
+      a) tools.execute(slug, arguments, user_id, dangerously_skip_version_check)
+      b) tools.execute(slug, arguments, user_id)  — relies on client-level skip
+    """
+    last_err = None
+    for kwargs in (
+        {"slug": slug, "arguments": arguments, "user_id": COMPOSIO_ENTITY_ID,
+         "dangerously_skip_version_check": True},
+        {"slug": slug, "arguments": arguments, "user_id": COMPOSIO_ENTITY_ID,
+         "skip_version_check": True},
+        {"slug": slug, "arguments": arguments, "user_id": COMPOSIO_ENTITY_ID},
+    ):
+        try:
+            return client.tools.execute(**kwargs)
+        except TypeError as e:
+            # signature mismatch — try next variant
+            last_err = e
+            continue
+    raise RuntimeError(f"all execute signatures failed; last: {last_err}")
 
 
 def _unwrap_id(response) -> str:
@@ -86,10 +101,27 @@ def publish_image(image_url: str, caption: str, max_wait_seconds: int = 90) -> d
     except ImportError as e:
         return {"ok": False, "error": f"composio SDK not installed: {e}"}
 
-    try:
-        client = Composio(api_key=COMPOSIO_API_KEY)
-    except Exception as e:
-        return {"ok": False, "error": f"Composio client init failed: {e}"}
+    # Try multiple init signatures — composio v3 has evolving API
+    client = None
+    init_errors = []
+    for init_kwargs in (
+        {"api_key": COMPOSIO_API_KEY, "dangerously_skip_version_check": True},
+        {"api_key": COMPOSIO_API_KEY, "skip_version_check": True},
+        {"api_key": COMPOSIO_API_KEY},
+    ):
+        try:
+            client = Composio(**init_kwargs)
+            break
+        except TypeError as e:
+            init_errors.append(f"{init_kwargs.keys()}: {e}")
+        except Exception as e:
+            init_errors.append(f"{init_kwargs.keys()}: {e}")
+
+    if client is None:
+        return {
+            "ok": False,
+            "error": f"Composio client init failed: {init_errors}",
+        }
 
     if not hasattr(client, "tools"):
         return {
