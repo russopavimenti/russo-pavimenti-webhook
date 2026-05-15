@@ -217,7 +217,7 @@ def _handle_text_message(message: dict) -> None:
 
 # === Flask routes ===
 
-VERSION_MARKER = "v9-pexels-official-api"
+VERSION_MARKER = "v10-pexels-debug"
 
 @app.route("/", methods=["GET"])
 def index():

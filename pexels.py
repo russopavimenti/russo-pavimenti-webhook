@@ -25,18 +25,22 @@ PEXELS_API_KEY = os.environ.get("PEXELS_API_KEY", "").strip()
 
 def _search_via_api(query: str, limit: int) -> List[Dict]:
     """Official Pexels API — reliable, works from any IP."""
+    # No orientation filter — square photos are rare and we crop in renderer anyway.
     url = (
         "https://api.pexels.com/v1/search?"
-        f"query={urllib.parse.quote(query)}&per_page={limit}&orientation=square"
+        f"query={urllib.parse.quote(query)}&per_page={limit}"
     )
     req = urllib.request.Request(
         url, headers={"Authorization": PEXELS_API_KEY},
     )
+    log.info(f"pexels API call: {url} (key_present={bool(PEXELS_API_KEY)})")
+    print(f"[pexels] API call query={query!r} key_set={bool(PEXELS_API_KEY)}", flush=True)
     try:
         with urllib.request.urlopen(req, timeout=15) as r:
             data = json.loads(r.read())
     except Exception as e:
         log.warning(f"pexels API error: {e}")
+        print(f"[pexels] API ERROR: {e}", flush=True)
         return []
 
     out: List[Dict] = []
@@ -48,6 +52,7 @@ def _search_via_api(query: str, limit: int) -> List[Dict]:
         if pid and url_clean:
             out.append({"id": pid, "url": url_clean})
     log.info(f"pexels API '{query}' → {len(out)} results")
+    print(f"[pexels] API '{query}' → {len(out)} results (total_results={data.get('total_results')})", flush=True)
     return out
 
 
