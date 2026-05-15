@@ -1,0 +1,129 @@
+{
+  "_meta": {
+    "description": "Topic pool per i daily post Russo Pavimenti. Il cron Render picka il prossimo topic dalla rotazione, applica hook+caption pre-scritti, renderizza, manda preview Telegram.",
+    "rotation_strategy": "round_robin",
+    "hashtags_common": "#LucidaturaPavimenti #LevigaturaPavimenti #RestauroPavimenti #TrattamentoMarmo #LucidaturaMarmo #PavimentiPerfetti #ArteDelPavimento #MaestriDelMarmo #EccellenzaArtigiana #DettagliCheContano #FinituraPerfetta #LavoriSuMisura #PassionePerILavoro #EsperienzaArtigiana #DesignDInterni #InterniEleganti #AmbientiDiClasse #CasaDiLusso #SuperficiDiPregio #LucidaturaPalermo #LucidaturaTrapani #palermo #trapani #alcamo"
+  },
+  "topics": [
+    {
+      "id": "marmocemento_opaco",
+      "topic": "Marmocemento siciliano opaco (graniglia anni '60)",
+      "pexels_queries": ["italian terrazzo floor", "old marble cement floor", "vintage terrazzo"],
+      "overlay_alpha": 0.30,
+      "hook_line1": "Il marmocemento siciliano",
+      "hook_line2": "non si butta. Si risveglia.",
+      "caption_body": "✨ Il marmocemento siciliano non passa di moda. Si addormenta.\n\n🪨 La graniglia degli anni '60 — quella che trovi nelle case di nonna, nei palazzi storici di Alcamo, Trapani, Palermo — è uno dei materiali più nobili che esistano. Pezzi di marmo veri legati nel cemento, levigati a mano dai vecchi maestri.\n\n💔 Il problema: opaca, ingiallita, graffiata, sembra da buttare.\n\n💡 Ma sotto quello strato di tempo c'è ancora il marmo originale. Una levigatura mirata + lucidatura cristallina riporta a vita anche pavimenti di 60 anni fa.\n\n❤️ Sopralluogo gratuito in tutta la Sicilia occidentale.\n📞 +39 339 7919513\n🌐 russopavimenti.com\n\n#MarmocementoSiciliano #Graniglia #Palladiana #PavimentiStorici #RestauroGraniglia",
+      "extra_hashtags": "#MarmocementoSiciliano #Graniglia #Palladiana #PavimentiStorici #RestauroGraniglia"
+    },
+    {
+      "id": "top_cucina_acidi",
+      "topic": "Top cucina rovinato da limone, aceto, agrumi",
+      "pexels_queries": ["white marble kitchen counter", "marble kitchen worktop", "lemon on marble"],
+      "overlay_alpha": 0.32,
+      "hook_line1": "Un limone è bastato",
+      "hook_line2": "a opacizzare il tuo top.",
+      "caption_body": "🍋 Un sorso di limonata. Una scorza di agrume. Un goccio di aceto sull'insalata.\n\n💎 Il marmo del tuo top cucina è bellissimo. Ma è poroso, e gli acidi naturali lo aggrediscono. Bastano secondi per lasciare un alone opaco permanente sui detergenti normali.\n\n🤔 Sostituirlo? Costa migliaia di euro.\n💡 Lucidatura + cristallizzazione professionale lo riporta come nuovo per centinaia. La superficie torna brillante, l'alone scompare, e applichiamo un trattamento idro/oleo-repellente che lo protegge per i prossimi anni.\n\n❤️ Sopralluogo gratuito.\n📞 +39 339 7919513\n🌐 russopavimenti.com\n\n#TopCucinaMarmo #MacchieMarmo #MarmoCucina #LucidaturaTopCucina",
+      "extra_hashtags": "#TopCucinaMarmo #MacchieMarmo #MarmoCucina #LucidaturaTopCucina"
+    },
+    {
+      "id": "scale_marmo_usura",
+      "topic": "Scale in marmo: usura sui gradini",
+      "pexels_queries": ["marble staircase", "stone stairs interior", "marble stair vintage"],
+      "overlay_alpha": 0.35,
+      "hook_line1": "I gradini in marmo",
+      "hook_line2": "raccontano chi passa.",
+      "caption_body": "👣 Ogni gradino in marmo ha vissuto migliaia di passi. Famiglie, ospiti, anni.\n\n🪨 Nel tempo il calpestio crea solchi visibili al centro del gradino — il marmo si consuma dove tutti poggiano il piede.\n\n💡 La levigatura ridà uniformità alla superficie. La cristallizzazione finale crea uno strato lucido resistente all'usura. Le scale tornano dritte, lucide, sicure.\n\n🏛 Lavoriamo scale storiche e moderne — palazzi, ville, condomini.\n\n❤️ Sopralluogo gratuito in tutta la Sicilia occidentale.\n📞 +39 339 7919513\n🌐 russopavimenti.com\n\n#ScaleInMarmo #RestauroScale #GraniglieScale #MarmoSulleScale",
+      "extra_hashtags": "#ScaleInMarmo #RestauroScale #GraniglieScale #MarmoSulleScale"
+    },
+    {
+      "id": "cera_vs_lucidatura",
+      "topic": "Differenza marmo cerato vs lucidato cristallino",
+      "pexels_queries": ["polished marble shine", "wax marble floor", "marble reflection floor"],
+      "overlay_alpha": 0.28,
+      "hook_line1": "La cera nasconde.",
+      "hook_line2": "La lucidatura rivela.",
+      "caption_body": "🕯 Tanti vendono \"lucidatura\" che in realtà è solo cera applicata sopra.\n\n❌ Effetto immediato bello, ma:\n- Si consuma in pochi mesi\n- Va riapplicata di continuo\n- Sigilla lo sporco sotto\n- Sotto resta lo stesso marmo opaco\n\n✅ La lucidatura cristallina vera è un trattamento chimico-meccanico che LEVIGA il marmo a specchio. Il risultato non è uno strato sopra — è il marmo stesso che torna lucido. Dura anni, non mesi.\n\n💡 Differenza visibile alla mano: la cera è \"viscida\", il marmo cristallizzato è duro e fresco.\n\n❤️ Sopralluogo gratuito.\n📞 +39 339 7919513\n🌐 russopavimenti.com\n\n#LucidaturaCristallina #DifferenzaCera #VeraLucidatura #MaestriDelMarmo",
+      "extra_hashtags": "#LucidaturaCristallina #DifferenzaCera #VeraLucidatura"
+    },
+    {
+      "id": "marmo_bianco_ingiallisce",
+      "topic": "Pavimento bianco che ingiallisce",
+      "pexels_queries": ["white marble floor", "yellow marble tile", "vintage marble flooring"],
+      "overlay_alpha": 0.25,
+      "hook_line1": "Il bianco non era così.",
+      "hook_line2": "È diventato giallo.",
+      "caption_body": "🌞 Sole, cere accumulate, vecchi detergenti aggressivi, fumo: tutto contribuisce a far virare il marmo bianco verso il giallo.\n\n😞 Risultato: la casa sembra meno luminosa, gli arredi sembrano vecchi, la stanza intera perde valore visivo.\n\n💡 La buona notizia: l'ingiallimento è quasi sempre SUPERFICIALE. Non è il marmo che cambia colore — sono gli strati accumulati sopra di esso.\n\n✨ Una levigatura asporta gli strati, una lucidatura cristallina ripristina il bianco originale. La differenza prima/dopo è impressionante.\n\n❤️ Sopralluogo gratuito.\n📞 +39 339 7919513\n🌐 russopavimenti.com\n\n#MarmoBianco #MarmoIngiallito #RestauroMarmoBianco #PavimentoBianco",
+      "extra_hashtags": "#MarmoBianco #MarmoIngiallito #RestauroMarmoBianco"
+    },
+    {
+      "id": "rivestimenti_verticali",
+      "topic": "Rivestimenti verticali in marmo: come trattarli",
+      "pexels_queries": ["marble wall bathroom", "marble cladding wall", "stone wall interior"],
+      "overlay_alpha": 0.32,
+      "hook_line1": "Il marmo verticale",
+      "hook_line2": "soffre quanto il pavimento.",
+      "caption_body": "🚿 Bagni, docce, scale, camini: il marmo verticale è ovunque ma quasi nessuno lo cura.\n\n💧 Calcare, sapone, detergenti acidi, vapore — il rivestimento verticale opacizza ancora più velocemente del pavimento (ma si vede meno e ce ne si accorge tardi).\n\n💡 Cosa facciamo:\n- Pulizia profonda con prodotti professionali\n- Levigatura mirata sulle aree compromesse\n- Lucidatura cristallina + idro-oleo-repellente\n- Risultato: superficie verticale che brilla e resiste all'acqua\n\n🛁 Specialità anche su top bagno, mensole, alzate.\n\n❤️ Sopralluogo gratuito.\n📞 +39 339 7919513\n🌐 russopavimenti.com\n\n#RivestimentiVerticali #MarmoBagno #MarmoDoccia #LucidaturaVerticale",
+      "extra_hashtags": "#RivestimentiVerticali #MarmoBagno #MarmoDoccia"
+    },
+    {
+      "id": "candeggina_aloni",
+      "topic": "Aloni di candeggina sul marmo",
+      "pexels_queries": ["marble floor stain", "damaged marble surface", "white marble close up"],
+      "overlay_alpha": 0.30,
+      "hook_line1": "La candeggina",
+      "hook_line2": "non è amica del marmo.",
+      "caption_body": "🚫 ATTENZIONE: la candeggina sul marmo crea aloni biancastri permanenti.\n\nMolti la usano credendo di disinfettare meglio. Il marmo è una pietra calcarea, la candeggina è basica e ossidante — la reazione chimica corrode lo strato superficiale lasciando macchie più chiare del marmo stesso.\n\n💡 Cosa fare se è già successo:\n1. Niente panico, NON è permanente\n2. Una levigatura mirata sull'area asporta lo strato compromesso\n3. La lucidatura ripristina la finitura originale uniforme\n\n✅ Per pulire il marmo in sicurezza: solo detergenti neutri pH ~7, mai aceto, mai candeggina, mai limone.\n\n❤️ Sopralluogo gratuito.\n📞 +39 339 7919513\n🌐 russopavimenti.com\n\n#PuliziaMarmo #ErroriPulizia #AloniMarmo #ConsigliMarmo",
+      "extra_hashtags": "#PuliziaMarmo #ErroriPulizia #AloniMarmo"
+    },
+    {
+      "id": "marmo_scivoloso",
+      "topic": "Marmo scivoloso = pericolo (anziani, bambini, casa al mare)",
+      "pexels_queries": ["polished marble floor reflection", "marble floor home", "glossy stone floor"],
+      "overlay_alpha": 0.32,
+      "hook_line1": "Lucido è bello.",
+      "hook_line2": "Scivoloso è pericolo.",
+      "caption_body": "⚠️ Il marmo molto lucido è splendido. Ma quando si bagna, diventa scivolosissimo.\n\nIn case con anziani, bambini, o in casa al mare (dove l'umidità entra) lo scivolamento è un rischio reale di cadute.\n\n💡 Possiamo fare due cose:\n1. Lucidatura SATINATA invece che cristallina specchiata — uguale bellezza, meno scivolosità\n2. Trattamento ANTISCIVOLO chimico — applica una micro-rugosità invisibile all'occhio che aumenta drasticamente l'aderenza, soprattutto a piedi bagnati\n\n🏖 Particolarmente importante nelle case sulla costa di Trapani/Palermo — l'aria salmastra + umidità rendono il pavimento ancora più infido.\n\n❤️ Sopralluogo gratuito.\n📞 +39 339 7919513\n🌐 russopavimenti.com\n\n#PavimentoAntiscivolo #SicurezzaCasa #MarmoSicuro #TrattamentoAntiscivolo",
+      "extra_hashtags": "#PavimentoAntiscivolo #SicurezzaCasa #MarmoSicuro"
+    },
+    {
+      "id": "cemento_lucidato_moderno",
+      "topic": "Cemento lucidato come alternativa moderna",
+      "pexels_queries": ["polished concrete floor", "modern concrete interior", "industrial concrete floor"],
+      "overlay_alpha": 0.35,
+      "hook_line1": "Il cemento può essere",
+      "hook_line2": "più bello del marmo.",
+      "caption_body": "🏗 Il cemento non è più solo industriale. Trattato bene, diventa un pavimento d'arredo da showroom.\n\n✨ Lucidatura del cemento: levigatrice professionale → vari step di abrasivi diamantati → lucidatura finale. Risultato: superficie ultra-piana, lucida, uniforme, senza giunti.\n\n💪 Vantaggi:\n- Estremamente resistente\n- Manutenzione minima\n- Look moderno, minimal, industrial-chic\n- Costo per mq più basso del marmo\n- Si fa anche su cemento ESISTENTE (non serve ribuilare)\n\n🏠 Ideale per: open space, loft, garage trasformati, showroom, locali, case minimal.\n\n❤️ Sopralluogo gratuito.\n📞 +39 339 7919513\n🌐 russopavimenti.com\n\n#CementoLucidato #PavimentoIndustriale #ConcreteFloor #DesignMinimal",
+      "extra_hashtags": "#CementoLucidato #PavimentoIndustriale #ConcreteFloor"
+    },
+    {
+      "id": "marmo_anni60_appartamenti",
+      "topic": "Marmo anni '60-'70 nei vecchi appartamenti",
+      "pexels_queries": ["vintage italian home interior", "old apartment marble", "1970s apartment"],
+      "overlay_alpha": 0.32,
+      "hook_line1": "I pavimenti dei nonni",
+      "hook_line2": "valgono più dei nuovi.",
+      "caption_body": "🏠 Hai comprato/ereditato un appartamento anni '60-'70?\n\nNon strappare il pavimento. C'è altissima probabilità che sotto strati di cere e sporco accumulato negli anni ci sia un MARMO o un MARMOCEMENTO di qualità superiore a quello che metteresti oggi.\n\n💎 Materiali storici:\n- Marmo Botticino, Perlato, Bianco di Sicilia\n- Graniglia veneziana e siciliana\n- Palladiana con scaglie di marmo grandi\n- Travertino lucido\n\nTutti pavimenti che oggi costerebbero il doppio o il triplo del listino moderno — se si trovano ancora.\n\n💡 Una levigatura e lucidatura cristallina li riporta come nuovi. La differenza pre/post è impressionante.\n\n❤️ Sopralluogo gratuito.\n📞 +39 339 7919513\n🌐 russopavimenti.com\n\n#MarmoStorico #PavimentiVintage #RestauroPavimenti #CasaAnni60",
+      "extra_hashtags": "#MarmoStorico #PavimentiVintage #CasaAnni60"
+    },
+    {
+      "id": "top_bagno_calcare",
+      "topic": "Top bagno con calcare incrostato",
+      "pexels_queries": ["marble bathroom counter", "marble vanity sink", "white marble bathroom"],
+      "overlay_alpha": 0.28,
+      "hook_line1": "Il calcare sul marmo",
+      "hook_line2": "non se ne va con lo straccio.",
+      "caption_body": "💧 Acqua dura + marmo = calcare incrostato.\n\nNei bagni il calcare si deposita su top, lavandini, alzate. Diventa biancastro, ruvido, opaco. I detergenti anticalcare commerciali sono acidi → corrodono il marmo invece di pulirlo.\n\n💡 La soluzione professionale:\n1. Rimozione meccanica delicata (non aggressiva)\n2. Levigatura mirata su micro-aree compromesse\n3. Lucidatura cristallina che ripristina la finitura\n4. Sigillatura idro-repellente che impedisce ai nuovi depositi di attecchire\n\n✨ Risultato: top bagno come nuovo. E rimane bello per anni se manutenuto bene.\n\n❤️ Sopralluogo gratuito.\n📞 +39 339 7919513\n🌐 russopavimenti.com\n\n#TopBagno #MarmoBagno #CalcareSulMarmo #LavabosMarmo",
+      "extra_hashtags": "#TopBagno #MarmoBagno #CalcareSulMarmo"
+    },
+    {
+      "id": "durata_lucidatura",
+      "topic": "Quanto dura una lucidatura professionale",
+      "pexels_queries": ["polished marble close up", "shiny marble floor reflection", "marble luxury home"],
+      "overlay_alpha": 0.30,
+      "hook_line1": "Una lucidatura fatta bene",
+      "hook_line2": "dura più di 10 anni.",
+      "caption_body": "❓ \"Tra quanto dovrò rifarla?\" — è la domanda più frequente.\n\n📅 Una lucidatura cristallina professionale dura:\n- 5-7 anni in case con traffico medio\n- 10+ anni in case con traffico basso\n- 2-3 anni in negozi/ristoranti ad alto traffico (poi solo rinfresco, non re-levigatura)\n\n✨ Differenza con cera (che dura mesi):\nLa cristallizzazione non è un \"prodotto sopra\" — è una reazione chimica che indurisce e rende riflettente lo strato superficiale del marmo stesso. Il marmo torna a essere intrinsecamente lucido.\n\n💡 Per allungare la durata:\n- Solo detergenti neutri\n- Mai aceto/limone/candeggina\n- Tappetini all'ingresso (sabbia → graffi)\n- Pulizia regolare (no sporco accumulato)\n\n❤️ Sopralluogo gratuito.\n📞 +39 339 7919513\n🌐 russopavimenti.com\n\n#DurataLucidatura #ManutenzioneMarmo #InvestimentoCasa #LucidaturaProfessionale",
+      "extra_hashtags": "#DurataLucidatura #ManutenzioneMarmo #LucidaturaProfessionale"
+    }
+  ]
+}

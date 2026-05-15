@@ -1,5 +1,24 @@
-# Render Blueprint — deploys the webhook as a free web service.
+# Render Blueprint — deploys the webhook + 3 daily-post cron jobs.
 # https://render.com/docs/blueprint-spec
+
+# === Shared env vars across web + cron services ===
+envVarGroups:
+  - name: russo-pavimenti-shared
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: TELEGRAM_CHAT_ID
+        sync: false
+      - key: GITHUB_TOKEN
+        sync: false
+      - key: PEXELS_API_KEY
+        sync: false
+      - key: GITHUB_REPO_OWNER
+        value: russopavimenti
+      - key: GITHUB_REPO_NAME
+        value: russo-pavimenti-webhook
+      - key: GITHUB_BRANCH
+        value: main
 
 services:
   - type: web
@@ -11,15 +30,13 @@ services:
     healthCheckPath: /health
     buildCommand: pip install --upgrade pip && pip install -r requirements.txt
     startCommand: gunicorn -b 0.0.0.0:$PORT --workers 1 --threads 4 --timeout 120 app:app
+    envVarGroups:
+      - russo-pavimenti-shared
     envVars:
       - key: PYTHON_VERSION
         value: 3.11.9
 
-      # === Secrets (must be set MANUALLY in Render dashboard) ===
-      - key: TELEGRAM_BOT_TOKEN
-        sync: false
-      - key: TELEGRAM_CHAT_ID
-        sync: false
+      # === Webhook-only secrets ===
       - key: COMPOSIO_API_KEY
         sync: false
       - key: TELEGRAM_WEBHOOK_SECRET
@@ -31,23 +48,66 @@ services:
         sync: false
       - key: ANTHROPIC_MODEL
         value: claude-sonnet-4-5-20250929
-      # Pexels API key (free, get at https://www.pexels.com/api/new/)
-      # Required for agent to find photos — HTML scrape is blocked from cloud IPs.
-      - key: PEXELS_API_KEY
-        sync: false
 
-      # === Public IDs / config ===
       - key: IG_USER_ID
         value: "26664442679877111"
-      - key: GITHUB_REPO_OWNER
-        value: russopavimenti
-      - key: GITHUB_REPO_NAME
-        value: russo-pavimenti-webhook
-      - key: GITHUB_BRANCH
-        value: main
       - key: COMPOSIO_ENTITY_ID
         value: default
 
-      # Optional — needed only if repo is private
-      - key: GITHUB_TOKEN
-        sync: false
+  # === 3 daily cron jobs ===
+  # Schedule is UTC. Italy = UTC+2 (summer/CEST) or UTC+1 (winter/CET).
+  # Current values target SUMMER time. Adjust +1 hour during winter DST.
+  #   08:00 IT (CEST) = 06:00 UTC
+  #   12:30 IT (CEST) = 10:30 UTC
+  #   17:30 IT (CEST) = 15:30 UTC
+
+  - type: cron
+    name: russo-daily-morning
+    runtime: python
+    plan: free
+    region: frankfurt
+    branch: main
+    schedule: "0 6 * * *"
+    buildCommand: pip install --upgrade pip && pip install -r requirements.txt
+    startCommand: python daily_post_cron.py
+    envVarGroups:
+      - russo-pavimenti-shared
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: DAILY_SLOT
+        value: morning
+
+  - type: cron
+    name: russo-daily-lunch
+    runtime: python
+    plan: free
+    region: frankfurt
+    branch: main
+    schedule: "30 10 * * *"
+    buildCommand: pip install --upgrade pip && pip install -r requirements.txt
+    startCommand: python daily_post_cron.py
+    envVarGroups:
+      - russo-pavimenti-shared
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: DAILY_SLOT
+        value: lunch
+
+  - type: cron
+    name: russo-daily-evening
+    runtime: python
+    plan: free
+    region: frankfurt
+    branch: main
+    schedule: "30 15 * * *"
+    buildCommand: pip install --upgrade pip && pip install -r requirements.txt
+    startCommand: python daily_post_cron.py
+    envVarGroups:
+      - russo-pavimenti-shared
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: DAILY_SLOT
+        value: evening
