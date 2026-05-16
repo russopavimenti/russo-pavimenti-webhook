@@ -15,6 +15,7 @@ Endpoints:
   GET  /health             Liveness probe (for Render health checks)
   GET  /                   Status page
 """
+import collections
 import html
 import logging
 import threading
@@ -47,6 +48,66 @@ logging.getLogger().addHandler(fh)
 app = Flask(__name__)
 
 
+# === Idempotency: dedup Telegram callbacks ===
+# Telegram retries webhook delivery if our handler doesn't ACK within ~10s.
+# On Render free tier cold start this happens regularly (~30-60s boot).
+# Result: same approve callback delivered 2x → 2 publishes.
+#
+# We dedup by callback_query.id (Telegram assigns a unique id per click;
+# retries use the SAME id) AND by (chat_id, message_id, cb_data) to also
+# catch user double-taps. Cache is in-memory (bounded), expires by FIFO.
+# In-flight publish tracking ensures concurrent retries within the SAME
+# warm container don't both reach _handle_approve.
+
+_CALLBACK_CACHE = collections.OrderedDict()
+_INFLIGHT_PUBLISHES = set()
+_DEDUP_LOCK = threading.Lock()
+_DEDUP_MAX_CACHE = 500
+_DEDUP_TTL_SECONDS = 600   # 10 min — long enough to cover any TG retry window
+
+
+def _is_duplicate_callback(cb_id: str, dedup_key: str) -> bool:
+    """Return True if we've already seen this callback. Side effect: mark as seen.
+
+    `dedup_key` is the (chat_id|msg_id|cb_data) composite to also catch
+    same-action clicks even if Telegram assigned different ids.
+    """
+    now = time.time()
+    with _DEDUP_LOCK:
+        # Expire old entries
+        cutoff = now - _DEDUP_TTL_SECONDS
+        while _CALLBACK_CACHE:
+            oldest_key, oldest_ts = next(iter(_CALLBACK_CACHE.items()))
+            if oldest_ts < cutoff:
+                _CALLBACK_CACHE.popitem(last=False)
+            else:
+                break
+
+        if cb_id in _CALLBACK_CACHE or dedup_key in _CALLBACK_CACHE:
+            return True
+
+        _CALLBACK_CACHE[cb_id] = now
+        _CALLBACK_CACHE[dedup_key] = now
+        while len(_CALLBACK_CACHE) > _DEDUP_MAX_CACHE:
+            _CALLBACK_CACHE.popitem(last=False)
+        return False
+
+
+def _claim_publish_lock(post_id: str) -> bool:
+    """Try to claim the right to publish `post_id`. Returns False if
+    another thread already claimed it (concurrent retry in same container)."""
+    with _DEDUP_LOCK:
+        if post_id in _INFLIGHT_PUBLISHES:
+            return False
+        _INFLIGHT_PUBLISHES.add(post_id)
+        return True
+
+
+def _release_publish_lock(post_id: str) -> None:
+    with _DEDUP_LOCK:
+        _INFLIGHT_PUBLISHES.discard(post_id)
+
+
 # === Callback handlers (run in background threads) ===
 
 def _post_id_from(cb_data: str, prefix: str) -> str:
@@ -55,87 +116,122 @@ def _post_id_from(cb_data: str, prefix: str) -> str:
 
 def _handle_approve(cb_data: str, chat_id: int, message_id: int) -> None:
     post_id = _post_id_from(cb_data, "approve_")
+
+    # Claim the publish lock for this post_id. If already in-flight in a
+    # sibling thread (same container), bail out silently — the other thread
+    # is taking care of it.
+    if not _claim_publish_lock(post_id):
+        log.warning(f"APPROVE skipped (in-flight): post_id={post_id}")
+        return
+
     log.info(f"APPROVE start: post_id={post_id}")
 
-    post = github_storage.get_post(post_id)
-    if not post:
-        log.error(f"post not found in GitHub: {post_id}")
+    try:
+        post = github_storage.get_post(post_id)
+        if not post:
+            log.error(f"post not found in GitHub: {post_id}")
+            tg.edit_message_buttons(
+                chat_id, message_id,
+                [[{"text": "❌ Metadata mancante — scrivi a Claude",
+                   "callback_data": "noop"}]],
+            )
+            tg.send_message(
+                f"⚠️ Approvazione ricevuta per <code>{post_id}</code> ma "
+                "<b>metadata non trovato su GitHub</b>.\n\n"
+                "Probabilmente Claude non ha ancora pushato i file del post. "
+                "Riprova dopo che Claude conferma il push, oppure scrivi qui.",
+                chat_id=chat_id,
+            )
+            return
+
+        # Defense in depth: if metadata already has a published media_id
+        # (set by a previous successful publish), bail out — this is a
+        # cold-start retry from Telegram after the original publish completed.
+        if post.get("ig_media_id"):
+            log.warning(f"APPROVE skipped (already published): post_id={post_id} "
+                        f"media_id={post.get('ig_media_id')}")
+            existing_link = post.get("ig_permalink", "")
+            if existing_link:
+                tg.edit_message_buttons(
+                    chat_id, message_id,
+                    [[{"text": "✅ Già pubblicato — apri post",
+                       "url": existing_link}]],
+                )
+            return
+
+        image_url = post.get("image_url")
+        caption = post.get("caption")
+        if not image_url or not caption:
+            tg.send_message(
+                f"⚠️ Metadata di <code>{post_id}</code> incompleto "
+                f"(manca image_url o caption). Scrivi a Claude.",
+                chat_id=chat_id,
+            )
+            return
+
+        # UI: "publishing..."
         tg.edit_message_buttons(
             chat_id, message_id,
-            [[{"text": "❌ Metadata mancante — scrivi a Claude",
+            [[{"text": "⏳ Pubblicazione su Instagram in corso...",
                "callback_data": "noop"}]],
         )
+
+        result = publish_image(image_url, caption)
+
+        if not result.get("ok"):
+            err_str = str(result.get("error", "unknown error"))
+            log.error(f"publish failed: {err_str}")
+            tg.edit_message_buttons(
+                chat_id, message_id,
+                [[{"text": "❌ Pubblicazione fallita", "callback_data": "noop"}]],
+            )
+            err_escaped = html.escape(err_str[:1500])
+            post_id_escaped = html.escape(post_id)
+            r = tg.send_message(
+                f"❌ <b>Pubblicazione fallita</b> per <code>{post_id_escaped}</code>\n\n"
+                f"<code>{err_escaped}</code>",
+                chat_id=chat_id,
+            )
+            if not r.get("ok"):
+                log.warning(f"telegram html send failed: {r}; retrying plain")
+                tg.call("sendMessage", {
+                    "chat_id": chat_id,
+                    "text": f"❌ Pubblicazione fallita per {post_id}\n\n{err_str[:1500]}",
+                })
+            return
+
+        # === Success: persist published state back to repo metadata ===
+        media_id = result.get("media_id", "")
+        permalink = result.get("permalink") or ""
+        try:
+            post["ig_media_id"] = media_id
+            post["ig_permalink"] = permalink
+            post["published_at"] = int(time.time())
+            github_storage.write_post(post_id, post)
+        except Exception as e:
+            log.warning(f"failed to write back published state (non-fatal): {e}")
+
+        if permalink:
+            tg.edit_message_buttons(
+                chat_id, message_id,
+                [[{"text": "✅ Pubblicato — apri post", "url": permalink}]],
+            )
+        else:
+            tg.edit_message_buttons(
+                chat_id, message_id,
+                [[{"text": "✅ Pubblicato", "callback_data": "noop"}]],
+            )
+
+        topic = post.get("topic") or post_id
         tg.send_message(
-            f"⚠️ Approvazione ricevuta per <code>{post_id}</code> ma "
-            "<b>metadata non trovato su GitHub</b>.\n\n"
-            "Probabilmente Claude non ha ancora pushato i file del post. "
-            "Riprova dopo che Claude conferma il push, oppure scrivi qui.",
-            chat_id=chat_id,
+            f"🟢 <b>POST PUBBLICATO</b>\n\n"
+            f"📌 <i>{topic}</i>\n"
+            f"🆔 Media ID: <code>{media_id}</code>\n"
+            f"🔗 <a href=\"{permalink or 'N/D'}\">Apri su Instagram</a>",
+            chat_id=chat_id, disable_preview=False,
         )
-        return
-
-    image_url = post.get("image_url")
-    caption = post.get("caption")
-    if not image_url or not caption:
-        tg.send_message(
-            f"⚠️ Metadata di <code>{post_id}</code> incompleto "
-            f"(manca image_url o caption). Scrivi a Claude.",
-            chat_id=chat_id,
-        )
-        return
-
-    # UI: "publishing..."
-    tg.edit_message_buttons(
-        chat_id, message_id,
-        [[{"text": "⏳ Pubblicazione su Instagram in corso...",
-           "callback_data": "noop"}]],
-    )
-
-    result = publish_image(image_url, caption)
-
-    if not result.get("ok"):
-        err_str = str(result.get("error", "unknown error"))
-        log.error(f"publish failed: {err_str}")
-        tg.edit_message_buttons(
-            chat_id, message_id,
-            [[{"text": "❌ Pubblicazione fallita", "callback_data": "noop"}]],
-        )
-        # First attempt: HTML-escaped detail. Fallback: plain text.
-        err_escaped = html.escape(err_str[:1500])
-        post_id_escaped = html.escape(post_id)
-        r = tg.send_message(
-            f"❌ <b>Pubblicazione fallita</b> per <code>{post_id_escaped}</code>\n\n"
-            f"<code>{err_escaped}</code>",
-            chat_id=chat_id,
-        )
-        if not r.get("ok"):
-            log.warning(f"telegram html send failed: {r}; retrying plain")
-            tg.call("sendMessage", {
-                "chat_id": chat_id,
-                "text": f"❌ Pubblicazione fallita per {post_id}\n\n{err_str[:1500]}",
-            })
-        return
-
-    permalink = result.get("permalink") or ""
-    if permalink:
-        tg.edit_message_buttons(
-            chat_id, message_id,
-            [[{"text": "✅ Pubblicato — apri post", "url": permalink}]],
-        )
-    else:
-        tg.edit_message_buttons(
-            chat_id, message_id,
-            [[{"text": "✅ Pubblicato", "callback_data": "noop"}]],
-        )
-
-    topic = post.get("topic") or post_id
-    tg.send_message(
-        f"🟢 <b>POST PUBBLICATO</b>\n\n"
-        f"📌 <i>{topic}</i>\n"
-        f"🆔 Media ID: <code>{result['media_id']}</code>\n"
-        f"🔗 <a href=\"{permalink or 'N/D'}\">Apri su Instagram</a>",
-        chat_id=chat_id, disable_preview=False,
-    )
+    finally:
+        _release_publish_lock(post_id)
 
 
 def _handle_modify(cb_data: str, chat_id: int, message_id: int) -> None:
@@ -225,7 +321,7 @@ def _handle_text_message(message: dict) -> None:
 
 # === Flask routes ===
 
-VERSION_MARKER = "v14-claude-on-mac-mode"
+VERSION_MARKER = "v15-publish-dedup"
 
 @app.route("/", methods=["GET"])
 def index():
@@ -472,7 +568,18 @@ def webhook():
     msg = cbq.get("message", {})
     chat_id = msg.get("chat", {}).get("id")
     message_id = msg.get("message_id")
-    log.info(f"callback: {cb_data} chat={chat_id} msg={message_id}")
+    log.info(f"callback: {cb_data} chat={chat_id} msg={message_id} cb_id={cb_id}")
+
+    # === Idempotency gate ===
+    # Telegram retries this callback if our webhook took >10s to ACK
+    # (common during Render free-tier cold starts). Dedup by both the
+    # Telegram-assigned callback_query.id AND (chat|msg|data) composite
+    # so we also catch user accidental double-taps.
+    dedup_key = f"{chat_id}|{message_id}|{cb_data}"
+    if _is_duplicate_callback(cb_id, dedup_key):
+        log.warning(f"DUPLICATE callback rejected: cb_id={cb_id} key={dedup_key}")
+        tg.answer_callback(cb_id, "Già processato")
+        return jsonify({"ok": True})
 
     # ACK first so Telegram doesn't retry / user doesn't see spinner
     if cb_data.startswith("approve_"):

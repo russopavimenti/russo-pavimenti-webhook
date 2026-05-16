@@ -118,3 +118,67 @@ def get_post(post_id: str) -> Optional[dict]:
     except json.JSONDecodeError as e:
         log.error(f"invalid JSON in posts/{safe_id}.json: {e}")
         return None
+
+
+def _api_get_sha(path: str) -> str:
+    """Get current SHA of a file (needed to update via Contents API)."""
+    if not GITHUB_TOKEN:
+        return ""
+    url = f"{_API_BASE}/{path}?ref={GITHUB_BRANCH}"
+    req = urllib.request.Request(url, headers={
+        "Authorization": f"Bearer {GITHUB_TOKEN}",
+        "Accept": "application/vnd.github+json",
+        "X-GitHub-Api-Version": "2022-11-28",
+    })
+    try:
+        with urllib.request.urlopen(req, timeout=15) as r:
+            return json.loads(r.read()).get("sha", "")
+    except Exception:
+        return ""
+
+
+def write_post(post_id: str, data: dict) -> bool:
+    """Write/update posts/<post_id>.json via GitHub Contents API.
+    Used by the webhook to persist published media_id/permalink after
+    successful publish — so cold-start retries can detect 'already done'."""
+    if not GITHUB_TOKEN:
+        log.warning("write_post: GITHUB_TOKEN missing, skipping")
+        return False
+    safe_id = post_id.replace("/", "_").replace("..", "_")
+    path = f"posts/{safe_id}.json"
+    body = (json.dumps(data, indent=2, ensure_ascii=False) + "\n").encode("utf-8")
+    sha = _api_get_sha(path)
+    payload = {
+        "message": f"published: {safe_id}",
+        "content": base64.b64encode(body).decode("ascii"),
+        "branch": GITHUB_BRANCH,
+    }
+    if sha:
+        payload["sha"] = sha
+    req = urllib.request.Request(
+        f"{_API_BASE}/{path}",
+        data=json.dumps(payload).encode("utf-8"),
+        method="PUT",
+        headers={
+            "Authorization": f"Bearer {GITHUB_TOKEN}",
+            "Accept": "application/vnd.github+json",
+            "X-GitHub-Api-Version": "2022-11-28",
+            "Content-Type": "application/json",
+        },
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=20) as r:
+            r.read()
+        log.info(f"write_post OK: {path}")
+        return True
+    except HTTPError as e:
+        body = ""
+        try:
+            body = e.read().decode("utf-8", errors="replace")[:300]
+        except Exception:
+            pass
+        log.error(f"write_post {path} HTTP {e.code}: {body}")
+        return False
+    except Exception as e:
+        log.exception(f"write_post {path}: {e}")
+        return False
