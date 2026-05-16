@@ -12,9 +12,17 @@ name: Daily Russo Pavimenti Post
 
 on:
   schedule:
-    - cron: '0 6 * * *'    # morning
-    - cron: '30 10 * * *'  # lunch
-    - cron: '30 15 * * *'  # evening
+    # GitHub Actions scheduled cron is delayed (or skipped) at round-hour
+    # times due to peak load. Use non-round minutes to dramatically reduce
+    # delay risk. Reference: https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule
+    #   Target  ↦  UTC (CEST summer, +2)  ↦  cron
+    #   08:00 IT  → 06:00 UTC, shifted to 05:53 → '53 5 * * *'
+    #   12:30 IT  → 10:30 UTC, shifted to 10:23 → '23 10 * * *'
+    #   17:30 IT  → 15:30 UTC, shifted to 15:23 → '23 15 * * *'
+    # Posts arrive 7 min EARLY vs scheduled time (acceptable; better than 2h late).
+    - cron: '53 5 * * *'   # ~07:53 IT (slot=morning)
+    - cron: '23 10 * * *'  # ~12:23 IT (slot=lunch)
+    - cron: '23 15 * * *'  # ~17:23 IT (slot=evening)
   workflow_dispatch:
     inputs:
       slot:
