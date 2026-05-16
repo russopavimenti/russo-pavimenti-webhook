@@ -1,5 +1,5 @@
 {
-  "next_index": 0,
+  "next_index": 1,
   "history": [
     {
       "post_id": "daily_20260515_morning_top_bagno_calcare",
@@ -12,6 +12,12 @@
       "topic_id": "durata_lucidatura",
       "slot": "morning",
       "at": "2026-05-16T07:48:06.164385+00:00"
+    },
+    {
+      "post_id": "daily_20260516_lunch_marmocemento_opaco",
+      "topic_id": "marmocemento_opaco",
+      "slot": "lunch",
+      "at": "2026-05-16T12:11:50.642679+00:00"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron"
