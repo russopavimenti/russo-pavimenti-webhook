@@ -288,10 +288,27 @@ def main() -> int:
 
     topics = load_topics()
     state = load_state()
+
+    # === Idempotency gate ===
+    # Multiple redundant cron triggers fire per slot (workflow has 3 each)
+    # to compensate for GitHub Actions free-tier delays/skips. Check the
+    # history: if today's UTC date + this slot already produced a post,
+    # exit cleanly so we don't double-generate.
+    today_utc = datetime.now(timezone.utc).strftime("%Y%m%d")
+    history = state.get("history", []) or []
+    for entry in history:
+        post_id_existing = entry.get("post_id", "")
+        if entry.get("slot") == slot and post_id_existing.startswith(f"daily_{today_utc}_{slot}_"):
+            log.info(
+                f"IDEMPOTENT skip: post for {today_utc}+{slot} already exists "
+                f"({post_id_existing}). Exit 0."
+            )
+            return 0
+
     topic = pick_next_topic(topics, state)
     log.info(f"picked topic[{state.get('next_index', 0)}]: {topic['id']} ({topic['topic']})")
 
-    today = datetime.now(timezone.utc).strftime("%Y%m%d")
+    today = today_utc
     post_id = f"daily_{today}_{slot}_{topic['id']}"
 
     # 1. Pick photo from Pexels

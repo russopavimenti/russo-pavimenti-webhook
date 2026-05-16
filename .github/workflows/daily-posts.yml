@@ -12,17 +12,27 @@ name: Daily Russo Pavimenti Post
 
 on:
   schedule:
-    # GitHub Actions scheduled cron is delayed (or skipped) at round-hour
-    # times due to peak load. Use non-round minutes to dramatically reduce
-    # delay risk. Reference: https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule
-    #   Target  ↦  UTC (CEST summer, +2)  ↦  cron
-    #   08:00 IT  → 06:00 UTC, shifted to 05:53 → '53 5 * * *'
-    #   12:30 IT  → 10:30 UTC, shifted to 10:23 → '23 10 * * *'
-    #   17:30 IT  → 15:30 UTC, shifted to 15:23 → '23 15 * * *'
-    # Posts arrive 7 min EARLY vs scheduled time (acceptable; better than 2h late).
-    - cron: '53 5 * * *'   # ~07:53 IT (slot=morning)
-    - cron: '23 10 * * *'  # ~12:23 IT (slot=lunch)
-    - cron: '23 15 * * *'  # ~17:23 IT (slot=evening)
+    # GitHub Actions scheduled cron is wildly unreliable on free tier:
+    # observed 4-hour delays AND complete skips even with non-round minutes.
+    # Strategy: 3 redundant triggers per slot at non-round minutes. The
+    # python script (daily_post_cron.py) is idempotent — if a post for
+    # today+slot already exists in daily_state.json history, it exits.
+    # As long as AT LEAST ONE of the 3 cron attempts per slot fires within
+    # an hour, the post goes out.
+    #
+    # Target (CEST summer, UTC+2):
+    #   08:00 IT  → triggers at 05:53 / 05:57 / 06:01 UTC
+    #   12:30 IT  → triggers at 10:23 / 10:27 / 10:31 UTC
+    #   17:30 IT  → triggers at 15:23 / 15:27 / 15:31 UTC
+    - cron: '53 5 * * *'    # morning attempt 1
+    - cron: '57 5 * * *'    # morning attempt 2
+    - cron: '1 6 * * *'     # morning attempt 3
+    - cron: '23 10 * * *'   # lunch attempt 1
+    - cron: '27 10 * * *'   # lunch attempt 2
+    - cron: '31 10 * * *'   # lunch attempt 3
+    - cron: '23 15 * * *'   # evening attempt 1
+    - cron: '27 15 * * *'   # evening attempt 2
+    - cron: '31 15 * * *'   # evening attempt 3
   workflow_dispatch:
     inputs:
       slot:
