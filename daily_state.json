@@ -1,5 +1,5 @@
 {
-  "next_index": 6,
+  "next_index": 5,
   "history": [
     {
       "post_id": "daily_20260515_morning_top_bagno_calcare",
@@ -42,14 +42,6 @@
       "topic_id": "marmo_bianco_ingiallisce",
       "slot": "evening",
       "at": "2026-05-17T14:44:39.113056+00:00"
-    },
-    {
-      "post_id": "daily_20260517_extra_rivestimenti_verticali",
-      "topic_id": "rivestimenti_verticali",
-      "slot": "extra",
-      "at": "2026-05-17T19:59:39.275512+00:00",
-      "claimed_by_run": "local-1779047978",
-      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron"
