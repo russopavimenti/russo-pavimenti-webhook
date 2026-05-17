@@ -35,7 +35,7 @@ import time
 import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Any, Dict, List
+from typing import Any, Dict, List, Optional
 
 # Make renderer and pexels importable
 HERE = Path(__file__).resolve().parent
@@ -282,34 +282,110 @@ def determine_slot() -> str:
     return "evening"
 
 
+def _slot_already_done(state: Dict[str, Any], today_utc: str, slot: str) -> bool:
+    """True if history already contains an entry for today+slot."""
+    for entry in state.get("history", []) or []:
+        post_id_existing = entry.get("post_id", "")
+        if entry.get("slot") == slot and post_id_existing.startswith(f"daily_{today_utc}_{slot}_"):
+            return True
+    return False
+
+
+def _try_claim_slot(today_utc: str, slot: str, topics: List[Dict[str, Any]],
+                    max_retries: int = 3) -> Optional[Dict[str, Any]]:
+    """Optimistic claim via CAS write on daily_state.json.
+
+    Race scenario this defends against: GH Actions batches the 3 redundant
+    cron triggers and runs them in parallel. All 3 read state simultaneously,
+    all pass the idempotency check, all generate + send preview. Only the
+    first state-commit wins (SHA mismatch) but the previews were already sent.
+
+    Fix: claim the slot BEFORE generating, via SHA-aware CAS write. Only the
+    runner that wins the CAS commit proceeds. Others exit silently with no
+    side effects.
+
+    Returns the claimed (post_id, topic, state) tuple if we won, None if we lost.
+    """
+    import os as _os
+    run_id = _os.environ.get("GITHUB_RUN_ID", f"local-{int(time.time())}")
+
+    for attempt in range(max_retries):
+        state = load_state()
+
+        # Idempotency re-check inside the loop (state may have changed since last attempt)
+        if _slot_already_done(state, today_utc, slot):
+            log.info(f"IDEMPOTENT skip (attempt {attempt+1}): {today_utc}+{slot} already done")
+            return None
+
+        # Pick the topic and build claim entry
+        topic = pick_next_topic(topics, state)
+        post_id = f"daily_{today_utc}_{slot}_{topic['id']}"
+
+        state["next_index"] = (state.get("next_index", 0) + 1) % len(topics)
+        state.setdefault("history", []).append({
+            "post_id": post_id,
+            "topic_id": topic["id"],
+            "slot": slot,
+            "at": datetime.now(timezone.utc).isoformat(),
+            "claimed_by_run": run_id,
+            "status": "claimed",
+        })
+        state["history"] = state["history"][-50:]
+
+        # gh_write does SHA-aware update internally (gets current sha then PUT).
+        # If another runner committed between our read and write, this returns
+        # False (HTTP 409). save_state delegates to gh_write.
+        log.info(f"attempt {attempt+1}: trying to claim {post_id} (run_id={run_id})")
+        try:
+            save_state(state)
+            # Re-read to verify our entry is actually in the committed state
+            # (defensive: gh_write returns success even on rare API hiccups)
+            verify = load_state()
+            our_entry = next(
+                (e for e in verify.get("history", []) if e.get("claimed_by_run") == run_id),
+                None,
+            )
+            if our_entry:
+                log.info(f"CLAIM WON: {post_id} (run_id={run_id})")
+                return {"post_id": post_id, "topic": topic, "state": verify}
+            log.warning(f"attempt {attempt+1}: save returned ok but our entry not visible, race?")
+        except Exception as e:
+            log.warning(f"attempt {attempt+1} claim raised: {e}")
+
+        # Lost the race or partial failure: re-loop, will re-check idempotency
+        # and try to claim with fresh state.
+        time.sleep(1 + attempt)
+
+    log.error(f"all {max_retries} claim attempts exhausted")
+    return None
+
+
 def main() -> int:
     slot = determine_slot()
     log.info(f"=== daily post cron START (slot={slot}) ===")
 
     topics = load_topics()
-    state = load_state()
-
-    # === Idempotency gate ===
-    # Multiple redundant cron triggers fire per slot (workflow has 3 each)
-    # to compensate for GitHub Actions free-tier delays/skips. Check the
-    # history: if today's UTC date + this slot already produced a post,
-    # exit cleanly so we don't double-generate.
     today_utc = datetime.now(timezone.utc).strftime("%Y%m%d")
-    history = state.get("history", []) or []
-    for entry in history:
-        post_id_existing = entry.get("post_id", "")
-        if entry.get("slot") == slot and post_id_existing.startswith(f"daily_{today_utc}_{slot}_"):
-            log.info(
-                f"IDEMPOTENT skip: post for {today_utc}+{slot} already exists "
-                f"({post_id_existing}). Exit 0."
-            )
-            return 0
 
-    topic = pick_next_topic(topics, state)
-    log.info(f"picked topic[{state.get('next_index', 0)}]: {topic['id']} ({topic['topic']})")
+    # Fast-path idempotency check (no work if obviously already done)
+    fast_state = load_state()
+    if _slot_already_done(fast_state, today_utc, slot):
+        log.info(f"IDEMPOTENT skip (fast path): {today_utc}+{slot} already done. Exit 0.")
+        return 0
+
+    # CLAIM the slot via CAS BEFORE generating anything. If we lose the race
+    # to a parallel runner, exit cleanly with NO side effects (no Telegram preview,
+    # no PNG generation, no GitHub commits beyond the failed CAS attempt).
+    claim = _try_claim_slot(today_utc, slot, topics)
+    if claim is None:
+        log.info(f"slot {today_utc}+{slot} could not be claimed (lost race or already done). Exit 0.")
+        return 0
+
+    post_id = claim["post_id"]
+    topic = claim["topic"]
+    log.info(f"proceeding with generation: topic={topic['id']} post_id={post_id}")
 
     today = today_utc
-    post_id = f"daily_{today}_{slot}_{topic['id']}"
 
     # 1. Pick photo from Pexels
     queries = topic.get("pexels_queries") or [topic["topic"]]
@@ -377,16 +453,17 @@ def main() -> int:
     # 6. Send Telegram preview with cache-buster
     tg_send_preview(post_id, image_url + f"?v={int(time.time())}", caption, slot)
 
-    # 7. Advance state
-    state["next_index"] = (state.get("next_index", 0) + 1) % len(topics)
-    state.setdefault("history", []).append({
-        "post_id": post_id,
-        "topic_id": topic["id"],
-        "slot": slot,
-        "at": datetime.now(timezone.utc).isoformat(),
-    })
-    state["history"] = state["history"][-50:]   # keep last 50
-    save_state(state)
+    # 7. Mark claim as 'done' in history (claim was already written by _try_claim_slot)
+    try:
+        final_state = load_state()
+        for entry in final_state.get("history", []):
+            if entry.get("post_id") == post_id and entry.get("status") == "claimed":
+                entry["status"] = "done"
+                entry["completed_at"] = datetime.now(timezone.utc).isoformat()
+                break
+        save_state(final_state)
+    except Exception as e:
+        log.warning(f"final state update failed (non-fatal, post is already live): {e}")
 
     # Cleanup
     for p in (tmp_photo, tmp_out):
