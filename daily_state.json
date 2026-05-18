@@ -1,5 +1,5 @@
 {
-  "next_index": 8,
+  "next_index": 9,
   "history": [
     {
       "post_id": "daily_20260515_morning_top_bagno_calcare",
@@ -69,6 +69,14 @@
       "claimed_by_run": "26032741654",
       "status": "done",
       "completed_at": "2026-05-18T12:13:32.543660+00:00"
+    },
+    {
+      "post_id": "daily_20260518_evening_cemento_lucidato_moderno",
+      "topic_id": "cemento_lucidato_moderno",
+      "slot": "evening",
+      "at": "2026-05-18T16:42:41.347592+00:00",
+      "claimed_by_run": "26047076824",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron"
