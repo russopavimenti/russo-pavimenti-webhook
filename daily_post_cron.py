@@ -33,9 +33,9 @@ import sys
 import tempfile
 import time
 import urllib.request
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List, Optional, Tuple
 
 # Make renderer and pexels importable
 HERE = Path(__file__).resolve().parent
@@ -268,18 +268,52 @@ def tg_send_preview(post_id: str, raw_url: str, caption: str, slot: str) -> None
 
 
 # === Main flow ===
+
+# Canonical slot schedule (UTC). Update during DST transitions.
+# CEST (summer, UTC+2): morning=06:00, lunch=10:30, evening=15:30 UTC
+# CET  (winter, UTC+1): add +1 hour to each
+SLOTS_UTC: List[Tuple[str, int, int]] = [
+    ("morning", 6, 0),    # 08:00 IT CEST
+    ("lunch",   10, 30),  # 12:30 IT CEST
+    ("evening", 15, 30),  # 17:30 IT CEST
+]
+# Grace window: a slot is considered "due" starting `GRACE_MIN` before its time.
+# This allows a cron firing slightly early to still pick up its own slot.
+GRACE_MIN = 5
+
+
 def determine_slot() -> str:
-    """If env DAILY_SLOT not set, derive from current Italy hour."""
+    """Legacy: derive slot from current UTC hour (kept for workflow_dispatch)."""
     if DAILY_SLOT and DAILY_SLOT != "auto":
         return DAILY_SLOT
-    # Italy = UTC+1/+2. Use UTC hour and approximate slot mapping.
     now_utc = datetime.now(timezone.utc)
     h = now_utc.hour
-    if h < 9:    # 06-08 UTC ≈ 08-10 Italy
+    if h < 9:
         return "morning"
-    if h < 13:   # 09-12 UTC ≈ 11-14 Italy
+    if h < 13:
         return "lunch"
     return "evening"
+
+
+def slots_due_today(now_utc: datetime, state: Dict[str, Any]) -> List[str]:
+    """Return ordered list of slot names that are scheduled by now but not yet done.
+
+    A slot is "due" if its scheduled UTC time minus GRACE_MIN is <= now_utc AND
+    there's no history entry for today+slot. Self-healing: any cron run that
+    fires (even hours late) will pick up all scheduled-but-missing slots and
+    process them in chronological order.
+    """
+    today_utc = now_utc.strftime("%Y%m%d")
+    due: List[str] = []
+    for slot_name, h, m in SLOTS_UTC:
+        slot_dt = now_utc.replace(hour=h, minute=m, second=0, microsecond=0)
+        if now_utc + timedelta(minutes=GRACE_MIN) < slot_dt:
+            # Slot is in the future (even with grace) — skip
+            continue
+        if _slot_already_done(state, today_utc, slot_name):
+            continue
+        due.append(slot_name)
+    return due
 
 
 def _slot_already_done(state: Dict[str, Any], today_utc: str, slot: str) -> bool:
@@ -360,32 +394,20 @@ def _try_claim_slot(today_utc: str, slot: str, topics: List[Dict[str, Any]],
     return None
 
 
-def main() -> int:
-    slot = determine_slot()
-    log.info(f"=== daily post cron START (slot={slot}) ===")
+def generate_one_slot(slot: str, today_utc: str, topics: List[Dict[str, Any]]) -> int:
+    """Generate + send preview for a single slot. Returns 0 on success, 1 on error,
+    2 if skipped (idempotent or lost claim race)."""
+    log.info(f"--- processing slot={slot} today={today_utc} ---")
 
-    topics = load_topics()
-    today_utc = datetime.now(timezone.utc).strftime("%Y%m%d")
-
-    # Fast-path idempotency check (no work if obviously already done)
-    fast_state = load_state()
-    if _slot_already_done(fast_state, today_utc, slot):
-        log.info(f"IDEMPOTENT skip (fast path): {today_utc}+{slot} already done. Exit 0.")
-        return 0
-
-    # CLAIM the slot via CAS BEFORE generating anything. If we lose the race
-    # to a parallel runner, exit cleanly with NO side effects (no Telegram preview,
-    # no PNG generation, no GitHub commits beyond the failed CAS attempt).
+    # CLAIM the slot via CAS BEFORE generating anything.
     claim = _try_claim_slot(today_utc, slot, topics)
     if claim is None:
-        log.info(f"slot {today_utc}+{slot} could not be claimed (lost race or already done). Exit 0.")
-        return 0
+        log.info(f"slot {today_utc}+{slot} skipped (race lost or already done)")
+        return 2
 
     post_id = claim["post_id"]
     topic = claim["topic"]
-    log.info(f"proceeding with generation: topic={topic['id']} post_id={post_id}")
-
-    today = today_utc
+    log.info(f"claim won: topic={topic['id']} post_id={post_id}")
 
     # 1. Pick photo from Pexels
     queries = topic.get("pexels_queries") or [topic["topic"]]
@@ -453,7 +475,7 @@ def main() -> int:
     # 6. Send Telegram preview with cache-buster
     tg_send_preview(post_id, image_url + f"?v={int(time.time())}", caption, slot)
 
-    # 7. Mark claim as 'done' in history (claim was already written by _try_claim_slot)
+    # 7. Mark claim as 'done' in history
     try:
         final_state = load_state()
         for entry in final_state.get("history", []):
@@ -472,8 +494,47 @@ def main() -> int:
         except OSError:
             pass
 
-    log.info(f"=== daily cron DONE: {post_id} ===")
+    log.info(f"--- slot {slot} DONE: {post_id} ---")
     return 0
+
+
+def main() -> int:
+    now_utc = datetime.now(timezone.utc)
+    today_utc = now_utc.strftime("%Y%m%d")
+    topics = load_topics()
+
+    # Determine which slot(s) to process:
+    # - workflow_dispatch with explicit slot → just that slot (single)
+    # - schedule trigger → ALL slots that are due today and not yet done
+    #   (self-healing: recovers any slot that got skipped by GH Actions earlier)
+    explicit_slot = (DAILY_SLOT or "").strip()
+    if explicit_slot and explicit_slot != "auto":
+        targets = [explicit_slot]
+        log.info(f"=== daily cron START (explicit slot={explicit_slot}) ===")
+    else:
+        state = load_state()
+        targets = slots_due_today(now_utc, state)
+        log.info(f"=== daily cron START (self-healing, due slots={targets}) ===")
+        if not targets:
+            log.info("no slots due / all already done. Exit 0.")
+            return 0
+
+    overall_rc = 0
+    for slot in targets:
+        try:
+            rc = generate_one_slot(slot, today_utc, topics)
+            if rc == 1:
+                overall_rc = 1
+                # Don't bail; try the remaining slots too
+        except Exception as e:
+            log.exception(f"slot {slot} crashed: {e}")
+            overall_rc = 1
+        # Small delay between slots to space out Telegram messages
+        if len(targets) > 1:
+            time.sleep(2)
+
+    log.info(f"=== daily cron END (rc={overall_rc}) ===")
+    return overall_rc
 
 
 if __name__ == "__main__":

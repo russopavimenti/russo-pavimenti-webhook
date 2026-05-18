@@ -1,46 +1,68 @@
 name: Daily Russo Pavimenti Post
 
-# 3 cron triggers daily — UTC times mapped to Italy local hours.
-# Italy is CEST (UTC+2) in summer, CET (UTC+1) in winter.
-# Current schedule targets CEST (summer). Adjust +1 hour during winter DST.
-#   08:00 IT (CEST) = 06:00 UTC
-#   12:30 IT (CEST) = 10:30 UTC
-#   17:30 IT (CEST) = 15:30 UTC
+# Slot UTC schedule (CEST summer, UTC+2):
+#   08:00 IT = 06:00 UTC  (morning)
+#   12:30 IT = 10:30 UTC  (lunch)
+#   17:30 IT = 15:30 UTC  (evening)
+# Adjust +1h during winter DST (CET, UTC+1).
 #
-# GitHub Actions cron can be delayed by minutes during peak load — this is normal.
-# For exact-time guarantees we'd need a paid scheduler; +/- 15 min is acceptable.
+# GitHub Actions cron on free tier can:
+#   - delay 1-4 hours
+#   - skip individual triggers entirely
+#   - batch parallel triggers
+#
+# Defense:
+#   1) High redundancy: 6 triggers per slot in a 20-min window
+#   2) Safety net: 4 extra triggers spread across the day at non-peak minutes
+#      that catch missed slots via self-healing recovery
+#   3) Python script (daily_post_cron.py) self-heals: any run that fires
+#      checks all slots scheduled-but-not-done today and processes them.
+#      Idempotent + CAS-claim → safe even with parallel triggers.
 
 on:
   schedule:
-    # GitHub Actions scheduled cron is wildly unreliable on free tier:
-    # observed 4-hour delays AND complete skips even with non-round minutes.
-    # Strategy: 3 redundant triggers per slot at non-round minutes. The
-    # python script (daily_post_cron.py) is idempotent — if a post for
-    # today+slot already exists in daily_state.json history, it exits.
-    # As long as AT LEAST ONE of the 3 cron attempts per slot fires within
-    # an hour, the post goes out.
-    #
-    # Target (CEST summer, UTC+2):
-    #   08:00 IT  → triggers at 05:53 / 05:57 / 06:01 UTC
-    #   12:30 IT  → triggers at 10:23 / 10:27 / 10:31 UTC
-    #   17:30 IT  → triggers at 15:23 / 15:27 / 15:31 UTC
-    - cron: '53 5 * * *'    # morning attempt 1
-    - cron: '57 5 * * *'    # morning attempt 2
-    - cron: '1 6 * * *'     # morning attempt 3
-    - cron: '23 10 * * *'   # lunch attempt 1
-    - cron: '27 10 * * *'   # lunch attempt 2
-    - cron: '31 10 * * *'   # lunch attempt 3
-    - cron: '23 15 * * *'   # evening attempt 1
-    - cron: '27 15 * * *'   # evening attempt 2
-    - cron: '31 15 * * *'   # evening attempt 3
+    # Morning window (target 06:00 UTC = 08:00 IT)
+    - cron: '53 5 * * *'
+    - cron: '55 5 * * *'
+    - cron: '57 5 * * *'
+    - cron: '59 5 * * *'
+    - cron: '3 6 * * *'
+    - cron: '7 6 * * *'
+
+    # Lunch window (target 10:30 UTC = 12:30 IT)
+    - cron: '23 10 * * *'
+    - cron: '25 10 * * *'
+    - cron: '27 10 * * *'
+    - cron: '29 10 * * *'
+    - cron: '33 10 * * *'
+    - cron: '37 10 * * *'
+
+    # Evening window (target 15:30 UTC = 17:30 IT)
+    - cron: '23 15 * * *'
+    - cron: '25 15 * * *'
+    - cron: '27 15 * * *'
+    - cron: '29 15 * * *'
+    - cron: '33 15 * * *'
+    - cron: '37 15 * * *'
+
+    # Safety net: 4 catch-all triggers throughout the day.
+    # These fire AFTER each slot window, so they only trigger work if any
+    # of the slot-specific cron runs got skipped by GH Actions. The python
+    # script's self-healing logic figures out what's missing and runs it.
+    - cron: '47 7 * * *'    # ~09:47 IT, after morning window
+    - cron: '17 12 * * *'   # ~14:17 IT, after lunch window
+    - cron: '47 16 * * *'   # ~18:47 IT, after evening window
+    - cron: '17 19 * * *'   # ~21:17 IT, last chance catch-all
+
   workflow_dispatch:
     inputs:
       slot:
-        description: 'Manual slot (morning/lunch/evening)'
+        description: 'Manual slot (morning/lunch/evening/auto)'
         required: false
-        default: 'morning'
+        default: 'auto'
         type: choice
         options:
+          - auto
           - morning
           - lunch
           - evening
@@ -49,7 +71,7 @@ jobs:
   generate-post:
     runs-on: ubuntu-latest
     permissions:
-      contents: write   # needed for daily_post_cron.py to commit posts/<id>.{png,json}
+      contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -67,31 +89,14 @@ jobs:
           pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Determine slot
-        id: slot
-        run: |
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            echo "slot=${{ github.event.inputs.slot }}" >> "$GITHUB_OUTPUT"
-          else
-            HOUR=$(date -u +%H)
-            if [ "$HOUR" -lt 9 ]; then
-              echo "slot=morning" >> "$GITHUB_OUTPUT"
-            elif [ "$HOUR" -lt 13 ]; then
-              echo "slot=lunch" >> "$GITHUB_OUTPUT"
-            else
-              echo "slot=evening" >> "$GITHUB_OUTPUT"
-            fi
-          fi
-          echo "Selected slot: $(cat $GITHUB_OUTPUT)"
-
       - name: Run daily post generator
         env:
-          DAILY_SLOT: ${{ steps.slot.outputs.slot }}
+          # On schedule triggers DAILY_SLOT=auto → self-healing recovery
+          # On workflow_dispatch use the user-selected slot (or 'auto')
+          DAILY_SLOT: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.slot || 'auto' }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
-          # Use the built-in Actions token. Has contents:write thanks to
-          # the `permissions: contents: write` at job level above.
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPO_OWNER: russopavimenti
           GITHUB_REPO_NAME: russo-pavimenti-webhook
