@@ -76,7 +76,8 @@
       "slot": "evening",
       "at": "2026-05-18T16:42:41.347592+00:00",
       "claimed_by_run": "26047076824",
-      "status": "claimed"
+      "status": "done",
+      "completed_at": "2026-05-18T16:42:49.647242+00:00"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron"
