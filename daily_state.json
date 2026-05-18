@@ -1,5 +1,5 @@
 {
-  "next_index": 6,
+  "next_index": 7,
   "history": [
     {
       "post_id": "daily_20260515_morning_top_bagno_calcare",
@@ -51,6 +51,14 @@
       "claimed_by_run": "26001237450",
       "status": "done",
       "completed_at": "2026-05-17T20:02:02.711453+00:00"
+    },
+    {
+      "post_id": "daily_20260518_morning_candeggina_aloni",
+      "topic_id": "candeggina_aloni",
+      "slot": "morning",
+      "at": "2026-05-18T08:29:56.635410+00:00",
+      "claimed_by_run": "26022301342",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron"
