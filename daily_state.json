@@ -1,5 +1,5 @@
 {
-  "next_index": 11,
+  "next_index": 0,
   "history": [
     {
       "post_id": "daily_20260515_morning_top_bagno_calcare",
@@ -92,6 +92,14 @@
       "topic_id": "top_bagno_calcare",
       "slot": "lunch",
       "at": "2026-05-19T16:42:26.305250+00:00",
+      "claimed_by_run": "26111444324",
+      "status": "claimed"
+    },
+    {
+      "post_id": "daily_20260519_evening_durata_lucidatura",
+      "topic_id": "durata_lucidatura",
+      "slot": "evening",
+      "at": "2026-05-19T16:42:32.754441+00:00",
       "claimed_by_run": "26111444324",
       "status": "claimed"
     }
