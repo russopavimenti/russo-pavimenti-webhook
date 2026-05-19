@@ -85,7 +85,8 @@
       "slot": "morning",
       "at": "2026-05-19T16:42:24.665996+00:00",
       "claimed_by_run": "26111444343",
-      "status": "claimed"
+      "status": "done",
+      "completed_at": "2026-05-19T16:42:34.204282+00:00"
     },
     {
       "post_id": "daily_20260519_lunch_top_bagno_calcare",
