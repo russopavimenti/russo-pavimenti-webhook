@@ -131,6 +131,14 @@
       "claimed_by_run": "26175924011",
       "status": "done",
       "completed_at": "2026-05-20T16:34:20.975151+00:00"
+    },
+    {
+      "post_id": "daily_20260520_evening_marmo_post_ristrutturazione",
+      "topic_id": "marmo_post_ristrutturazione",
+      "slot": "evening",
+      "at": "2026-05-20T16:50:10.220053+00:00",
+      "status": "manual_replacement",
+      "note": "Sostituisce daily_20260520_evening_scale_marmo_usura, duplicato byte-identico del post gia' pubblicato il 16/05 (segnalato da Nino). Anteprima inviata, in attesa di approvazione."
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron"
