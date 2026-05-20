@@ -141,5 +141,37 @@
       "note": "Sostituisce daily_20260520_evening_scale_marmo_usura, duplicato byte-identico del post gia' pubblicato il 16/05 (segnalato da Nino). Anteprima inviata, in attesa di approvazione."
     }
   ],
-  "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron"
+  "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
+  "used_topics": {
+    "top_bagno_calcare": "2026-05-15T22:16:00.701418+00:00",
+    "scale_marmo_usura": "2026-05-20T16:34:18.046051+00:00",
+    "top_cucina_acidi": "2026-05-20T16:34:08.529592+00:00",
+    "marmocemento_opaco": "2026-05-20T16:33:58.762340+00:00",
+    "durata_lucidatura": "2026-05-19T16:42:37.352293+00:00",
+    "marmo_bianco_ingiallisce": "2026-05-17T14:44:36.116101+00:00",
+    "cera_vs_lucidatura": "2026-05-17T10:52:19.449491+00:00",
+    "rivestimenti_verticali": "2026-05-17T20:01:59.553445+00:00",
+    "cemento_lucidato_moderno": "2026-05-18T16:42:45.770057+00:00",
+    "marmo_scivoloso": "2026-05-18T12:13:28.993567+00:00",
+    "candeggina_aloni": "2026-05-18T08:30:00.789698+00:00",
+    "marmo_anni60_appartamenti": "2026-05-19T16:42:30.250539+00:00",
+    "marmo_post_ristrutturazione": "2026-05-20T16:50:08.080573+00:00"
+  },
+  "used_photos": {
+    "12329142": "2026-05-15T22:16:00.701418+00:00",
+    "37042958": "2026-05-20T16:34:18.046051+00:00",
+    "7671234": "2026-05-16T14:40:59.269525+00:00",
+    "4977451": "2026-05-16T12:11:48.055069+00:00",
+    "6634155": "2026-05-16T07:48:02.557746+00:00",
+    "7078686": "2026-05-17T14:44:36.116101+00:00",
+    "3847496": "2026-05-17T10:52:19.449491+00:00",
+    "8142054": "2026-05-17T20:01:59.553445+00:00",
+    "29482812": "2026-05-18T16:42:45.770057+00:00",
+    "2102546": "2026-05-18T12:13:28.993567+00:00",
+    "11061219": "2026-05-18T08:30:00.789698+00:00",
+    "4705932": "2026-05-19T16:42:37.352293+00:00",
+    "20489077": "2026-05-19T16:42:30.250539+00:00",
+    "7535035": "2026-05-20T16:34:08.529592+00:00",
+    "1088158": "2026-05-20T16:33:58.762340+00:00"
+  }
 }

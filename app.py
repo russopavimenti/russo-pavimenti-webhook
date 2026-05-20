@@ -22,6 +22,7 @@ import threading
 import time
 from flask import Flask, request, jsonify, abort
 
+import cron_dispatcher
 import github_storage
 import inbox
 import telegram_api as tg
@@ -33,6 +34,10 @@ from config import (
     LOG_DIR,
     ANTHROPIC_API_KEY,
     AGENT_AUTONOMOUS_MODE,
+    GITHUB_REPO_OWNER,
+    GITHUB_REPO_NAME,
+    GITHUB_BRANCH,
+    GITHUB_TOKEN,
 )
 
 # === Logging ===
@@ -336,6 +341,32 @@ def index():
 @app.route("/health", methods=["GET"])
 def health():
     return jsonify({"ok": True})
+
+
+@app.route(f"/cron/tick/{WEBHOOK_PATH_SECRET}", methods=["GET", "POST"])
+def cron_tick():
+    """External cron entrypoint. Pings this endpoint trigger workflow_dispatch
+    if any daily slot is due-but-not-done. Idempotent thanks to in-memory
+    cooldown + CAS claim on the GH Actions side.
+
+    Used as a more reliable scheduler than GH Actions free-tier cron, which
+    sporadically skips entire days. Suggested ping cadence: every 5-10 min
+    from UptimeRobot or cron-job.org.
+    """
+    try:
+        report = cron_dispatcher.tick_once(
+            GITHUB_REPO_OWNER, GITHUB_REPO_NAME, GITHUB_BRANCH, GITHUB_TOKEN,
+        )
+        return jsonify(report)
+    except Exception as e:
+        log.exception(f"/cron/tick error: {e}")
+        return jsonify({"ok": False, "error": str(e)}), 500
+
+
+# Start background dispatcher thread (idempotent)
+cron_dispatcher.start(
+    GITHUB_REPO_OWNER, GITHUB_REPO_NAME, GITHUB_BRANCH, GITHUB_TOKEN,
+)
 
 
 @app.route(f"/debug/{WEBHOOK_PATH_SECRET}/logs", methods=["GET"])

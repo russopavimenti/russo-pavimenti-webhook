@@ -174,41 +174,135 @@ def load_topics() -> List[Dict[str, Any]]:
     return data["topics"]
 
 
+# === Anti-repeat tracking ===
+# Topic considered "fresh" if not used in the last TOPIC_COOLDOWN_DAYS days.
+# Photo considered "fresh" if not used in the last PHOTO_COOLDOWN_DAYS days.
+# Cooldown windows tuned for 3 posts/day; cleanup keeps state.json compact.
+TOPIC_COOLDOWN_DAYS = 21    # avoid repeating a topic for 3 weeks
+PHOTO_COOLDOWN_DAYS = 90    # never repeat a Pexels photo within 3 months
+USED_TOPICS_KEEP_DAYS = 60  # cleanup horizon for state hygiene
+USED_PHOTOS_KEEP_DAYS = 180
+
+
+def _days_ago(iso_str: str) -> int:
+    """Days between iso_str and now (UTC). Returns big number on parse failure."""
+    try:
+        dt = datetime.fromisoformat(iso_str)
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=timezone.utc)
+        delta = datetime.now(timezone.utc) - dt
+        return delta.days
+    except Exception:
+        return 99999
+
+
+def cleanup_used_tracking(state: Dict[str, Any]) -> None:
+    """Drop entries older than the keep horizon from used_topics/used_photos."""
+    for key, max_days in (("used_topics", USED_TOPICS_KEEP_DAYS),
+                          ("used_photos", USED_PHOTOS_KEEP_DAYS)):
+        d = state.get(key) or {}
+        if not isinstance(d, dict):
+            continue
+        stale = [k for k, v in d.items() if _days_ago(str(v)) > max_days]
+        for k in stale:
+            d.pop(k, None)
+        state[key] = d
+
+
 def pick_next_topic(topics: List[Dict[str, Any]], state: Dict[str, Any]) -> Dict[str, Any]:
-    idx = state.get("next_index", 0) % len(topics)
-    return topics[idx]
+    """Anti-repeat topic selection.
+
+    Strategy:
+      1. Filter out topics used within TOPIC_COOLDOWN_DAYS.
+      2. Among fresh ones, pick the one least-recently used (or never used).
+      3. Fallback if pool exhausted: pick globally least-recently used.
+
+    used_topics in state is {topic_id: iso_timestamp_last_used}.
+    """
+    used = state.get("used_topics") or {}
+    # Score each topic by days_since_last_use (huge if never used)
+    def score(t: Dict[str, Any]) -> int:
+        ts = used.get(t["id"])
+        if not ts:
+            return 99999
+        return _days_ago(str(ts))
+
+    fresh = [t for t in topics if score(t) >= TOPIC_COOLDOWN_DAYS]
+    if fresh:
+        # Among fresh, prefer the least-recently used (gives variety)
+        fresh.sort(key=score, reverse=True)
+        return fresh[0]
+
+    # All topics recently used — fall back to least-recently used overall
+    log.warning(f"all {len(topics)} topics used within {TOPIC_COOLDOWN_DAYS}d — "
+                f"falling back to least-recently-used. Add more topics!")
+    return max(topics, key=score)
 
 
 # === Pexels search/download (via API with UA) ===
 PEXELS_UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
 
 
-def pexels_search_first(queries: List[str], limit: int = 8) -> str:
-    """Return the URL of the first usable photo from any of the queries."""
+def pexels_search_first(
+    queries: List[str],
+    limit: int = 15,
+    used_photo_ids: Optional[set] = None,
+) -> Dict[str, Any]:
+    """Pick a fresh photo from Pexels.
+
+    Strategy:
+      - For each query, scan multiple pages (randomized) up to `limit` per page.
+      - Skip any photo whose id is in `used_photo_ids` (long-term dedup).
+      - Returns dict {'url': ..., 'id': ...} or {} if nothing fresh found.
+
+    Returning the id lets the caller persist it to state so it stays blacklisted
+    across future runs (e.g. when the topic recycles after the cooldown).
+    """
     import urllib.parse as up
+    used_photo_ids = used_photo_ids or set()
+    # Randomize page order so we don't always pick the same "top result"
+    # even when used_photo_ids is empty (e.g. early days of the pool).
+    pages = [1, 2, 3]
+    random.shuffle(pages)
+
     for q in queries:
-        url = f"https://api.pexels.com/v1/search?query={up.quote(q)}&per_page={limit}"
-        req = urllib.request.Request(
-            url,
-            headers={
-                "Authorization": PEXELS_API_KEY,
-                "User-Agent": PEXELS_UA,
-                "Accept": "application/json",
-            },
-        )
-        try:
-            with urllib.request.urlopen(req, timeout=15) as r:
-                data = json.loads(r.read())
-        except Exception as e:
-            log.warning(f"pexels query {q!r} failed: {e}")
-            continue
-        for photo in data.get("photos", []):
-            src = photo.get("src", {})
-            u = src.get("large") or src.get("medium") or src.get("original")
-            if u:
-                log.info(f"picked photo id={photo.get('id')} from query={q!r}")
-                return u
-    return ""
+        for page in pages:
+            url = (f"https://api.pexels.com/v1/search?query={up.quote(q)}"
+                   f"&per_page={limit}&page={page}")
+            req = urllib.request.Request(
+                url,
+                headers={
+                    "Authorization": PEXELS_API_KEY,
+                    "User-Agent": PEXELS_UA,
+                    "Accept": "application/json",
+                },
+            )
+            try:
+                with urllib.request.urlopen(req, timeout=15) as r:
+                    data = json.loads(r.read())
+            except Exception as e:
+                log.warning(f"pexels query {q!r} page={page} failed: {e}")
+                continue
+
+            photos = list(data.get("photos", []) or [])
+            # Within a page, shuffle for additional variety
+            random.shuffle(photos)
+
+            for photo in photos:
+                pid = photo.get("id")
+                if pid is None:
+                    continue
+                if str(pid) in used_photo_ids or pid in used_photo_ids:
+                    log.info(f"skip used photo_id={pid}")
+                    continue
+                src = photo.get("src", {})
+                u = src.get("large") or src.get("medium") or src.get("original")
+                if u:
+                    log.info(f"picked photo id={pid} from query={q!r} page={page}")
+                    return {"url": u, "id": pid}
+
+    log.warning("no fresh photo found across all queries/pages (all blacklisted?)")
+    return {}
 
 
 def pexels_download(url: str, dest: str) -> bool:
@@ -409,16 +503,21 @@ def generate_one_slot(slot: str, today_utc: str, topics: List[Dict[str, Any]]) -
     topic = claim["topic"]
     log.info(f"claim won: topic={topic['id']} post_id={post_id}")
 
-    # 1. Pick photo from Pexels
+    # 1. Pick photo from Pexels (with long-term blacklist of used photo_ids)
+    used_photo_ids = set(str(k) for k in (claim.get("state", {}).get("used_photos") or {}).keys())
     queries = topic.get("pexels_queries") or [topic["topic"]]
-    photo_url = pexels_search_first(queries)
-    if not photo_url:
-        log.error("no photo found, abort")
+    photo = pexels_search_first(queries, used_photo_ids=used_photo_ids)
+    if not photo:
+        log.error("no fresh photo found, abort")
         tg_call("sendMessage", {
             "chat_id": TELEGRAM_CHAT_ID,
-            "text": f"⚠️ Daily cron {slot}: nessuna foto trovata per topic {topic['id']!r}. Vado avanti senza generare.",
+            "text": f"⚠️ Daily cron {slot}: nessuna foto NUOVA trovata per topic {topic['id']!r}. "
+                    f"Tutte le foto disponibili sono già state usate negli ultimi {PHOTO_COOLDOWN_DAYS} giorni. "
+                    f"Aggiungi altre query Pexels al topic o estendi il pool.",
         })
         return 1
+    photo_url = photo["url"]
+    photo_id = photo["id"]
 
     # 2. Download photo
     tmp_photo = tempfile.NamedTemporaryFile(suffix=".jpg", delete=False).name
@@ -475,14 +574,21 @@ def generate_one_slot(slot: str, today_utc: str, topics: List[Dict[str, Any]]) -
     # 6. Send Telegram preview with cache-buster
     tg_send_preview(post_id, image_url + f"?v={int(time.time())}", caption, slot)
 
-    # 7. Mark claim as 'done' in history
+    # 7. Mark claim as 'done' + register topic/photo as used (anti-repeat)
     try:
         final_state = load_state()
         for entry in final_state.get("history", []):
             if entry.get("post_id") == post_id and entry.get("status") == "claimed":
                 entry["status"] = "done"
                 entry["completed_at"] = datetime.now(timezone.utc).isoformat()
+                entry["photo_id"] = photo_id
                 break
+        # Register topic+photo as used for anti-repeat
+        now_iso = datetime.now(timezone.utc).isoformat()
+        final_state.setdefault("used_topics", {})[topic["id"]] = now_iso
+        final_state.setdefault("used_photos", {})[str(photo_id)] = now_iso
+        # Cleanup stale entries to keep state.json small
+        cleanup_used_tracking(final_state)
         save_state(final_state)
     except Exception as e:
         log.warning(f"final state update failed (non-fatal, post is already live): {e}")
