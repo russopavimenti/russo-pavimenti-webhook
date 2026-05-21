@@ -1,0 +1,46 @@
+name: Generate Carousel
+
+# One-off / on-demand carousel generation.
+# Runs gen_carousel.py (needs Pexels) then push_carousel.py (commits the
+# slides + sends the Telegram album preview with an approve button).
+# Trigger manually from the Actions tab → "Run workflow".
+
+on:
+  workflow_dispatch:
+
+jobs:
+  carousel:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Generate carousel slides
+        env:
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+        run: python gen_carousel.py
+
+      - name: Commit slides + send Telegram preview
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPO_OWNER: russopavimenti
+          GITHUB_REPO_NAME: russo-pavimenti-webhook
+          GITHUB_BRANCH: main
+        run: python push_carousel.py

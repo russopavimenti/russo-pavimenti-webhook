@@ -29,3 +29,6 @@ logs/
 *.log
 pending_queue.json
 posts_metadata.json
+captions/
+carousel_out/
+.inbox_processed.json

@@ -192,3 +192,124 @@ def publish_image(image_url: str, caption: str, max_wait_seconds: int = 90) -> d
         "media_id": media_id,
         "permalink": permalink,
     }
+
+
+def _make_client():
+    """Init a Composio v3 client. Returns (client, error_str). client is None on error."""
+    if not COMPOSIO_API_KEY:
+        return None, "COMPOSIO_API_KEY missing"
+    try:
+        from composio import Composio
+    except ImportError as e:
+        return None, f"composio SDK not installed: {e}"
+
+    client = None
+    errs = []
+    for kw in (
+        {"api_key": COMPOSIO_API_KEY, "dangerously_skip_version_check": True},
+        {"api_key": COMPOSIO_API_KEY, "skip_version_check": True},
+        {"api_key": COMPOSIO_API_KEY},
+    ):
+        try:
+            client = Composio(**kw)
+            break
+        except Exception as e:
+            errs.append(str(e))
+    if client is None:
+        return None, f"Composio client init failed: {errs}"
+    if not hasattr(client, "tools"):
+        return None, ("Composio client has no .tools attribute — old SDK? "
+                      "Need composio>=0.8 (v3).")
+    return client, ""
+
+
+def publish_carousel(image_urls, caption: str, max_wait_seconds: int = 120) -> dict:
+    """
+    Publish a multi-image Instagram carousel (2-10 images).
+
+    Instagram 3-step carousel flow:
+      1. Create a child media container per image (is_carousel_item=true).
+      2. Create a parent container (media_type=CAROUSEL, children=[ids], caption).
+      3. Publish the parent container.
+
+    Returns: {ok: bool, media_id, permalink, error}
+    """
+    image_urls = list(image_urls or [])
+    if not (2 <= len(image_urls) <= 10):
+        return {"ok": False,
+                "error": f"carousel needs 2-10 images, got {len(image_urls)}"}
+
+    client, err = _make_client()
+    if client is None:
+        return {"ok": False, "error": err}
+
+    # === Step 1: one child container per image ===
+    child_ids = []
+    for i, url in enumerate(image_urls):
+        try:
+            r = _execute(client, "INSTAGRAM_POST_IG_USER_MEDIA", {
+                "ig_user_id": IG_USER_ID,
+                "image_url": url,
+                "is_carousel_item": True,
+            })
+        except Exception as e:
+            log.exception(f"carousel child {i} exception")
+            return {"ok": False, "error": f"child container {i} failed: {e}"}
+        cid = _unwrap_id(r)
+        if not cid:
+            return {"ok": False,
+                    "error": f"child {i}: no container id. raw={r!r:.300}"}
+        child_ids.append(cid)
+        log.info(f"carousel child {i + 1}/{len(image_urls)} container: {cid}")
+
+    # === Step 2: parent carousel container ===
+    try:
+        rp = _execute(client, "INSTAGRAM_POST_IG_USER_MEDIA", {
+            "ig_user_id": IG_USER_ID,
+            "media_type": "CAROUSEL",
+            "children": child_ids,
+            "caption": caption,
+        })
+    except Exception as e:
+        log.exception("carousel parent container exception")
+        return {"ok": False, "error": f"parent carousel container failed: {e}"}
+    parent_id = _unwrap_id(rp)
+    if not parent_id:
+        return {"ok": False,
+                "error": f"no parent carousel container id. raw={rp!r:.300}"}
+    log.info(f"carousel parent container: {parent_id}")
+
+    # === Step 3: publish parent ===
+    try:
+        rpub = _execute(client, "INSTAGRAM_POST_IG_USER_MEDIA_PUBLISH", {
+            "ig_user_id": IG_USER_ID,
+            "creation_id": parent_id,
+            "max_wait_seconds": max_wait_seconds,
+        })
+    except Exception as e:
+        log.exception("carousel publish exception")
+        return {"ok": False, "creation_id": parent_id,
+                "error": f"carousel publish failed: {e}"}
+    media_id = _unwrap_id(rpub)
+    if not media_id:
+        return {"ok": False, "creation_id": parent_id,
+                "error": f"no media_id after publish. raw={rpub!r:.300}"}
+    log.info(f"carousel published: {media_id}")
+
+    # === Step 4: permalink (non-fatal) ===
+    permalink = ""
+    try:
+        r3 = _execute(client, "INSTAGRAM_GET_IG_MEDIA", {
+            "ig_media_id": media_id,
+            "fields": "id,permalink,timestamp",
+        })
+        permalink = _unwrap_permalink(r3)
+    except Exception as e:
+        log.warning(f"permalink fetch failed (non-fatal): {e}")
+
+    return {
+        "ok": True,
+        "creation_id": parent_id,
+        "media_id": media_id,
+        "permalink": permalink,
+    }

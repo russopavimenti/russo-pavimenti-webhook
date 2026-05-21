@@ -26,7 +26,7 @@ import cron_dispatcher
 import github_storage
 import inbox
 import telegram_api as tg
-from publisher import publish_image
+from publisher import publish_image, publish_carousel
 from config import (
     WEBHOOK_PATH_SECRET,
     TELEGRAM_WEBHOOK_SECRET,
@@ -164,24 +164,45 @@ def _handle_approve(cb_data: str, chat_id: int, message_id: int) -> None:
                 )
             return
 
-        image_url = post.get("image_url")
+        is_carousel = (
+            post.get("type") == "carousel" or bool(post.get("image_urls"))
+        )
         caption = post.get("caption")
-        if not image_url or not caption:
-            tg.send_message(
-                f"⚠️ Metadata di <code>{post_id}</code> incompleto "
-                f"(manca image_url o caption). Scrivi a Claude.",
-                chat_id=chat_id,
-            )
-            return
+
+        if is_carousel:
+            image_urls = post.get("image_urls") or []
+            if len(image_urls) < 2 or not caption:
+                tg.send_message(
+                    f"⚠️ Metadata carosello <code>{post_id}</code> incompleto "
+                    f"(servono ≥2 image_urls e una caption). Scrivi a Claude.",
+                    chat_id=chat_id,
+                )
+                return
+        else:
+            image_url = post.get("image_url")
+            if not image_url or not caption:
+                tg.send_message(
+                    f"⚠️ Metadata di <code>{post_id}</code> incompleto "
+                    f"(manca image_url o caption). Scrivi a Claude.",
+                    chat_id=chat_id,
+                )
+                return
 
         # UI: "publishing..."
+        publishing_label = (
+            "⏳ Pubblicazione carosello su Instagram..."
+            if is_carousel else
+            "⏳ Pubblicazione su Instagram in corso..."
+        )
         tg.edit_message_buttons(
             chat_id, message_id,
-            [[{"text": "⏳ Pubblicazione su Instagram in corso...",
-               "callback_data": "noop"}]],
+            [[{"text": publishing_label, "callback_data": "noop"}]],
         )
 
-        result = publish_image(image_url, caption)
+        if is_carousel:
+            result = publish_carousel(image_urls, caption)
+        else:
+            result = publish_image(image_url, caption)
 
         if not result.get("ok"):
             err_str = str(result.get("error", "unknown error"))
@@ -326,7 +347,7 @@ def _handle_text_message(message: dict) -> None:
 
 # === Flask routes ===
 
-VERSION_MARKER = "v15-publish-dedup"
+VERSION_MARKER = "v16-carousel"
 
 @app.route("/", methods=["GET"])
 def index():
