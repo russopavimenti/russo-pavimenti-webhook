@@ -1,5 +1,5 @@
 {
-  "next_index": 6,
+  "next_index": 7,
   "history": [
     {
       "post_id": "daily_20260515_morning_top_bagno_calcare",
@@ -167,6 +167,14 @@
       "status": "done",
       "completed_at": "2026-05-21T16:29:52.103037+00:00",
       "photo_id": 7195721
+    },
+    {
+      "post_id": "daily_20260521_lunch_marmo_ingresso_traffico",
+      "topic_id": "marmo_ingresso_traffico",
+      "slot": "lunch",
+      "at": "2026-05-21T21:16:45.867150+00:00",
+      "claimed_by_run": "26253589702",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -185,7 +193,8 @@
     "marmo_anni60_appartamenti": "2026-05-19T16:42:30.250539+00:00",
     "marmo_post_ristrutturazione": "2026-05-20T16:50:08.080573+00:00",
     "graniglia_palladiana": "2026-05-21T08:38:13.456260+00:00",
-    "lavabo_marmo_macchie": "2026-05-21T16:29:52.103046+00:00"
+    "lavabo_marmo_macchie": "2026-05-21T16:29:52.103046+00:00",
+    "marmo_ingresso_traffico": "2026-05-21T21:16:45.867150+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
