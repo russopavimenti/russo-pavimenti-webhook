@@ -1,5 +1,5 @@
 {
-  "next_index": 5,
+  "next_index": 6,
   "history": [
     {
       "post_id": "daily_20260515_morning_top_bagno_calcare",
@@ -156,6 +156,14 @@
       "slot": "lunch",
       "at": "2026-05-21T16:29:37.922475+00:00",
       "claimed_by_run": "26239096369",
+      "status": "claimed"
+    },
+    {
+      "post_id": "daily_20260521_evening_lavabo_marmo_macchie",
+      "topic_id": "lavabo_marmo_macchie",
+      "slot": "evening",
+      "at": "2026-05-21T16:29:44.302998+00:00",
+      "claimed_by_run": "26239096506",
       "status": "claimed"
     }
   ],
