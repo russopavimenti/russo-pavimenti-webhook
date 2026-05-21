@@ -375,6 +375,13 @@ SLOTS_UTC: List[Tuple[str, int, int]] = [
 # This allows a cron firing slightly early to still pick up its own slot.
 GRACE_MIN = 5
 
+# A 'claimed' history entry older than this many minutes is considered an
+# ORPHAN (the runner that claimed it crashed before finishing). Orphan claims
+# do NOT block a slot — a later run is allowed to re-claim and retry it.
+# 'done'/'manual_replacement' always block; a fresh 'claimed' blocks (a sibling
+# runner is mid-flight); 'failed' never blocks.
+STALE_CLAIM_MIN = 25
+
 
 def determine_slot() -> str:
     """Legacy: derive slot from current UTC hour (kept for workflow_dispatch)."""
@@ -410,13 +417,50 @@ def slots_due_today(now_utc: datetime, state: Dict[str, Any]) -> List[str]:
     return due
 
 
-def _slot_already_done(state: Dict[str, Any], today_utc: str, slot: str) -> bool:
-    """True if history already contains an entry for today+slot."""
+def _entry_age_min(entry: Dict[str, Any]) -> float:
+    """Minutes since the entry was created (field 'at'). Huge on parse failure."""
+    ts = entry.get("at", "")
+    try:
+        dt = datetime.fromisoformat(ts)
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=timezone.utc)
+        return (datetime.now(timezone.utc) - dt).total_seconds() / 60.0
+    except Exception:
+        return 99999.0
+
+
+def _slot_status(state: Dict[str, Any], today_utc: str, slot: str) -> Optional[str]:
+    """Effective status of today+slot, derived from the LATEST matching history
+    entry. Returns one of:
+      'done'          → completed (or manual_replacement); never retry
+      'claimed_fresh' → a sibling runner is mid-flight; do not retry
+      'claimed_stale' → claimer crashed/orphaned; safe to re-claim
+      'failed'        → generation failed before preview; must retry
+      None            → no entry yet for this slot
+    """
+    best: Optional[Dict[str, Any]] = None
     for entry in state.get("history", []) or []:
         post_id_existing = entry.get("post_id", "")
         if entry.get("slot") == slot and post_id_existing.startswith(f"daily_{today_utc}_{slot}_"):
-            return True
-    return False
+            best = entry  # history is append-ordered → keep the latest match
+    if best is None:
+        return None
+    st = (best.get("status") or "done").strip()
+    if st in ("done", "manual_replacement"):
+        return "done"
+    if st == "failed":
+        return "failed"
+    if st == "claimed":
+        return "claimed_stale" if _entry_age_min(best) > STALE_CLAIM_MIN else "claimed_fresh"
+    # Unknown status → treat as done (conservative: don't spam duplicate previews)
+    return "done"
+
+
+def _slot_already_done(state: Dict[str, Any], today_utc: str, slot: str) -> bool:
+    """True if the slot must NOT be (re)processed: either completed, or freshly
+    claimed by a sibling runner still in-flight. Orphaned ('claimed_stale') and
+    'failed' slots return False so they get retried."""
+    return _slot_status(state, today_utc, slot) in ("done", "claimed_fresh")
 
 
 def _try_claim_slot(today_utc: str, slot: str, topics: List[Dict[str, Any]],
@@ -448,17 +492,24 @@ def _try_claim_slot(today_utc: str, slot: str, topics: List[Dict[str, Any]],
         # Pick the topic and build claim entry
         topic = pick_next_topic(topics, state)
         post_id = f"daily_{today_utc}_{slot}_{topic['id']}"
+        now_iso = datetime.now(timezone.utc).isoformat()
 
         state["next_index"] = (state.get("next_index", 0) + 1) % len(topics)
         state.setdefault("history", []).append({
             "post_id": post_id,
             "topic_id": topic["id"],
             "slot": slot,
-            "at": datetime.now(timezone.utc).isoformat(),
+            "at": now_iso,
             "claimed_by_run": run_id,
             "status": "claimed",
         })
         state["history"] = state["history"][-50:]
+        # Burn the topic ATOMICALLY with the claim. Guarantees no other slot in
+        # this run (nor any future run) can pick the same topic — even if
+        # generation later fails. Fixes the lunch+evening duplicate-topic bug
+        # (both picked 'lavabo_marmo_macchie' on 2026-05-21 because the topic
+        # was only registered on the success path, which the lunch never reached).
+        state.setdefault("used_topics", {})[topic["id"]] = now_iso
 
         # gh_write does SHA-aware update internally (gets current sha then PUT).
         # If another runner committed between our read and write, this returns
@@ -475,7 +526,8 @@ def _try_claim_slot(today_utc: str, slot: str, topics: List[Dict[str, Any]],
             )
             if our_entry:
                 log.info(f"CLAIM WON: {post_id} (run_id={run_id})")
-                return {"post_id": post_id, "topic": topic, "state": verify}
+                return {"post_id": post_id, "topic": topic,
+                        "state": verify, "run_id": run_id}
             log.warning(f"attempt {attempt+1}: save returned ok but our entry not visible, race?")
         except Exception as e:
             log.warning(f"attempt {attempt+1} claim raised: {e}")
@@ -488,9 +540,65 @@ def _try_claim_slot(today_utc: str, slot: str, topics: List[Dict[str, Any]],
     return None
 
 
+def _commit_state_mutation(mutate, label: str, max_retries: int = 5) -> bool:
+    """Load state, apply mutate(state) in-place, save with CAS. Retry on conflict.
+
+    gh_write returns False on HTTP 409 (SHA conflict) → another runner committed
+    in between. We reload and retry. This makes state updates robust against the
+    parallel-runner races that previously left entries stuck in 'claimed'.
+    """
+    for attempt in range(max_retries):
+        state = load_state()
+        try:
+            mutate(state)
+        except Exception as e:
+            log.warning(f"state mutation '{label}' callback raised: {e}")
+            return False
+        body = (json.dumps(state, indent=2, ensure_ascii=False) + "\n").encode("utf-8")
+        if gh_write(STATE_FILE_REPO, body, f"daily_state: {label} (try {attempt+1})"):
+            return True
+        log.warning(f"state '{label}' commit try {attempt+1} conflicted, reloading")
+        time.sleep(1 + attempt)
+    log.error(f"state mutation '{label}': all {max_retries} retries exhausted")
+    return False
+
+
+def _set_entry_status(post_id: str, status: str,
+                      extra: Optional[Dict[str, Any]] = None) -> bool:
+    """CAS-retry update of a history entry's status + optional extra fields.
+
+    status='done'   → marks completion; if extra carries photo_id, the photo is
+                      also registered in used_photos (long-term dedup).
+    status='failed' → releases the slot so a later run can retry it. The topic
+                      stays burned (used_topics) so the retry picks a fresh one.
+    """
+    extra = extra or {}
+
+    def mutate(state: Dict[str, Any]) -> None:
+        now_iso = datetime.now(timezone.utc).isoformat()
+        for entry in state.get("history", []):
+            if entry.get("post_id") == post_id:
+                entry["status"] = status
+                entry[f"{status}_at"] = now_iso
+                for k, v in extra.items():
+                    entry[k] = v
+        photo_id = extra.get("photo_id")
+        if status == "done" and photo_id is not None:
+            state.setdefault("used_photos", {})[str(photo_id)] = now_iso
+        cleanup_used_tracking(state)
+
+    return _commit_state_mutation(mutate, f"{status} {post_id}")
+
+
 def generate_one_slot(slot: str, today_utc: str, topics: List[Dict[str, Any]]) -> int:
     """Generate + send preview for a single slot. Returns 0 on success, 1 on error,
-    2 if skipped (idempotent or lost claim race)."""
+    2 if skipped (idempotent or lost claim race).
+
+    On any error BEFORE the Telegram preview is sent, the claimed history entry
+    is flipped to 'failed' so a later self-healing run retries the slot (the
+    burned topic stays burned → the retry picks a fresh one). On success it is
+    flipped to 'done'. A slot therefore never gets stuck silently in 'claimed'.
+    """
     log.info(f"--- processing slot={slot} today={today_utc} ---")
 
     # CLAIM the slot via CAS BEFORE generating anything.
@@ -503,105 +611,108 @@ def generate_one_slot(slot: str, today_utc: str, topics: List[Dict[str, Any]]) -
     topic = claim["topic"]
     log.info(f"claim won: topic={topic['id']} post_id={post_id}")
 
-    # 1. Pick photo from Pexels (with long-term blacklist of used photo_ids)
-    used_photo_ids = set(str(k) for k in (claim.get("state", {}).get("used_photos") or {}).keys())
-    queries = topic.get("pexels_queries") or [topic["topic"]]
-    photo = pexels_search_first(queries, used_photo_ids=used_photo_ids)
-    if not photo:
-        log.error("no fresh photo found, abort")
-        tg_call("sendMessage", {
-            "chat_id": TELEGRAM_CHAT_ID,
-            "text": f"⚠️ Daily cron {slot}: nessuna foto NUOVA trovata per topic {topic['id']!r}. "
-                    f"Tutte le foto disponibili sono già state usate negli ultimi {PHOTO_COOLDOWN_DAYS} giorni. "
-                    f"Aggiungi altre query Pexels al topic o estendi il pool.",
-        })
-        return 1
-    photo_url = photo["url"]
-    photo_id = photo["id"]
-
-    # 2. Download photo
-    tmp_photo = tempfile.NamedTemporaryFile(suffix=".jpg", delete=False).name
-    if not pexels_download(photo_url, tmp_photo):
-        log.error("download failed")
-        return 1
-
-    # 3. Render
-    import renderer
-    tmp_out = tempfile.NamedTemporaryFile(suffix=".png", delete=False).name
-    renderer.render(
-        photo_path=tmp_photo,
-        line1=topic["hook_line1"],
-        line2=topic["hook_line2"],
-        output_path=tmp_out,
-        overlay_alpha=topic.get("overlay_alpha", 0.30),
-        backdrop_intensity=130,
-    )
-
-    # 4. Build caption
-    caption = (
-        topic.get("caption_body", "")
-        + "\n\n"
-        + COMMON_HASHTAGS
-        + " " + topic.get("extra_hashtags", "")
-    )
-
-    # 5. Commit PNG + JSON metadata
-    png_bytes = Path(tmp_out).read_bytes()
-    if not gh_write(f"posts/{post_id}.png", png_bytes, f"daily: {post_id}"):
-        return 1
-
-    image_url = (
-        f"https://raw.githubusercontent.com/"
-        f"{GITHUB_REPO_OWNER}/{GITHUB_REPO_NAME}/{GITHUB_BRANCH}/"
-        f"posts/{post_id}.png"
-    )
-    metadata = {
-        "post_id": post_id,
-        "image_url": image_url,
-        "caption": caption,
-        "topic": topic["topic"],
-        "topic_id": topic["id"],
-        "slot": slot,
-        "hook_line1": topic["hook_line1"],
-        "hook_line2": topic["hook_line2"],
-        "created_at": datetime.now(timezone.utc).isoformat(),
-        "source_photo_url": photo_url,
-    }
-    meta_bytes = (json.dumps(metadata, indent=2, ensure_ascii=False) + "\n").encode("utf-8")
-    if not gh_write(f"posts/{post_id}.json", meta_bytes, f"daily meta: {post_id}"):
-        return 1
-
-    # 6. Send Telegram preview with cache-buster
-    tg_send_preview(post_id, image_url + f"?v={int(time.time())}", caption, slot)
-
-    # 7. Mark claim as 'done' + register topic/photo as used (anti-repeat)
+    tmp_photo = None
+    tmp_out = None
     try:
-        final_state = load_state()
-        for entry in final_state.get("history", []):
-            if entry.get("post_id") == post_id and entry.get("status") == "claimed":
-                entry["status"] = "done"
-                entry["completed_at"] = datetime.now(timezone.utc).isoformat()
-                entry["photo_id"] = photo_id
-                break
-        # Register topic+photo as used for anti-repeat
-        now_iso = datetime.now(timezone.utc).isoformat()
-        final_state.setdefault("used_topics", {})[topic["id"]] = now_iso
-        final_state.setdefault("used_photos", {})[str(photo_id)] = now_iso
-        # Cleanup stale entries to keep state.json small
-        cleanup_used_tracking(final_state)
-        save_state(final_state)
+        # 1. Pick photo from Pexels (with long-term blacklist of used photo_ids)
+        used_photo_ids = set(
+            str(k) for k in (claim.get("state", {}).get("used_photos") or {}).keys()
+        )
+        queries = topic.get("pexels_queries") or [topic["topic"]]
+        photo = pexels_search_first(queries, used_photo_ids=used_photo_ids)
+        if not photo:
+            log.error("no fresh photo found, abort")
+            _set_entry_status(post_id, "failed", {"error": "no_fresh_photo"})
+            tg_call("sendMessage", {
+                "chat_id": TELEGRAM_CHAT_ID,
+                "text": f"⚠️ Daily cron {slot}: nessuna foto NUOVA per topic {topic['id']!r}. "
+                        f"Lo slot verrà ritentato al prossimo ciclo con un altro argomento.",
+            })
+            return 1
+        photo_url = photo["url"]
+        photo_id = photo["id"]
+
+        # 2. Download photo
+        tmp_photo = tempfile.NamedTemporaryFile(suffix=".jpg", delete=False).name
+        if not pexels_download(photo_url, tmp_photo):
+            log.error("download failed")
+            _set_entry_status(post_id, "failed", {"error": "photo_download_failed"})
+            return 1
+
+        # 3. Render
+        import renderer
+        tmp_out = tempfile.NamedTemporaryFile(suffix=".png", delete=False).name
+        renderer.render(
+            photo_path=tmp_photo,
+            line1=topic["hook_line1"],
+            line2=topic["hook_line2"],
+            output_path=tmp_out,
+            overlay_alpha=topic.get("overlay_alpha", 0.30),
+            backdrop_intensity=130,
+        )
+
+        # 4. Build caption
+        caption = (
+            topic.get("caption_body", "")
+            + "\n\n"
+            + COMMON_HASHTAGS
+            + " " + topic.get("extra_hashtags", "")
+        )
+
+        # 5. Commit PNG + JSON metadata
+        png_bytes = Path(tmp_out).read_bytes()
+        if not gh_write(f"posts/{post_id}.png", png_bytes, f"daily: {post_id}"):
+            _set_entry_status(post_id, "failed", {"error": "png_commit_failed"})
+            return 1
+
+        image_url = (
+            f"https://raw.githubusercontent.com/"
+            f"{GITHUB_REPO_OWNER}/{GITHUB_REPO_NAME}/{GITHUB_BRANCH}/"
+            f"posts/{post_id}.png"
+        )
+        metadata = {
+            "post_id": post_id,
+            "image_url": image_url,
+            "caption": caption,
+            "topic": topic["topic"],
+            "topic_id": topic["id"],
+            "slot": slot,
+            "hook_line1": topic["hook_line1"],
+            "hook_line2": topic["hook_line2"],
+            "created_at": datetime.now(timezone.utc).isoformat(),
+            "source_photo_url": photo_url,
+        }
+        meta_bytes = (json.dumps(metadata, indent=2, ensure_ascii=False) + "\n").encode("utf-8")
+        if not gh_write(f"posts/{post_id}.json", meta_bytes, f"daily meta: {post_id}"):
+            _set_entry_status(post_id, "failed", {"error": "json_commit_failed"})
+            return 1
+
+        # 6. Send Telegram preview with cache-buster
+        tg_send_preview(post_id, image_url + f"?v={int(time.time())}", caption, slot)
+
+        # 7. Mark claim 'done' + register photo as used (topic was burned at claim).
+        #    Robust CAS-retry update — a single conflicted write no longer leaves
+        #    the entry stuck in 'claimed'.
+        if not _set_entry_status(post_id, "done", {"photo_id": photo_id}):
+            log.warning("could not flip entry to 'done' after retries — preview "
+                        "WAS sent, slot is effectively complete")
+
+        log.info(f"--- slot {slot} DONE: {post_id} ---")
+        return 0
+
     except Exception as e:
-        log.warning(f"final state update failed (non-fatal, post is already live): {e}")
-
-    # Cleanup
-    for p in (tmp_photo, tmp_out):
-        try:
-            os.unlink(p)
-        except OSError:
-            pass
-
-    log.info(f"--- slot {slot} DONE: {post_id} ---")
-    return 0
+        # Crash before the preview was sent (e.g. renderer error). Release the
+        # slot so a later self-healing run retries it with a fresh topic.
+        log.exception(f"slot {slot} generation crashed: {e}")
+        _set_entry_status(post_id, "failed", {"error": f"exception: {e}"[:200]})
+        return 1
+    finally:
+        for p in (tmp_photo, tmp_out):
+            if p:
+                try:
+                    os.unlink(p)
+                except OSError:
+                    pass
 
 
 def main() -> int:
