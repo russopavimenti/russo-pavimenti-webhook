@@ -1,0 +1,45 @@
+name: Keepalive Render Webhook
+
+# Pings the Render webhook server to keep it warm.
+#
+# Render free tier hibernates after 15 min of inactivity. When hibernated,
+# the cron_dispatcher background thread inside the webhook server is dead,
+# so daily slots never get triggered.
+#
+# This workflow runs cron every 5 minutes — many triggers fire per day,
+# and even with GH Actions free-tier reliability (random skips, delays),
+# enough of them get through to keep Render warm 24/7.
+#
+# Also: this workflow itself fires the /cron/tick endpoint, which means
+# even if the background thread is hibernated, the ping wakes Render AND
+# triggers a slot check in the same shot. Double duty.
+
+on:
+  schedule:
+    # Every 5 minutes. ~288 triggers/day; GH actions usually delivers 60-80%
+    # which is enough since we only need Render warm (not every ping).
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+
+# Cancel an in-progress run if a newer one starts — avoid backlog buildup
+# if GH actions delays triggers and batches them together.
+concurrency:
+  group: keepalive
+  cancel-in-progress: true
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Ping /cron/tick (wakes Render AND checks for due slots)
+        env:
+          WEBHOOK_PATH_SECRET: ${{ secrets.WEBHOOK_PATH_SECRET }}
+        run: |
+          # First-call cold start can take 30-60s; allow ample time.
+          # /cron/tick returns JSON describing whether a workflow was dispatched.
+          # We don't gate on response — best-effort. Failure is fine; next ping
+          # will retry in 5 min.
+          curl -fsS --connect-timeout 60 --max-time 120 \
+            "https://russo-pavimenti-webhook.onrender.com/cron/tick/${WEBHOOK_PATH_SECRET}" \
+            || echo "ping failed, will retry next tick"
