@@ -35,38 +35,42 @@ OUT.mkdir(exist_ok=True)
 
 # --- slide definitions ---
 CAROUSEL_ID = "carousel_lucidatura_step_by_step"
+# All queries are marble/stone-surface oriented. Pexels has no reliable
+# "floor grinding" imagery (it returns quarry trucks etc.), so every slide
+# uses an elegant marble photo as a dark textured backdrop — the step is
+# communicated by the number + title + body, not by a literal process photo.
 SLIDES = [
     {
         "kind": "cover",
         "kicker": "Russo Pavimenti",
         "title1": "I 5 PASSAGGI",
         "title2": "della lucidatura del marmo",
-        "queries": ["polished marble floor luxury", "elegant marble interior"],
+        "queries": ["luxury marble interior", "elegant marble hall", "marble floor luxury"],
     },
     {
         "kind": "step", "number": "1", "title": "Molatura",
         "body": "Si rimuove lo strato superficiale rovinato, eliminando graffi e dislivelli.",
-        "queries": ["floor grinding machine", "concrete floor grinding", "floor restoration work"],
+        "queries": ["grey marble texture", "dark marble background", "raw marble surface"],
     },
     {
         "kind": "step", "number": "2", "title": "Levigatura",
         "body": "Abrasivi a grane sempre più fini rendono la superficie liscia e uniforme.",
-        "queries": ["marble floor restoration", "floor polishing machine", "stone floor work"],
+        "queries": ["marble texture surface", "marble stone background", "white marble texture"],
     },
     {
         "kind": "step", "number": "3", "title": "Lucidatura",
         "body": "La pietra torna a riflettere la luce con la sua brillantezza naturale.",
-        "queries": ["shiny marble floor reflection", "glossy marble floor", "polished stone floor"],
+        "queries": ["shiny marble floor", "polished marble surface", "glossy marble"],
     },
     {
         "kind": "step", "number": "4", "title": "Cristallizzazione",
         "body": "Un trattamento crea uno strato lucido e molto più resistente all'usura.",
-        "queries": ["luxury marble floor shine", "marble texture elegant", "marble surface detail"],
+        "queries": ["luxury marble texture", "elegant marble pattern", "marble background"],
     },
     {
         "kind": "step", "number": "5", "title": "Protezione",
         "body": "Un sigillante finale protegge dalle macchie e mantiene il risultato nel tempo.",
-        "queries": ["clean marble floor home", "modern marble floor", "marble floor living room"],
+        "queries": ["white marble floor interior", "clean marble surface", "marble floor home"],
     },
 ]
 TOTAL_STEPS = "5"
