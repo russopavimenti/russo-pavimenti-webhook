@@ -194,7 +194,9 @@
       "slot": "lunch",
       "at": "2026-05-22T15:59:19.338110+00:00",
       "claimed_by_run": "26298221607",
-      "status": "claimed"
+      "status": "failed",
+      "failed_at": "2026-05-22T15:59:32.030018+00:00",
+      "error": "png_commit_failed"
     },
     {
       "post_id": "daily_20260522_evening_differenza_levigatura_lucidatura",
