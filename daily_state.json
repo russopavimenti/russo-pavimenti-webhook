@@ -1,5 +1,5 @@
 {
-  "next_index": 10,
+  "next_index": 11,
   "history": [
     {
       "post_id": "daily_20260515_morning_top_bagno_calcare",
@@ -207,6 +207,14 @@
       "status": "failed",
       "failed_at": "2026-05-22T15:59:29.167323+00:00",
       "error": "png_commit_failed"
+    },
+    {
+      "post_id": "daily_20260522_evening_macchie_olio_marmo",
+      "topic_id": "macchie_olio_marmo",
+      "slot": "evening",
+      "at": "2026-05-22T15:59:33.378800+00:00",
+      "claimed_by_run": "26298217651",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -229,7 +237,8 @@
     "marmo_ingresso_traffico": "2026-05-21T21:16:45.867150+00:00",
     "marmo_negozi_ristoranti": "2026-05-22T15:59:17.757632+00:00",
     "pavimento_anziani_riflesso": "2026-05-22T15:59:19.338110+00:00",
-    "differenza_levigatura_lucidatura": "2026-05-22T15:59:25.159573+00:00"
+    "differenza_levigatura_lucidatura": "2026-05-22T15:59:25.159573+00:00",
+    "macchie_olio_marmo": "2026-05-22T15:59:33.378800+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
