@@ -1,5 +1,5 @@
 {
-  "next_index": 8,
+  "next_index": 9,
   "history": [
     {
       "post_id": "daily_20260515_morning_top_bagno_calcare",
@@ -185,6 +185,14 @@
       "at": "2026-05-22T15:59:17.757632+00:00",
       "claimed_by_run": "26298217651",
       "status": "claimed"
+    },
+    {
+      "post_id": "daily_20260522_lunch_pavimento_anziani_riflesso",
+      "topic_id": "pavimento_anziani_riflesso",
+      "slot": "lunch",
+      "at": "2026-05-22T15:59:19.338110+00:00",
+      "claimed_by_run": "26298221607",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -205,7 +213,8 @@
     "graniglia_palladiana": "2026-05-21T08:38:13.456260+00:00",
     "lavabo_marmo_macchie": "2026-05-21T16:29:52.103046+00:00",
     "marmo_ingresso_traffico": "2026-05-21T21:16:45.867150+00:00",
-    "marmo_negozi_ristoranti": "2026-05-22T15:59:17.757632+00:00"
+    "marmo_negozi_ristoranti": "2026-05-22T15:59:17.757632+00:00",
+    "pavimento_anziani_riflesso": "2026-05-22T15:59:19.338110+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
