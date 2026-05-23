@@ -14,12 +14,22 @@ from config import COMPOSIO_API_KEY, IG_USER_ID, COMPOSIO_ENTITY_ID
 log = logging.getLogger("publisher")
 
 
+class ComposioVercelBlockError(RuntimeError):
+    """Composio backend returned a Vercel Security Checkpoint HTML page
+    instead of JSON. This happens post the May-2026 Composio security
+    incident — the WAF challenges API calls. Renders into a short,
+    actionable message rather than a 100KB HTML dump."""
+
+
 def _execute(client, slug: str, arguments: dict) -> dict:
     """Execute a Composio tool via v3 SDK.
 
     Tries several signatures because the v3 SDK is rapidly evolving:
       a) tools.execute(slug, arguments, user_id, dangerously_skip_version_check)
       b) tools.execute(slug, arguments, user_id)  — relies on client-level skip
+
+    Wraps Composio Vercel WAF responses (huge HTML dumps) into a small
+    actionable exception so they don't leak into user-facing Telegram messages.
     """
     last_err = None
     for kwargs in (
@@ -35,6 +45,16 @@ def _execute(client, slug: str, arguments: dict) -> dict:
             # signature mismatch — try next variant
             last_err = e
             continue
+        except Exception as e:
+            msg = str(e)
+            if "Vercel Security Checkpoint" in msg or "data-astro-cid" in msg:
+                raise ComposioVercelBlockError(
+                    "Composio API bloccata dal WAF Vercel (incidente di "
+                    "sicurezza Composio del 21/05/2026). Soluzione: ruota la "
+                    "Composio API key su https://app.composio.dev/settings + "
+                    "aggiorna COMPOSIO_API_KEY su Render."
+                ) from e
+            raise
     raise RuntimeError(f"all execute signatures failed; last: {last_err}")
 
 
