@@ -1,5 +1,5 @@
 {
-  "next_index": 17,
+  "next_index": 18,
   "history": [
     {
       "post_id": "daily_20260515_morning_top_bagno_calcare",
@@ -276,6 +276,14 @@
       "status": "done",
       "done_at": "2026-05-24T08:04:43.523201+00:00",
       "photo_id": 5691474
+    },
+    {
+      "post_id": "daily_20260524_lunch_pavimento_anziano_sicurezza",
+      "topic_id": "pavimento_anziano_sicurezza",
+      "slot": "lunch",
+      "at": "2026-05-24T10:25:25.093927+00:00",
+      "claimed_by_run": "26358711764",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -305,7 +313,8 @@
     "alcamo_storia_marmo": "2026-05-23T09:53:16.588248+00:00",
     "preventivo_trasparente": "2026-05-23T15:25:23.710316+00:00",
     "marmo_terrazzo_esterno": "2026-05-24T05:55:40.028125+00:00",
-    "graffi_profondi_marmo": "2026-05-24T08:04:35.599558+00:00"
+    "graffi_profondi_marmo": "2026-05-24T08:04:35.599558+00:00",
+    "pavimento_anziano_sicurezza": "2026-05-24T10:25:25.093927+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
