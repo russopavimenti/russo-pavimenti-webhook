@@ -1,5 +1,5 @@
 {
-  "next_index": 18,
+  "next_index": 19,
   "history": [
     {
       "post_id": "daily_20260515_morning_top_bagno_calcare",
@@ -286,6 +286,14 @@
       "status": "done",
       "done_at": "2026-05-24T10:25:31.420952+00:00",
       "photo_id": 8871427
+    },
+    {
+      "post_id": "daily_20260524_evening_vino_macchie",
+      "topic_id": "vino_macchie",
+      "slot": "evening",
+      "at": "2026-05-24T15:26:19.175233+00:00",
+      "claimed_by_run": "26365194829",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -316,7 +324,8 @@
     "preventivo_trasparente": "2026-05-23T15:25:23.710316+00:00",
     "marmo_terrazzo_esterno": "2026-05-24T05:55:40.028125+00:00",
     "graffi_profondi_marmo": "2026-05-24T08:04:35.599558+00:00",
-    "pavimento_anziano_sicurezza": "2026-05-24T10:25:25.093927+00:00"
+    "pavimento_anziano_sicurezza": "2026-05-24T10:25:25.093927+00:00",
+    "vino_macchie": "2026-05-24T15:26:19.175233+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
