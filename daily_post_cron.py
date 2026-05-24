@@ -162,9 +162,11 @@ def load_state() -> Dict[str, Any]:
         return {"next_index": 0, "history": []}
 
 
-def save_state(state: Dict[str, Any]) -> None:
+def save_state(state: Dict[str, Any]) -> bool:
+    """Persist state via SHA-aware CAS write. Returns True on success, False on
+    conflict (HTTP 409) or other write failure."""
     body = (json.dumps(state, indent=2, ensure_ascii=False) + "\n").encode("utf-8")
-    gh_write(STATE_FILE_REPO, body, f"daily_state: bump to index {state.get('next_index')}")
+    return gh_write(STATE_FILE_REPO, body, f"daily_state: bump to index {state.get('next_index')}")
 
 
 # === Topics loading ===
@@ -512,23 +514,46 @@ def _try_claim_slot(today_utc: str, slot: str, topics: List[Dict[str, Any]],
         state.setdefault("used_topics", {})[topic["id"]] = now_iso
 
         # gh_write does SHA-aware update internally (gets current sha then PUT).
-        # If another runner committed between our read and write, this returns
-        # False (HTTP 409). save_state delegates to gh_write.
+        # If another runner committed between our read and write, gh_write
+        # returns False (HTTP 409). save_state now propagates that bool.
         log.info(f"attempt {attempt+1}: trying to claim {post_id} (run_id={run_id})")
         try:
-            save_state(state)
-            # Re-read to verify our entry is actually in the committed state
-            # (defensive: gh_write returns success even on rare API hiccups)
-            verify = load_state()
-            our_entry = next(
-                (e for e in verify.get("history", []) if e.get("claimed_by_run") == run_id),
-                None,
-            )
+            saved = save_state(state)
+            if not saved:
+                # 409 conflict or write failure → another runner won the CAS race.
+                log.info(f"attempt {attempt+1}: save_state returned False (conflict), retrying")
+                time.sleep(1 + attempt)
+                continue
+
+            # save returned True → our PUT succeeded. Verify with retry+backoff
+            # because GitHub Contents API has eventual consistency between write
+            # and immediate read (observed 24/5/2026: write succeeded but immediate
+            # reread missed it, causing the claim to be wrongly abandoned).
+            our_entry = None
+            for retry in range(4):
+                time.sleep(0.4 + 0.3 * retry)  # 0.4, 0.7, 1.0, 1.3 s
+                verify = load_state()
+                our_entry = next(
+                    (e for e in verify.get("history", [])
+                     if e.get("claimed_by_run") == run_id),
+                    None,
+                )
+                if our_entry:
+                    break
+
             if our_entry:
                 log.info(f"CLAIM WON: {post_id} (run_id={run_id})")
                 return {"post_id": post_id, "topic": topic,
                         "state": verify, "run_id": run_id}
-            log.warning(f"attempt {attempt+1}: save returned ok but our entry not visible, race?")
+
+            # save was True but reread never confirmed. Trust the write: SHA-based
+            # CAS guarantees the write only succeeds if no concurrent modification,
+            # so our entry IS persisted — the reread just hit a stale replica.
+            # Proceed optimistically with our local in-memory state.
+            log.warning(f"save ok but reread didn't confirm after retries — "
+                        f"trusting gh_write (eventual consistency); proceeding with claim")
+            return {"post_id": post_id, "topic": topic,
+                    "state": state, "run_id": run_id}
         except Exception as e:
             log.warning(f"attempt {attempt+1} claim raised: {e}")
 
