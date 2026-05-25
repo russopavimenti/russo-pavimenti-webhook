@@ -1,5 +1,5 @@
 {
-  "next_index": 21,
+  "next_index": 22,
   "history": [
     {
       "post_id": "daily_20260515_morning_top_bagno_calcare",
@@ -317,6 +317,14 @@
       "status": "done",
       "done_at": "2026-05-25T07:18:00.500212+00:00",
       "photo_id": 28575436
+    },
+    {
+      "post_id": "daily_20260525_lunch_marmo_chiesa_storico",
+      "topic_id": "marmo_chiesa_storico",
+      "slot": "lunch",
+      "at": "2026-05-25T10:26:14.902293+00:00",
+      "claimed_by_run": "26395747244",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -350,7 +358,8 @@
     "pavimento_anziano_sicurezza": "2026-05-24T10:25:25.093927+00:00",
     "vino_macchie": "2026-05-24T15:26:19.175233+00:00",
     "marmo_camino": "2026-05-25T05:56:07.495953+00:00",
-    "marmo_pre_vendita": "2026-05-25T07:17:53.254375+00:00"
+    "marmo_pre_vendita": "2026-05-25T07:17:53.254375+00:00",
+    "marmo_chiesa_storico": "2026-05-25T10:26:14.902293+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
