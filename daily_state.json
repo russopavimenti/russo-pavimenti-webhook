@@ -1,5 +1,5 @@
 {
-  "next_index": 22,
+  "next_index": 23,
   "history": [
     {
       "post_id": "daily_20260515_morning_top_bagno_calcare",
@@ -327,11 +327,19 @@
       "status": "done",
       "done_at": "2026-05-25T10:26:24.498115+00:00",
       "photo_id": 30099383
+    },
+    {
+      "post_id": "daily_20260525_evening_top_bagno_calcare",
+      "topic_id": "top_bagno_calcare",
+      "slot": "evening",
+      "at": "2026-05-25T15:25:50.999097+00:00",
+      "claimed_by_run": "26407851980",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
   "used_topics": {
-    "top_bagno_calcare": "2026-05-15T22:16:00.701418+00:00",
+    "top_bagno_calcare": "2026-05-25T15:25:50.999097+00:00",
     "scale_marmo_usura": "2026-05-20T16:34:18.046051+00:00",
     "top_cucina_acidi": "2026-05-20T16:34:08.529592+00:00",
     "marmocemento_opaco": "2026-05-20T16:33:58.762340+00:00",
