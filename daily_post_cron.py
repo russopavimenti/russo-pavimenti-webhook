@@ -75,9 +75,17 @@ DAILY_SLOT = os.environ.get("DAILY_SLOT", "auto")  # morning / lunch / evening /
 TOPICS_FILE = HERE / "daily_topics.json"
 STATE_FILE_REPO = "daily_state.json"   # committed to repo so all cron jobs share state
 COMMON_HASHTAGS = (
+    # Brand + servizi
     "#russopavimenti #lucidaturamarmo #levigaturamarmo "
     "#restauromarmo #marmocemento #pavimentiinmarmo "
-    "#alcamo #trapani #palermo #sicilia"
+    # Provincia di Trapani — Alcamo (base) + comuni vicini + città principali
+    "#alcamo #castellammaredelgolfo #calatafimi #trapani "
+    "#erice #valderice #marsala #salemi "
+    # Provincia di Palermo — comuni al confine + città principali
+    "#partinico #balestrate #monreale #carini "
+    "#cinisi #terrasini #bagheria #palermo "
+    # Regione
+    "#sicilia"
 )
 
 
