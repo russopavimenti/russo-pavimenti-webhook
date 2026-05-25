@@ -8,8 +8,12 @@
     {
       "id": "marmocemento_opaco",
       "topic": "Marmocemento siciliano opaco (graniglia anni '60)",
-      "pexels_queries": ["italian terrazzo floor", "old marble cement floor", "vintage terrazzo"],
-      "overlay_alpha": 0.30,
+      "pexels_queries": [
+        "italian terrazzo floor",
+        "old marble cement floor",
+        "vintage terrazzo"
+      ],
+      "overlay_alpha": 0.3,
       "hook_line1": "Il marmocemento siciliano",
       "hook_line2": "non si butta. Si risveglia.",
       "caption_body": "✨ Il marmocemento siciliano non passa di moda. Si addormenta.\n\n🪨 La graniglia degli anni '60 — quella che trovi nelle case di nonna, nei palazzi storici di Alcamo, Trapani, Palermo — è uno dei materiali più nobili che esistano. Pezzi di marmo veri legati nel cemento, levigati a mano dai vecchi maestri.\n\n💔 Il problema: opaca, ingiallita, graffiata, sembra da buttare.\n\n💡 Ma sotto quello strato di tempo c'è ancora il marmo originale. Una levigatura mirata + lucidatura cristallina riporta a vita anche pavimenti di 60 anni fa.\n\n❤️ Sopralluogo gratuito in tutta la Sicilia occidentale.\n📞 +39 339 7919513\n🌐 russopavimenti.com\n\n#MarmocementoSiciliano #Graniglia #Palladiana #PavimentiStorici #RestauroGraniglia",
@@ -18,7 +22,11 @@
     {
       "id": "top_cucina_acidi",
       "topic": "Top cucina rovinato da limone, aceto, agrumi",
-      "pexels_queries": ["white marble kitchen counter", "marble kitchen worktop", "lemon on marble"],
+      "pexels_queries": [
+        "white marble kitchen counter",
+        "marble kitchen worktop",
+        "lemon on marble"
+      ],
       "overlay_alpha": 0.32,
       "hook_line1": "Un limone è bastato",
       "hook_line2": "a opacizzare il tuo top.",
@@ -28,7 +36,11 @@
     {
       "id": "scale_marmo_usura",
       "topic": "Scale in marmo: usura sui gradini",
-      "pexels_queries": ["marble staircase", "stone stairs interior", "marble stair vintage"],
+      "pexels_queries": [
+        "marble staircase",
+        "stone stairs interior",
+        "marble stair vintage"
+      ],
       "overlay_alpha": 0.35,
       "hook_line1": "I gradini in marmo",
       "hook_line2": "raccontano chi passa.",
@@ -38,7 +50,11 @@
     {
       "id": "cera_vs_lucidatura",
       "topic": "Differenza marmo cerato vs lucidato cristallino",
-      "pexels_queries": ["polished marble shine", "wax marble floor", "marble reflection floor"],
+      "pexels_queries": [
+        "polished marble shine",
+        "wax marble floor",
+        "marble reflection floor"
+      ],
       "overlay_alpha": 0.28,
       "hook_line1": "La cera nasconde.",
       "hook_line2": "La lucidatura rivela.",
@@ -48,7 +64,11 @@
     {
       "id": "marmo_bianco_ingiallisce",
       "topic": "Pavimento bianco che ingiallisce",
-      "pexels_queries": ["white marble floor", "yellow marble tile", "vintage marble flooring"],
+      "pexels_queries": [
+        "white marble floor",
+        "yellow marble tile",
+        "vintage marble flooring"
+      ],
       "overlay_alpha": 0.25,
       "hook_line1": "Il bianco non era così.",
       "hook_line2": "È diventato giallo.",
@@ -58,7 +78,11 @@
     {
       "id": "rivestimenti_verticali",
       "topic": "Rivestimenti verticali in marmo: come trattarli",
-      "pexels_queries": ["marble wall bathroom", "marble cladding wall", "stone wall interior"],
+      "pexels_queries": [
+        "marble wall bathroom",
+        "marble cladding wall",
+        "stone wall interior"
+      ],
       "overlay_alpha": 0.32,
       "hook_line1": "Il marmo verticale",
       "hook_line2": "soffre quanto il pavimento.",
@@ -68,8 +92,12 @@
     {
       "id": "candeggina_aloni",
       "topic": "Aloni di candeggina sul marmo",
-      "pexels_queries": ["marble floor stain", "damaged marble surface", "white marble close up"],
-      "overlay_alpha": 0.30,
+      "pexels_queries": [
+        "marble floor stain",
+        "damaged marble surface",
+        "white marble close up"
+      ],
+      "overlay_alpha": 0.3,
       "hook_line1": "La candeggina",
       "hook_line2": "non è amica del marmo.",
       "caption_body": "🚫 ATTENZIONE: la candeggina sul marmo crea aloni biancastri permanenti.\n\nMolti la usano credendo di disinfettare meglio. Il marmo è una pietra calcarea, la candeggina è basica e ossidante — la reazione chimica corrode lo strato superficiale lasciando macchie più chiare del marmo stesso.\n\n💡 Cosa fare se è già successo:\n1. Niente panico, NON è permanente\n2. Una levigatura mirata sull'area asporta lo strato compromesso\n3. La lucidatura ripristina la finitura originale uniforme\n\n✅ Per pulire il marmo in sicurezza: solo detergenti neutri pH ~7, mai aceto, mai candeggina, mai limone.\n\n❤️ Sopralluogo gratuito.\n📞 +39 339 7919513\n🌐 russopavimenti.com\n\n#PuliziaMarmo #ErroriPulizia #AloniMarmo #ConsigliMarmo",
@@ -78,7 +106,11 @@
     {
       "id": "marmo_scivoloso",
       "topic": "Marmo scivoloso = pericolo (anziani, bambini, casa al mare)",
-      "pexels_queries": ["polished marble floor reflection", "marble floor home", "glossy stone floor"],
+      "pexels_queries": [
+        "polished marble floor reflection",
+        "marble floor home",
+        "glossy stone floor"
+      ],
       "overlay_alpha": 0.32,
       "hook_line1": "Lucido è bello.",
       "hook_line2": "Scivoloso è pericolo.",
@@ -88,7 +120,11 @@
     {
       "id": "cemento_lucidato_moderno",
       "topic": "Cemento lucidato come alternativa moderna",
-      "pexels_queries": ["polished concrete floor", "modern concrete interior", "industrial concrete floor"],
+      "pexels_queries": [
+        "polished concrete floor",
+        "modern concrete interior",
+        "industrial concrete floor"
+      ],
       "overlay_alpha": 0.35,
       "hook_line1": "Il cemento può essere",
       "hook_line2": "più bello del marmo.",
@@ -98,7 +134,11 @@
     {
       "id": "marmo_anni60_appartamenti",
       "topic": "Marmo anni '60-'70 nei vecchi appartamenti",
-      "pexels_queries": ["vintage italian home interior", "old apartment marble", "1970s apartment"],
+      "pexels_queries": [
+        "vintage italian home interior",
+        "old apartment marble",
+        "1970s apartment"
+      ],
       "overlay_alpha": 0.32,
       "hook_line1": "I pavimenti dei nonni",
       "hook_line2": "valgono più dei nuovi.",
@@ -108,7 +148,13 @@
     {
       "id": "top_bagno_calcare",
       "topic": "Top bagno con calcare incrostato (marmo giallo)",
-      "pexels_queries": ["yellow marble bathroom", "siena marble vanity", "golden marble countertop", "amber marble sink", "yellow stone bathroom counter"],
+      "pexels_queries": [
+        "yellow marble bathroom",
+        "siena marble vanity",
+        "golden marble countertop",
+        "amber marble sink",
+        "yellow stone bathroom counter"
+      ],
       "overlay_alpha": 0.28,
       "hook_line1": "Il calcare sul marmo",
       "hook_line2": "non se ne va con lo straccio.",
@@ -118,8 +164,12 @@
     {
       "id": "durata_lucidatura",
       "topic": "Quanto dura una lucidatura professionale",
-      "pexels_queries": ["polished marble close up", "shiny marble floor reflection", "marble luxury home"],
-      "overlay_alpha": 0.30,
+      "pexels_queries": [
+        "polished marble close up",
+        "shiny marble floor reflection",
+        "marble luxury home"
+      ],
+      "overlay_alpha": 0.3,
       "hook_line1": "Una lucidatura fatta bene",
       "hook_line2": "dura più di 10 anni.",
       "caption_body": "❓ \"Tra quanto dovrò rifarla?\" — è la domanda più frequente.\n\n📅 Una lucidatura cristallina professionale dura:\n- 5-7 anni in case con traffico medio\n- 10+ anni in case con traffico basso\n- 2-3 anni in negozi/ristoranti ad alto traffico (poi solo rinfresco, non re-levigatura)\n\n✨ Differenza con cera (che dura mesi):\nLa cristallizzazione non è un \"prodotto sopra\" — è una reazione chimica che indurisce e rende riflettente lo strato superficiale del marmo stesso. Il marmo torna a essere intrinsecamente lucido.\n\n💡 Per allungare la durata:\n- Solo detergenti neutri\n- Mai aceto/limone/candeggina\n- Tappetini all'ingresso (sabbia → graffi)\n- Pulizia regolare (no sporco accumulato)\n\n❤️ Sopralluogo gratuito.\n📞 +39 339 7919513\n🌐 russopavimenti.com\n\n#DurataLucidatura #ManutenzioneMarmo #InvestimentoCasa #LucidaturaProfessionale",
@@ -128,8 +178,13 @@
     {
       "id": "graniglia_palladiana",
       "topic": "Pavimento in palladiana siciliana",
-      "pexels_queries": ["palladiana floor", "venetian terrazzo floor", "stone chip floor", "italian patchwork floor"],
-      "overlay_alpha": 0.30,
+      "pexels_queries": [
+        "palladiana floor",
+        "venetian terrazzo floor",
+        "stone chip floor",
+        "italian patchwork floor"
+      ],
+      "overlay_alpha": 0.3,
       "hook_line1": "La palladiana siciliana",
       "hook_line2": "è un mosaico di marmo vero.",
       "caption_body": "🎨 Hai notato quei pavimenti coi pezzi di marmo grandi e irregolari come puzzle? È la palladiana — uno dei pavimenti più ricercati al mondo.\n\n🪨 Vero marmo (Botticino, Rosso Verona, Bianco Carrara) tagliato in scaglie e annegato nel cemento, levigato e lucidato a mano.\n\n💔 Si trovano sotto cere, vernici, sporco. Spesso strappate per metter su gres economico.\n\n💡 Mai distruggere una palladiana. Ha valore artistico e di mercato altissimo. Una sola lucidatura cristallina la riporta come nuova.\n\n❤️ Sopralluogo gratuito.\n📞 +39 339 7919513\n🌐 russopavimenti.com\n\n#Palladiana #PavimentiVintage #MarmoSiciliano #PatchworkMarmo",
@@ -138,7 +193,12 @@
     {
       "id": "lavabo_marmo_macchie",
       "topic": "Lavabo in marmo macchiato",
-      "pexels_queries": ["marble sink bathroom", "stone basin", "marble washbasin", "natural stone sink"],
+      "pexels_queries": [
+        "marble sink bathroom",
+        "stone basin",
+        "marble washbasin",
+        "natural stone sink"
+      ],
       "overlay_alpha": 0.28,
       "hook_line1": "Il lavabo in marmo",
       "hook_line2": "è bello ma fragile.",
@@ -148,8 +208,13 @@
     {
       "id": "marmo_ingresso_traffico",
       "topic": "Marmo dell'ingresso/atrio: il punto più sofferente",
-      "pexels_queries": ["entrance hall marble", "foyer floor", "lobby marble", "marble entryway"],
-      "overlay_alpha": 0.30,
+      "pexels_queries": [
+        "entrance hall marble",
+        "foyer floor",
+        "lobby marble",
+        "marble entryway"
+      ],
+      "overlay_alpha": 0.3,
       "hook_line1": "L'ingresso è il punto",
       "hook_line2": "dove il marmo soffre di più.",
       "caption_body": "🚪 Ogni persona che entra in casa porta con sé granelli di sabbia, polvere, terra, calcio dell'asfalto. Tutto questo finisce sul marmo dell'ingresso.\n\n⚠️ Risultato: l'ingresso è SEMPRE il punto più opaco, più graffiato, più segnato della casa. Anche se tutto il resto è perfetto.\n\n💡 Cosa fare:\n- Tappetino di buona qualità (raccoglie >60% dei detriti)\n- Pulizia regolare per togliere sabbia\n- Levigatura+lucidatura ogni 5-7 anni per ripristinare la finitura\n\n✨ Spesso facciamo \"lucidatura parziale\" solo nell'ingresso ad un costo molto contenuto, e il resto della casa segue solo quando serve.\n\n❤️ Sopralluogo gratuito.\n📞 +39 339 7919513\n🌐 russopavimenti.com\n\n#IngressoCasa #AtriarFloor #MarmoIngresso",
@@ -158,7 +223,12 @@
     {
       "id": "marmo_negozi_ristoranti",
       "topic": "Lucidatura marmo per negozi, bar, ristoranti",
-      "pexels_queries": ["restaurant marble floor", "luxury hotel lobby", "boutique store interior", "marble bar counter"],
+      "pexels_queries": [
+        "restaurant marble floor",
+        "luxury hotel lobby",
+        "boutique store interior",
+        "marble bar counter"
+      ],
       "overlay_alpha": 0.32,
       "hook_line1": "Un pavimento perfetto",
       "hook_line2": "fa parlare il tuo locale.",
@@ -168,7 +238,12 @@
     {
       "id": "pavimento_anziani_riflesso",
       "topic": "Marmo lucido riflette luce naturale, ridà valore alla casa",
-      "pexels_queries": ["sunlit marble floor", "bright living room", "luxury home interior light", "elegant marble entrance"],
+      "pexels_queries": [
+        "sunlit marble floor",
+        "bright living room",
+        "luxury home interior light",
+        "elegant marble entrance"
+      ],
       "overlay_alpha": 0.25,
       "hook_line1": "Un pavimento lucidato",
       "hook_line2": "raddoppia la luce in casa.",
@@ -178,7 +253,12 @@
     {
       "id": "differenza_levigatura_lucidatura",
       "topic": "Differenza tra LEVIGATURA e LUCIDATURA",
-      "pexels_queries": ["marble surface close up", "floor polishing machine", "shiny marble texture", "marble work tools"],
+      "pexels_queries": [
+        "marble surface close up",
+        "floor polishing machine",
+        "shiny marble texture",
+        "marble work tools"
+      ],
       "overlay_alpha": 0.32,
       "hook_line1": "Levigare e lucidare",
       "hook_line2": "non sono la stessa cosa.",
@@ -188,8 +268,13 @@
     {
       "id": "macchie_olio_marmo",
       "topic": "Macchie di olio sul marmo (cucina/garage)",
-      "pexels_queries": ["oil stain floor", "kitchen marble dirty", "marble surface stain", "grease stain stone"],
-      "overlay_alpha": 0.30,
+      "pexels_queries": [
+        "oil stain floor",
+        "kitchen marble dirty",
+        "marble surface stain",
+        "grease stain stone"
+      ],
+      "overlay_alpha": 0.3,
       "hook_line1": "L'olio penetra nel marmo",
       "hook_line2": "in pochi minuti.",
       "caption_body": "🛢 Olio d'oliva, olio di motore, grasso da cucina: tutti gli oli sono nemici giurati del marmo.\n\n⚠️ Il marmo è poroso: l'olio entra in profondità, lascia macchie scure permanenti che NON si rimuovono con detergente normale.\n\n💡 Trattamento professionale:\n1. Impacchi assorbenti che fanno risalire l'olio fuori dal marmo (giorni, non minuti)\n2. Levigatura mirata sulla zona se la macchia è profonda\n3. Lucidatura per uniformare la finitura\n4. Trattamento OLEO-repellente che impedisce a oli futuri di penetrare\n\n🚫 Mai usare alcool, acetone, sgrassatori industriali: peggiorano la situazione.\n\n❤️ Sopralluogo gratuito.\n📞 +39 339 7919513\n🌐 russopavimenti.com\n\n#MacchieOlio #PuliziaMarmo #RimuovereMacchie",
@@ -198,7 +283,12 @@
     {
       "id": "garanzia_lavoro",
       "topic": "Garanzia del nostro lavoro",
-      "pexels_queries": ["craftsman working marble", "skilled artisan", "italian craftsmanship", "professional floor polishing"],
+      "pexels_queries": [
+        "craftsman working marble",
+        "skilled artisan",
+        "italian craftsmanship",
+        "professional floor polishing"
+      ],
       "overlay_alpha": 0.35,
       "hook_line1": "Garanzia scritta.",
       "hook_line2": "Lavoro che dura nel tempo.",
@@ -208,7 +298,12 @@
     {
       "id": "pavimento_doccia",
       "topic": "Pavimento doccia in marmo: muffa e calcare",
-      "pexels_queries": ["luxury shower marble", "walk in shower stone", "bathroom shower floor", "marble shower interior"],
+      "pexels_queries": [
+        "luxury shower marble",
+        "walk in shower stone",
+        "bathroom shower floor",
+        "marble shower interior"
+      ],
       "overlay_alpha": 0.32,
       "hook_line1": "La doccia in marmo",
       "hook_line2": "è la più trascurata.",
@@ -218,7 +313,13 @@
     {
       "id": "alcamo_storia_marmo",
       "topic": "Tradizione marmoraria siciliana — Alcamo e dintorni",
-      "pexels_queries": ["sicilian architecture", "old sicilian villa", "alcamo italy", "historic sicilian palace", "italian baroque interior"],
+      "pexels_queries": [
+        "sicilian architecture",
+        "old sicilian villa",
+        "alcamo italy",
+        "historic sicilian palace",
+        "italian baroque interior"
+      ],
       "overlay_alpha": 0.32,
       "hook_line1": "In Sicilia il marmo",
       "hook_line2": "è cultura, non solo materiale.",
@@ -228,7 +329,12 @@
     {
       "id": "preventivo_trasparente",
       "topic": "Come funziona il preventivo",
-      "pexels_queries": ["business handshake", "professional consultation home", "italian artisan client", "home inspection floor"],
+      "pexels_queries": [
+        "business handshake",
+        "professional consultation home",
+        "italian artisan client",
+        "home inspection floor"
+      ],
       "overlay_alpha": 0.32,
       "hook_line1": "Sopralluogo gratis.",
       "hook_line2": "Preventivo trasparente.",
@@ -238,7 +344,12 @@
     {
       "id": "marmo_terrazzo_esterno",
       "topic": "Marmo da esterno: terrazzi, balconi, vialetti",
-      "pexels_queries": ["outdoor marble terrace", "stone balcony floor", "marble patio", "outdoor stone garden"],
+      "pexels_queries": [
+        "outdoor marble terrace",
+        "stone balcony floor",
+        "marble patio",
+        "outdoor stone garden"
+      ],
       "overlay_alpha": 0.32,
       "hook_line1": "Il marmo esterno",
       "hook_line2": "soffre il sole e la pioggia.",
@@ -248,7 +359,12 @@
     {
       "id": "graffi_profondi_marmo",
       "topic": "Graffi profondi sul marmo: si sistemano?",
-      "pexels_queries": ["scratched marble surface", "damaged stone floor", "marble repair", "deep scratch stone"],
+      "pexels_queries": [
+        "scratched marble surface",
+        "damaged stone floor",
+        "marble repair",
+        "deep scratch stone"
+      ],
       "overlay_alpha": 0.32,
       "hook_line1": "Sì, anche i graffi",
       "hook_line2": "profondi si tolgono.",
@@ -258,8 +374,13 @@
     {
       "id": "pavimento_anziano_sicurezza",
       "topic": "Sicurezza pavimento per persone anziane",
-      "pexels_queries": ["safe home elderly", "non slip floor", "matte marble floor", "senior friendly home"],
-      "overlay_alpha": 0.30,
+      "pexels_queries": [
+        "safe home elderly",
+        "non slip floor",
+        "matte marble floor",
+        "senior friendly home"
+      ],
+      "overlay_alpha": 0.3,
       "hook_line1": "La sicurezza viene prima",
       "hook_line2": "del riflesso a specchio.",
       "caption_body": "👵 Casa con genitori/nonni anziani? Il pavimento non è solo estetica — è sicurezza.\n\n⚠️ Le cadute domestiche sono la prima causa di trauma negli over 70. Il pavimento marmo lucido bagnato è scivoloso quanto il ghiaccio.\n\n💡 Cosa proponiamo:\n- Lucidatura SATINATA invece di cristallina specchiata (stessa bellezza, meno riflesso, più aderenza)\n- Trattamento ANTISCIVOLO chimico (invisibile, ma aumenta drasticamente l'aderenza anche a piedi bagnati)\n- Consigli su tappetini, pulizia, manutenzione\n\n🛡 Il trattamento antiscivolo è IL MIGLIOR INVESTIMENTO nella sicurezza in casa con anziani.\n\nDura 5-7 anni e si applica in un giorno.\n\n❤️ Sopralluogo gratuito.\n📞 +39 339 7919513\n🌐 russopavimenti.com\n\n#SicurezzaAnziani #Antiscivolo #CaduteDomestiche",
@@ -268,7 +389,12 @@
     {
       "id": "vino_macchie",
       "topic": "Macchie di vino rosso sul marmo",
-      "pexels_queries": ["red wine spill", "wine glass marble", "marble dinner table", "wine stain stone"],
+      "pexels_queries": [
+        "red wine spill",
+        "wine glass marble",
+        "marble dinner table",
+        "wine stain stone"
+      ],
       "overlay_alpha": 0.32,
       "hook_line1": "Un bicchiere di vino rosso",
       "hook_line2": "può rovinare il marmo per sempre.",
@@ -276,20 +402,15 @@
       "extra_hashtags": "#MacchieVino #PrimoSoccorsoMarmo"
     },
     {
-      "id": "marmo_camino",
-      "topic": "Camino in marmo: come ravvivarlo",
-      "pexels_queries": ["marble fireplace", "stone fireplace mantle", "elegant fireplace home", "vintage fireplace marble"],
-      "overlay_alpha": 0.32,
-      "hook_line1": "Il marmo del camino",
-      "hook_line2": "racconta storie di famiglia.",
-      "caption_body": "🔥 Il camino è il cuore della casa. Il suo marmo — bianco, rosa, beige, nero — ha visto decenni di Natali, cene, riunioni.\n\n⚠️ Nel tempo accumula:\n- Fuliggine nera dalla canna fumaria\n- Macchie scure dal calore\n- Cere e olii applicati nei decenni\n- Graffi dagli attrezzi\n\n💡 Trattamento dedicato:\n1. Sgrassatura per togliere fuliggine\n2. Levigatura mirata sulle aree compromesse\n3. Lucidatura per uniformare la finitura\n4. Trattamento termo-resistente che protegge dal calore futuro\n\n✨ Risultato: il camino torna come quando l'hanno installato. La differenza è impressionante in foto.\n\n❤️ Sopralluogo gratuito.\n📞 +39 339 7919513\n🌐 russopavimenti.com\n\n#CaminoInMarmo #RestauroCamino #SalottoElegante",
-      "extra_hashtags": "#CaminoInMarmo #RestauroCamino"
-    },
-    {
       "id": "marmo_pre_vendita",
       "topic": "Lucidatura pavimento prima di vendere casa",
-      "pexels_queries": ["luxury home for sale", "elegant living room", "real estate interior", "italian home interior"],
-      "overlay_alpha": 0.30,
+      "pexels_queries": [
+        "luxury home for sale",
+        "elegant living room",
+        "real estate interior",
+        "italian home interior"
+      ],
+      "overlay_alpha": 0.3,
       "hook_line1": "Vendi casa?",
       "hook_line2": "Lucida il pavimento PRIMA.",
       "caption_body": "🏠 Stai per vendere o affittare casa? FERMATI prima di pubblicare gli annunci.\n\n📸 Ti consiglio una lucidatura del pavimento PRIMA delle foto immobiliari. Motivi:\n\n1️⃣ <b>Foto migliori</b>: il marmo cristallino riflette luce e fa sembrare la casa più grande e luminosa\n\n2️⃣ <b>Prezzo più alto</b>: case con pavimenti perfettamente curati possono valere il 5-10% in più. Su un appartamento da 150k€ sono 7-15k€\n\n3️⃣ <b>Vendita più rapida</b>: il pavimento è la prima cosa che si nota durante una visita. Curato = casa curata\n\n4️⃣ <b>Investimento ridicolo</b>: una lucidatura completa di un appartamento è frazione del valore aggiunto\n\n💼 Lavoriamo spesso con agenzie immobiliari e venditori privati.\n\n❤️ Sopralluogo gratuito.\n📞 +39 339 7919513\n🌐 russopavimenti.com\n\n#VenditaCasa #ValoreImmobile #AgenzieImmobiliari",
@@ -298,7 +419,12 @@
     {
       "id": "marmo_chiesa_storico",
       "topic": "Restauro marmo edifici storici / chiese",
-      "pexels_queries": ["church marble interior", "historic italian church", "old monastery floor", "baroque church italy"],
+      "pexels_queries": [
+        "church marble interior",
+        "historic italian church",
+        "old monastery floor",
+        "baroque church italy"
+      ],
       "overlay_alpha": 0.35,
       "hook_line1": "Restauriamo anche",
       "hook_line2": "pavimenti del 1700.",

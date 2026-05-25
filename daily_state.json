@@ -273,8 +273,7 @@
       "slot": "morning",
       "at": "2026-05-24T08:04:35.599558+00:00",
       "claimed_by_run": "26355875512",
-      "status": "failed",
-      "failed_reason": "user_requested_replacement",
+      "status": "done",
       "done_at": "2026-05-24T08:04:43.523201+00:00",
       "photo_id": 5691474
     },
@@ -304,7 +303,8 @@
       "slot": "morning",
       "at": "2026-05-25T05:56:07.495953+00:00",
       "claimed_by_run": "26385745375",
-      "status": "done",
+      "status": "failed",
+      "failed_reason": "user_requested_replacement (Russo Pavimenti non cura marmi di camini)",
       "done_at": "2026-05-25T05:56:15.853062+00:00",
       "photo_id": 6283961
     }
