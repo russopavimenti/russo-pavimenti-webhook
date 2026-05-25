@@ -273,7 +273,8 @@
       "slot": "morning",
       "at": "2026-05-24T08:04:35.599558+00:00",
       "claimed_by_run": "26355875512",
-      "status": "done",
+      "status": "failed",
+      "failed_reason": "user_requested_replacement",
       "done_at": "2026-05-24T08:04:43.523201+00:00",
       "photo_id": 5691474
     },
