@@ -1,5 +1,5 @@
 {
-  "next_index": 23,
+  "next_index": 24,
   "history": [
     {
       "post_id": "daily_20260515_morning_top_bagno_calcare",
@@ -337,6 +337,14 @@
       "status": "done",
       "done_at": "2026-05-25T15:25:58.092352+00:00",
       "photo_id": 7722157
+    },
+    {
+      "post_id": "daily_20260526_morning_cera_vs_lucidatura",
+      "topic_id": "cera_vs_lucidatura",
+      "slot": "morning",
+      "at": "2026-05-26T05:55:30.574834+00:00",
+      "claimed_by_run": "26435020648",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -347,7 +355,7 @@
     "marmocemento_opaco": "2026-05-20T16:33:58.762340+00:00",
     "durata_lucidatura": "2026-05-19T16:42:37.352293+00:00",
     "marmo_bianco_ingiallisce": "2026-05-17T14:44:36.116101+00:00",
-    "cera_vs_lucidatura": "2026-05-17T10:52:19.449491+00:00",
+    "cera_vs_lucidatura": "2026-05-26T05:55:30.574834+00:00",
     "rivestimenti_verticali": "2026-05-17T20:01:59.553445+00:00",
     "cemento_lucidato_moderno": "2026-05-18T16:42:45.770057+00:00",
     "marmo_scivoloso": "2026-05-18T12:13:28.993567+00:00",
