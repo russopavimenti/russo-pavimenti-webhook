@@ -1,5 +1,5 @@
 {
-  "next_index": 26,
+  "next_index": 27,
   "history": [
     {
       "post_id": "daily_20260515_morning_top_bagno_calcare",
@@ -367,6 +367,14 @@
       "status": "done",
       "done_at": "2026-05-26T15:26:14.288647+00:00",
       "photo_id": 1456326
+    },
+    {
+      "post_id": "daily_20260527_morning_travertino_vs_marmo",
+      "topic_id": "travertino_vs_marmo",
+      "slot": "morning",
+      "at": "2026-05-27T05:56:06.614336+00:00",
+      "claimed_by_run": "26493607587",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -402,7 +410,8 @@
     "marmo_camino": "2026-05-25T05:56:07.495953+00:00",
     "marmo_pre_vendita": "2026-05-25T07:17:53.254375+00:00",
     "marmo_chiesa_storico": "2026-05-25T10:26:14.902293+00:00",
-    "detergenti_acidi_lista": "2026-05-26T15:26:03.654198+00:00"
+    "detergenti_acidi_lista": "2026-05-26T15:26:03.654198+00:00",
+    "travertino_vs_marmo": "2026-05-27T05:56:06.614336+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
