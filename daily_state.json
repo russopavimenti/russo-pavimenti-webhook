@@ -1,5 +1,5 @@
 {
-  "next_index": 30,
+  "next_index": 31,
   "history": [
     {
       "post_id": "daily_20260515_morning_top_bagno_calcare",
@@ -407,6 +407,14 @@
       "status": "done",
       "done_at": "2026-05-28T05:55:36.733388+00:00",
       "photo_id": 7218121
+    },
+    {
+      "post_id": "daily_20260528_lunch_lucidatura_negozi_chiusura",
+      "topic_id": "lucidatura_negozi_chiusura",
+      "slot": "lunch",
+      "at": "2026-05-28T10:25:33.376562+00:00",
+      "claimed_by_run": "26569100469",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -446,7 +454,8 @@
     "travertino_vs_marmo": "2026-05-27T05:56:06.614336+00:00",
     "bagno_padronale_marmo": "2026-05-27T10:26:10.434705+00:00",
     "mosaico_veneziano_70": "2026-05-27T15:25:34.345167+00:00",
-    "mobili_pesanti_senza_graffi": "2026-05-28T05:55:30.109382+00:00"
+    "mobili_pesanti_senza_graffi": "2026-05-28T05:55:30.109382+00:00",
+    "lucidatura_negozi_chiusura": "2026-05-28T10:25:33.376562+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
