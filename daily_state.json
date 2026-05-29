@@ -1,5 +1,5 @@
 {
-  "next_index": 33,
+  "next_index": 34,
   "history": [
     {
       "post_id": "daily_20260515_morning_top_bagno_calcare",
@@ -438,6 +438,14 @@
       "done_at": "2026-05-29T05:55:33.783031+00:00",
       "photo_id": 7580947,
       "failed_reason": "user_requested_no_pricing_in_posts"
+    },
+    {
+      "post_id": "daily_20260529_morning_pulizia_quotidiana_60sec",
+      "topic_id": "pulizia_quotidiana_60sec",
+      "slot": "morning",
+      "at": "2026-05-29T09:32:07.986664+00:00",
+      "claimed_by_run": "26629654784",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -480,7 +488,8 @@
     "mobili_pesanti_senza_graffi": "2026-05-28T05:55:30.109382+00:00",
     "lucidatura_negozi_chiusura": "2026-05-28T10:25:33.376562+00:00",
     "marmo_bambini_animali": "2026-05-28T15:26:04.871263+00:00",
-    "costo_indicativo_zona": "2026-05-29T05:55:27.571582+00:00"
+    "costo_indicativo_zona": "2026-05-29T05:55:27.571582+00:00",
+    "pulizia_quotidiana_60sec": "2026-05-29T09:32:07.986664+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
