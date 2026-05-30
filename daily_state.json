@@ -1,12 +1,6 @@
 {
-  "next_index": 36,
+  "next_index": 37,
   "history": [
-    {
-      "post_id": "daily_20260516_morning_durata_lucidatura",
-      "topic_id": "durata_lucidatura",
-      "slot": "morning",
-      "at": "2026-05-16T07:48:06.164385+00:00"
-    },
     {
       "post_id": "daily_20260516_lunch_marmocemento_opaco",
       "topic_id": "marmocemento_opaco",
@@ -462,6 +456,14 @@
       "status": "done",
       "done_at": "2026-05-29T15:25:54.819105+00:00",
       "photo_id": 15742828
+    },
+    {
+      "post_id": "daily_20260530_morning_rivendita_immobile_marmo",
+      "topic_id": "rivendita_immobile_marmo",
+      "slot": "morning",
+      "at": "2026-05-30T05:56:24.445328+00:00",
+      "claimed_by_run": "26676243744",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -507,7 +509,8 @@
     "costo_indicativo_zona": "2026-05-29T05:55:27.571582+00:00",
     "pulizia_quotidiana_60sec": "2026-05-29T09:32:07.986664+00:00",
     "post_cantiere_proteggere": "2026-05-29T10:26:01.862466+00:00",
-    "marmo_dimenticato_cantina": "2026-05-29T15:25:47.234248+00:00"
+    "marmo_dimenticato_cantina": "2026-05-29T15:25:47.234248+00:00",
+    "rivendita_immobile_marmo": "2026-05-30T05:56:24.445328+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
