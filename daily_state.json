@@ -1,12 +1,6 @@
 {
-  "next_index": 39,
+  "next_index": 0,
   "history": [
-    {
-      "post_id": "daily_20260516_evening_scale_marmo_usura",
-      "topic_id": "scale_marmo_usura",
-      "slot": "evening",
-      "at": "2026-05-16T18:10:53.145861+00:00"
-    },
     {
       "post_id": "daily_20260517_lunch_cera_vs_lucidatura",
       "topic_id": "cera_vs_lucidatura",
@@ -474,6 +468,14 @@
       "status": "done",
       "done_at": "2026-05-30T15:26:05.272667+00:00",
       "photo_id": 6634153
+    },
+    {
+      "post_id": "daily_20260531_morning_marmo_scivoloso",
+      "topic_id": "marmo_scivoloso",
+      "slot": "morning",
+      "at": "2026-05-31T05:56:14.818157+00:00",
+      "claimed_by_run": "26704778856",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -487,7 +489,7 @@
     "cera_vs_lucidatura": "2026-05-26T05:55:30.574834+00:00",
     "rivestimenti_verticali": "2026-05-30T10:25:38.433231+00:00",
     "cemento_lucidato_moderno": "2026-05-18T16:42:45.770057+00:00",
-    "marmo_scivoloso": "2026-05-18T12:13:28.993567+00:00",
+    "marmo_scivoloso": "2026-05-31T05:56:14.818157+00:00",
     "candeggina_aloni": "2026-05-30T15:25:56.758841+00:00",
     "marmo_anni60_appartamenti": "2026-05-19T16:42:30.250539+00:00",
     "marmo_post_ristrutturazione": "2026-05-20T16:50:08.080573+00:00",
