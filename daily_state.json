@@ -1,15 +1,6 @@
 {
-  "next_index": 2,
+  "next_index": 3,
   "history": [
-    {
-      "post_id": "daily_20260517_morning_rivestimenti_verticali",
-      "topic_id": "rivestimenti_verticali",
-      "slot": "morning",
-      "at": "2026-05-17T20:01:56.323058+00:00",
-      "claimed_by_run": "26001237450",
-      "status": "done",
-      "completed_at": "2026-05-17T20:02:02.711453+00:00"
-    },
     {
       "post_id": "daily_20260518_morning_candeggina_aloni",
       "topic_id": "candeggina_aloni",
@@ -486,6 +477,14 @@
       "status": "done",
       "done_at": "2026-05-31T15:25:52.086785+00:00",
       "photo_id": 36178819
+    },
+    {
+      "post_id": "daily_20260601_morning_durata_lucidatura",
+      "topic_id": "durata_lucidatura",
+      "slot": "morning",
+      "at": "2026-06-01T05:55:32.976958+00:00",
+      "claimed_by_run": "26737824145",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -494,7 +493,7 @@
     "scale_marmo_usura": "2026-05-20T16:34:18.046051+00:00",
     "top_cucina_acidi": "2026-05-20T16:34:08.529592+00:00",
     "marmocemento_opaco": "2026-05-20T16:33:58.762340+00:00",
-    "durata_lucidatura": "2026-05-19T16:42:37.352293+00:00",
+    "durata_lucidatura": "2026-06-01T05:55:32.976958+00:00",
     "marmo_bianco_ingiallisce": "2026-05-26T10:26:12.668608+00:00",
     "cera_vs_lucidatura": "2026-05-26T05:55:30.574834+00:00",
     "rivestimenti_verticali": "2026-05-30T10:25:38.433231+00:00",
