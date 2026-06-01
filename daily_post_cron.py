@@ -188,7 +188,7 @@ def load_topics() -> List[Dict[str, Any]]:
 # Topic considered "fresh" if not used in the last TOPIC_COOLDOWN_DAYS days.
 # Photo considered "fresh" if not used in the last PHOTO_COOLDOWN_DAYS days.
 # Cooldown windows tuned for 3 posts/day; cleanup keeps state.json compact.
-TOPIC_COOLDOWN_DAYS = 21    # avoid repeating a topic for 3 weeks
+TOPIC_COOLDOWN_DAYS = 30    # avoid repeating a topic for ~1 month
 PHOTO_COOLDOWN_DAYS = 90    # never repeat a Pexels photo within 3 months
 USED_TOPICS_KEEP_DAYS = 60  # cleanup horizon for state hygiene
 USED_PHOTOS_KEEP_DAYS = 180
