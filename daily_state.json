@@ -1,15 +1,6 @@
 {
-  "next_index": 4,
+  "next_index": 5,
   "history": [
-    {
-      "post_id": "daily_20260518_lunch_marmo_scivoloso",
-      "topic_id": "marmo_scivoloso",
-      "slot": "lunch",
-      "at": "2026-05-18T12:13:24.627120+00:00",
-      "claimed_by_run": "26032741654",
-      "status": "done",
-      "completed_at": "2026-05-18T12:13:32.543660+00:00"
-    },
     {
       "post_id": "daily_20260518_evening_cemento_lucidato_moderno",
       "topic_id": "cemento_lucidato_moderno",
@@ -488,13 +479,21 @@
       "status": "done",
       "done_at": "2026-06-01T10:25:58.080839+00:00",
       "photo_id": 36346039
+    },
+    {
+      "post_id": "daily_20260601_evening_top_cucina_acidi",
+      "topic_id": "top_cucina_acidi",
+      "slot": "evening",
+      "at": "2026-06-01T15:25:30.231516+00:00",
+      "claimed_by_run": "26764449911",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
   "used_topics": {
     "top_bagno_calcare": "2026-05-25T15:25:50.999097+00:00",
     "scale_marmo_usura": "2026-05-20T16:34:18.046051+00:00",
-    "top_cucina_acidi": "2026-05-20T16:34:08.529592+00:00",
+    "top_cucina_acidi": "2026-06-01T15:25:30.231516+00:00",
     "marmocemento_opaco": "2026-06-01T10:25:49.297389+00:00",
     "durata_lucidatura": "2026-06-01T05:55:32.976958+00:00",
     "marmo_bianco_ingiallisce": "2026-05-26T10:26:12.668608+00:00",
