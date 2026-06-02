@@ -58,6 +58,43 @@ def _draw_centered(d, text: str, fnt, y: int, fill=WHITE, shadow=True) -> int:
     return y + (bb[3] - bb[1])
 
 
+def _fit_font_size(text: str, base_size: int, max_width_px: int,
+                   font_path: str = ROMAN_B, min_size: int = 36) -> int:
+    """Return the largest font size <= base_size that makes `text` fit within
+    max_width_px. Falls back to min_size if nothing fits.
+
+    Used for hook lines that may exceed the canvas width — instead of overflowing,
+    we scale down the font."""
+    size = base_size
+    while size > min_size:
+        f = ImageFont.truetype(font_path, size)
+        bb = f.getbbox(text)
+        if (bb[2] - bb[0]) <= max_width_px:
+            return size
+        size -= 3
+    return min_size
+
+
+def _wrap_to_lines(text: str, fnt, max_width_px: int) -> list:
+    """Greedy word-wrap a text into lines that fit max_width_px at the given font."""
+    words = text.split()
+    if not words:
+        return [text]
+    lines = []
+    cur = ""
+    for w in words:
+        trial = (cur + " " + w).strip()
+        bb = fnt.getbbox(trial)
+        if (bb[2] - bb[0]) <= max_width_px or not cur:
+            cur = trial
+        else:
+            lines.append(cur)
+            cur = w
+    if cur:
+        lines.append(cur)
+    return lines
+
+
 def render(
     photo_path: str,
     line1: str,
@@ -105,22 +142,49 @@ def render(
 
     d = ImageDraw.Draw(bg)
 
-    # Hook centered vertically
-    f1 = _font(ROMAN_B, font_size)
-    bb1 = f1.getbbox(line1)
-    bb2 = f1.getbbox(line2)
-    h1 = bb1[3] - bb1[1]
-    h2 = bb2[3] - bb2[1]
-    GAP = 12
+    # Hook centered vertically.
+    # Each line is fitted independently: if it's too wide at `font_size`, we
+    # first try a smaller font (down to ~38pt); if even that overflows, we
+    # word-wrap into multiple lines. This prevents the "text cut off at the
+    # edge" issue observed on long hooks (segnalato 2/6/2026).
+    MARGIN = 60                          # left+right safety margin
+    MAX_W = W - 2 * MARGIN               # max usable width for hook text
+
+    def _hook_block(text: str, color):
+        """Return (lines: list[str], font, line_height)."""
+        size = _fit_font_size(text, font_size, MAX_W, font_path=ROMAN_B)
+        f = _font(ROMAN_B, size)
+        if (f.getbbox(text)[2] - f.getbbox(text)[0]) > MAX_W:
+            # still too wide → wrap
+            lines = _wrap_to_lines(text, f, MAX_W)
+        else:
+            lines = [text]
+        # line height from font ascent+descent
+        asc, desc = f.getmetrics()
+        lh = asc + desc
+        return lines, f, lh
+
+    lines1, f1, lh1 = _hook_block(line1, WHITE)
+    lines2, f2, lh2 = _hook_block(line2, LIME)
+
+    GAP = 12                              # gap between line1 block and line2 block
+    INTER_LINE_GAP = 8                    # gap between wrapped lines inside a block
     LIME_OFFSET = 50
     LIME_THICK = 3
 
-    total = h1 + GAP + h2 + LIME_OFFSET + LIME_THICK
-    block_top = (H - total) // 2
+    block1_h = lh1 * len(lines1) + INTER_LINE_GAP * (len(lines1) - 1)
+    block2_h = lh2 * len(lines2) + INTER_LINE_GAP * (len(lines2) - 1)
 
-    y = block_top
-    y = _draw_centered(d, line1, f1, y, fill=WHITE)
-    y = _draw_centered(d, line2, f1, y + GAP, fill=LIME)
+    total = block1_h + GAP + block2_h + LIME_OFFSET + LIME_THICK
+    y = (H - total) // 2
+
+    for i, ln in enumerate(lines1):
+        _draw_centered(d, ln, f1, y, fill=WHITE)
+        y += lh1 + (INTER_LINE_GAP if i < len(lines1) - 1 else 0)
+    y += GAP
+    for i, ln in enumerate(lines2):
+        _draw_centered(d, ln, f2, y, fill=LIME)
+        y += lh2 + (INTER_LINE_GAP if i < len(lines2) - 1 else 0)
 
     # Lime accent line
     line_w = int(W * 0.10)
