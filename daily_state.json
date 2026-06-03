@@ -1,15 +1,6 @@
 {
-  "next_index": 10,
+  "next_index": 11,
   "history": [
-    {
-      "post_id": "daily_20260520_lunch_top_cucina_acidi",
-      "topic_id": "top_cucina_acidi",
-      "slot": "lunch",
-      "at": "2026-05-20T16:34:04.788300+00:00",
-      "claimed_by_run": "26175924011",
-      "status": "done",
-      "completed_at": "2026-05-20T16:34:11.740399+00:00"
-    },
     {
       "post_id": "daily_20260520_evening_scale_marmo_usura",
       "topic_id": "scale_marmo_usura",
@@ -496,6 +487,14 @@
       "status": "done",
       "done_at": "2026-06-03T05:55:47.260013+00:00",
       "photo_id": 36028853
+    },
+    {
+      "post_id": "daily_20260603_lunch_cementine_disegno",
+      "topic_id": "cementine_disegno",
+      "slot": "lunch",
+      "at": "2026-06-03T10:25:57.939792+00:00",
+      "claimed_by_run": "26878786754",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -547,7 +546,8 @@
     "quarzite_durezza": "2026-06-02T09:20:39.228098+00:00",
     "onice_retroilluminato": "2026-06-02T10:25:49.889311+00:00",
     "botticino_classico": "2026-06-02T15:25:28.684638+00:00",
-    "pietra_ragusa": "2026-06-03T05:55:40.200463+00:00"
+    "pietra_ragusa": "2026-06-03T05:55:40.200463+00:00",
+    "cementine_disegno": "2026-06-03T10:25:57.939792+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
