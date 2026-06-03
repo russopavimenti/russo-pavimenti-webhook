@@ -1,15 +1,6 @@
 {
-  "next_index": 9,
+  "next_index": 10,
   "history": [
-    {
-      "post_id": "daily_20260520_morning_marmocemento_opaco",
-      "topic_id": "marmocemento_opaco",
-      "slot": "morning",
-      "at": "2026-05-20T16:33:54.220739+00:00",
-      "claimed_by_run": "26175924011",
-      "status": "done",
-      "completed_at": "2026-05-20T16:34:01.636973+00:00"
-    },
     {
       "post_id": "daily_20260520_lunch_top_cucina_acidi",
       "topic_id": "top_cucina_acidi",
@@ -495,6 +486,14 @@
       "status": "done",
       "done_at": "2026-06-02T15:25:37.297396+00:00",
       "photo_id": 11255130
+    },
+    {
+      "post_id": "daily_20260603_morning_pietra_ragusa",
+      "topic_id": "pietra_ragusa",
+      "slot": "morning",
+      "at": "2026-06-03T05:55:40.200463+00:00",
+      "claimed_by_run": "26866531843",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -545,7 +544,8 @@
     "granito_lavorazione": "2026-06-02T05:56:10.353027+00:00",
     "quarzite_durezza": "2026-06-02T09:20:39.228098+00:00",
     "onice_retroilluminato": "2026-06-02T10:25:49.889311+00:00",
-    "botticino_classico": "2026-06-02T15:25:28.684638+00:00"
+    "botticino_classico": "2026-06-02T15:25:28.684638+00:00",
+    "pietra_ragusa": "2026-06-03T05:55:40.200463+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
