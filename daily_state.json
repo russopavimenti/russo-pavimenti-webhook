@@ -1,14 +1,6 @@
 {
-  "next_index": 14,
+  "next_index": 15,
   "history": [
-    {
-      "post_id": "daily_20260521_lunch_lavabo_marmo_macchie",
-      "topic_id": "lavabo_marmo_macchie",
-      "slot": "lunch",
-      "at": "2026-05-21T16:29:37.922475+00:00",
-      "claimed_by_run": "26239096369",
-      "status": "claimed"
-    },
     {
       "post_id": "daily_20260521_evening_lavabo_marmo_macchie",
       "topic_id": "lavabo_marmo_macchie",
@@ -500,6 +492,14 @@
       "status": "done",
       "done_at": "2026-06-04T10:25:58.245552+00:00",
       "photo_id": 35816354
+    },
+    {
+      "post_id": "daily_20260604_evening_soglia_davanzale",
+      "topic_id": "soglia_davanzale",
+      "slot": "evening",
+      "at": "2026-06-04T15:25:45.726640+00:00",
+      "claimed_by_run": "26961575553",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -555,7 +555,8 @@
     "cementine_disegno": "2026-06-03T10:25:57.939792+00:00",
     "cotto_artigianale": "2026-06-03T15:26:26.575603+00:00",
     "klinker_terrazze": "2026-06-04T05:55:50.808363+00:00",
-    "battiscopa_coordinati": "2026-06-04T10:25:48.976622+00:00"
+    "battiscopa_coordinati": "2026-06-04T10:25:48.976622+00:00",
+    "soglia_davanzale": "2026-06-04T15:25:45.726640+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
