@@ -1,16 +1,6 @@
 {
-  "next_index": 13,
+  "next_index": 14,
   "history": [
-    {
-      "post_id": "daily_20260521_morning_graniglia_palladiana",
-      "topic_id": "graniglia_palladiana",
-      "slot": "morning",
-      "at": "2026-05-21T08:38:04.627650+00:00",
-      "claimed_by_run": "26215142140",
-      "status": "done",
-      "completed_at": "2026-05-21T08:38:13.456245+00:00",
-      "photo_id": 15156178
-    },
     {
       "post_id": "daily_20260521_lunch_lavabo_marmo_macchie",
       "topic_id": "lavabo_marmo_macchie",
@@ -500,6 +490,14 @@
       "status": "done",
       "done_at": "2026-06-04T05:56:00.366426+00:00",
       "photo_id": 30756803
+    },
+    {
+      "post_id": "daily_20260604_lunch_battiscopa_coordinati",
+      "topic_id": "battiscopa_coordinati",
+      "slot": "lunch",
+      "at": "2026-06-04T10:25:48.976622+00:00",
+      "claimed_by_run": "26946030104",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -554,7 +552,8 @@
     "pietra_ragusa": "2026-06-03T05:55:40.200463+00:00",
     "cementine_disegno": "2026-06-03T10:25:57.939792+00:00",
     "cotto_artigianale": "2026-06-03T15:26:26.575603+00:00",
-    "klinker_terrazze": "2026-06-04T05:55:50.808363+00:00"
+    "klinker_terrazze": "2026-06-04T05:55:50.808363+00:00",
+    "battiscopa_coordinati": "2026-06-04T10:25:48.976622+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
