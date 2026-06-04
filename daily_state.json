@@ -1,14 +1,6 @@
 {
-  "next_index": 12,
+  "next_index": 13,
   "history": [
-    {
-      "post_id": "daily_20260520_evening_marmo_post_ristrutturazione",
-      "topic_id": "marmo_post_ristrutturazione",
-      "slot": "evening",
-      "at": "2026-05-20T16:50:10.220053+00:00",
-      "status": "manual_replacement",
-      "note": "Sostituisce daily_20260520_evening_scale_marmo_usura, duplicato byte-identico del post gia' pubblicato il 16/05 (segnalato da Nino). Anteprima inviata, in attesa di approvazione."
-    },
     {
       "post_id": "daily_20260521_morning_graniglia_palladiana",
       "topic_id": "graniglia_palladiana",
@@ -498,6 +490,14 @@
       "status": "done",
       "done_at": "2026-06-03T15:26:35.213295+00:00",
       "photo_id": 6010260
+    },
+    {
+      "post_id": "daily_20260604_morning_klinker_terrazze",
+      "topic_id": "klinker_terrazze",
+      "slot": "morning",
+      "at": "2026-06-04T05:55:50.808363+00:00",
+      "claimed_by_run": "26933732633",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -551,7 +551,8 @@
     "botticino_classico": "2026-06-02T15:25:28.684638+00:00",
     "pietra_ragusa": "2026-06-03T05:55:40.200463+00:00",
     "cementine_disegno": "2026-06-03T10:25:57.939792+00:00",
-    "cotto_artigianale": "2026-06-03T15:26:26.575603+00:00"
+    "cotto_artigianale": "2026-06-03T15:26:26.575603+00:00",
+    "klinker_terrazze": "2026-06-04T05:55:50.808363+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
