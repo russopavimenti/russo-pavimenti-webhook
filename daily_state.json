@@ -1,16 +1,6 @@
 {
-  "next_index": 16,
+  "next_index": 17,
   "history": [
-    {
-      "post_id": "daily_20260521_lunch_marmo_ingresso_traffico",
-      "topic_id": "marmo_ingresso_traffico",
-      "slot": "lunch",
-      "at": "2026-05-21T21:16:45.867150+00:00",
-      "claimed_by_run": "26253589702",
-      "status": "done",
-      "done_at": "2026-05-21T21:16:54.848437+00:00",
-      "photo_id": 29832024
-    },
     {
       "post_id": "daily_20260522_morning_marmo_negozi_ristoranti",
       "topic_id": "marmo_negozi_ristoranti",
@@ -502,6 +492,14 @@
       "status": "done",
       "done_at": "2026-06-05T05:55:50.145152+00:00",
       "photo_id": 29901648
+    },
+    {
+      "post_id": "daily_20260605_lunch_cera_candele_yankee",
+      "topic_id": "cera_candele_yankee",
+      "slot": "lunch",
+      "at": "2026-06-05T11:40:10.113889+00:00",
+      "claimed_by_run": "27012703266",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -559,7 +557,8 @@
     "klinker_terrazze": "2026-06-04T05:55:50.808363+00:00",
     "battiscopa_coordinati": "2026-06-04T10:25:48.976622+00:00",
     "soglia_davanzale": "2026-06-04T15:25:45.726640+00:00",
-    "marmo_arancione_cause": "2026-06-05T05:55:41.073876+00:00"
+    "marmo_arancione_cause": "2026-06-05T05:55:41.073876+00:00",
+    "cera_candele_yankee": "2026-06-05T11:40:10.113889+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
