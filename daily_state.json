@@ -1,16 +1,6 @@
 {
-  "next_index": 17,
+  "next_index": 18,
   "history": [
-    {
-      "post_id": "daily_20260522_morning_marmo_negozi_ristoranti",
-      "topic_id": "marmo_negozi_ristoranti",
-      "slot": "morning",
-      "at": "2026-05-22T15:59:17.757632+00:00",
-      "claimed_by_run": "26298217651",
-      "status": "done",
-      "done_at": "2026-05-22T15:59:27.733764+00:00",
-      "photo_id": 16199068
-    },
     {
       "post_id": "daily_20260522_lunch_pavimento_anziani_riflesso",
       "topic_id": "pavimento_anziani_riflesso",
@@ -502,6 +492,14 @@
       "status": "done",
       "done_at": "2026-06-05T11:40:19.305407+00:00",
       "photo_id": 14759746
+    },
+    {
+      "post_id": "daily_20260605_evening_marmo_anelli_piante",
+      "topic_id": "marmo_anelli_piante",
+      "slot": "evening",
+      "at": "2026-06-05T15:25:54.576807+00:00",
+      "claimed_by_run": "27023819916",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -560,7 +558,8 @@
     "battiscopa_coordinati": "2026-06-04T10:25:48.976622+00:00",
     "soglia_davanzale": "2026-06-04T15:25:45.726640+00:00",
     "marmo_arancione_cause": "2026-06-05T05:55:41.073876+00:00",
-    "cera_candele_yankee": "2026-06-05T11:40:10.113889+00:00"
+    "cera_candele_yankee": "2026-06-05T11:40:10.113889+00:00",
+    "marmo_anelli_piante": "2026-06-05T15:25:54.576807+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
