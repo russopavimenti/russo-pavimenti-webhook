@@ -1,16 +1,6 @@
 {
-  "next_index": 20,
+  "next_index": 21,
   "history": [
-    {
-      "post_id": "daily_20260522_evening_macchie_olio_marmo",
-      "topic_id": "macchie_olio_marmo",
-      "slot": "evening",
-      "at": "2026-05-22T15:59:33.378800+00:00",
-      "claimed_by_run": "26298217651",
-      "status": "done",
-      "done_at": "2026-05-22T15:59:41.976327+00:00",
-      "photo_id": 5739382
-    },
     {
       "post_id": "daily_20260522_lunch_garanzia_lavoro",
       "topic_id": "garanzia_lavoro",
@@ -502,6 +492,14 @@
       "status": "done",
       "done_at": "2026-06-06T10:26:14.075808+00:00",
       "photo_id": 8858717
+    },
+    {
+      "post_id": "daily_20260606_evening_olio_motore_garage",
+      "topic_id": "olio_motore_garage",
+      "slot": "evening",
+      "at": "2026-06-06T15:26:02.133995+00:00",
+      "claimed_by_run": "27066208539",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -563,7 +561,8 @@
     "cera_candele_yankee": "2026-06-05T11:40:10.113889+00:00",
     "marmo_anelli_piante": "2026-06-05T15:25:54.576807+00:00",
     "crepe_assestamento": "2026-06-06T05:56:20.073408+00:00",
-    "marmo_che_suda": "2026-06-06T10:26:05.083472+00:00"
+    "marmo_che_suda": "2026-06-06T10:26:05.083472+00:00",
+    "olio_motore_garage": "2026-06-06T15:26:02.133995+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
