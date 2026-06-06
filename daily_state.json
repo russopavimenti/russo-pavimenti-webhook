@@ -1,16 +1,6 @@
 {
-  "next_index": 18,
+  "next_index": 19,
   "history": [
-    {
-      "post_id": "daily_20260522_lunch_pavimento_anziani_riflesso",
-      "topic_id": "pavimento_anziani_riflesso",
-      "slot": "lunch",
-      "at": "2026-05-22T15:59:19.338110+00:00",
-      "claimed_by_run": "26298221607",
-      "status": "failed",
-      "failed_at": "2026-05-22T15:59:32.030018+00:00",
-      "error": "png_commit_failed"
-    },
     {
       "post_id": "daily_20260522_evening_differenza_levigatura_lucidatura",
       "topic_id": "differenza_levigatura_lucidatura",
@@ -502,6 +492,14 @@
       "status": "done",
       "done_at": "2026-06-05T15:26:01.714730+00:00",
       "photo_id": 7475172
+    },
+    {
+      "post_id": "daily_20260606_morning_crepe_assestamento",
+      "topic_id": "crepe_assestamento",
+      "slot": "morning",
+      "at": "2026-06-06T05:56:20.073408+00:00",
+      "claimed_by_run": "27054335449",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -561,7 +559,8 @@
     "soglia_davanzale": "2026-06-04T15:25:45.726640+00:00",
     "marmo_arancione_cause": "2026-06-05T05:55:41.073876+00:00",
     "cera_candele_yankee": "2026-06-05T11:40:10.113889+00:00",
-    "marmo_anelli_piante": "2026-06-05T15:25:54.576807+00:00"
+    "marmo_anelli_piante": "2026-06-05T15:25:54.576807+00:00",
+    "crepe_assestamento": "2026-06-06T05:56:20.073408+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
