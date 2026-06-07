@@ -1,16 +1,6 @@
 {
-  "next_index": 21,
+  "next_index": 22,
   "history": [
-    {
-      "post_id": "daily_20260522_lunch_garanzia_lavoro",
-      "topic_id": "garanzia_lavoro",
-      "slot": "lunch",
-      "at": "2026-05-22T15:59:40.683435+00:00",
-      "claimed_by_run": "26298238792",
-      "status": "done",
-      "done_at": "2026-05-22T15:59:47.054663+00:00",
-      "photo_id": 37054477
-    },
     {
       "post_id": "daily_20260523_morning_pavimento_doccia",
       "topic_id": "pavimento_doccia",
@@ -502,6 +492,14 @@
       "status": "done",
       "done_at": "2026-06-06T15:26:09.219947+00:00",
       "photo_id": 33973337
+    },
+    {
+      "post_id": "daily_20260607_morning_marmo_cucina_dietro_fornelli",
+      "topic_id": "marmo_cucina_dietro_fornelli",
+      "slot": "morning",
+      "at": "2026-06-07T05:56:53.027916+00:00",
+      "claimed_by_run": "27084303282",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -564,7 +562,8 @@
     "marmo_anelli_piante": "2026-06-05T15:25:54.576807+00:00",
     "crepe_assestamento": "2026-06-06T05:56:20.073408+00:00",
     "marmo_che_suda": "2026-06-06T10:26:05.083472+00:00",
-    "olio_motore_garage": "2026-06-06T15:26:02.133995+00:00"
+    "olio_motore_garage": "2026-06-06T15:26:02.133995+00:00",
+    "marmo_cucina_dietro_fornelli": "2026-06-07T05:56:53.027916+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
