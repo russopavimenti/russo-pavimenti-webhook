@@ -1,16 +1,6 @@
 {
-  "next_index": 23,
+  "next_index": 24,
   "history": [
-    {
-      "post_id": "daily_20260523_lunch_alcamo_storia_marmo",
-      "topic_id": "alcamo_storia_marmo",
-      "slot": "lunch",
-      "at": "2026-05-23T09:53:16.588248+00:00",
-      "claimed_by_run": "26329708188",
-      "status": "done",
-      "done_at": "2026-05-23T09:53:24.256244+00:00",
-      "photo_id": 19476154
-    },
     {
       "post_id": "daily_20260523_evening_preventivo_trasparente",
       "topic_id": "preventivo_trasparente",
@@ -502,6 +492,14 @@
       "status": "done",
       "done_at": "2026-06-07T10:25:33.515950+00:00",
       "photo_id": 33970137
+    },
+    {
+      "post_id": "daily_20260607_evening_marmo_terrazza_estate",
+      "topic_id": "marmo_terrazza_estate",
+      "slot": "evening",
+      "at": "2026-06-07T15:26:11.467696+00:00",
+      "claimed_by_run": "27096717411",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -566,7 +564,8 @@
     "marmo_che_suda": "2026-06-06T10:26:05.083472+00:00",
     "olio_motore_garage": "2026-06-06T15:26:02.133995+00:00",
     "marmo_cucina_dietro_fornelli": "2026-06-07T05:56:53.027916+00:00",
-    "marmo_lavanderia": "2026-06-07T10:25:27.336994+00:00"
+    "marmo_lavanderia": "2026-06-07T10:25:27.336994+00:00",
+    "marmo_terrazza_estate": "2026-06-07T15:26:11.467696+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
