@@ -1,15 +1,6 @@
 {
-  "next_index": 25,
+  "next_index": 26,
   "history": [
-    {
-      "post_id": "daily_20260524_morning_marmo_terrazzo_esterno",
-      "topic_id": "marmo_terrazzo_esterno",
-      "slot": "morning",
-      "at": "2026-05-24T05:55:40.028125+00:00",
-      "claimed_by_run": "26353411443",
-      "status": "failed",
-      "failed_reason": "eventual_consistency_race"
-    },
     {
       "post_id": "daily_20260524_morning_graffi_profondi_marmo",
       "topic_id": "graffi_profondi_marmo",
@@ -502,6 +493,14 @@
       "status": "done",
       "done_at": "2026-06-08T05:55:51.506065+00:00",
       "photo_id": 29675607
+    },
+    {
+      "post_id": "daily_20260608_lunch_geometri_architetti",
+      "topic_id": "geometri_architetti",
+      "slot": "lunch",
+      "at": "2026-06-08T10:25:46.299222+00:00",
+      "claimed_by_run": "27131416019",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -568,7 +567,8 @@
     "marmo_cucina_dietro_fornelli": "2026-06-07T05:56:53.027916+00:00",
     "marmo_lavanderia": "2026-06-07T10:25:27.336994+00:00",
     "marmo_terrazza_estate": "2026-06-07T15:26:11.467696+00:00",
-    "marmo_inverno_sale": "2026-06-08T05:55:43.240138+00:00"
+    "marmo_inverno_sale": "2026-06-08T05:55:43.240138+00:00",
+    "geometri_architetti": "2026-06-08T10:25:46.299222+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
