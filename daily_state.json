@@ -1,16 +1,6 @@
 {
-  "next_index": 26,
+  "next_index": 27,
   "history": [
-    {
-      "post_id": "daily_20260524_morning_graffi_profondi_marmo",
-      "topic_id": "graffi_profondi_marmo",
-      "slot": "morning",
-      "at": "2026-05-24T08:04:35.599558+00:00",
-      "claimed_by_run": "26355875512",
-      "status": "done",
-      "done_at": "2026-05-24T08:04:43.523201+00:00",
-      "photo_id": 5691474
-    },
     {
       "post_id": "daily_20260524_lunch_pavimento_anziano_sicurezza",
       "topic_id": "pavimento_anziano_sicurezza",
@@ -503,6 +493,14 @@
       "status": "done",
       "done_at": "2026-06-08T10:25:53.902153+00:00",
       "photo_id": 8470810
+    },
+    {
+      "post_id": "daily_20260608_evening_agenzie_immobiliari",
+      "topic_id": "agenzie_immobiliari",
+      "slot": "evening",
+      "at": "2026-06-08T15:25:38.931198+00:00",
+      "claimed_by_run": "27148161338",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -570,7 +568,8 @@
     "marmo_lavanderia": "2026-06-07T10:25:27.336994+00:00",
     "marmo_terrazza_estate": "2026-06-07T15:26:11.467696+00:00",
     "marmo_inverno_sale": "2026-06-08T05:55:43.240138+00:00",
-    "geometri_architetti": "2026-06-08T10:25:46.299222+00:00"
+    "geometri_architetti": "2026-06-08T10:25:46.299222+00:00",
+    "agenzie_immobiliari": "2026-06-08T15:25:38.931198+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
