@@ -1,16 +1,6 @@
 {
-  "next_index": 24,
+  "next_index": 25,
   "history": [
-    {
-      "post_id": "daily_20260523_evening_preventivo_trasparente",
-      "topic_id": "preventivo_trasparente",
-      "slot": "evening",
-      "at": "2026-05-23T15:25:23.710316+00:00",
-      "claimed_by_run": "26336493007",
-      "status": "done",
-      "done_at": "2026-05-23T15:25:31.247216+00:00",
-      "photo_id": 33175653
-    },
     {
       "post_id": "daily_20260524_morning_marmo_terrazzo_esterno",
       "topic_id": "marmo_terrazzo_esterno",
@@ -502,6 +492,14 @@
       "status": "done",
       "done_at": "2026-06-07T15:26:18.122897+00:00",
       "photo_id": 18071891
+    },
+    {
+      "post_id": "daily_20260608_morning_marmo_inverno_sale",
+      "topic_id": "marmo_inverno_sale",
+      "slot": "morning",
+      "at": "2026-06-08T05:55:43.240138+00:00",
+      "claimed_by_run": "27118789505",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -567,7 +565,8 @@
     "olio_motore_garage": "2026-06-06T15:26:02.133995+00:00",
     "marmo_cucina_dietro_fornelli": "2026-06-07T05:56:53.027916+00:00",
     "marmo_lavanderia": "2026-06-07T10:25:27.336994+00:00",
-    "marmo_terrazza_estate": "2026-06-07T15:26:11.467696+00:00"
+    "marmo_terrazza_estate": "2026-06-07T15:26:11.467696+00:00",
+    "marmo_inverno_sale": "2026-06-08T05:55:43.240138+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
