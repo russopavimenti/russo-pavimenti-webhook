@@ -1,17 +1,6 @@
 {
-  "next_index": 29,
+  "next_index": 30,
   "history": [
-    {
-      "post_id": "daily_20260525_morning_marmo_camino",
-      "topic_id": "marmo_camino",
-      "slot": "morning",
-      "at": "2026-05-25T05:56:07.495953+00:00",
-      "claimed_by_run": "26385745375",
-      "status": "failed",
-      "failed_reason": "user_requested_replacement (Russo Pavimenti non cura marmi di camini)",
-      "done_at": "2026-05-25T05:56:15.853062+00:00",
-      "photo_id": 6283961
-    },
     {
       "post_id": "daily_20260525_morning_marmo_pre_vendita",
       "topic_id": "marmo_pre_vendita",
@@ -503,6 +492,14 @@
       "status": "done",
       "done_at": "2026-06-09T10:25:49.982370+00:00",
       "photo_id": 33935830
+    },
+    {
+      "post_id": "daily_20260609_evening_macchine_silenziose",
+      "topic_id": "macchine_silenziose",
+      "slot": "evening",
+      "at": "2026-06-09T16:19:21.956494+00:00",
+      "claimed_by_run": "27220023973",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -573,7 +570,8 @@
     "geometri_architetti": "2026-06-08T10:25:46.299222+00:00",
     "agenzie_immobiliari": "2026-06-08T15:25:38.931198+00:00",
     "property_manager_bnb": "2026-06-09T05:55:23.453305+00:00",
-    "studi_dentistici_legali": "2026-06-09T10:25:40.988196+00:00"
+    "studi_dentistici_legali": "2026-06-09T10:25:40.988196+00:00",
+    "macchine_silenziose": "2026-06-09T16:19:21.956494+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
