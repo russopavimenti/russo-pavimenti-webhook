@@ -1,16 +1,6 @@
 {
-  "next_index": 28,
+  "next_index": 29,
   "history": [
-    {
-      "post_id": "daily_20260524_evening_vino_macchie",
-      "topic_id": "vino_macchie",
-      "slot": "evening",
-      "at": "2026-05-24T15:26:19.175233+00:00",
-      "claimed_by_run": "26365194829",
-      "status": "done",
-      "done_at": "2026-05-24T15:26:27.420816+00:00",
-      "photo_id": 31902090
-    },
     {
       "post_id": "daily_20260525_morning_marmo_camino",
       "topic_id": "marmo_camino",
@@ -503,6 +493,14 @@
       "status": "done",
       "done_at": "2026-06-09T05:55:31.021325+00:00",
       "photo_id": 4276608
+    },
+    {
+      "post_id": "daily_20260609_lunch_studi_dentistici_legali",
+      "topic_id": "studi_dentistici_legali",
+      "slot": "lunch",
+      "at": "2026-06-09T10:25:40.988196+00:00",
+      "claimed_by_run": "27199870460",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -572,7 +570,8 @@
     "marmo_inverno_sale": "2026-06-08T05:55:43.240138+00:00",
     "geometri_architetti": "2026-06-08T10:25:46.299222+00:00",
     "agenzie_immobiliari": "2026-06-08T15:25:38.931198+00:00",
-    "property_manager_bnb": "2026-06-09T05:55:23.453305+00:00"
+    "property_manager_bnb": "2026-06-09T05:55:23.453305+00:00",
+    "studi_dentistici_legali": "2026-06-09T10:25:40.988196+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
