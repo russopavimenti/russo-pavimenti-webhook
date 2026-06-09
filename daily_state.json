@@ -1,16 +1,6 @@
 {
-  "next_index": 27,
+  "next_index": 28,
   "history": [
-    {
-      "post_id": "daily_20260524_lunch_pavimento_anziano_sicurezza",
-      "topic_id": "pavimento_anziano_sicurezza",
-      "slot": "lunch",
-      "at": "2026-05-24T10:25:25.093927+00:00",
-      "claimed_by_run": "26358711764",
-      "status": "done",
-      "done_at": "2026-05-24T10:25:31.420952+00:00",
-      "photo_id": 8871427
-    },
     {
       "post_id": "daily_20260524_evening_vino_macchie",
       "topic_id": "vino_macchie",
@@ -503,6 +493,14 @@
       "status": "done",
       "done_at": "2026-06-08T15:25:46.173308+00:00",
       "photo_id": 7734586
+    },
+    {
+      "post_id": "daily_20260609_morning_property_manager_bnb",
+      "topic_id": "property_manager_bnb",
+      "slot": "morning",
+      "at": "2026-06-09T05:55:23.453305+00:00",
+      "claimed_by_run": "27186837524",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -571,7 +569,8 @@
     "marmo_terrazza_estate": "2026-06-07T15:26:11.467696+00:00",
     "marmo_inverno_sale": "2026-06-08T05:55:43.240138+00:00",
     "geometri_architetti": "2026-06-08T10:25:46.299222+00:00",
-    "agenzie_immobiliari": "2026-06-08T15:25:38.931198+00:00"
+    "agenzie_immobiliari": "2026-06-08T15:25:38.931198+00:00",
+    "property_manager_bnb": "2026-06-09T05:55:23.453305+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
