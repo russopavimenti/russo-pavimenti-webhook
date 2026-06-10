@@ -1,16 +1,6 @@
 {
-  "next_index": 32,
+  "next_index": 33,
   "history": [
-    {
-      "post_id": "daily_20260525_evening_top_bagno_calcare",
-      "topic_id": "top_bagno_calcare",
-      "slot": "evening",
-      "at": "2026-05-25T15:25:50.999097+00:00",
-      "claimed_by_run": "26407851980",
-      "status": "done",
-      "done_at": "2026-05-25T15:25:58.092352+00:00",
-      "photo_id": 7722157
-    },
     {
       "post_id": "daily_20260526_morning_cera_vs_lucidatura",
       "topic_id": "cera_vs_lucidatura",
@@ -502,6 +492,14 @@
       "status": "done",
       "done_at": "2026-06-10T10:26:20.750772+00:00",
       "photo_id": 15798784
+    },
+    {
+      "post_id": "daily_20260610_evening_camminare_dopo_lucidatura",
+      "topic_id": "camminare_dopo_lucidatura",
+      "slot": "evening",
+      "at": "2026-06-10T15:29:05.891432+00:00",
+      "claimed_by_run": "27287038250",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -575,7 +573,8 @@
     "studi_dentistici_legali": "2026-06-09T10:25:40.988196+00:00",
     "macchine_silenziose": "2026-06-09T16:19:21.956494+00:00",
     "polvere_zero": "2026-06-10T05:55:56.200282+00:00",
-    "tempi_reali_100mq": "2026-06-10T10:26:12.523806+00:00"
+    "tempi_reali_100mq": "2026-06-10T10:26:12.523806+00:00",
+    "camminare_dopo_lucidatura": "2026-06-10T15:29:05.891432+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
