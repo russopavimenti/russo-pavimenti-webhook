@@ -1,16 +1,6 @@
 {
-  "next_index": 31,
+  "next_index": 32,
   "history": [
-    {
-      "post_id": "daily_20260525_lunch_marmo_chiesa_storico",
-      "topic_id": "marmo_chiesa_storico",
-      "slot": "lunch",
-      "at": "2026-05-25T10:26:14.902293+00:00",
-      "claimed_by_run": "26395747244",
-      "status": "done",
-      "done_at": "2026-05-25T10:26:24.498115+00:00",
-      "photo_id": 30099383
-    },
     {
       "post_id": "daily_20260525_evening_top_bagno_calcare",
       "topic_id": "top_bagno_calcare",
@@ -502,6 +492,14 @@
       "status": "done",
       "done_at": "2026-06-10T05:56:02.963111+00:00",
       "photo_id": 37357036
+    },
+    {
+      "post_id": "daily_20260610_lunch_tempi_reali_100mq",
+      "topic_id": "tempi_reali_100mq",
+      "slot": "lunch",
+      "at": "2026-06-10T10:26:12.523806+00:00",
+      "claimed_by_run": "27269859969",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -574,7 +572,8 @@
     "property_manager_bnb": "2026-06-09T05:55:23.453305+00:00",
     "studi_dentistici_legali": "2026-06-09T10:25:40.988196+00:00",
     "macchine_silenziose": "2026-06-09T16:19:21.956494+00:00",
-    "polvere_zero": "2026-06-10T05:55:56.200282+00:00"
+    "polvere_zero": "2026-06-10T05:55:56.200282+00:00",
+    "tempi_reali_100mq": "2026-06-10T10:26:12.523806+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
