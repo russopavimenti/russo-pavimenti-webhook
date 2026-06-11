@@ -1,16 +1,6 @@
 {
-  "next_index": 33,
+  "next_index": 34,
   "history": [
-    {
-      "post_id": "daily_20260526_morning_cera_vs_lucidatura",
-      "topic_id": "cera_vs_lucidatura",
-      "slot": "morning",
-      "at": "2026-05-26T05:55:30.574834+00:00",
-      "claimed_by_run": "26435020648",
-      "status": "done",
-      "done_at": "2026-05-26T05:55:39.109234+00:00",
-      "photo_id": 6634142
-    },
     {
       "post_id": "daily_20260526_lunch_marmo_bianco_ingiallisce",
       "topic_id": "marmo_bianco_ingiallisce",
@@ -502,6 +492,14 @@
       "status": "done",
       "done_at": "2026-06-10T15:29:14.953082+00:00",
       "photo_id": 8234211
+    },
+    {
+      "post_id": "daily_20260611_morning_pavimenti_misti_giunti",
+      "topic_id": "pavimenti_misti_giunti",
+      "slot": "morning",
+      "at": "2026-06-11T05:55:50.204054+00:00",
+      "claimed_by_run": "27326973260",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -576,7 +574,8 @@
     "macchine_silenziose": "2026-06-09T16:19:21.956494+00:00",
     "polvere_zero": "2026-06-10T05:55:56.200282+00:00",
     "tempi_reali_100mq": "2026-06-10T10:26:12.523806+00:00",
-    "camminare_dopo_lucidatura": "2026-06-10T15:29:05.891432+00:00"
+    "camminare_dopo_lucidatura": "2026-06-10T15:29:05.891432+00:00",
+    "pavimenti_misti_giunti": "2026-06-11T05:55:50.204054+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
