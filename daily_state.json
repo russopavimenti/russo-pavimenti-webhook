@@ -1,16 +1,6 @@
 {
-  "next_index": 35,
+  "next_index": 36,
   "history": [
-    {
-      "post_id": "daily_20260526_evening_detergenti_acidi_lista",
-      "topic_id": "detergenti_acidi_lista",
-      "slot": "evening",
-      "at": "2026-05-26T15:26:03.654198+00:00",
-      "claimed_by_run": "26457829718",
-      "status": "done",
-      "done_at": "2026-05-26T15:26:14.288647+00:00",
-      "photo_id": 1456326
-    },
     {
       "post_id": "daily_20260527_morning_travertino_vs_marmo",
       "topic_id": "travertino_vs_marmo",
@@ -502,12 +492,20 @@
       "status": "done",
       "done_at": "2026-06-11T10:26:36.970321+00:00",
       "photo_id": 16567021
+    },
+    {
+      "post_id": "daily_20260611_evening_scale_marmo_usura",
+      "topic_id": "scale_marmo_usura",
+      "slot": "evening",
+      "at": "2026-06-11T15:26:22.096835+00:00",
+      "claimed_by_run": "27357907858",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
   "used_topics": {
     "top_bagno_calcare": "2026-05-25T15:25:50.999097+00:00",
-    "scale_marmo_usura": "2026-05-20T16:34:18.046051+00:00",
+    "scale_marmo_usura": "2026-06-11T15:26:22.096835+00:00",
     "top_cucina_acidi": "2026-06-01T15:25:30.231516+00:00",
     "marmocemento_opaco": "2026-06-01T10:25:49.297389+00:00",
     "durata_lucidatura": "2026-06-01T05:55:32.976958+00:00",
