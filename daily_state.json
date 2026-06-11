@@ -1,16 +1,6 @@
 {
-  "next_index": 34,
+  "next_index": 35,
   "history": [
-    {
-      "post_id": "daily_20260526_lunch_marmo_bianco_ingiallisce",
-      "topic_id": "marmo_bianco_ingiallisce",
-      "slot": "lunch",
-      "at": "2026-05-26T10:26:12.668608+00:00",
-      "claimed_by_run": "26446770477",
-      "status": "done",
-      "done_at": "2026-05-26T10:26:20.161415+00:00",
-      "photo_id": 7545858
-    },
     {
       "post_id": "daily_20260526_evening_detergenti_acidi_lista",
       "topic_id": "detergenti_acidi_lista",
@@ -502,6 +492,14 @@
       "status": "done",
       "done_at": "2026-06-11T05:55:58.289502+00:00",
       "photo_id": 11861450
+    },
+    {
+      "post_id": "daily_20260611_lunch_cave_custonaci",
+      "topic_id": "cave_custonaci",
+      "slot": "lunch",
+      "at": "2026-06-11T10:26:27.308615+00:00",
+      "claimed_by_run": "27340428683",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -577,7 +575,8 @@
     "polvere_zero": "2026-06-10T05:55:56.200282+00:00",
     "tempi_reali_100mq": "2026-06-10T10:26:12.523806+00:00",
     "camminare_dopo_lucidatura": "2026-06-10T15:29:05.891432+00:00",
-    "pavimenti_misti_giunti": "2026-06-11T05:55:50.204054+00:00"
+    "pavimenti_misti_giunti": "2026-06-11T05:55:50.204054+00:00",
+    "cave_custonaci": "2026-06-11T10:26:27.308615+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
