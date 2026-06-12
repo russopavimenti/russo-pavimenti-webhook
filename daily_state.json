@@ -1,16 +1,6 @@
 {
-  "next_index": 38,
+  "next_index": 39,
   "history": [
-    {
-      "post_id": "daily_20260527_evening_mosaico_veneziano_70",
-      "topic_id": "mosaico_veneziano_70",
-      "slot": "evening",
-      "at": "2026-05-27T15:25:34.345167+00:00",
-      "claimed_by_run": "26520825884",
-      "status": "done",
-      "done_at": "2026-05-27T15:25:43.990661+00:00",
-      "photo_id": 507892
-    },
     {
       "post_id": "daily_20260528_morning_mobili_pesanti_senza_graffi",
       "topic_id": "mobili_pesanti_senza_graffi",
@@ -502,6 +492,14 @@
       "status": "done",
       "done_at": "2026-06-12T10:26:31.665977+00:00",
       "photo_id": 27629440
+    },
+    {
+      "post_id": "daily_20260612_evening_marmo_ingresso_traffico",
+      "topic_id": "marmo_ingresso_traffico",
+      "slot": "evening",
+      "at": "2026-06-12T15:26:31.899822+00:00",
+      "claimed_by_run": "27425385842",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -521,7 +519,7 @@
     "marmo_post_ristrutturazione": "2026-05-20T16:50:08.080573+00:00",
     "graniglia_palladiana": "2026-06-12T05:56:04.268321+00:00",
     "lavabo_marmo_macchie": "2026-06-12T10:26:23.512015+00:00",
-    "marmo_ingresso_traffico": "2026-05-21T21:16:45.867150+00:00",
+    "marmo_ingresso_traffico": "2026-06-12T15:26:31.899822+00:00",
     "marmo_negozi_ristoranti": "2026-05-22T15:59:17.757632+00:00",
     "pavimento_anziani_riflesso": "2026-05-22T15:59:19.338110+00:00",
     "differenza_levigatura_lucidatura": "2026-05-22T15:59:25.159573+00:00",
