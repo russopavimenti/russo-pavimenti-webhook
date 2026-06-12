@@ -1,16 +1,6 @@
 {
-  "next_index": 37,
+  "next_index": 38,
   "history": [
-    {
-      "post_id": "daily_20260527_lunch_bagno_padronale_marmo",
-      "topic_id": "bagno_padronale_marmo",
-      "slot": "lunch",
-      "at": "2026-05-27T10:26:10.434705+00:00",
-      "claimed_by_run": "26505584034",
-      "status": "done",
-      "done_at": "2026-05-27T10:26:20.096670+00:00",
-      "photo_id": 8146148
-    },
     {
       "post_id": "daily_20260527_evening_mosaico_veneziano_70",
       "topic_id": "mosaico_veneziano_70",
@@ -502,6 +492,14 @@
       "status": "done",
       "done_at": "2026-06-12T05:56:10.582618+00:00",
       "photo_id": 37727447
+    },
+    {
+      "post_id": "daily_20260612_lunch_lavabo_marmo_macchie",
+      "topic_id": "lavabo_marmo_macchie",
+      "slot": "lunch",
+      "at": "2026-06-12T10:26:23.512015+00:00",
+      "claimed_by_run": "27409949540",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -520,7 +518,7 @@
     "marmo_anni60_appartamenti": "2026-05-31T15:25:45.112562+00:00",
     "marmo_post_ristrutturazione": "2026-05-20T16:50:08.080573+00:00",
     "graniglia_palladiana": "2026-06-12T05:56:04.268321+00:00",
-    "lavabo_marmo_macchie": "2026-05-21T16:29:52.103046+00:00",
+    "lavabo_marmo_macchie": "2026-06-12T10:26:23.512015+00:00",
     "marmo_ingresso_traffico": "2026-05-21T21:16:45.867150+00:00",
     "marmo_negozi_ristoranti": "2026-05-22T15:59:17.757632+00:00",
     "pavimento_anziani_riflesso": "2026-05-22T15:59:19.338110+00:00",
