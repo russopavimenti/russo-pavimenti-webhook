@@ -1,16 +1,6 @@
 {
-  "next_index": 41,
+  "next_index": 42,
   "history": [
-    {
-      "post_id": "daily_20260528_evening_marmo_bambini_animali",
-      "topic_id": "marmo_bambini_animali",
-      "slot": "evening",
-      "at": "2026-05-28T15:26:04.871263+00:00",
-      "claimed_by_run": "26584306825",
-      "status": "done",
-      "done_at": "2026-05-28T15:26:12.455627+00:00",
-      "photo_id": 8763082
-    },
     {
       "post_id": "daily_20260529_morning_costo_indicativo_zona",
       "topic_id": "costo_indicativo_zona",
@@ -502,6 +492,14 @@
       "status": "done",
       "done_at": "2026-06-13T10:26:08.006645+00:00",
       "photo_id": 34296099
+    },
+    {
+      "post_id": "daily_20260613_evening_differenza_levigatura_lucidatura",
+      "topic_id": "differenza_levigatura_lucidatura",
+      "slot": "evening",
+      "at": "2026-06-13T15:26:24.998379+00:00",
+      "claimed_by_run": "27470884750",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -524,7 +522,7 @@
     "marmo_ingresso_traffico": "2026-06-12T15:26:31.899822+00:00",
     "marmo_negozi_ristoranti": "2026-06-13T05:55:54.875309+00:00",
     "pavimento_anziani_riflesso": "2026-06-13T10:26:00.879903+00:00",
-    "differenza_levigatura_lucidatura": "2026-05-22T15:59:25.159573+00:00",
+    "differenza_levigatura_lucidatura": "2026-06-13T15:26:24.998379+00:00",
     "macchie_olio_marmo": "2026-05-22T15:59:33.378800+00:00",
     "garanzia_lavoro": "2026-05-22T15:59:40.683435+00:00",
     "pavimento_doccia": "2026-05-23T06:53:13.907689+00:00",
