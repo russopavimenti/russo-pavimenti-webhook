@@ -1,16 +1,6 @@
 {
-  "next_index": 40,
+  "next_index": 41,
   "history": [
-    {
-      "post_id": "daily_20260528_lunch_lucidatura_negozi_chiusura",
-      "topic_id": "lucidatura_negozi_chiusura",
-      "slot": "lunch",
-      "at": "2026-05-28T10:25:33.376562+00:00",
-      "claimed_by_run": "26569100469",
-      "status": "done",
-      "done_at": "2026-05-28T10:25:40.611881+00:00",
-      "photo_id": 13865606
-    },
     {
       "post_id": "daily_20260528_evening_marmo_bambini_animali",
       "topic_id": "marmo_bambini_animali",
@@ -502,6 +492,14 @@
       "status": "done",
       "done_at": "2026-06-13T05:56:02.007122+00:00",
       "photo_id": 13088696
+    },
+    {
+      "post_id": "daily_20260613_lunch_pavimento_anziani_riflesso",
+      "topic_id": "pavimento_anziani_riflesso",
+      "slot": "lunch",
+      "at": "2026-06-13T10:26:00.879903+00:00",
+      "claimed_by_run": "27464120392",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -523,7 +521,7 @@
     "lavabo_marmo_macchie": "2026-06-12T10:26:23.512015+00:00",
     "marmo_ingresso_traffico": "2026-06-12T15:26:31.899822+00:00",
     "marmo_negozi_ristoranti": "2026-06-13T05:55:54.875309+00:00",
-    "pavimento_anziani_riflesso": "2026-05-22T15:59:19.338110+00:00",
+    "pavimento_anziani_riflesso": "2026-06-13T10:26:00.879903+00:00",
     "differenza_levigatura_lucidatura": "2026-05-22T15:59:25.159573+00:00",
     "macchie_olio_marmo": "2026-05-22T15:59:33.378800+00:00",
     "garanzia_lavoro": "2026-05-22T15:59:40.683435+00:00",
