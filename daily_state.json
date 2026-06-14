@@ -1,16 +1,6 @@
 {
-  "next_index": 43,
+  "next_index": 44,
   "history": [
-    {
-      "post_id": "daily_20260529_morning_pulizia_quotidiana_60sec",
-      "topic_id": "pulizia_quotidiana_60sec",
-      "slot": "morning",
-      "at": "2026-05-29T09:32:07.986664+00:00",
-      "claimed_by_run": "26629654784",
-      "status": "done",
-      "done_at": "2026-05-29T09:32:14.795265+00:00",
-      "photo_id": 36729576
-    },
     {
       "post_id": "daily_20260529_lunch_post_cantiere_proteggere",
       "topic_id": "post_cantiere_proteggere",
@@ -501,6 +491,14 @@
       "status": "done",
       "done_at": "2026-06-14T05:56:00.943301+00:00",
       "photo_id": 18160477
+    },
+    {
+      "post_id": "daily_20260614_lunch_garanzia_lavoro",
+      "topic_id": "garanzia_lavoro",
+      "slot": "lunch",
+      "at": "2026-06-14T10:26:23.242509+00:00",
+      "claimed_by_run": "27495933346",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -525,7 +523,7 @@
     "pavimento_anziani_riflesso": "2026-06-13T10:26:00.879903+00:00",
     "differenza_levigatura_lucidatura": "2026-06-13T15:26:24.998379+00:00",
     "macchie_olio_marmo": "2026-06-14T05:55:51.906769+00:00",
-    "garanzia_lavoro": "2026-05-22T15:59:40.683435+00:00",
+    "garanzia_lavoro": "2026-06-14T10:26:23.242509+00:00",
     "pavimento_doccia": "2026-05-23T06:53:13.907689+00:00",
     "alcamo_storia_marmo": "2026-05-23T09:53:16.588248+00:00",
     "preventivo_trasparente": "2026-05-23T15:25:23.710316+00:00",
