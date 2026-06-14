@@ -1,17 +1,6 @@
 {
-  "next_index": 42,
+  "next_index": 43,
   "history": [
-    {
-      "post_id": "daily_20260529_morning_costo_indicativo_zona",
-      "topic_id": "costo_indicativo_zona",
-      "slot": "morning",
-      "at": "2026-05-29T05:55:27.571582+00:00",
-      "claimed_by_run": "26620795010",
-      "status": "failed",
-      "done_at": "2026-05-29T05:55:33.783031+00:00",
-      "photo_id": 7580947,
-      "failed_reason": "user_requested_no_pricing_in_posts"
-    },
     {
       "post_id": "daily_20260529_morning_pulizia_quotidiana_60sec",
       "topic_id": "pulizia_quotidiana_60sec",
@@ -502,6 +491,14 @@
       "status": "done",
       "done_at": "2026-06-13T15:26:33.661604+00:00",
       "photo_id": 4705855
+    },
+    {
+      "post_id": "daily_20260614_morning_macchie_olio_marmo",
+      "topic_id": "macchie_olio_marmo",
+      "slot": "morning",
+      "at": "2026-06-14T05:55:51.906769+00:00",
+      "claimed_by_run": "27490009098",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -525,7 +522,7 @@
     "marmo_negozi_ristoranti": "2026-06-13T05:55:54.875309+00:00",
     "pavimento_anziani_riflesso": "2026-06-13T10:26:00.879903+00:00",
     "differenza_levigatura_lucidatura": "2026-06-13T15:26:24.998379+00:00",
-    "macchie_olio_marmo": "2026-05-22T15:59:33.378800+00:00",
+    "macchie_olio_marmo": "2026-06-14T05:55:51.906769+00:00",
     "garanzia_lavoro": "2026-05-22T15:59:40.683435+00:00",
     "pavimento_doccia": "2026-05-23T06:53:13.907689+00:00",
     "alcamo_storia_marmo": "2026-05-23T09:53:16.588248+00:00",
