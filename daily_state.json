@@ -1,16 +1,6 @@
 {
-  "next_index": 46,
+  "next_index": 47,
   "history": [
-    {
-      "post_id": "daily_20260530_morning_rivendita_immobile_marmo",
-      "topic_id": "rivendita_immobile_marmo",
-      "slot": "morning",
-      "at": "2026-05-30T05:56:24.445328+00:00",
-      "claimed_by_run": "26676243744",
-      "status": "done",
-      "done_at": "2026-05-30T05:56:32.502057+00:00",
-      "photo_id": 33305177
-    },
     {
       "post_id": "daily_20260530_lunch_rivestimenti_verticali",
       "topic_id": "rivestimenti_verticali",
@@ -501,6 +491,14 @@
       "status": "done",
       "done_at": "2026-06-15T05:55:42.702795+00:00",
       "photo_id": 14493575
+    },
+    {
+      "post_id": "daily_20260615_lunch_preventivo_trasparente",
+      "topic_id": "preventivo_trasparente",
+      "slot": "lunch",
+      "at": "2026-06-15T10:26:26.920010+00:00",
+      "claimed_by_run": "27539976120",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -528,7 +526,7 @@
     "garanzia_lavoro": "2026-06-14T10:26:23.242509+00:00",
     "pavimento_doccia": "2026-06-14T15:26:02.614667+00:00",
     "alcamo_storia_marmo": "2026-06-15T05:55:34.487418+00:00",
-    "preventivo_trasparente": "2026-05-23T15:25:23.710316+00:00",
+    "preventivo_trasparente": "2026-06-15T10:26:26.920010+00:00",
     "marmo_terrazzo_esterno": "2026-05-24T05:55:40.028125+00:00",
     "graffi_profondi_marmo": "2026-05-24T08:04:35.599558+00:00",
     "pavimento_anziano_sicurezza": "2026-05-24T10:25:25.093927+00:00",
