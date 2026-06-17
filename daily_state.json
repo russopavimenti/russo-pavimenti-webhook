@@ -1,16 +1,6 @@
 {
-  "next_index": 53,
+  "next_index": 54,
   "history": [
-    {
-      "post_id": "daily_20260601_lunch_marmocemento_opaco",
-      "topic_id": "marmocemento_opaco",
-      "slot": "lunch",
-      "at": "2026-06-01T10:25:49.297389+00:00",
-      "claimed_by_run": "26749258474",
-      "status": "done",
-      "done_at": "2026-06-01T10:25:58.080839+00:00",
-      "photo_id": 36346039
-    },
     {
       "post_id": "daily_20260601_evening_top_cucina_acidi",
       "topic_id": "top_cucina_acidi",
@@ -501,6 +491,14 @@
       "status": "done",
       "done_at": "2026-06-17T10:26:36.511017+00:00",
       "photo_id": 7937207
+    },
+    {
+      "post_id": "daily_20260617_evening_marmo_chiesa_storico",
+      "topic_id": "marmo_chiesa_storico",
+      "slot": "evening",
+      "at": "2026-06-17T15:26:28.463982+00:00",
+      "claimed_by_run": "27700169163",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -535,7 +533,7 @@
     "vino_macchie": "2026-06-16T15:25:05.934076+00:00",
     "marmo_camino": "2026-05-25T05:56:07.495953+00:00",
     "marmo_pre_vendita": "2026-06-17T10:26:26.864725+00:00",
-    "marmo_chiesa_storico": "2026-05-25T10:26:14.902293+00:00",
+    "marmo_chiesa_storico": "2026-06-17T15:26:28.463982+00:00",
     "detergenti_acidi_lista": "2026-05-26T15:26:03.654198+00:00",
     "travertino_vs_marmo": "2026-05-27T05:56:06.614336+00:00",
     "bagno_padronale_marmo": "2026-05-27T10:26:10.434705+00:00",
