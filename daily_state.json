@@ -1,16 +1,6 @@
 {
-  "next_index": 52,
+  "next_index": 53,
   "history": [
-    {
-      "post_id": "daily_20260601_morning_durata_lucidatura",
-      "topic_id": "durata_lucidatura",
-      "slot": "morning",
-      "at": "2026-06-01T05:55:32.976958+00:00",
-      "claimed_by_run": "26737824145",
-      "status": "done",
-      "done_at": "2026-06-01T05:55:39.965072+00:00",
-      "photo_id": 6952650
-    },
     {
       "post_id": "daily_20260601_lunch_marmocemento_opaco",
       "topic_id": "marmocemento_opaco",
@@ -501,6 +491,14 @@
       "status": "done",
       "done_at": "2026-06-17T05:55:34.336115+00:00",
       "photo_id": 6444979
+    },
+    {
+      "post_id": "daily_20260617_lunch_marmo_pre_vendita",
+      "topic_id": "marmo_pre_vendita",
+      "slot": "lunch",
+      "at": "2026-06-17T10:26:26.864725+00:00",
+      "claimed_by_run": "27682397593",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -534,7 +532,7 @@
     "pavimento_anziano_sicurezza": "2026-06-16T10:25:34.936753+00:00",
     "vino_macchie": "2026-06-16T15:25:05.934076+00:00",
     "marmo_camino": "2026-05-25T05:56:07.495953+00:00",
-    "marmo_pre_vendita": "2026-05-25T07:17:53.254375+00:00",
+    "marmo_pre_vendita": "2026-06-17T10:26:26.864725+00:00",
     "marmo_chiesa_storico": "2026-05-25T10:26:14.902293+00:00",
     "detergenti_acidi_lista": "2026-05-26T15:26:03.654198+00:00",
     "travertino_vs_marmo": "2026-05-27T05:56:06.614336+00:00",
