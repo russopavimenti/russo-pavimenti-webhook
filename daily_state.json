@@ -1,16 +1,6 @@
 {
-  "next_index": 54,
+  "next_index": 55,
   "history": [
-    {
-      "post_id": "daily_20260601_evening_top_cucina_acidi",
-      "topic_id": "top_cucina_acidi",
-      "slot": "evening",
-      "at": "2026-06-01T15:25:30.231516+00:00",
-      "claimed_by_run": "26764449911",
-      "status": "done",
-      "done_at": "2026-06-01T15:25:38.815995+00:00",
-      "photo_id": 15409430
-    },
     {
       "post_id": "daily_20260602_morning_granito_lavorazione",
       "topic_id": "granito_lavorazione",
@@ -501,6 +491,14 @@
       "status": "done",
       "done_at": "2026-06-17T15:26:36.555855+00:00",
       "photo_id": 9656233
+    },
+    {
+      "post_id": "daily_20260618_morning_cera_vs_lucidatura",
+      "topic_id": "cera_vs_lucidatura",
+      "slot": "morning",
+      "at": "2026-06-18T05:56:12.833727+00:00",
+      "claimed_by_run": "27739830504",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -511,7 +509,7 @@
     "marmocemento_opaco": "2026-06-01T10:25:49.297389+00:00",
     "durata_lucidatura": "2026-06-01T05:55:32.976958+00:00",
     "marmo_bianco_ingiallisce": "2026-05-26T10:26:12.668608+00:00",
-    "cera_vs_lucidatura": "2026-05-26T05:55:30.574834+00:00",
+    "cera_vs_lucidatura": "2026-06-18T05:56:12.833727+00:00",
     "rivestimenti_verticali": "2026-05-30T10:25:38.433231+00:00",
     "cemento_lucidato_moderno": "2026-05-31T10:25:26.252767+00:00",
     "marmo_scivoloso": "2026-05-31T05:56:14.818157+00:00",
