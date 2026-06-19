@@ -1,16 +1,6 @@
 {
-  "next_index": 59,
+  "next_index": 60,
   "history": [
-    {
-      "post_id": "daily_20260603_morning_pietra_ragusa",
-      "topic_id": "pietra_ragusa",
-      "slot": "morning",
-      "at": "2026-06-03T05:55:40.200463+00:00",
-      "claimed_by_run": "26866531843",
-      "status": "done",
-      "done_at": "2026-06-03T05:55:47.260013+00:00",
-      "photo_id": 36028853
-    },
     {
       "post_id": "daily_20260603_lunch_cementine_disegno",
       "topic_id": "cementine_disegno",
@@ -500,6 +490,14 @@
       "status": "done",
       "done_at": "2026-06-19T10:25:35.692820+00:00",
       "photo_id": 6903151
+    },
+    {
+      "post_id": "daily_20260619_evening_mosaico_veneziano_70",
+      "topic_id": "mosaico_veneziano_70",
+      "slot": "evening",
+      "at": "2026-06-19T15:25:57.561613+00:00",
+      "claimed_by_run": "27834417260",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -538,7 +536,7 @@
     "detergenti_acidi_lista": "2026-06-18T15:26:02.662031+00:00",
     "travertino_vs_marmo": "2026-06-19T05:55:51.020217+00:00",
     "bagno_padronale_marmo": "2026-06-19T10:25:28.100615+00:00",
-    "mosaico_veneziano_70": "2026-05-27T15:25:34.345167+00:00",
+    "mosaico_veneziano_70": "2026-06-19T15:25:57.561613+00:00",
     "mobili_pesanti_senza_graffi": "2026-05-28T05:55:30.109382+00:00",
     "lucidatura_negozi_chiusura": "2026-05-28T10:25:33.376562+00:00",
     "marmo_bambini_animali": "2026-05-28T15:26:04.871263+00:00",
