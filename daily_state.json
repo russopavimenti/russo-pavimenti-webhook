@@ -1,16 +1,6 @@
 {
-  "next_index": 57,
+  "next_index": 58,
   "history": [
-    {
-      "post_id": "daily_20260602_lunch_onice_retroilluminato",
-      "topic_id": "onice_retroilluminato",
-      "slot": "lunch",
-      "at": "2026-06-02T10:25:49.889311+00:00",
-      "claimed_by_run": "26813768374",
-      "status": "done",
-      "done_at": "2026-06-02T10:25:56.878716+00:00",
-      "photo_id": 4705851
-    },
     {
       "post_id": "daily_20260602_evening_botticino_classico",
       "topic_id": "botticino_classico",
@@ -500,6 +490,14 @@
       "status": "done",
       "done_at": "2026-06-18T15:26:09.095007+00:00",
       "photo_id": 10558186
+    },
+    {
+      "post_id": "daily_20260619_morning_travertino_vs_marmo",
+      "topic_id": "travertino_vs_marmo",
+      "slot": "morning",
+      "at": "2026-06-19T05:55:51.020217+00:00",
+      "claimed_by_run": "27808312253",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -536,7 +534,7 @@
     "marmo_pre_vendita": "2026-06-17T10:26:26.864725+00:00",
     "marmo_chiesa_storico": "2026-06-17T15:26:28.463982+00:00",
     "detergenti_acidi_lista": "2026-06-18T15:26:02.662031+00:00",
-    "travertino_vs_marmo": "2026-05-27T05:56:06.614336+00:00",
+    "travertino_vs_marmo": "2026-06-19T05:55:51.020217+00:00",
     "bagno_padronale_marmo": "2026-05-27T10:26:10.434705+00:00",
     "mosaico_veneziano_70": "2026-05-27T15:25:34.345167+00:00",
     "mobili_pesanti_senza_graffi": "2026-05-28T05:55:30.109382+00:00",
