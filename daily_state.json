@@ -1,16 +1,6 @@
 {
-  "next_index": 62,
+  "next_index": 63,
   "history": [
-    {
-      "post_id": "daily_20260604_morning_klinker_terrazze",
-      "topic_id": "klinker_terrazze",
-      "slot": "morning",
-      "at": "2026-06-04T05:55:50.808363+00:00",
-      "claimed_by_run": "26933732633",
-      "status": "done",
-      "done_at": "2026-06-04T05:56:00.366426+00:00",
-      "photo_id": 30756803
-    },
     {
       "post_id": "daily_20260604_lunch_battiscopa_coordinati",
       "topic_id": "battiscopa_coordinati",
@@ -500,6 +490,14 @@
       "status": "failed",
       "failed_at": "2026-06-20T10:25:38.318328+00:00",
       "error": "exception: HTTP Error 400: Bad Request"
+    },
+    {
+      "post_id": "daily_20260620_lunch_marmo_bambini_animali",
+      "topic_id": "marmo_bambini_animali",
+      "slot": "lunch",
+      "at": "2026-06-20T12:12:52.130024+00:00",
+      "claimed_by_run": "27870815768",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -541,7 +539,7 @@
     "mosaico_veneziano_70": "2026-06-19T15:25:57.561613+00:00",
     "mobili_pesanti_senza_graffi": "2026-06-20T05:55:20.557709+00:00",
     "lucidatura_negozi_chiusura": "2026-06-20T10:25:30.789752+00:00",
-    "marmo_bambini_animali": "2026-05-28T15:26:04.871263+00:00",
+    "marmo_bambini_animali": "2026-06-20T12:12:52.130024+00:00",
     "costo_indicativo_zona": "2026-05-29T05:55:27.571582+00:00",
     "pulizia_quotidiana_60sec": "2026-05-29T09:32:07.986664+00:00",
     "post_cantiere_proteggere": "2026-05-29T10:26:01.862466+00:00",
