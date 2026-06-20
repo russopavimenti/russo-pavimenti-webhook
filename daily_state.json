@@ -1,16 +1,6 @@
 {
-  "next_index": 63,
+  "next_index": 64,
   "history": [
-    {
-      "post_id": "daily_20260604_lunch_battiscopa_coordinati",
-      "topic_id": "battiscopa_coordinati",
-      "slot": "lunch",
-      "at": "2026-06-04T10:25:48.976622+00:00",
-      "claimed_by_run": "26946030104",
-      "status": "done",
-      "done_at": "2026-06-04T10:25:58.245552+00:00",
-      "photo_id": 35816354
-    },
     {
       "post_id": "daily_20260604_evening_soglia_davanzale",
       "topic_id": "soglia_davanzale",
@@ -500,6 +490,14 @@
       "status": "done",
       "done_at": "2026-06-20T12:13:04.404802+00:00",
       "photo_id": 8763155
+    },
+    {
+      "post_id": "daily_20260620_evening_pulizia_quotidiana_60sec",
+      "topic_id": "pulizia_quotidiana_60sec",
+      "slot": "evening",
+      "at": "2026-06-20T15:25:50.293427+00:00",
+      "claimed_by_run": "27875463190",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -543,7 +541,7 @@
     "lucidatura_negozi_chiusura": "2026-06-20T10:25:30.789752+00:00",
     "marmo_bambini_animali": "2026-06-20T12:12:52.130024+00:00",
     "costo_indicativo_zona": "2026-05-29T05:55:27.571582+00:00",
-    "pulizia_quotidiana_60sec": "2026-05-29T09:32:07.986664+00:00",
+    "pulizia_quotidiana_60sec": "2026-06-20T15:25:50.293427+00:00",
     "post_cantiere_proteggere": "2026-05-29T10:26:01.862466+00:00",
     "marmo_dimenticato_cantina": "2026-05-29T15:25:47.234248+00:00",
     "rivendita_immobile_marmo": "2026-05-30T05:56:24.445328+00:00",
