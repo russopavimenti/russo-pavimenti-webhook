@@ -1,16 +1,6 @@
 {
-  "next_index": 65,
+  "next_index": 66,
   "history": [
-    {
-      "post_id": "daily_20260605_morning_marmo_arancione_cause",
-      "topic_id": "marmo_arancione_cause",
-      "slot": "morning",
-      "at": "2026-06-05T05:55:41.073876+00:00",
-      "claimed_by_run": "26998181244",
-      "status": "done",
-      "done_at": "2026-06-05T05:55:50.145152+00:00",
-      "photo_id": 29901648
-    },
     {
       "post_id": "daily_20260605_lunch_cera_candele_yankee",
       "topic_id": "cera_candele_yankee",
@@ -500,6 +490,14 @@
       "status": "done",
       "done_at": "2026-06-21T05:55:40.221212+00:00",
       "photo_id": 5691535
+    },
+    {
+      "post_id": "daily_20260621_lunch_rivestimenti_verticali",
+      "topic_id": "rivestimenti_verticali",
+      "slot": "lunch",
+      "at": "2026-06-21T10:25:39.819594+00:00",
+      "claimed_by_run": "27901388192",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -511,7 +509,7 @@
     "durata_lucidatura": "2026-06-01T05:55:32.976958+00:00",
     "marmo_bianco_ingiallisce": "2026-06-18T10:25:52.612646+00:00",
     "cera_vs_lucidatura": "2026-06-18T05:56:12.833727+00:00",
-    "rivestimenti_verticali": "2026-05-30T10:25:38.433231+00:00",
+    "rivestimenti_verticali": "2026-06-21T10:25:39.819594+00:00",
     "cemento_lucidato_moderno": "2026-05-31T10:25:26.252767+00:00",
     "marmo_scivoloso": "2026-05-31T05:56:14.818157+00:00",
     "candeggina_aloni": "2026-05-30T15:25:56.758841+00:00",
