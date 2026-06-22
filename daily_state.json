@@ -1,16 +1,6 @@
 {
-  "next_index": 69,
+  "next_index": 0,
   "history": [
-    {
-      "post_id": "daily_20260606_lunch_marmo_che_suda",
-      "topic_id": "marmo_che_suda",
-      "slot": "lunch",
-      "at": "2026-06-06T10:26:05.083472+00:00",
-      "claimed_by_run": "27059789027",
-      "status": "done",
-      "done_at": "2026-06-06T10:26:14.075808+00:00",
-      "photo_id": 8858717
-    },
     {
       "post_id": "daily_20260606_evening_olio_motore_garage",
       "topic_id": "olio_motore_garage",
@@ -500,6 +490,14 @@
       "status": "done",
       "done_at": "2026-06-22T10:25:45.540846+00:00",
       "photo_id": 7579192
+    },
+    {
+      "post_id": "daily_20260622_evening_marmo_scivoloso",
+      "topic_id": "marmo_scivoloso",
+      "slot": "evening",
+      "at": "2026-06-22T15:25:47.994764+00:00",
+      "claimed_by_run": "27963895531",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -513,7 +511,7 @@
     "cera_vs_lucidatura": "2026-06-18T05:56:12.833727+00:00",
     "rivestimenti_verticali": "2026-06-21T10:25:39.819594+00:00",
     "cemento_lucidato_moderno": "2026-05-31T10:25:26.252767+00:00",
-    "marmo_scivoloso": "2026-05-31T05:56:14.818157+00:00",
+    "marmo_scivoloso": "2026-06-22T15:25:47.994764+00:00",
     "candeggina_aloni": "2026-06-22T05:55:44.289279+00:00",
     "marmo_anni60_appartamenti": "2026-05-31T15:25:45.112562+00:00",
     "marmo_post_ristrutturazione": "2026-05-20T16:50:08.080573+00:00",
