@@ -1,16 +1,6 @@
 {
-  "next_index": 67,
+  "next_index": 68,
   "history": [
-    {
-      "post_id": "daily_20260605_evening_marmo_anelli_piante",
-      "topic_id": "marmo_anelli_piante",
-      "slot": "evening",
-      "at": "2026-06-05T15:25:54.576807+00:00",
-      "claimed_by_run": "27023819916",
-      "status": "done",
-      "done_at": "2026-06-05T15:26:01.714730+00:00",
-      "photo_id": 7475172
-    },
     {
       "post_id": "daily_20260606_morning_crepe_assestamento",
       "topic_id": "crepe_assestamento",
@@ -500,6 +490,14 @@
       "status": "done",
       "done_at": "2026-06-21T15:26:11.030504+00:00",
       "photo_id": 27906730
+    },
+    {
+      "post_id": "daily_20260622_morning_candeggina_aloni",
+      "topic_id": "candeggina_aloni",
+      "slot": "morning",
+      "at": "2026-06-22T05:55:44.289279+00:00",
+      "claimed_by_run": "27932577646",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -514,7 +512,7 @@
     "rivestimenti_verticali": "2026-06-21T10:25:39.819594+00:00",
     "cemento_lucidato_moderno": "2026-05-31T10:25:26.252767+00:00",
     "marmo_scivoloso": "2026-05-31T05:56:14.818157+00:00",
-    "candeggina_aloni": "2026-05-30T15:25:56.758841+00:00",
+    "candeggina_aloni": "2026-06-22T05:55:44.289279+00:00",
     "marmo_anni60_appartamenti": "2026-05-31T15:25:45.112562+00:00",
     "marmo_post_ristrutturazione": "2026-05-20T16:50:08.080573+00:00",
     "graniglia_palladiana": "2026-06-12T05:56:04.268321+00:00",
