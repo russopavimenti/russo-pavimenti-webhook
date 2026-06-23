@@ -1,16 +1,6 @@
 {
-  "next_index": 0,
+  "next_index": 1,
   "history": [
-    {
-      "post_id": "daily_20260606_evening_olio_motore_garage",
-      "topic_id": "olio_motore_garage",
-      "slot": "evening",
-      "at": "2026-06-06T15:26:02.133995+00:00",
-      "claimed_by_run": "27066208539",
-      "status": "done",
-      "done_at": "2026-06-06T15:26:09.219947+00:00",
-      "photo_id": 33973337
-    },
     {
       "post_id": "daily_20260607_morning_marmo_cucina_dietro_fornelli",
       "topic_id": "marmo_cucina_dietro_fornelli",
@@ -500,6 +490,14 @@
       "status": "done",
       "done_at": "2026-06-22T15:25:55.154985+00:00",
       "photo_id": 27742604
+    },
+    {
+      "post_id": "daily_20260623_morning_cemento_lucidato_moderno",
+      "topic_id": "cemento_lucidato_moderno",
+      "slot": "morning",
+      "at": "2026-06-23T05:55:24.271731+00:00",
+      "claimed_by_run": "28005470829",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -512,7 +510,7 @@
     "marmo_bianco_ingiallisce": "2026-06-18T10:25:52.612646+00:00",
     "cera_vs_lucidatura": "2026-06-18T05:56:12.833727+00:00",
     "rivestimenti_verticali": "2026-06-21T10:25:39.819594+00:00",
-    "cemento_lucidato_moderno": "2026-05-31T10:25:26.252767+00:00",
+    "cemento_lucidato_moderno": "2026-06-23T05:55:24.271731+00:00",
     "marmo_scivoloso": "2026-06-22T15:25:47.994764+00:00",
     "candeggina_aloni": "2026-06-22T05:55:44.289279+00:00",
     "marmo_anni60_appartamenti": "2026-05-31T15:25:45.112562+00:00",
