@@ -1,16 +1,6 @@
 {
-  "next_index": 1,
+  "next_index": 2,
   "history": [
-    {
-      "post_id": "daily_20260607_morning_marmo_cucina_dietro_fornelli",
-      "topic_id": "marmo_cucina_dietro_fornelli",
-      "slot": "morning",
-      "at": "2026-06-07T05:56:53.027916+00:00",
-      "claimed_by_run": "27084303282",
-      "status": "done",
-      "done_at": "2026-06-07T05:56:58.612763+00:00",
-      "photo_id": 6970055
-    },
     {
       "post_id": "daily_20260607_lunch_marmo_lavanderia",
       "topic_id": "marmo_lavanderia",
@@ -500,6 +490,14 @@
       "status": "done",
       "done_at": "2026-06-23T05:55:32.025841+00:00",
       "photo_id": 36603628
+    },
+    {
+      "post_id": "daily_20260623_lunch_marmo_anni60_appartamenti",
+      "topic_id": "marmo_anni60_appartamenti",
+      "slot": "lunch",
+      "at": "2026-06-23T10:25:35.126919+00:00",
+      "claimed_by_run": "28019518728",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -515,7 +513,7 @@
     "cemento_lucidato_moderno": "2026-06-23T05:55:24.271731+00:00",
     "marmo_scivoloso": "2026-06-22T15:25:47.994764+00:00",
     "candeggina_aloni": "2026-06-22T05:55:44.289279+00:00",
-    "marmo_anni60_appartamenti": "2026-05-31T15:25:45.112562+00:00",
+    "marmo_anni60_appartamenti": "2026-06-23T10:25:35.126919+00:00",
     "marmo_post_ristrutturazione": "2026-05-20T16:50:08.080573+00:00",
     "graniglia_palladiana": "2026-06-12T05:56:04.268321+00:00",
     "lavabo_marmo_macchie": "2026-06-12T10:26:23.512015+00:00",
