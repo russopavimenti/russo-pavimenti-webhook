@@ -1,16 +1,6 @@
 {
-  "next_index": 5,
+  "next_index": 6,
   "history": [
-    {
-      "post_id": "daily_20260608_lunch_geometri_architetti",
-      "topic_id": "geometri_architetti",
-      "slot": "lunch",
-      "at": "2026-06-08T10:25:46.299222+00:00",
-      "claimed_by_run": "27131416019",
-      "status": "done",
-      "done_at": "2026-06-08T10:25:53.902153+00:00",
-      "photo_id": 8470810
-    },
     {
       "post_id": "daily_20260608_evening_agenzie_immobiliari",
       "topic_id": "agenzie_immobiliari",
@@ -500,6 +490,14 @@
       "status": "done",
       "done_at": "2026-06-24T10:25:42.692330+00:00",
       "photo_id": 7027984
+    },
+    {
+      "post_id": "daily_20260624_evening_granito_lavorazione",
+      "topic_id": "granito_lavorazione",
+      "slot": "evening",
+      "at": "2026-06-24T15:25:44.392076+00:00",
+      "claimed_by_run": "28109656662",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -547,7 +545,7 @@
     "post_cantiere_proteggere": "2026-06-21T05:55:34.524165+00:00",
     "marmo_dimenticato_cantina": "2026-06-21T15:26:04.813408+00:00",
     "rivendita_immobile_marmo": "2026-06-22T10:25:34.559389+00:00",
-    "granito_lavorazione": "2026-06-02T05:56:10.353027+00:00",
+    "granito_lavorazione": "2026-06-24T15:25:44.392076+00:00",
     "quarzite_durezza": "2026-06-02T09:20:39.228098+00:00",
     "onice_retroilluminato": "2026-06-02T10:25:49.889311+00:00",
     "botticino_classico": "2026-06-02T15:25:28.684638+00:00",
