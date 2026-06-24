@@ -1,16 +1,6 @@
 {
-  "next_index": 4,
+  "next_index": 5,
   "history": [
-    {
-      "post_id": "daily_20260608_morning_marmo_inverno_sale",
-      "topic_id": "marmo_inverno_sale",
-      "slot": "morning",
-      "at": "2026-06-08T05:55:43.240138+00:00",
-      "claimed_by_run": "27118789505",
-      "status": "done",
-      "done_at": "2026-06-08T05:55:51.506065+00:00",
-      "photo_id": 29675607
-    },
     {
       "post_id": "daily_20260608_lunch_geometri_architetti",
       "topic_id": "geometri_architetti",
@@ -500,13 +490,21 @@
       "status": "done",
       "done_at": "2026-06-24T05:55:50.440844+00:00",
       "photo_id": 4709028
+    },
+    {
+      "post_id": "daily_20260624_lunch_top_cucina_acidi",
+      "topic_id": "top_cucina_acidi",
+      "slot": "lunch",
+      "at": "2026-06-24T10:25:33.757939+00:00",
+      "claimed_by_run": "28091953490",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
   "used_topics": {
     "top_bagno_calcare": "2026-06-17T05:55:27.676491+00:00",
     "scale_marmo_usura": "2026-06-11T15:26:22.096835+00:00",
-    "top_cucina_acidi": "2026-06-01T15:25:30.231516+00:00",
+    "top_cucina_acidi": "2026-06-24T10:25:33.757939+00:00",
     "marmocemento_opaco": "2026-06-23T15:26:24.161195+00:00",
     "durata_lucidatura": "2026-06-24T05:55:44.294867+00:00",
     "marmo_bianco_ingiallisce": "2026-06-18T10:25:52.612646+00:00",
