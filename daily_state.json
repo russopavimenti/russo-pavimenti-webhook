@@ -1,16 +1,6 @@
 {
-  "next_index": 6,
+  "next_index": 7,
   "history": [
-    {
-      "post_id": "daily_20260608_evening_agenzie_immobiliari",
-      "topic_id": "agenzie_immobiliari",
-      "slot": "evening",
-      "at": "2026-06-08T15:25:38.931198+00:00",
-      "claimed_by_run": "27148161338",
-      "status": "done",
-      "done_at": "2026-06-08T15:25:46.173308+00:00",
-      "photo_id": 7734586
-    },
     {
       "post_id": "daily_20260609_morning_property_manager_bnb",
       "topic_id": "property_manager_bnb",
@@ -500,6 +490,14 @@
       "status": "done",
       "done_at": "2026-06-24T15:25:52.160651+00:00",
       "photo_id": 4119838
+    },
+    {
+      "post_id": "daily_20260625_morning_quarzite_durezza",
+      "topic_id": "quarzite_durezza",
+      "slot": "morning",
+      "at": "2026-06-25T05:55:21.171713+00:00",
+      "claimed_by_run": "28149995135",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -548,7 +546,7 @@
     "marmo_dimenticato_cantina": "2026-06-21T15:26:04.813408+00:00",
     "rivendita_immobile_marmo": "2026-06-22T10:25:34.559389+00:00",
     "granito_lavorazione": "2026-06-24T15:25:44.392076+00:00",
-    "quarzite_durezza": "2026-06-02T09:20:39.228098+00:00",
+    "quarzite_durezza": "2026-06-25T05:55:21.171713+00:00",
     "onice_retroilluminato": "2026-06-02T10:25:49.889311+00:00",
     "botticino_classico": "2026-06-02T15:25:28.684638+00:00",
     "pietra_ragusa": "2026-06-03T05:55:40.200463+00:00",
