@@ -1,16 +1,6 @@
 {
-  "next_index": 7,
+  "next_index": 8,
   "history": [
-    {
-      "post_id": "daily_20260609_morning_property_manager_bnb",
-      "topic_id": "property_manager_bnb",
-      "slot": "morning",
-      "at": "2026-06-09T05:55:23.453305+00:00",
-      "claimed_by_run": "27186837524",
-      "status": "done",
-      "done_at": "2026-06-09T05:55:31.021325+00:00",
-      "photo_id": 4276608
-    },
     {
       "post_id": "daily_20260609_lunch_studi_dentistici_legali",
       "topic_id": "studi_dentistici_legali",
@@ -500,6 +490,14 @@
       "status": "done",
       "done_at": "2026-06-25T05:55:27.427976+00:00",
       "photo_id": 7031879
+    },
+    {
+      "post_id": "daily_20260625_lunch_onice_retroilluminato",
+      "topic_id": "onice_retroilluminato",
+      "slot": "lunch",
+      "at": "2026-06-25T10:25:58.226863+00:00",
+      "claimed_by_run": "28163648492",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -549,7 +547,7 @@
     "rivendita_immobile_marmo": "2026-06-22T10:25:34.559389+00:00",
     "granito_lavorazione": "2026-06-24T15:25:44.392076+00:00",
     "quarzite_durezza": "2026-06-25T05:55:21.171713+00:00",
-    "onice_retroilluminato": "2026-06-02T10:25:49.889311+00:00",
+    "onice_retroilluminato": "2026-06-25T10:25:58.226863+00:00",
     "botticino_classico": "2026-06-02T15:25:28.684638+00:00",
     "pietra_ragusa": "2026-06-03T05:55:40.200463+00:00",
     "cementine_disegno": "2026-06-03T10:25:57.939792+00:00",
