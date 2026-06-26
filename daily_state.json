@@ -1,16 +1,6 @@
 {
-  "next_index": 11,
+  "next_index": 12,
   "history": [
-    {
-      "post_id": "daily_20260610_lunch_tempi_reali_100mq",
-      "topic_id": "tempi_reali_100mq",
-      "slot": "lunch",
-      "at": "2026-06-10T10:26:12.523806+00:00",
-      "claimed_by_run": "27269859969",
-      "status": "done",
-      "done_at": "2026-06-10T10:26:20.750772+00:00",
-      "photo_id": 15798784
-    },
     {
       "post_id": "daily_20260610_evening_camminare_dopo_lucidatura",
       "topic_id": "camminare_dopo_lucidatura",
@@ -500,6 +490,14 @@
       "status": "done",
       "done_at": "2026-06-26T10:25:58.544716+00:00",
       "photo_id": 35176581
+    },
+    {
+      "post_id": "daily_20260626_evening_bnb_scopello_pavimento",
+      "topic_id": "bnb_scopello_pavimento",
+      "slot": "evening",
+      "at": "2026-06-26T15:26:16.533554+00:00",
+      "claimed_by_run": "28247772970",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -578,7 +576,8 @@
     "pavimenti_misti_giunti": "2026-06-11T05:55:50.204054+00:00",
     "cave_custonaci": "2026-06-11T10:26:27.308615+00:00",
     "signora_erice_caso": "2026-06-26T05:55:59.185775+00:00",
-    "ristorante_cefalu": "2026-06-26T10:25:51.258458+00:00"
+    "ristorante_cefalu": "2026-06-26T10:25:51.258458+00:00",
+    "bnb_scopello_pavimento": "2026-06-26T15:26:16.533554+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
