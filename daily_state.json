@@ -1,16 +1,6 @@
 {
-  "next_index": 9,
+  "next_index": 10,
   "history": [
-    {
-      "post_id": "daily_20260609_evening_macchine_silenziose",
-      "topic_id": "macchine_silenziose",
-      "slot": "evening",
-      "at": "2026-06-09T16:19:21.956494+00:00",
-      "claimed_by_run": "27220023973",
-      "status": "done",
-      "done_at": "2026-06-09T16:19:30.216130+00:00",
-      "photo_id": 35149468
-    },
     {
       "post_id": "daily_20260610_morning_polvere_zero",
       "topic_id": "polvere_zero",
@@ -500,6 +490,14 @@
       "status": "done",
       "done_at": "2026-06-25T15:26:24.782110+00:00",
       "photo_id": 12956025
+    },
+    {
+      "post_id": "daily_20260626_morning_signora_erice_caso",
+      "topic_id": "signora_erice_caso",
+      "slot": "morning",
+      "at": "2026-06-26T05:55:59.185775+00:00",
+      "claimed_by_run": "28220105544",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -576,7 +574,8 @@
     "tempi_reali_100mq": "2026-06-10T10:26:12.523806+00:00",
     "camminare_dopo_lucidatura": "2026-06-10T15:29:05.891432+00:00",
     "pavimenti_misti_giunti": "2026-06-11T05:55:50.204054+00:00",
-    "cave_custonaci": "2026-06-11T10:26:27.308615+00:00"
+    "cave_custonaci": "2026-06-11T10:26:27.308615+00:00",
+    "signora_erice_caso": "2026-06-26T05:55:59.185775+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
