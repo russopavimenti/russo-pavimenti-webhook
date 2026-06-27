@@ -1,16 +1,6 @@
 {
-  "next_index": 12,
+  "next_index": 13,
   "history": [
-    {
-      "post_id": "daily_20260610_evening_camminare_dopo_lucidatura",
-      "topic_id": "camminare_dopo_lucidatura",
-      "slot": "evening",
-      "at": "2026-06-10T15:29:05.891432+00:00",
-      "claimed_by_run": "27287038250",
-      "status": "done",
-      "done_at": "2026-06-10T15:29:14.953082+00:00",
-      "photo_id": 8234211
-    },
     {
       "post_id": "daily_20260611_morning_pavimenti_misti_giunti",
       "topic_id": "pavimenti_misti_giunti",
@@ -500,6 +490,14 @@
       "status": "done",
       "done_at": "2026-06-26T15:26:26.776938+00:00",
       "photo_id": 8112356
+    },
+    {
+      "post_id": "daily_20260627_morning_posso_forare_marmo",
+      "topic_id": "posso_forare_marmo",
+      "slot": "morning",
+      "at": "2026-06-27T05:55:47.980562+00:00",
+      "claimed_by_run": "28280477808",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -579,7 +577,8 @@
     "cave_custonaci": "2026-06-11T10:26:27.308615+00:00",
     "signora_erice_caso": "2026-06-26T05:55:59.185775+00:00",
     "ristorante_cefalu": "2026-06-26T10:25:51.258458+00:00",
-    "bnb_scopello_pavimento": "2026-06-26T15:26:16.533554+00:00"
+    "bnb_scopello_pavimento": "2026-06-26T15:26:16.533554+00:00",
+    "posso_forare_marmo": "2026-06-27T05:55:47.980562+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
