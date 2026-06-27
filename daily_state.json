@@ -1,16 +1,6 @@
 {
-  "next_index": 14,
+  "next_index": 15,
   "history": [
-    {
-      "post_id": "daily_20260611_lunch_cave_custonaci",
-      "topic_id": "cave_custonaci",
-      "slot": "lunch",
-      "at": "2026-06-11T10:26:27.308615+00:00",
-      "claimed_by_run": "27340428683",
-      "status": "done",
-      "done_at": "2026-06-11T10:26:36.970321+00:00",
-      "photo_id": 16567021
-    },
     {
       "post_id": "daily_20260611_evening_scale_marmo_usura",
       "topic_id": "scale_marmo_usura",
@@ -500,6 +490,14 @@
       "status": "done",
       "done_at": "2026-06-27T10:26:15.881980+00:00",
       "photo_id": 35769473
+    },
+    {
+      "post_id": "daily_20260627_evening_marmo_si_e_no_lucidatura",
+      "topic_id": "marmo_si_e_no_lucidatura",
+      "slot": "evening",
+      "at": "2026-06-27T15:25:52.669852+00:00",
+      "claimed_by_run": "28293419268",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -581,7 +579,8 @@
     "ristorante_cefalu": "2026-06-26T10:25:51.258458+00:00",
     "bnb_scopello_pavimento": "2026-06-26T15:26:16.533554+00:00",
     "posso_forare_marmo": "2026-06-27T05:55:47.980562+00:00",
-    "tappeti_su_marmo": "2026-06-27T10:26:08.733264+00:00"
+    "tappeti_su_marmo": "2026-06-27T10:26:08.733264+00:00",
+    "marmo_si_e_no_lucidatura": "2026-06-27T15:25:52.669852+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
