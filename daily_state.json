@@ -495,8 +495,8 @@
       "post_id": "daily_20260628_lunch_cocciopesto_storico",
       "topic_id": "cocciopesto_storico",
       "slot": "lunch",
-      "at": "2026-06-28T10:26:10.779924+00:00",
-      "claimed_by_run": "28319230291",
+      "at": "2026-06-28T10:26:12.269198+00:00",
+      "claimed_by_run": "28319230024",
       "status": "claimed"
     }
   ],
@@ -582,7 +582,7 @@
     "tappeti_su_marmo": "2026-06-27T10:26:08.733264+00:00",
     "marmo_si_e_no_lucidatura": "2026-06-27T15:25:52.669852+00:00",
     "pietra_lavica_etna": "2026-06-28T05:55:34.334872+00:00",
-    "cocciopesto_storico": "2026-06-28T10:26:10.779924+00:00"
+    "cocciopesto_storico": "2026-06-28T10:26:12.269198+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
