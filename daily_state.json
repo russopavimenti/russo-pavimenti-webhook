@@ -1,16 +1,6 @@
 {
-  "next_index": 16,
+  "next_index": 17,
   "history": [
-    {
-      "post_id": "daily_20260612_morning_graniglia_palladiana",
-      "topic_id": "graniglia_palladiana",
-      "slot": "morning",
-      "at": "2026-06-12T05:56:04.268321+00:00",
-      "claimed_by_run": "27397577605",
-      "status": "done",
-      "done_at": "2026-06-12T05:56:10.582618+00:00",
-      "photo_id": 37727447
-    },
     {
       "post_id": "daily_20260612_lunch_lavabo_marmo_macchie",
       "topic_id": "lavabo_marmo_macchie",
@@ -500,6 +490,14 @@
       "status": "done",
       "done_at": "2026-06-28T05:55:42.110778+00:00",
       "photo_id": 18926804
+    },
+    {
+      "post_id": "daily_20260628_lunch_cocciopesto_storico",
+      "topic_id": "cocciopesto_storico",
+      "slot": "lunch",
+      "at": "2026-06-28T10:26:10.779924+00:00",
+      "claimed_by_run": "28319230291",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -583,7 +581,8 @@
     "posso_forare_marmo": "2026-06-27T05:55:47.980562+00:00",
     "tappeti_su_marmo": "2026-06-27T10:26:08.733264+00:00",
     "marmo_si_e_no_lucidatura": "2026-06-27T15:25:52.669852+00:00",
-    "pietra_lavica_etna": "2026-06-28T05:55:34.334872+00:00"
+    "pietra_lavica_etna": "2026-06-28T05:55:34.334872+00:00",
+    "cocciopesto_storico": "2026-06-28T10:26:10.779924+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
