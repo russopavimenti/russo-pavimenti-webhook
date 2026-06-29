@@ -1,16 +1,6 @@
 {
-  "next_index": 19,
+  "next_index": 20,
   "history": [
-    {
-      "post_id": "daily_20260613_morning_marmo_negozi_ristoranti",
-      "topic_id": "marmo_negozi_ristoranti",
-      "slot": "morning",
-      "at": "2026-06-13T05:55:54.875309+00:00",
-      "claimed_by_run": "27458397301",
-      "status": "done",
-      "done_at": "2026-06-13T05:56:02.007122+00:00",
-      "photo_id": 13088696
-    },
     {
       "post_id": "daily_20260613_lunch_pavimento_anziani_riflesso",
       "topic_id": "pavimento_anziani_riflesso",
@@ -500,6 +490,14 @@
       "status": "done",
       "done_at": "2026-06-29T05:55:41.731564+00:00",
       "photo_id": 17086289
+    },
+    {
+      "post_id": "daily_20260629_lunch_bicchiere_alone_marmo",
+      "topic_id": "bicchiere_alone_marmo",
+      "slot": "lunch",
+      "at": "2026-06-29T10:25:37.076178+00:00",
+      "claimed_by_run": "28365373068",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -586,7 +584,8 @@
     "pietra_lavica_etna": "2026-06-28T05:55:34.334872+00:00",
     "cocciopesto_storico": "2026-06-28T10:26:12.269198+00:00",
     "perlato_vs_botticino": "2026-06-28T15:26:22.277976+00:00",
-    "bruciatura_pentola": "2026-06-29T05:55:34.612338+00:00"
+    "bruciatura_pentola": "2026-06-29T05:55:34.612338+00:00",
+    "bicchiere_alone_marmo": "2026-06-29T10:25:37.076178+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
