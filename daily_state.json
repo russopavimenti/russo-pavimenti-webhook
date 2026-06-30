@@ -1,16 +1,6 @@
 {
-  "next_index": 23,
+  "next_index": 24,
   "history": [
-    {
-      "post_id": "daily_20260614_lunch_garanzia_lavoro",
-      "topic_id": "garanzia_lavoro",
-      "slot": "lunch",
-      "at": "2026-06-14T10:26:23.242509+00:00",
-      "claimed_by_run": "27495933346",
-      "status": "done",
-      "done_at": "2026-06-14T10:26:29.555247+00:00",
-      "photo_id": 34222660
-    },
     {
       "post_id": "daily_20260614_evening_pavimento_doccia",
       "topic_id": "pavimento_doccia",
@@ -500,6 +490,14 @@
       "status": "done",
       "done_at": "2026-06-30T10:26:18.987348+00:00",
       "photo_id": 7600384
+    },
+    {
+      "post_id": "daily_20260630_evening_marmo_ferragosto",
+      "topic_id": "marmo_ferragosto",
+      "slot": "evening",
+      "at": "2026-06-30T15:26:23.981290+00:00",
+      "claimed_by_run": "28455866810",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -590,7 +588,8 @@
     "bicchiere_alone_marmo": "2026-06-29T10:25:37.076178+00:00",
     "finitura_satin_opaca": "2026-06-29T15:25:57.174369+00:00",
     "casa_chiusa_estate": "2026-06-30T05:56:21.485826+00:00",
-    "festa_bambini_marmo": "2026-06-30T10:26:11.908851+00:00"
+    "festa_bambini_marmo": "2026-06-30T10:26:11.908851+00:00",
+    "marmo_ferragosto": "2026-06-30T15:26:23.981290+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
