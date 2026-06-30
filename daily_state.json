@@ -1,16 +1,6 @@
 {
-  "next_index": 22,
+  "next_index": 23,
   "history": [
-    {
-      "post_id": "daily_20260614_morning_macchie_olio_marmo",
-      "topic_id": "macchie_olio_marmo",
-      "slot": "morning",
-      "at": "2026-06-14T05:55:51.906769+00:00",
-      "claimed_by_run": "27490009098",
-      "status": "done",
-      "done_at": "2026-06-14T05:56:00.943301+00:00",
-      "photo_id": 18160477
-    },
     {
       "post_id": "daily_20260614_lunch_garanzia_lavoro",
       "topic_id": "garanzia_lavoro",
@@ -500,6 +490,14 @@
       "status": "done",
       "done_at": "2026-06-30T05:56:32.281680+00:00",
       "photo_id": 29945325
+    },
+    {
+      "post_id": "daily_20260630_lunch_festa_bambini_marmo",
+      "topic_id": "festa_bambini_marmo",
+      "slot": "lunch",
+      "at": "2026-06-30T10:26:11.908851+00:00",
+      "claimed_by_run": "28437583061",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -589,7 +587,8 @@
     "bruciatura_pentola": "2026-06-29T05:55:34.612338+00:00",
     "bicchiere_alone_marmo": "2026-06-29T10:25:37.076178+00:00",
     "finitura_satin_opaca": "2026-06-29T15:25:57.174369+00:00",
-    "casa_chiusa_estate": "2026-06-30T05:56:21.485826+00:00"
+    "casa_chiusa_estate": "2026-06-30T05:56:21.485826+00:00",
+    "festa_bambini_marmo": "2026-06-30T10:26:11.908851+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
