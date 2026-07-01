@@ -1,16 +1,6 @@
 {
-  "next_index": 26,
+  "next_index": 27,
   "history": [
-    {
-      "post_id": "daily_20260615_lunch_preventivo_trasparente",
-      "topic_id": "preventivo_trasparente",
-      "slot": "lunch",
-      "at": "2026-06-15T10:26:26.920010+00:00",
-      "claimed_by_run": "27539976120",
-      "status": "done",
-      "done_at": "2026-06-15T10:26:34.373443+00:00",
-      "photo_id": 8171194
-    },
     {
       "post_id": "daily_20260615_evening_marmo_terrazzo_esterno",
       "topic_id": "marmo_terrazzo_esterno",
@@ -500,6 +490,14 @@
       "status": "done",
       "done_at": "2026-07-01T10:26:03.835335+00:00",
       "photo_id": 14805846
+    },
+    {
+      "post_id": "daily_20260701_evening_marmo_sotto_laminato",
+      "topic_id": "marmo_sotto_laminato",
+      "slot": "evening",
+      "at": "2026-07-01T15:26:20.581096+00:00",
+      "claimed_by_run": "28528636384",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -593,7 +591,8 @@
     "festa_bambini_marmo": "2026-06-30T10:26:11.908851+00:00",
     "marmo_ferragosto": "2026-06-30T15:26:23.981290+00:00",
     "pasqua_pulizia_marmo": "2026-07-01T05:56:01.954661+00:00",
-    "natale_decorazioni_marmo": "2026-07-01T10:25:57.338556+00:00"
+    "natale_decorazioni_marmo": "2026-07-01T10:25:57.338556+00:00",
+    "marmo_sotto_laminato": "2026-07-01T15:26:20.581096+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
