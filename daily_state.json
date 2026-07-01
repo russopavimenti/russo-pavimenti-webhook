@@ -1,16 +1,6 @@
 {
-  "next_index": 24,
+  "next_index": 25,
   "history": [
-    {
-      "post_id": "daily_20260614_evening_pavimento_doccia",
-      "topic_id": "pavimento_doccia",
-      "slot": "evening",
-      "at": "2026-06-14T15:26:02.614667+00:00",
-      "claimed_by_run": "27503379297",
-      "status": "done",
-      "done_at": "2026-06-14T15:26:09.974685+00:00",
-      "photo_id": 6315801
-    },
     {
       "post_id": "daily_20260615_morning_alcamo_storia_marmo",
       "topic_id": "alcamo_storia_marmo",
@@ -500,6 +490,14 @@
       "status": "done",
       "done_at": "2026-06-30T15:26:34.570034+00:00",
       "photo_id": 13171263
+    },
+    {
+      "post_id": "daily_20260701_morning_pasqua_pulizia_marmo",
+      "topic_id": "pasqua_pulizia_marmo",
+      "slot": "morning",
+      "at": "2026-07-01T05:56:01.954661+00:00",
+      "claimed_by_run": "28496820784",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -591,7 +589,8 @@
     "finitura_satin_opaca": "2026-06-29T15:25:57.174369+00:00",
     "casa_chiusa_estate": "2026-06-30T05:56:21.485826+00:00",
     "festa_bambini_marmo": "2026-06-30T10:26:11.908851+00:00",
-    "marmo_ferragosto": "2026-06-30T15:26:23.981290+00:00"
+    "marmo_ferragosto": "2026-06-30T15:26:23.981290+00:00",
+    "pasqua_pulizia_marmo": "2026-07-01T05:56:01.954661+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
