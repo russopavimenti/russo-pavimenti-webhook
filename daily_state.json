@@ -1,16 +1,6 @@
 {
-  "next_index": 30,
+  "next_index": 31,
   "history": [
-    {
-      "post_id": "daily_20260616_evening_vino_macchie",
-      "topic_id": "vino_macchie",
-      "slot": "evening",
-      "at": "2026-06-16T15:25:05.934076+00:00",
-      "claimed_by_run": "27628513493",
-      "status": "done",
-      "done_at": "2026-06-16T15:25:15.290859+00:00",
-      "photo_id": 31551925
-    },
     {
       "post_id": "daily_20260617_morning_top_bagno_calcare",
       "topic_id": "top_bagno_calcare",
@@ -502,6 +492,14 @@
       "error": "png_commit_failed",
       "done_at": "2026-07-02T12:23:52.501136+00:00",
       "photo_id": 770224
+    },
+    {
+      "post_id": "daily_20260702_evening_murature_calcina_marmo",
+      "topic_id": "murature_calcina_marmo",
+      "slot": "evening",
+      "at": "2026-07-02T15:25:53.209818+00:00",
+      "claimed_by_run": "28601642277",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -599,7 +597,8 @@
     "marmo_sotto_laminato": "2026-07-01T15:26:20.581096+00:00",
     "marmo_sotto_moquette": "2026-07-02T05:55:26.600045+00:00",
     "impresa_pulizia_coordinamento": "2026-07-02T10:26:05.491606+00:00",
-    "idraulico_perdita_marmo": "2026-07-02T12:23:46.418055+00:00"
+    "idraulico_perdita_marmo": "2026-07-02T12:23:46.418055+00:00",
+    "murature_calcina_marmo": "2026-07-02T15:25:53.209818+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
