@@ -495,8 +495,8 @@
       "post_id": "daily_20260702_lunch_idraulico_perdita_marmo",
       "topic_id": "idraulico_perdita_marmo",
       "slot": "lunch",
-      "at": "2026-07-02T12:23:45.265573+00:00",
-      "claimed_by_run": "28589682185",
+      "at": "2026-07-02T12:23:46.418055+00:00",
+      "claimed_by_run": "28589689315",
       "status": "claimed"
     }
   ],
@@ -595,7 +595,7 @@
     "marmo_sotto_laminato": "2026-07-01T15:26:20.581096+00:00",
     "marmo_sotto_moquette": "2026-07-02T05:55:26.600045+00:00",
     "impresa_pulizia_coordinamento": "2026-07-02T10:26:05.491606+00:00",
-    "idraulico_perdita_marmo": "2026-07-02T12:23:45.265573+00:00"
+    "idraulico_perdita_marmo": "2026-07-02T12:23:46.418055+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
