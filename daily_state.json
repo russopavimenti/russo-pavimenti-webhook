@@ -497,7 +497,9 @@
       "slot": "lunch",
       "at": "2026-07-02T10:26:05.491606+00:00",
       "claimed_by_run": "28583101719",
-      "status": "claimed"
+      "status": "failed",
+      "failed_at": "2026-07-02T10:28:02.234716+00:00",
+      "error": "no_fresh_photo"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
