@@ -1,16 +1,6 @@
 {
-  "next_index": 29,
+  "next_index": 30,
   "history": [
-    {
-      "post_id": "daily_20260616_lunch_pavimento_anziano_sicurezza",
-      "topic_id": "pavimento_anziano_sicurezza",
-      "slot": "lunch",
-      "at": "2026-06-16T10:25:34.936753+00:00",
-      "claimed_by_run": "27611035617",
-      "status": "done",
-      "done_at": "2026-06-16T10:25:41.918212+00:00",
-      "photo_id": 7328487
-    },
     {
       "post_id": "daily_20260616_evening_vino_macchie",
       "topic_id": "vino_macchie",
@@ -500,6 +490,14 @@
       "status": "failed",
       "failed_at": "2026-07-02T10:28:02.234716+00:00",
       "error": "no_fresh_photo"
+    },
+    {
+      "post_id": "daily_20260702_lunch_idraulico_perdita_marmo",
+      "topic_id": "idraulico_perdita_marmo",
+      "slot": "lunch",
+      "at": "2026-07-02T12:23:45.265573+00:00",
+      "claimed_by_run": "28589682185",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -596,7 +594,8 @@
     "natale_decorazioni_marmo": "2026-07-01T10:25:57.338556+00:00",
     "marmo_sotto_laminato": "2026-07-01T15:26:20.581096+00:00",
     "marmo_sotto_moquette": "2026-07-02T05:55:26.600045+00:00",
-    "impresa_pulizia_coordinamento": "2026-07-02T10:26:05.491606+00:00"
+    "impresa_pulizia_coordinamento": "2026-07-02T10:26:05.491606+00:00",
+    "idraulico_perdita_marmo": "2026-07-02T12:23:45.265573+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
