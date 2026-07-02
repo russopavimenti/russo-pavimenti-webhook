@@ -1,16 +1,6 @@
 {
-  "next_index": 28,
+  "next_index": 29,
   "history": [
-    {
-      "post_id": "daily_20260616_morning_graffi_profondi_marmo",
-      "topic_id": "graffi_profondi_marmo",
-      "slot": "morning",
-      "at": "2026-06-16T05:56:10.687485+00:00",
-      "claimed_by_run": "27597327271",
-      "status": "done",
-      "done_at": "2026-06-16T05:56:18.068273+00:00",
-      "photo_id": 3721374
-    },
     {
       "post_id": "daily_20260616_lunch_pavimento_anziano_sicurezza",
       "topic_id": "pavimento_anziano_sicurezza",
@@ -500,6 +490,14 @@
       "status": "done",
       "done_at": "2026-07-02T05:55:37.972266+00:00",
       "photo_id": 16820353
+    },
+    {
+      "post_id": "daily_20260702_lunch_impresa_pulizia_coordinamento",
+      "topic_id": "impresa_pulizia_coordinamento",
+      "slot": "lunch",
+      "at": "2026-07-02T10:26:05.491606+00:00",
+      "claimed_by_run": "28583101719",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -595,7 +593,8 @@
     "pasqua_pulizia_marmo": "2026-07-01T05:56:01.954661+00:00",
     "natale_decorazioni_marmo": "2026-07-01T10:25:57.338556+00:00",
     "marmo_sotto_laminato": "2026-07-01T15:26:20.581096+00:00",
-    "marmo_sotto_moquette": "2026-07-02T05:55:26.600045+00:00"
+    "marmo_sotto_moquette": "2026-07-02T05:55:26.600045+00:00",
+    "impresa_pulizia_coordinamento": "2026-07-02T10:26:05.491606+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
