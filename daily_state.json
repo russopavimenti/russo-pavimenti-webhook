@@ -1,16 +1,6 @@
 {
-  "next_index": 33,
+  "next_index": 34,
   "history": [
-    {
-      "post_id": "daily_20260617_evening_marmo_chiesa_storico",
-      "topic_id": "marmo_chiesa_storico",
-      "slot": "evening",
-      "at": "2026-06-17T15:26:28.463982+00:00",
-      "claimed_by_run": "27700169163",
-      "status": "done",
-      "done_at": "2026-06-17T15:26:36.555855+00:00",
-      "photo_id": 9656233
-    },
     {
       "post_id": "daily_20260618_morning_cera_vs_lucidatura",
       "topic_id": "cera_vs_lucidatura",
@@ -502,6 +492,14 @@
       "status": "done",
       "done_at": "2026-07-03T10:25:48.215681+00:00",
       "photo_id": 10268087
+    },
+    {
+      "post_id": "daily_20260703_evening_marmo_riciclo_recupero",
+      "topic_id": "marmo_riciclo_recupero",
+      "slot": "evening",
+      "at": "2026-07-03T15:25:34.737098+00:00",
+      "claimed_by_run": "28669705795",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -602,7 +600,8 @@
     "idraulico_perdita_marmo": "2026-07-02T12:23:46.418055+00:00",
     "murature_calcina_marmo": "2026-07-02T15:25:53.209818+00:00",
     "elettricista_traccia_marmo": "2026-07-03T05:55:53.280597+00:00",
-    "prodotti_eco_marmo": "2026-07-03T10:25:38.964597+00:00"
+    "prodotti_eco_marmo": "2026-07-03T10:25:38.964597+00:00",
+    "marmo_riciclo_recupero": "2026-07-03T15:25:34.737098+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
