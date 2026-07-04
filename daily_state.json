@@ -1,16 +1,6 @@
 {
-  "next_index": 34,
+  "next_index": 35,
   "history": [
-    {
-      "post_id": "daily_20260618_morning_cera_vs_lucidatura",
-      "topic_id": "cera_vs_lucidatura",
-      "slot": "morning",
-      "at": "2026-06-18T05:56:12.833727+00:00",
-      "claimed_by_run": "27739830504",
-      "status": "done",
-      "done_at": "2026-06-18T05:56:22.517912+00:00",
-      "photo_id": 7045766
-    },
     {
       "post_id": "daily_20260618_lunch_marmo_bianco_ingiallisce",
       "topic_id": "marmo_bianco_ingiallisce",
@@ -502,6 +492,14 @@
       "status": "done",
       "done_at": "2026-07-03T15:25:44.137512+00:00",
       "photo_id": 22710746
+    },
+    {
+      "post_id": "daily_20260704_morning_top_cucina_taglio_pesce",
+      "topic_id": "top_cucina_taglio_pesce",
+      "slot": "morning",
+      "at": "2026-07-04T05:55:42.990667+00:00",
+      "claimed_by_run": "28696912804",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -603,7 +601,8 @@
     "murature_calcina_marmo": "2026-07-02T15:25:53.209818+00:00",
     "elettricista_traccia_marmo": "2026-07-03T05:55:53.280597+00:00",
     "prodotti_eco_marmo": "2026-07-03T10:25:38.964597+00:00",
-    "marmo_riciclo_recupero": "2026-07-03T15:25:34.737098+00:00"
+    "marmo_riciclo_recupero": "2026-07-03T15:25:34.737098+00:00",
+    "top_cucina_taglio_pesce": "2026-07-04T05:55:42.990667+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
