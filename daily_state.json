@@ -1,16 +1,6 @@
 {
-  "next_index": 35,
+  "next_index": 36,
   "history": [
-    {
-      "post_id": "daily_20260618_lunch_marmo_bianco_ingiallisce",
-      "topic_id": "marmo_bianco_ingiallisce",
-      "slot": "lunch",
-      "at": "2026-06-18T10:25:52.612646+00:00",
-      "claimed_by_run": "27753113656",
-      "status": "done",
-      "done_at": "2026-06-18T10:25:59.228681+00:00",
-      "photo_id": 6634143
-    },
     {
       "post_id": "daily_20260618_evening_detergenti_acidi_lista",
       "topic_id": "detergenti_acidi_lista",
@@ -502,6 +492,14 @@
       "status": "done",
       "done_at": "2026-07-04T05:55:50.795127+00:00",
       "photo_id": 18832819
+    },
+    {
+      "post_id": "daily_20260704_lunch_marmo_olio_oliva",
+      "topic_id": "marmo_olio_oliva",
+      "slot": "lunch",
+      "at": "2026-07-04T10:25:35.407085+00:00",
+      "claimed_by_run": "28703260563",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -604,7 +602,8 @@
     "elettricista_traccia_marmo": "2026-07-03T05:55:53.280597+00:00",
     "prodotti_eco_marmo": "2026-07-03T10:25:38.964597+00:00",
     "marmo_riciclo_recupero": "2026-07-03T15:25:34.737098+00:00",
-    "top_cucina_taglio_pesce": "2026-07-04T05:55:42.990667+00:00"
+    "top_cucina_taglio_pesce": "2026-07-04T05:55:42.990667+00:00",
+    "marmo_olio_oliva": "2026-07-04T10:25:35.407085+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
