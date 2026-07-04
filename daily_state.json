@@ -1,16 +1,6 @@
 {
-  "next_index": 36,
+  "next_index": 37,
   "history": [
-    {
-      "post_id": "daily_20260618_evening_detergenti_acidi_lista",
-      "topic_id": "detergenti_acidi_lista",
-      "slot": "evening",
-      "at": "2026-06-18T15:26:02.662031+00:00",
-      "claimed_by_run": "27770255386",
-      "status": "done",
-      "done_at": "2026-06-18T15:26:09.095007+00:00",
-      "photo_id": 10558186
-    },
     {
       "post_id": "daily_20260619_morning_travertino_vs_marmo",
       "topic_id": "travertino_vs_marmo",
@@ -502,6 +492,14 @@
       "status": "done",
       "done_at": "2026-07-04T10:25:41.184305+00:00",
       "photo_id": 31275834
+    },
+    {
+      "post_id": "daily_20260704_evening_marmo_animali_domestici_unghie",
+      "topic_id": "marmo_animali_domestici_unghie",
+      "slot": "evening",
+      "at": "2026-07-04T15:26:17.552699+00:00",
+      "claimed_by_run": "28710776288",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -605,7 +603,8 @@
     "prodotti_eco_marmo": "2026-07-03T10:25:38.964597+00:00",
     "marmo_riciclo_recupero": "2026-07-03T15:25:34.737098+00:00",
     "top_cucina_taglio_pesce": "2026-07-04T05:55:42.990667+00:00",
-    "marmo_olio_oliva": "2026-07-04T10:25:35.407085+00:00"
+    "marmo_olio_oliva": "2026-07-04T10:25:35.407085+00:00",
+    "marmo_animali_domestici_unghie": "2026-07-04T15:26:17.552699+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
