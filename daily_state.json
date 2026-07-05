@@ -1,16 +1,6 @@
 {
-  "next_index": 37,
+  "next_index": 38,
   "history": [
-    {
-      "post_id": "daily_20260619_morning_travertino_vs_marmo",
-      "topic_id": "travertino_vs_marmo",
-      "slot": "morning",
-      "at": "2026-06-19T05:55:51.020217+00:00",
-      "claimed_by_run": "27808312253",
-      "status": "done",
-      "done_at": "2026-06-19T05:56:00.020458+00:00",
-      "photo_id": 36832062
-    },
     {
       "post_id": "daily_20260619_lunch_bagno_padronale_marmo",
       "topic_id": "bagno_padronale_marmo",
@@ -502,6 +492,14 @@
       "status": "done",
       "done_at": "2026-07-04T15:26:24.120506+00:00",
       "photo_id": 11083929
+    },
+    {
+      "post_id": "daily_20260705_morning_marmo_terrazza_invernale",
+      "topic_id": "marmo_terrazza_invernale",
+      "slot": "morning",
+      "at": "2026-07-05T05:55:55.968062+00:00",
+      "claimed_by_run": "28731267301",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -606,7 +604,8 @@
     "marmo_riciclo_recupero": "2026-07-03T15:25:34.737098+00:00",
     "top_cucina_taglio_pesce": "2026-07-04T05:55:42.990667+00:00",
     "marmo_olio_oliva": "2026-07-04T10:25:35.407085+00:00",
-    "marmo_animali_domestici_unghie": "2026-07-04T15:26:17.552699+00:00"
+    "marmo_animali_domestici_unghie": "2026-07-04T15:26:17.552699+00:00",
+    "marmo_terrazza_invernale": "2026-07-05T05:55:55.968062+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
