@@ -1,16 +1,6 @@
 {
-  "next_index": 39,
+  "next_index": 40,
   "history": [
-    {
-      "post_id": "daily_20260619_evening_mosaico_veneziano_70",
-      "topic_id": "mosaico_veneziano_70",
-      "slot": "evening",
-      "at": "2026-06-19T15:25:57.561613+00:00",
-      "claimed_by_run": "27834417260",
-      "status": "done",
-      "done_at": "2026-06-19T15:26:04.573804+00:00",
-      "photo_id": 26822297
-    },
     {
       "post_id": "daily_20260620_morning_mobili_pesanti_senza_graffi",
       "topic_id": "mobili_pesanti_senza_graffi",
@@ -502,6 +492,14 @@
       "status": "done",
       "done_at": "2026-07-05T05:56:34.693172+00:00",
       "photo_id": 38240610
+    },
+    {
+      "post_id": "daily_20260705_lunch_marmo_alone_calorifero",
+      "topic_id": "marmo_alone_calorifero",
+      "slot": "lunch",
+      "at": "2026-07-05T10:26:02.424605+00:00",
+      "claimed_by_run": "28737657881",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -608,7 +606,8 @@
     "marmo_olio_oliva": "2026-07-04T10:25:35.407085+00:00",
     "marmo_animali_domestici_unghie": "2026-07-04T15:26:17.552699+00:00",
     "marmo_terrazza_invernale": "2026-07-05T05:55:55.968062+00:00",
-    "marmo_sotto_finestra": "2026-07-05T05:56:24.612918+00:00"
+    "marmo_sotto_finestra": "2026-07-05T05:56:24.612918+00:00",
+    "marmo_alone_calorifero": "2026-07-05T10:26:02.424605+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
