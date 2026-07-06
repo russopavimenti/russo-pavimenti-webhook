@@ -1,16 +1,6 @@
 {
-  "next_index": 43,
+  "next_index": 44,
   "history": [
-    {
-      "post_id": "daily_20260620_evening_pulizia_quotidiana_60sec",
-      "topic_id": "pulizia_quotidiana_60sec",
-      "slot": "evening",
-      "at": "2026-06-20T15:25:50.293427+00:00",
-      "claimed_by_run": "27875463190",
-      "status": "done",
-      "done_at": "2026-06-20T15:25:58.490482+00:00",
-      "photo_id": 24403525
-    },
     {
       "post_id": "daily_20260621_morning_post_cantiere_proteggere",
       "topic_id": "post_cantiere_proteggere",
@@ -502,6 +492,14 @@
       "status": "done",
       "done_at": "2026-07-06T10:26:21.226847+00:00",
       "photo_id": 24514612
+    },
+    {
+      "post_id": "daily_20260706_evening_marmo_piscina_zona",
+      "topic_id": "marmo_piscina_zona",
+      "slot": "evening",
+      "at": "2026-07-06T15:25:39.203864+00:00",
+      "claimed_by_run": "28802833609",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -612,7 +610,8 @@
     "marmo_alone_calorifero": "2026-07-05T10:26:02.424605+00:00",
     "marmo_decoratore_pittore": "2026-07-05T15:26:14.609455+00:00",
     "marmo_dopo_alluvione": "2026-07-06T05:56:04.675323+00:00",
-    "marmo_chiesa_locale": "2026-07-06T10:26:13.868067+00:00"
+    "marmo_chiesa_locale": "2026-07-06T10:26:13.868067+00:00",
+    "marmo_piscina_zona": "2026-07-06T15:25:39.203864+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
