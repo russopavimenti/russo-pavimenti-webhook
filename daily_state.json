@@ -1,16 +1,6 @@
 {
-  "next_index": 41,
+  "next_index": 42,
   "history": [
-    {
-      "post_id": "daily_20260620_lunch_lucidatura_negozi_chiusura",
-      "topic_id": "lucidatura_negozi_chiusura",
-      "slot": "lunch",
-      "at": "2026-06-20T10:25:30.789752+00:00",
-      "claimed_by_run": "27868325495",
-      "status": "failed",
-      "failed_at": "2026-06-20T10:25:38.318328+00:00",
-      "error": "exception: HTTP Error 400: Bad Request"
-    },
     {
       "post_id": "daily_20260620_lunch_marmo_bambini_animali",
       "topic_id": "marmo_bambini_animali",
@@ -502,6 +492,14 @@
       "status": "done",
       "done_at": "2026-07-05T15:26:20.965971+00:00",
       "photo_id": 6764279
+    },
+    {
+      "post_id": "daily_20260706_morning_marmo_dopo_alluvione",
+      "topic_id": "marmo_dopo_alluvione",
+      "slot": "morning",
+      "at": "2026-07-06T05:56:04.675323+00:00",
+      "claimed_by_run": "28770948462",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -610,7 +608,8 @@
     "marmo_terrazza_invernale": "2026-07-05T05:55:55.968062+00:00",
     "marmo_sotto_finestra": "2026-07-05T05:56:24.612918+00:00",
     "marmo_alone_calorifero": "2026-07-05T10:26:02.424605+00:00",
-    "marmo_decoratore_pittore": "2026-07-05T15:26:14.609455+00:00"
+    "marmo_decoratore_pittore": "2026-07-05T15:26:14.609455+00:00",
+    "marmo_dopo_alluvione": "2026-07-06T05:56:04.675323+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
