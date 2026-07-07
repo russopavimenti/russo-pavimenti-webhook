@@ -1,16 +1,6 @@
 {
-  "next_index": 46,
+  "next_index": 47,
   "history": [
-    {
-      "post_id": "daily_20260621_evening_marmo_dimenticato_cantina",
-      "topic_id": "marmo_dimenticato_cantina",
-      "slot": "evening",
-      "at": "2026-06-21T15:26:04.813408+00:00",
-      "claimed_by_run": "27908872241",
-      "status": "done",
-      "done_at": "2026-06-21T15:26:11.030504+00:00",
-      "photo_id": 27906730
-    },
     {
       "post_id": "daily_20260622_morning_candeggina_aloni",
       "topic_id": "candeggina_aloni",
@@ -502,6 +492,14 @@
       "status": "done",
       "done_at": "2026-07-07T10:26:10.306277+00:00",
       "photo_id": 9064780
+    },
+    {
+      "post_id": "daily_20260707_evening_marmo_vintage_modern_mix",
+      "topic_id": "marmo_vintage_modern_mix",
+      "slot": "evening",
+      "at": "2026-07-07T15:26:01.012474+00:00",
+      "claimed_by_run": "28877983450",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -615,7 +613,8 @@
     "marmo_chiesa_locale": "2026-07-06T10:26:13.868067+00:00",
     "marmo_piscina_zona": "2026-07-06T15:25:39.203864+00:00",
     "marmo_recensione_cliente": "2026-07-07T05:56:27.699655+00:00",
-    "sopralluogo_come_funziona": "2026-07-07T10:26:02.972629+00:00"
+    "sopralluogo_come_funziona": "2026-07-07T10:26:02.972629+00:00",
+    "marmo_vintage_modern_mix": "2026-07-07T15:26:01.012474+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
