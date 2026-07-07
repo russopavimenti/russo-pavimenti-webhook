@@ -1,16 +1,6 @@
 {
-  "next_index": 44,
+  "next_index": 45,
   "history": [
-    {
-      "post_id": "daily_20260621_morning_post_cantiere_proteggere",
-      "topic_id": "post_cantiere_proteggere",
-      "slot": "morning",
-      "at": "2026-06-21T05:55:34.524165+00:00",
-      "claimed_by_run": "27895272050",
-      "status": "done",
-      "done_at": "2026-06-21T05:55:40.221212+00:00",
-      "photo_id": 5691535
-    },
     {
       "post_id": "daily_20260621_lunch_rivestimenti_verticali",
       "topic_id": "rivestimenti_verticali",
@@ -502,6 +492,14 @@
       "status": "done",
       "done_at": "2026-07-06T15:25:49.739507+00:00",
       "photo_id": 14012213
+    },
+    {
+      "post_id": "daily_20260707_morning_marmo_recensione_cliente",
+      "topic_id": "marmo_recensione_cliente",
+      "slot": "morning",
+      "at": "2026-07-07T05:56:27.699655+00:00",
+      "claimed_by_run": "28844921970",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -613,7 +611,8 @@
     "marmo_decoratore_pittore": "2026-07-05T15:26:14.609455+00:00",
     "marmo_dopo_alluvione": "2026-07-06T05:56:04.675323+00:00",
     "marmo_chiesa_locale": "2026-07-06T10:26:13.868067+00:00",
-    "marmo_piscina_zona": "2026-07-06T15:25:39.203864+00:00"
+    "marmo_piscina_zona": "2026-07-06T15:25:39.203864+00:00",
+    "marmo_recensione_cliente": "2026-07-07T05:56:27.699655+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
