@@ -1,16 +1,6 @@
 {
-  "next_index": 49,
+  "next_index": 50,
   "history": [
-    {
-      "post_id": "daily_20260622_evening_marmo_scivoloso",
-      "topic_id": "marmo_scivoloso",
-      "slot": "evening",
-      "at": "2026-06-22T15:25:47.994764+00:00",
-      "claimed_by_run": "27963895531",
-      "status": "done",
-      "done_at": "2026-06-22T15:25:55.154985+00:00",
-      "photo_id": 27742604
-    },
     {
       "post_id": "daily_20260623_morning_cemento_lucidato_moderno",
       "topic_id": "cemento_lucidato_moderno",
@@ -502,6 +492,14 @@
       "status": "done",
       "done_at": "2026-07-08T10:26:14.423377+00:00",
       "photo_id": 33061504
+    },
+    {
+      "post_id": "daily_20260708_evening_pietra_ragusa",
+      "topic_id": "pietra_ragusa",
+      "slot": "evening",
+      "at": "2026-07-08T15:25:34.224307+00:00",
+      "claimed_by_run": "28954446251",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -553,7 +551,7 @@
     "quarzite_durezza": "2026-06-25T05:55:21.171713+00:00",
     "onice_retroilluminato": "2026-06-25T10:25:58.226863+00:00",
     "botticino_classico": "2026-06-25T15:26:16.517243+00:00",
-    "pietra_ragusa": "2026-06-03T05:55:40.200463+00:00",
+    "pietra_ragusa": "2026-07-08T15:25:34.224307+00:00",
     "cementine_disegno": "2026-06-03T10:25:57.939792+00:00",
     "cotto_artigianale": "2026-06-03T15:26:26.575603+00:00",
     "klinker_terrazze": "2026-06-04T05:55:50.808363+00:00",
