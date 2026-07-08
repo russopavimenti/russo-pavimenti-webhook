@@ -1,16 +1,6 @@
 {
-  "next_index": 47,
+  "next_index": 48,
   "history": [
-    {
-      "post_id": "daily_20260622_morning_candeggina_aloni",
-      "topic_id": "candeggina_aloni",
-      "slot": "morning",
-      "at": "2026-06-22T05:55:44.289279+00:00",
-      "claimed_by_run": "27932577646",
-      "status": "done",
-      "done_at": "2026-06-22T05:55:50.993613+00:00",
-      "photo_id": 15273824
-    },
     {
       "post_id": "daily_20260622_lunch_rivendita_immobile_marmo",
       "topic_id": "rivendita_immobile_marmo",
@@ -502,6 +492,14 @@
       "status": "done",
       "done_at": "2026-07-07T15:26:11.635353+00:00",
       "photo_id": 7598368
+    },
+    {
+      "post_id": "daily_20260708_morning_marmo_donne_imprenditrici",
+      "topic_id": "marmo_donne_imprenditrici",
+      "slot": "morning",
+      "at": "2026-07-08T05:55:35.433010+00:00",
+      "claimed_by_run": "28920922883",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -616,7 +614,8 @@
     "marmo_piscina_zona": "2026-07-06T15:25:39.203864+00:00",
     "marmo_recensione_cliente": "2026-07-07T05:56:27.699655+00:00",
     "sopralluogo_come_funziona": "2026-07-07T10:26:02.972629+00:00",
-    "marmo_vintage_modern_mix": "2026-07-07T15:26:01.012474+00:00"
+    "marmo_vintage_modern_mix": "2026-07-07T15:26:01.012474+00:00",
+    "marmo_donne_imprenditrici": "2026-07-08T05:55:35.433010+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
