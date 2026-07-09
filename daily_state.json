@@ -1,16 +1,6 @@
 {
-  "next_index": 52,
+  "next_index": 53,
   "history": [
-    {
-      "post_id": "daily_20260623_evening_marmocemento_opaco",
-      "topic_id": "marmocemento_opaco",
-      "slot": "evening",
-      "at": "2026-06-23T15:26:24.161195+00:00",
-      "claimed_by_run": "28036868068",
-      "status": "done",
-      "done_at": "2026-06-23T15:26:33.017178+00:00",
-      "photo_id": 18156022
-    },
     {
       "post_id": "daily_20260624_morning_durata_lucidatura",
       "topic_id": "durata_lucidatura",
@@ -502,6 +492,14 @@
       "status": "done",
       "done_at": "2026-07-09T10:25:46.457456+00:00",
       "photo_id": 29378218
+    },
+    {
+      "post_id": "daily_20260709_evening_klinker_terrazze",
+      "topic_id": "klinker_terrazze",
+      "slot": "evening",
+      "at": "2026-07-09T15:32:16.270714+00:00",
+      "claimed_by_run": "29029866581",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -556,7 +554,7 @@
     "pietra_ragusa": "2026-07-08T15:25:34.224307+00:00",
     "cementine_disegno": "2026-07-09T05:57:12.418994+00:00",
     "cotto_artigianale": "2026-07-09T10:25:36.438870+00:00",
-    "klinker_terrazze": "2026-06-04T05:55:50.808363+00:00",
+    "klinker_terrazze": "2026-07-09T15:32:16.270714+00:00",
     "battiscopa_coordinati": "2026-06-04T10:25:48.976622+00:00",
     "soglia_davanzale": "2026-06-04T15:25:45.726640+00:00",
     "marmo_arancione_cause": "2026-06-05T05:55:41.073876+00:00",
