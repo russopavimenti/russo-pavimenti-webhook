@@ -1,16 +1,6 @@
 {
-  "next_index": 50,
+  "next_index": 51,
   "history": [
-    {
-      "post_id": "daily_20260623_morning_cemento_lucidato_moderno",
-      "topic_id": "cemento_lucidato_moderno",
-      "slot": "morning",
-      "at": "2026-06-23T05:55:24.271731+00:00",
-      "claimed_by_run": "28005470829",
-      "status": "done",
-      "done_at": "2026-06-23T05:55:32.025841+00:00",
-      "photo_id": 36603628
-    },
     {
       "post_id": "daily_20260623_lunch_marmo_anni60_appartamenti",
       "topic_id": "marmo_anni60_appartamenti",
@@ -502,6 +492,14 @@
       "status": "done",
       "done_at": "2026-07-08T15:25:44.415131+00:00",
       "photo_id": 33612379
+    },
+    {
+      "post_id": "daily_20260709_morning_cementine_disegno",
+      "topic_id": "cementine_disegno",
+      "slot": "morning",
+      "at": "2026-07-09T05:57:12.418994+00:00",
+      "claimed_by_run": "28997376581",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -554,7 +552,7 @@
     "onice_retroilluminato": "2026-06-25T10:25:58.226863+00:00",
     "botticino_classico": "2026-06-25T15:26:16.517243+00:00",
     "pietra_ragusa": "2026-07-08T15:25:34.224307+00:00",
-    "cementine_disegno": "2026-06-03T10:25:57.939792+00:00",
+    "cementine_disegno": "2026-07-09T05:57:12.418994+00:00",
     "cotto_artigianale": "2026-06-03T15:26:26.575603+00:00",
     "klinker_terrazze": "2026-06-04T05:55:50.808363+00:00",
     "battiscopa_coordinati": "2026-06-04T10:25:48.976622+00:00",
