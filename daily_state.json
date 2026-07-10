@@ -1,16 +1,6 @@
 {
-  "next_index": 53,
+  "next_index": 54,
   "history": [
-    {
-      "post_id": "daily_20260624_morning_durata_lucidatura",
-      "topic_id": "durata_lucidatura",
-      "slot": "morning",
-      "at": "2026-06-24T05:55:44.294867+00:00",
-      "claimed_by_run": "28078371383",
-      "status": "done",
-      "done_at": "2026-06-24T05:55:50.440844+00:00",
-      "photo_id": 4709028
-    },
     {
       "post_id": "daily_20260624_lunch_top_cucina_acidi",
       "topic_id": "top_cucina_acidi",
@@ -502,6 +492,14 @@
       "status": "done",
       "done_at": "2026-07-09T15:32:26.222624+00:00",
       "photo_id": 30742339
+    },
+    {
+      "post_id": "daily_20260710_morning_battiscopa_coordinati",
+      "topic_id": "battiscopa_coordinati",
+      "slot": "morning",
+      "at": "2026-07-10T05:55:43.992186+00:00",
+      "claimed_by_run": "29072496933",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -557,7 +555,7 @@
     "cementine_disegno": "2026-07-09T05:57:12.418994+00:00",
     "cotto_artigianale": "2026-07-09T10:25:36.438870+00:00",
     "klinker_terrazze": "2026-07-09T15:32:16.270714+00:00",
-    "battiscopa_coordinati": "2026-06-04T10:25:48.976622+00:00",
+    "battiscopa_coordinati": "2026-07-10T05:55:43.992186+00:00",
     "soglia_davanzale": "2026-06-04T15:25:45.726640+00:00",
     "marmo_arancione_cause": "2026-06-05T05:55:41.073876+00:00",
     "cera_candele_yankee": "2026-06-05T11:40:10.113889+00:00",
