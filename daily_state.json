@@ -1,16 +1,6 @@
 {
-  "next_index": 58,
+  "next_index": 59,
   "history": [
-    {
-      "post_id": "daily_20260625_evening_botticino_classico",
-      "topic_id": "botticino_classico",
-      "slot": "evening",
-      "at": "2026-06-25T15:26:16.517243+00:00",
-      "claimed_by_run": "28181147785",
-      "status": "done",
-      "done_at": "2026-06-25T15:26:24.782110+00:00",
-      "photo_id": 12956025
-    },
     {
       "post_id": "daily_20260626_morning_signora_erice_caso",
       "topic_id": "signora_erice_caso",
@@ -502,6 +492,14 @@
       "status": "done",
       "done_at": "2026-07-11T10:25:40.896677+00:00",
       "photo_id": 9507319
+    },
+    {
+      "post_id": "daily_20260711_evening_crepe_assestamento",
+      "topic_id": "crepe_assestamento",
+      "slot": "evening",
+      "at": "2026-07-11T15:26:16.990189+00:00",
+      "claimed_by_run": "29157894145",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -562,7 +560,7 @@
     "marmo_arancione_cause": "2026-07-10T15:25:41.747571+00:00",
     "cera_candele_yankee": "2026-07-11T05:55:49.529310+00:00",
     "marmo_anelli_piante": "2026-07-11T10:25:33.713644+00:00",
-    "crepe_assestamento": "2026-06-06T05:56:20.073408+00:00",
+    "crepe_assestamento": "2026-07-11T15:26:16.990189+00:00",
     "marmo_che_suda": "2026-06-06T10:26:05.083472+00:00",
     "olio_motore_garage": "2026-06-06T15:26:02.133995+00:00",
     "marmo_cucina_dietro_fornelli": "2026-06-07T05:56:53.027916+00:00",
