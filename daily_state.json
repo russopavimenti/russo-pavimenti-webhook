@@ -1,16 +1,6 @@
 {
-  "next_index": 57,
+  "next_index": 58,
   "history": [
-    {
-      "post_id": "daily_20260625_lunch_onice_retroilluminato",
-      "topic_id": "onice_retroilluminato",
-      "slot": "lunch",
-      "at": "2026-06-25T10:25:58.226863+00:00",
-      "claimed_by_run": "28163648492",
-      "status": "done",
-      "done_at": "2026-06-25T10:26:05.407742+00:00",
-      "photo_id": 6468454
-    },
     {
       "post_id": "daily_20260625_evening_botticino_classico",
       "topic_id": "botticino_classico",
@@ -502,6 +492,14 @@
       "status": "done",
       "done_at": "2026-07-11T05:56:00.687817+00:00",
       "photo_id": 20496467
+    },
+    {
+      "post_id": "daily_20260711_lunch_marmo_anelli_piante",
+      "topic_id": "marmo_anelli_piante",
+      "slot": "lunch",
+      "at": "2026-07-11T10:25:33.713644+00:00",
+      "claimed_by_run": "29149309835",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -561,7 +559,7 @@
     "soglia_davanzale": "2026-07-10T10:25:50.611129+00:00",
     "marmo_arancione_cause": "2026-07-10T15:25:41.747571+00:00",
     "cera_candele_yankee": "2026-07-11T05:55:49.529310+00:00",
-    "marmo_anelli_piante": "2026-06-05T15:25:54.576807+00:00",
+    "marmo_anelli_piante": "2026-07-11T10:25:33.713644+00:00",
     "crepe_assestamento": "2026-06-06T05:56:20.073408+00:00",
     "marmo_che_suda": "2026-06-06T10:26:05.083472+00:00",
     "olio_motore_garage": "2026-06-06T15:26:02.133995+00:00",
