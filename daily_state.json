@@ -1,16 +1,6 @@
 {
-  "next_index": 60,
+  "next_index": 61,
   "history": [
-    {
-      "post_id": "daily_20260626_lunch_ristorante_cefalu",
-      "topic_id": "ristorante_cefalu",
-      "slot": "lunch",
-      "at": "2026-06-26T10:25:51.258458+00:00",
-      "claimed_by_run": "28232270672",
-      "status": "done",
-      "done_at": "2026-06-26T10:25:58.544716+00:00",
-      "photo_id": 35176581
-    },
     {
       "post_id": "daily_20260626_evening_bnb_scopello_pavimento",
       "topic_id": "bnb_scopello_pavimento",
@@ -502,6 +492,14 @@
       "status": "done",
       "done_at": "2026-07-12T05:55:57.009080+00:00",
       "photo_id": 35850920
+    },
+    {
+      "post_id": "daily_20260712_lunch_olio_motore_garage",
+      "topic_id": "olio_motore_garage",
+      "slot": "lunch",
+      "at": "2026-07-12T10:25:56.413459+00:00",
+      "claimed_by_run": "29189095551",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -564,7 +562,7 @@
     "marmo_anelli_piante": "2026-07-11T10:25:33.713644+00:00",
     "crepe_assestamento": "2026-07-11T15:26:16.990189+00:00",
     "marmo_che_suda": "2026-07-12T05:55:49.080447+00:00",
-    "olio_motore_garage": "2026-06-06T15:26:02.133995+00:00",
+    "olio_motore_garage": "2026-07-12T10:25:56.413459+00:00",
     "marmo_cucina_dietro_fornelli": "2026-06-07T05:56:53.027916+00:00",
     "marmo_lavanderia": "2026-06-07T10:25:27.336994+00:00",
     "marmo_terrazza_estate": "2026-06-07T15:26:11.467696+00:00",
