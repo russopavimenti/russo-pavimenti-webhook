@@ -1,16 +1,6 @@
 {
-  "next_index": 59,
+  "next_index": 60,
   "history": [
-    {
-      "post_id": "daily_20260626_morning_signora_erice_caso",
-      "topic_id": "signora_erice_caso",
-      "slot": "morning",
-      "at": "2026-06-26T05:55:59.185775+00:00",
-      "claimed_by_run": "28220105544",
-      "status": "done",
-      "done_at": "2026-06-26T05:56:06.901339+00:00",
-      "photo_id": 28396979
-    },
     {
       "post_id": "daily_20260626_lunch_ristorante_cefalu",
       "topic_id": "ristorante_cefalu",
@@ -502,6 +492,14 @@
       "status": "done",
       "done_at": "2026-07-11T15:26:35.305126+00:00",
       "photo_id": 9579218
+    },
+    {
+      "post_id": "daily_20260712_morning_marmo_che_suda",
+      "topic_id": "marmo_che_suda",
+      "slot": "morning",
+      "at": "2026-07-12T05:55:49.080447+00:00",
+      "claimed_by_run": "29181874879",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -563,7 +561,7 @@
     "cera_candele_yankee": "2026-07-11T05:55:49.529310+00:00",
     "marmo_anelli_piante": "2026-07-11T10:25:33.713644+00:00",
     "crepe_assestamento": "2026-07-11T15:26:16.990189+00:00",
-    "marmo_che_suda": "2026-06-06T10:26:05.083472+00:00",
+    "marmo_che_suda": "2026-07-12T05:55:49.080447+00:00",
     "olio_motore_garage": "2026-06-06T15:26:02.133995+00:00",
     "marmo_cucina_dietro_fornelli": "2026-06-07T05:56:53.027916+00:00",
     "marmo_lavanderia": "2026-06-07T10:25:27.336994+00:00",
