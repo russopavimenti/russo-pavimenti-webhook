@@ -1,16 +1,6 @@
 {
-  "next_index": 64,
+  "next_index": 65,
   "history": [
-    {
-      "post_id": "daily_20260627_evening_marmo_si_e_no_lucidatura",
-      "topic_id": "marmo_si_e_no_lucidatura",
-      "slot": "evening",
-      "at": "2026-06-27T15:25:52.669852+00:00",
-      "claimed_by_run": "28293419268",
-      "status": "done",
-      "done_at": "2026-06-27T15:25:59.053784+00:00",
-      "photo_id": 5214204
-    },
     {
       "post_id": "daily_20260628_morning_pietra_lavica_etna",
       "topic_id": "pietra_lavica_etna",
@@ -502,6 +492,14 @@
       "status": "done",
       "done_at": "2026-07-13T10:26:09.481338+00:00",
       "photo_id": 34306265
+    },
+    {
+      "post_id": "daily_20260713_evening_marmo_inverno_sale",
+      "topic_id": "marmo_inverno_sale",
+      "slot": "evening",
+      "at": "2026-07-13T15:26:01.649174+00:00",
+      "claimed_by_run": "29262164328",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -568,7 +566,7 @@
     "marmo_cucina_dietro_fornelli": "2026-07-12T15:25:38.840600+00:00",
     "marmo_lavanderia": "2026-07-13T05:56:23.789668+00:00",
     "marmo_terrazza_estate": "2026-07-13T10:25:45.862452+00:00",
-    "marmo_inverno_sale": "2026-06-08T05:55:43.240138+00:00",
+    "marmo_inverno_sale": "2026-07-13T15:26:01.649174+00:00",
     "geometri_architetti": "2026-06-08T10:25:46.299222+00:00",
     "agenzie_immobiliari": "2026-06-08T15:25:38.931198+00:00",
     "property_manager_bnb": "2026-06-09T05:55:23.453305+00:00",
