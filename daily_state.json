@@ -1,16 +1,6 @@
 {
-  "next_index": 62,
+  "next_index": 63,
   "history": [
-    {
-      "post_id": "daily_20260627_morning_posso_forare_marmo",
-      "topic_id": "posso_forare_marmo",
-      "slot": "morning",
-      "at": "2026-06-27T05:55:47.980562+00:00",
-      "claimed_by_run": "28280477808",
-      "status": "done",
-      "done_at": "2026-06-27T05:55:55.944859+00:00",
-      "photo_id": 15467763
-    },
     {
       "post_id": "daily_20260627_lunch_tappeti_su_marmo",
       "topic_id": "tappeti_su_marmo",
@@ -502,6 +492,14 @@
       "status": "done",
       "done_at": "2026-07-12T15:25:54.732907+00:00",
       "photo_id": 11701152
+    },
+    {
+      "post_id": "daily_20260713_morning_marmo_lavanderia",
+      "topic_id": "marmo_lavanderia",
+      "slot": "morning",
+      "at": "2026-07-13T05:56:23.789668+00:00",
+      "claimed_by_run": "29227532465",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -566,7 +564,7 @@
     "marmo_che_suda": "2026-07-12T05:55:49.080447+00:00",
     "olio_motore_garage": "2026-07-12T10:25:56.413459+00:00",
     "marmo_cucina_dietro_fornelli": "2026-07-12T15:25:38.840600+00:00",
-    "marmo_lavanderia": "2026-06-07T10:25:27.336994+00:00",
+    "marmo_lavanderia": "2026-07-13T05:56:23.789668+00:00",
     "marmo_terrazza_estate": "2026-06-07T15:26:11.467696+00:00",
     "marmo_inverno_sale": "2026-06-08T05:55:43.240138+00:00",
     "geometri_architetti": "2026-06-08T10:25:46.299222+00:00",
