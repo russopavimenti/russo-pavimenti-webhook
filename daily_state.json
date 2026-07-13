@@ -1,16 +1,6 @@
 {
-  "next_index": 63,
+  "next_index": 64,
   "history": [
-    {
-      "post_id": "daily_20260627_lunch_tappeti_su_marmo",
-      "topic_id": "tappeti_su_marmo",
-      "slot": "lunch",
-      "at": "2026-06-27T10:26:08.733264+00:00",
-      "claimed_by_run": "28286477709",
-      "status": "done",
-      "done_at": "2026-06-27T10:26:15.881980+00:00",
-      "photo_id": 35769473
-    },
     {
       "post_id": "daily_20260627_evening_marmo_si_e_no_lucidatura",
       "topic_id": "marmo_si_e_no_lucidatura",
@@ -502,6 +492,14 @@
       "status": "done",
       "done_at": "2026-07-13T05:56:35.986386+00:00",
       "photo_id": 8774411
+    },
+    {
+      "post_id": "daily_20260713_lunch_marmo_terrazza_estate",
+      "topic_id": "marmo_terrazza_estate",
+      "slot": "lunch",
+      "at": "2026-07-13T10:25:45.862452+00:00",
+      "claimed_by_run": "29242686708",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -567,7 +565,7 @@
     "olio_motore_garage": "2026-07-12T10:25:56.413459+00:00",
     "marmo_cucina_dietro_fornelli": "2026-07-12T15:25:38.840600+00:00",
     "marmo_lavanderia": "2026-07-13T05:56:23.789668+00:00",
-    "marmo_terrazza_estate": "2026-06-07T15:26:11.467696+00:00",
+    "marmo_terrazza_estate": "2026-07-13T10:25:45.862452+00:00",
     "marmo_inverno_sale": "2026-06-08T05:55:43.240138+00:00",
     "geometri_architetti": "2026-06-08T10:25:46.299222+00:00",
     "agenzie_immobiliari": "2026-06-08T15:25:38.931198+00:00",
