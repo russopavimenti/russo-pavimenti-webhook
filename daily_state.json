@@ -1,16 +1,6 @@
 {
-  "next_index": 67,
+  "next_index": 68,
   "history": [
-    {
-      "post_id": "daily_20260628_evening_perlato_vs_botticino",
-      "topic_id": "perlato_vs_botticino",
-      "slot": "evening",
-      "at": "2026-06-28T15:26:22.277976+00:00",
-      "claimed_by_run": "28326945915",
-      "status": "done",
-      "done_at": "2026-06-28T15:26:28.250178+00:00",
-      "photo_id": 3847492
-    },
     {
       "post_id": "daily_20260629_morning_bruciatura_pentola",
       "topic_id": "bruciatura_pentola",
@@ -502,6 +492,14 @@
       "status": "done",
       "done_at": "2026-07-14T10:25:59.111055+00:00",
       "photo_id": 8815906
+    },
+    {
+      "post_id": "daily_20260714_evening_property_manager_bnb",
+      "topic_id": "property_manager_bnb",
+      "slot": "evening",
+      "at": "2026-07-14T15:25:35.877530+00:00",
+      "claimed_by_run": "29345234255",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -571,7 +569,7 @@
     "marmo_inverno_sale": "2026-07-13T15:26:01.649174+00:00",
     "geometri_architetti": "2026-07-14T05:56:28.867811+00:00",
     "agenzie_immobiliari": "2026-07-14T10:25:50.922592+00:00",
-    "property_manager_bnb": "2026-06-09T05:55:23.453305+00:00",
+    "property_manager_bnb": "2026-07-14T15:25:35.877530+00:00",
     "studi_dentistici_legali": "2026-06-09T10:25:40.988196+00:00",
     "macchine_silenziose": "2026-06-09T16:19:21.956494+00:00",
     "polvere_zero": "2026-06-10T05:55:56.200282+00:00",
