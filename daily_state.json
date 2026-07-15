@@ -1,16 +1,6 @@
 {
-  "next_index": 70,
+  "next_index": 71,
   "history": [
-    {
-      "post_id": "daily_20260629_evening_finitura_satin_opaca",
-      "topic_id": "finitura_satin_opaca",
-      "slot": "evening",
-      "at": "2026-06-29T15:25:57.174369+00:00",
-      "claimed_by_run": "28383206240",
-      "status": "done",
-      "done_at": "2026-06-29T15:26:06.840245+00:00",
-      "photo_id": 7031215
-    },
     {
       "post_id": "daily_20260630_morning_casa_chiusa_estate",
       "topic_id": "casa_chiusa_estate",
@@ -502,6 +492,14 @@
       "status": "done",
       "done_at": "2026-07-15T10:25:54.494089+00:00",
       "photo_id": 36930607
+    },
+    {
+      "post_id": "daily_20260715_evening_polvere_zero",
+      "topic_id": "polvere_zero",
+      "slot": "evening",
+      "at": "2026-07-15T15:25:56.860139+00:00",
+      "claimed_by_run": "29428005382",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -574,7 +572,7 @@
     "property_manager_bnb": "2026-07-14T15:25:35.877530+00:00",
     "studi_dentistici_legali": "2026-07-15T05:56:27.782298+00:00",
     "macchine_silenziose": "2026-07-15T10:25:45.761320+00:00",
-    "polvere_zero": "2026-06-10T05:55:56.200282+00:00",
+    "polvere_zero": "2026-07-15T15:25:56.860139+00:00",
     "tempi_reali_100mq": "2026-06-10T10:26:12.523806+00:00",
     "camminare_dopo_lucidatura": "2026-06-10T15:29:05.891432+00:00",
     "pavimenti_misti_giunti": "2026-06-11T05:55:50.204054+00:00",
