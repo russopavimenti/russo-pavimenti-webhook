@@ -1,16 +1,6 @@
 {
-  "next_index": 71,
+  "next_index": 72,
   "history": [
-    {
-      "post_id": "daily_20260630_morning_casa_chiusa_estate",
-      "topic_id": "casa_chiusa_estate",
-      "slot": "morning",
-      "at": "2026-06-30T05:56:21.485826+00:00",
-      "claimed_by_run": "28423570337",
-      "status": "done",
-      "done_at": "2026-06-30T05:56:32.281680+00:00",
-      "photo_id": 29945325
-    },
     {
       "post_id": "daily_20260630_lunch_festa_bambini_marmo",
       "topic_id": "festa_bambini_marmo",
@@ -502,6 +492,14 @@
       "status": "done",
       "done_at": "2026-07-15T15:26:07.010544+00:00",
       "photo_id": 804392
+    },
+    {
+      "post_id": "daily_20260716_morning_tempi_reali_100mq",
+      "topic_id": "tempi_reali_100mq",
+      "slot": "morning",
+      "at": "2026-07-16T05:55:52.469831+00:00",
+      "claimed_by_run": "29475195414",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -575,7 +573,7 @@
     "studi_dentistici_legali": "2026-07-15T05:56:27.782298+00:00",
     "macchine_silenziose": "2026-07-15T10:25:45.761320+00:00",
     "polvere_zero": "2026-07-15T15:25:56.860139+00:00",
-    "tempi_reali_100mq": "2026-06-10T10:26:12.523806+00:00",
+    "tempi_reali_100mq": "2026-07-16T05:55:52.469831+00:00",
     "camminare_dopo_lucidatura": "2026-06-10T15:29:05.891432+00:00",
     "pavimenti_misti_giunti": "2026-06-11T05:55:50.204054+00:00",
     "cave_custonaci": "2026-06-11T10:26:27.308615+00:00",
