@@ -1,16 +1,6 @@
 {
-  "next_index": 72,
+  "next_index": 73,
   "history": [
-    {
-      "post_id": "daily_20260630_lunch_festa_bambini_marmo",
-      "topic_id": "festa_bambini_marmo",
-      "slot": "lunch",
-      "at": "2026-06-30T10:26:11.908851+00:00",
-      "claimed_by_run": "28437583061",
-      "status": "done",
-      "done_at": "2026-06-30T10:26:18.987348+00:00",
-      "photo_id": 7600384
-    },
     {
       "post_id": "daily_20260630_evening_marmo_ferragosto",
       "topic_id": "marmo_ferragosto",
@@ -502,6 +492,14 @@
       "status": "done",
       "done_at": "2026-07-16T05:56:01.979572+00:00",
       "photo_id": 14840820
+    },
+    {
+      "post_id": "daily_20260716_lunch_camminare_dopo_lucidatura",
+      "topic_id": "camminare_dopo_lucidatura",
+      "slot": "lunch",
+      "at": "2026-07-16T10:26:06.390208+00:00",
+      "claimed_by_run": "29490779066",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -576,7 +574,7 @@
     "macchine_silenziose": "2026-07-15T10:25:45.761320+00:00",
     "polvere_zero": "2026-07-15T15:25:56.860139+00:00",
     "tempi_reali_100mq": "2026-07-16T05:55:52.469831+00:00",
-    "camminare_dopo_lucidatura": "2026-06-10T15:29:05.891432+00:00",
+    "camminare_dopo_lucidatura": "2026-07-16T10:26:06.390208+00:00",
     "pavimenti_misti_giunti": "2026-06-11T05:55:50.204054+00:00",
     "cave_custonaci": "2026-06-11T10:26:27.308615+00:00",
     "signora_erice_caso": "2026-06-26T05:55:59.185775+00:00",
