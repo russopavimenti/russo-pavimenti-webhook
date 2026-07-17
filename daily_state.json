@@ -1,16 +1,6 @@
 {
-  "next_index": 75,
+  "next_index": 76,
   "history": [
-    {
-      "post_id": "daily_20260701_lunch_natale_decorazioni_marmo",
-      "topic_id": "natale_decorazioni_marmo",
-      "slot": "lunch",
-      "at": "2026-07-01T10:25:57.338556+00:00",
-      "claimed_by_run": "28510828964",
-      "status": "done",
-      "done_at": "2026-07-01T10:26:03.835335+00:00",
-      "photo_id": 14805846
-    },
     {
       "post_id": "daily_20260701_evening_marmo_sotto_laminato",
       "topic_id": "marmo_sotto_laminato",
@@ -502,6 +492,14 @@
       "status": "done",
       "done_at": "2026-07-17T05:56:23.725141+00:00",
       "photo_id": 15161797
+    },
+    {
+      "post_id": "daily_20260717_lunch_graniglia_palladiana",
+      "topic_id": "graniglia_palladiana",
+      "slot": "lunch",
+      "at": "2026-07-17T10:26:24.146400+00:00",
+      "claimed_by_run": "29573435579",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -519,7 +517,7 @@
     "candeggina_aloni": "2026-06-22T05:55:44.289279+00:00",
     "marmo_anni60_appartamenti": "2026-06-23T10:25:35.126919+00:00",
     "marmo_post_ristrutturazione": "2026-05-20T16:50:08.080573+00:00",
-    "graniglia_palladiana": "2026-06-12T05:56:04.268321+00:00",
+    "graniglia_palladiana": "2026-07-17T10:26:24.146400+00:00",
     "lavabo_marmo_macchie": "2026-06-12T10:26:23.512015+00:00",
     "marmo_ingresso_traffico": "2026-06-12T15:26:31.899822+00:00",
     "marmo_negozi_ristoranti": "2026-06-13T05:55:54.875309+00:00",
