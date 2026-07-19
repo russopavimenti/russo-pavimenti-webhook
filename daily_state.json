@@ -1,16 +1,6 @@
 {
-  "next_index": 81,
+  "next_index": 82,
   "history": [
-    {
-      "post_id": "daily_20260703_morning_elettricista_traccia_marmo",
-      "topic_id": "elettricista_traccia_marmo",
-      "slot": "morning",
-      "at": "2026-07-03T05:55:53.280597+00:00",
-      "claimed_by_run": "28641503642",
-      "status": "done",
-      "done_at": "2026-07-03T05:55:59.288587+00:00",
-      "photo_id": 7647233
-    },
     {
       "post_id": "daily_20260703_lunch_prodotti_eco_marmo",
       "topic_id": "prodotti_eco_marmo",
@@ -500,6 +490,14 @@
       "status": "done",
       "done_at": "2026-07-19T05:56:13.076631+00:00",
       "photo_id": 28647059
+    },
+    {
+      "post_id": "daily_20260719_lunch_differenza_levigatura_lucidatura",
+      "topic_id": "differenza_levigatura_lucidatura",
+      "slot": "lunch",
+      "at": "2026-07-19T10:25:54.434825+00:00",
+      "claimed_by_run": "29683304208",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -522,7 +520,7 @@
     "marmo_ingresso_traffico": "2026-07-18T10:25:57.130535+00:00",
     "marmo_negozi_ristoranti": "2026-07-18T15:26:23.167746+00:00",
     "pavimento_anziani_riflesso": "2026-07-19T05:56:05.421315+00:00",
-    "differenza_levigatura_lucidatura": "2026-06-13T15:26:24.998379+00:00",
+    "differenza_levigatura_lucidatura": "2026-07-19T10:25:54.434825+00:00",
     "macchie_olio_marmo": "2026-06-14T05:55:51.906769+00:00",
     "garanzia_lavoro": "2026-06-14T10:26:23.242509+00:00",
     "pavimento_doccia": "2026-06-14T15:26:02.614667+00:00",
