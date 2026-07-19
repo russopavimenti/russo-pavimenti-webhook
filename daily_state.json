@@ -1,16 +1,6 @@
 {
-  "next_index": 82,
+  "next_index": 83,
   "history": [
-    {
-      "post_id": "daily_20260703_lunch_prodotti_eco_marmo",
-      "topic_id": "prodotti_eco_marmo",
-      "slot": "lunch",
-      "at": "2026-07-03T10:25:38.964597+00:00",
-      "claimed_by_run": "28654508174",
-      "status": "done",
-      "done_at": "2026-07-03T10:25:48.215681+00:00",
-      "photo_id": 10268087
-    },
     {
       "post_id": "daily_20260703_evening_marmo_riciclo_recupero",
       "topic_id": "marmo_riciclo_recupero",
@@ -500,6 +490,14 @@
       "status": "done",
       "done_at": "2026-07-19T10:26:03.486571+00:00",
       "photo_id": 4705821
+    },
+    {
+      "post_id": "daily_20260719_evening_macchie_olio_marmo",
+      "topic_id": "macchie_olio_marmo",
+      "slot": "evening",
+      "at": "2026-07-19T15:25:56.547008+00:00",
+      "claimed_by_run": "29692804300",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -523,7 +521,7 @@
     "marmo_negozi_ristoranti": "2026-07-18T15:26:23.167746+00:00",
     "pavimento_anziani_riflesso": "2026-07-19T05:56:05.421315+00:00",
     "differenza_levigatura_lucidatura": "2026-07-19T10:25:54.434825+00:00",
-    "macchie_olio_marmo": "2026-06-14T05:55:51.906769+00:00",
+    "macchie_olio_marmo": "2026-07-19T15:25:56.547008+00:00",
     "garanzia_lavoro": "2026-06-14T10:26:23.242509+00:00",
     "pavimento_doccia": "2026-06-14T15:26:02.614667+00:00",
     "alcamo_storia_marmo": "2026-06-15T05:55:34.487418+00:00",
