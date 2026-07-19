@@ -1,16 +1,6 @@
 {
-  "next_index": 80,
+  "next_index": 81,
   "history": [
-    {
-      "post_id": "daily_20260702_evening_murature_calcina_marmo",
-      "topic_id": "murature_calcina_marmo",
-      "slot": "evening",
-      "at": "2026-07-02T15:25:53.209818+00:00",
-      "claimed_by_run": "28601642277",
-      "status": "done",
-      "done_at": "2026-07-02T15:26:00.260626+00:00",
-      "photo_id": 5493673
-    },
     {
       "post_id": "daily_20260703_morning_elettricista_traccia_marmo",
       "topic_id": "elettricista_traccia_marmo",
@@ -500,6 +490,14 @@
       "status": "done",
       "done_at": "2026-07-18T15:26:29.715135+00:00",
       "photo_id": 5444190
+    },
+    {
+      "post_id": "daily_20260719_morning_pavimento_anziani_riflesso",
+      "topic_id": "pavimento_anziani_riflesso",
+      "slot": "morning",
+      "at": "2026-07-19T05:56:05.421315+00:00",
+      "claimed_by_run": "29675597899",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -521,7 +519,7 @@
     "lavabo_marmo_macchie": "2026-07-18T05:55:42.074787+00:00",
     "marmo_ingresso_traffico": "2026-07-18T10:25:57.130535+00:00",
     "marmo_negozi_ristoranti": "2026-07-18T15:26:23.167746+00:00",
-    "pavimento_anziani_riflesso": "2026-06-13T10:26:00.879903+00:00",
+    "pavimento_anziani_riflesso": "2026-07-19T05:56:05.421315+00:00",
     "differenza_levigatura_lucidatura": "2026-06-13T15:26:24.998379+00:00",
     "macchie_olio_marmo": "2026-06-14T05:55:51.906769+00:00",
     "garanzia_lavoro": "2026-06-14T10:26:23.242509+00:00",
