@@ -1,16 +1,6 @@
 {
-  "next_index": 84,
+  "next_index": 85,
   "history": [
-    {
-      "post_id": "daily_20260704_morning_top_cucina_taglio_pesce",
-      "topic_id": "top_cucina_taglio_pesce",
-      "slot": "morning",
-      "at": "2026-07-04T05:55:42.990667+00:00",
-      "claimed_by_run": "28696912804",
-      "status": "done",
-      "done_at": "2026-07-04T05:55:50.795127+00:00",
-      "photo_id": 18832819
-    },
     {
       "post_id": "daily_20260704_lunch_marmo_olio_oliva",
       "topic_id": "marmo_olio_oliva",
@@ -500,6 +490,14 @@
       "status": "done",
       "done_at": "2026-07-20T05:56:32.749820+00:00",
       "photo_id": 35532305
+    },
+    {
+      "post_id": "daily_20260720_lunch_pavimento_doccia",
+      "topic_id": "pavimento_doccia",
+      "slot": "lunch",
+      "at": "2026-07-20T10:25:52.384545+00:00",
+      "claimed_by_run": "29734998178",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -525,7 +523,7 @@
     "differenza_levigatura_lucidatura": "2026-07-19T10:25:54.434825+00:00",
     "macchie_olio_marmo": "2026-07-19T15:25:56.547008+00:00",
     "garanzia_lavoro": "2026-07-20T05:56:25.379818+00:00",
-    "pavimento_doccia": "2026-06-14T15:26:02.614667+00:00",
+    "pavimento_doccia": "2026-07-20T10:25:52.384545+00:00",
     "alcamo_storia_marmo": "2026-06-15T05:55:34.487418+00:00",
     "preventivo_trasparente": "2026-06-15T10:26:26.920010+00:00",
     "marmo_terrazzo_esterno": "2026-06-15T15:26:17.100270+00:00",
