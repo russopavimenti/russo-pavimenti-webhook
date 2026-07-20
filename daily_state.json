@@ -1,16 +1,6 @@
 {
-  "next_index": 85,
+  "next_index": 86,
   "history": [
-    {
-      "post_id": "daily_20260704_lunch_marmo_olio_oliva",
-      "topic_id": "marmo_olio_oliva",
-      "slot": "lunch",
-      "at": "2026-07-04T10:25:35.407085+00:00",
-      "claimed_by_run": "28703260563",
-      "status": "done",
-      "done_at": "2026-07-04T10:25:41.184305+00:00",
-      "photo_id": 31275834
-    },
     {
       "post_id": "daily_20260704_evening_marmo_animali_domestici_unghie",
       "topic_id": "marmo_animali_domestici_unghie",
@@ -500,6 +490,14 @@
       "status": "done",
       "done_at": "2026-07-20T10:26:01.298941+00:00",
       "photo_id": 13722855
+    },
+    {
+      "post_id": "daily_20260720_evening_alcamo_storia_marmo",
+      "topic_id": "alcamo_storia_marmo",
+      "slot": "evening",
+      "at": "2026-07-20T15:26:11.956706+00:00",
+      "claimed_by_run": "29755108938",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -526,7 +524,7 @@
     "macchie_olio_marmo": "2026-07-19T15:25:56.547008+00:00",
     "garanzia_lavoro": "2026-07-20T05:56:25.379818+00:00",
     "pavimento_doccia": "2026-07-20T10:25:52.384545+00:00",
-    "alcamo_storia_marmo": "2026-06-15T05:55:34.487418+00:00",
+    "alcamo_storia_marmo": "2026-07-20T15:26:11.956706+00:00",
     "preventivo_trasparente": "2026-06-15T10:26:26.920010+00:00",
     "marmo_terrazzo_esterno": "2026-06-15T15:26:17.100270+00:00",
     "graffi_profondi_marmo": "2026-06-16T05:56:10.687485+00:00",
