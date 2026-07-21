@@ -1,16 +1,6 @@
 {
-  "next_index": 87,
+  "next_index": 88,
   "history": [
-    {
-      "post_id": "daily_20260705_morning_marmo_terrazza_invernale",
-      "topic_id": "marmo_terrazza_invernale",
-      "slot": "morning",
-      "at": "2026-07-05T05:55:55.968062+00:00",
-      "claimed_by_run": "28731267301",
-      "status": "failed",
-      "failed_at": "2026-07-05T05:56:05.388016+00:00",
-      "error": "exception: HTTP Error 400: Bad Request"
-    },
     {
       "post_id": "daily_20260705_morning_marmo_sotto_finestra",
       "topic_id": "marmo_sotto_finestra",
@@ -500,6 +490,14 @@
       "status": "done",
       "done_at": "2026-07-21T05:55:50.306684+00:00",
       "photo_id": 7693144
+    },
+    {
+      "post_id": "daily_20260721_lunch_marmo_terrazzo_esterno",
+      "topic_id": "marmo_terrazzo_esterno",
+      "slot": "lunch",
+      "at": "2026-07-21T10:25:59.060898+00:00",
+      "claimed_by_run": "29822156587",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -527,7 +525,7 @@
     "pavimento_doccia": "2026-07-20T10:25:52.384545+00:00",
     "alcamo_storia_marmo": "2026-07-20T15:26:11.956706+00:00",
     "preventivo_trasparente": "2026-07-21T05:55:43.365423+00:00",
-    "marmo_terrazzo_esterno": "2026-06-15T15:26:17.100270+00:00",
+    "marmo_terrazzo_esterno": "2026-07-21T10:25:59.060898+00:00",
     "graffi_profondi_marmo": "2026-06-16T05:56:10.687485+00:00",
     "pavimento_anziano_sicurezza": "2026-06-16T10:25:34.936753+00:00",
     "vino_macchie": "2026-06-16T15:25:05.934076+00:00",
