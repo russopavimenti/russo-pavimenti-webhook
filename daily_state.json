@@ -1,16 +1,6 @@
 {
-  "next_index": 90,
+  "next_index": 91,
   "history": [
-    {
-      "post_id": "daily_20260705_evening_marmo_decoratore_pittore",
-      "topic_id": "marmo_decoratore_pittore",
-      "slot": "evening",
-      "at": "2026-07-05T15:26:14.609455+00:00",
-      "claimed_by_run": "28745593879",
-      "status": "done",
-      "done_at": "2026-07-05T15:26:20.965971+00:00",
-      "photo_id": 6764279
-    },
     {
       "post_id": "daily_20260706_morning_marmo_dopo_alluvione",
       "topic_id": "marmo_dopo_alluvione",
@@ -500,6 +490,14 @@
       "status": "done",
       "done_at": "2026-07-22T05:56:27.987961+00:00",
       "photo_id": 6587893
+    },
+    {
+      "post_id": "daily_20260722_lunch_pavimento_anziano_sicurezza",
+      "topic_id": "pavimento_anziano_sicurezza",
+      "slot": "lunch",
+      "at": "2026-07-22T10:25:43.944462+00:00",
+      "claimed_by_run": "29911825703",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -529,7 +527,7 @@
     "preventivo_trasparente": "2026-07-21T05:55:43.365423+00:00",
     "marmo_terrazzo_esterno": "2026-07-21T10:25:59.060898+00:00",
     "graffi_profondi_marmo": "2026-07-21T15:26:00.200258+00:00",
-    "pavimento_anziano_sicurezza": "2026-06-16T10:25:34.936753+00:00",
+    "pavimento_anziano_sicurezza": "2026-07-22T10:25:43.944462+00:00",
     "vino_macchie": "2026-06-16T15:25:05.934076+00:00",
     "marmo_camino": "2026-05-25T05:56:07.495953+00:00",
     "marmo_pre_vendita": "2026-06-17T10:26:26.864725+00:00",
