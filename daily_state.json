@@ -1,16 +1,6 @@
 {
-  "next_index": 91,
+  "next_index": 92,
   "history": [
-    {
-      "post_id": "daily_20260706_morning_marmo_dopo_alluvione",
-      "topic_id": "marmo_dopo_alluvione",
-      "slot": "morning",
-      "at": "2026-07-06T05:56:04.675323+00:00",
-      "claimed_by_run": "28770948462",
-      "status": "done",
-      "done_at": "2026-07-06T05:56:11.005378+00:00",
-      "photo_id": 13865772
-    },
     {
       "post_id": "daily_20260706_lunch_marmo_chiesa_locale",
       "topic_id": "marmo_chiesa_locale",
@@ -500,6 +490,14 @@
       "status": "done",
       "done_at": "2026-07-22T10:25:53.501200+00:00",
       "photo_id": 6818163
+    },
+    {
+      "post_id": "daily_20260722_evening_vino_macchie",
+      "topic_id": "vino_macchie",
+      "slot": "evening",
+      "at": "2026-07-22T15:26:34.779509+00:00",
+      "claimed_by_run": "29933334808",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -530,7 +528,7 @@
     "marmo_terrazzo_esterno": "2026-07-21T10:25:59.060898+00:00",
     "graffi_profondi_marmo": "2026-07-21T15:26:00.200258+00:00",
     "pavimento_anziano_sicurezza": "2026-07-22T10:25:43.944462+00:00",
-    "vino_macchie": "2026-06-16T15:25:05.934076+00:00",
+    "vino_macchie": "2026-07-22T15:26:34.779509+00:00",
     "marmo_camino": "2026-05-25T05:56:07.495953+00:00",
     "marmo_pre_vendita": "2026-06-17T10:26:26.864725+00:00",
     "marmo_chiesa_storico": "2026-06-17T15:26:28.463982+00:00",
