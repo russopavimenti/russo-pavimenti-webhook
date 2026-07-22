@@ -1,16 +1,6 @@
 {
-  "next_index": 89,
+  "next_index": 90,
   "history": [
-    {
-      "post_id": "daily_20260705_lunch_marmo_alone_calorifero",
-      "topic_id": "marmo_alone_calorifero",
-      "slot": "lunch",
-      "at": "2026-07-05T10:26:02.424605+00:00",
-      "claimed_by_run": "28737657881",
-      "status": "done",
-      "done_at": "2026-07-05T10:26:10.984440+00:00",
-      "photo_id": 11576130
-    },
     {
       "post_id": "daily_20260705_evening_marmo_decoratore_pittore",
       "topic_id": "marmo_decoratore_pittore",
@@ -500,11 +490,19 @@
       "status": "done",
       "done_at": "2026-07-21T15:26:11.989773+00:00",
       "photo_id": 9756786
+    },
+    {
+      "post_id": "daily_20260722_morning_top_bagno_calcare",
+      "topic_id": "top_bagno_calcare",
+      "slot": "morning",
+      "at": "2026-07-22T05:56:21.078185+00:00",
+      "claimed_by_run": "29895179279",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
   "used_topics": {
-    "top_bagno_calcare": "2026-06-17T05:55:27.676491+00:00",
+    "top_bagno_calcare": "2026-07-22T05:56:21.078185+00:00",
     "scale_marmo_usura": "2026-07-17T05:56:14.404458+00:00",
     "top_cucina_acidi": "2026-06-24T10:25:33.757939+00:00",
     "marmocemento_opaco": "2026-06-23T15:26:24.161195+00:00",
