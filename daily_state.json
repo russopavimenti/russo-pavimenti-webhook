@@ -1,16 +1,6 @@
 {
-  "next_index": 94,
+  "next_index": 95,
   "history": [
-    {
-      "post_id": "daily_20260707_morning_marmo_recensione_cliente",
-      "topic_id": "marmo_recensione_cliente",
-      "slot": "morning",
-      "at": "2026-07-07T05:56:27.699655+00:00",
-      "claimed_by_run": "28844921970",
-      "status": "done",
-      "done_at": "2026-07-07T05:56:37.051697+00:00",
-      "photo_id": 7579133
-    },
     {
       "post_id": "daily_20260707_lunch_sopralluogo_come_funziona",
       "topic_id": "sopralluogo_come_funziona",
@@ -500,6 +490,14 @@
       "status": "done",
       "done_at": "2026-07-23T10:26:12.306451+00:00",
       "photo_id": 7078360
+    },
+    {
+      "post_id": "daily_20260723_evening_marmo_bianco_ingiallisce",
+      "topic_id": "marmo_bianco_ingiallisce",
+      "slot": "evening",
+      "at": "2026-07-23T15:25:47.702104+00:00",
+      "claimed_by_run": "30020442840",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -509,7 +507,7 @@
     "top_cucina_acidi": "2026-06-24T10:25:33.757939+00:00",
     "marmocemento_opaco": "2026-06-23T15:26:24.161195+00:00",
     "durata_lucidatura": "2026-06-24T05:55:44.294867+00:00",
-    "marmo_bianco_ingiallisce": "2026-06-18T10:25:52.612646+00:00",
+    "marmo_bianco_ingiallisce": "2026-07-23T15:25:47.702104+00:00",
     "cera_vs_lucidatura": "2026-07-23T10:26:05.842950+00:00",
     "rivestimenti_verticali": "2026-06-21T10:25:39.819594+00:00",
     "cemento_lucidato_moderno": "2026-06-23T05:55:24.271731+00:00",
