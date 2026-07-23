@@ -1,16 +1,6 @@
 {
-  "next_index": 93,
+  "next_index": 94,
   "history": [
-    {
-      "post_id": "daily_20260706_evening_marmo_piscina_zona",
-      "topic_id": "marmo_piscina_zona",
-      "slot": "evening",
-      "at": "2026-07-06T15:25:39.203864+00:00",
-      "claimed_by_run": "28802833609",
-      "status": "done",
-      "done_at": "2026-07-06T15:25:49.739507+00:00",
-      "photo_id": 14012213
-    },
     {
       "post_id": "daily_20260707_morning_marmo_recensione_cliente",
       "topic_id": "marmo_recensione_cliente",
@@ -500,6 +490,14 @@
       "status": "done",
       "done_at": "2026-07-23T05:56:05.889797+00:00",
       "photo_id": 8482521
+    },
+    {
+      "post_id": "daily_20260723_lunch_cera_vs_lucidatura",
+      "topic_id": "cera_vs_lucidatura",
+      "slot": "lunch",
+      "at": "2026-07-23T10:26:05.842950+00:00",
+      "claimed_by_run": "29999243048",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -510,7 +508,7 @@
     "marmocemento_opaco": "2026-06-23T15:26:24.161195+00:00",
     "durata_lucidatura": "2026-06-24T05:55:44.294867+00:00",
     "marmo_bianco_ingiallisce": "2026-06-18T10:25:52.612646+00:00",
-    "cera_vs_lucidatura": "2026-06-18T05:56:12.833727+00:00",
+    "cera_vs_lucidatura": "2026-07-23T10:26:05.842950+00:00",
     "rivestimenti_verticali": "2026-06-21T10:25:39.819594+00:00",
     "cemento_lucidato_moderno": "2026-06-23T05:55:24.271731+00:00",
     "marmo_scivoloso": "2026-06-22T15:25:47.994764+00:00",
