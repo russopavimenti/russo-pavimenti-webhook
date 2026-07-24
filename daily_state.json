@@ -1,16 +1,6 @@
 {
-  "next_index": 96,
+  "next_index": 97,
   "history": [
-    {
-      "post_id": "daily_20260707_evening_marmo_vintage_modern_mix",
-      "topic_id": "marmo_vintage_modern_mix",
-      "slot": "evening",
-      "at": "2026-07-07T15:26:01.012474+00:00",
-      "claimed_by_run": "28877983450",
-      "status": "done",
-      "done_at": "2026-07-07T15:26:11.635353+00:00",
-      "photo_id": 7598368
-    },
     {
       "post_id": "daily_20260708_morning_marmo_donne_imprenditrici",
       "topic_id": "marmo_donne_imprenditrici",
@@ -500,6 +490,14 @@
       "status": "done",
       "done_at": "2026-07-24T05:56:19.788381+00:00",
       "photo_id": 34221622
+    },
+    {
+      "post_id": "daily_20260724_lunch_detergenti_acidi_lista",
+      "topic_id": "detergenti_acidi_lista",
+      "slot": "lunch",
+      "at": "2026-07-24T10:26:30.053128+00:00",
+      "claimed_by_run": "30086141908",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -534,7 +532,7 @@
     "marmo_camino": "2026-05-25T05:56:07.495953+00:00",
     "marmo_pre_vendita": "2026-07-23T05:55:56.925777+00:00",
     "marmo_chiesa_storico": "2026-07-24T05:56:13.008345+00:00",
-    "detergenti_acidi_lista": "2026-06-18T15:26:02.662031+00:00",
+    "detergenti_acidi_lista": "2026-07-24T10:26:30.053128+00:00",
     "travertino_vs_marmo": "2026-06-19T05:55:51.020217+00:00",
     "bagno_padronale_marmo": "2026-06-19T10:25:28.100615+00:00",
     "mosaico_veneziano_70": "2026-06-19T15:25:57.561613+00:00",
