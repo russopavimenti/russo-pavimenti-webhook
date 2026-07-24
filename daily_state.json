@@ -1,16 +1,6 @@
 {
-  "next_index": 97,
+  "next_index": 98,
   "history": [
-    {
-      "post_id": "daily_20260708_morning_marmo_donne_imprenditrici",
-      "topic_id": "marmo_donne_imprenditrici",
-      "slot": "morning",
-      "at": "2026-07-08T05:55:35.433010+00:00",
-      "claimed_by_run": "28920922883",
-      "status": "done",
-      "done_at": "2026-07-08T05:55:42.745848+00:00",
-      "photo_id": 4458387
-    },
     {
       "post_id": "daily_20260708_lunch_marmo_anziani_sicurezza_dopo",
       "topic_id": "marmo_anziani_sicurezza_dopo",
@@ -500,6 +490,14 @@
       "status": "done",
       "done_at": "2026-07-24T10:26:37.484083+00:00",
       "photo_id": 5217779
+    },
+    {
+      "post_id": "daily_20260724_evening_travertino_vs_marmo",
+      "topic_id": "travertino_vs_marmo",
+      "slot": "evening",
+      "at": "2026-07-24T15:25:58.026994+00:00",
+      "claimed_by_run": "30105210634",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -535,7 +533,7 @@
     "marmo_pre_vendita": "2026-07-23T05:55:56.925777+00:00",
     "marmo_chiesa_storico": "2026-07-24T05:56:13.008345+00:00",
     "detergenti_acidi_lista": "2026-07-24T10:26:30.053128+00:00",
-    "travertino_vs_marmo": "2026-06-19T05:55:51.020217+00:00",
+    "travertino_vs_marmo": "2026-07-24T15:25:58.026994+00:00",
     "bagno_padronale_marmo": "2026-06-19T10:25:28.100615+00:00",
     "mosaico_veneziano_70": "2026-06-19T15:25:57.561613+00:00",
     "mobili_pesanti_senza_graffi": "2026-06-20T05:55:20.557709+00:00",
