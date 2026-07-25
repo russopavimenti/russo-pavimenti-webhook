@@ -1,16 +1,6 @@
 {
-  "next_index": 100,
+  "next_index": 101,
   "history": [
-    {
-      "post_id": "daily_20260709_morning_cementine_disegno",
-      "topic_id": "cementine_disegno",
-      "slot": "morning",
-      "at": "2026-07-09T05:57:12.418994+00:00",
-      "claimed_by_run": "28997376581",
-      "status": "done",
-      "done_at": "2026-07-09T05:57:19.043387+00:00",
-      "photo_id": 18764945
-    },
     {
       "post_id": "daily_20260709_lunch_cotto_artigianale",
       "topic_id": "cotto_artigianale",
@@ -500,6 +490,14 @@
       "status": "done",
       "done_at": "2026-07-25T10:26:08.622904+00:00",
       "photo_id": 20158940
+    },
+    {
+      "post_id": "daily_20260725_evening_mobili_pesanti_senza_graffi",
+      "topic_id": "mobili_pesanti_senza_graffi",
+      "slot": "evening",
+      "at": "2026-07-25T15:26:35.567323+00:00",
+      "claimed_by_run": "30163597814",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -537,7 +535,7 @@
     "travertino_vs_marmo": "2026-07-24T15:25:58.026994+00:00",
     "bagno_padronale_marmo": "2026-07-25T05:56:26.361751+00:00",
     "mosaico_veneziano_70": "2026-07-25T10:26:02.212532+00:00",
-    "mobili_pesanti_senza_graffi": "2026-06-20T05:55:20.557709+00:00",
+    "mobili_pesanti_senza_graffi": "2026-07-25T15:26:35.567323+00:00",
     "lucidatura_negozi_chiusura": "2026-06-20T10:25:30.789752+00:00",
     "marmo_bambini_animali": "2026-06-20T12:12:52.130024+00:00",
     "costo_indicativo_zona": "2026-05-29T05:55:27.571582+00:00",
