@@ -1,16 +1,6 @@
 {
-  "next_index": 101,
+  "next_index": 102,
   "history": [
-    {
-      "post_id": "daily_20260709_lunch_cotto_artigianale",
-      "topic_id": "cotto_artigianale",
-      "slot": "lunch",
-      "at": "2026-07-09T10:25:36.438870+00:00",
-      "claimed_by_run": "29011526508",
-      "status": "done",
-      "done_at": "2026-07-09T10:25:46.457456+00:00",
-      "photo_id": 29378218
-    },
     {
       "post_id": "daily_20260709_evening_klinker_terrazze",
       "topic_id": "klinker_terrazze",
@@ -500,6 +490,14 @@
       "status": "done",
       "done_at": "2026-07-25T15:26:45.023453+00:00",
       "photo_id": 4554230
+    },
+    {
+      "post_id": "daily_20260726_morning_lucidatura_negozi_chiusura",
+      "topic_id": "lucidatura_negozi_chiusura",
+      "slot": "morning",
+      "at": "2026-07-26T05:56:03.768929+00:00",
+      "claimed_by_run": "30190170734",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -538,7 +536,7 @@
     "bagno_padronale_marmo": "2026-07-25T05:56:26.361751+00:00",
     "mosaico_veneziano_70": "2026-07-25T10:26:02.212532+00:00",
     "mobili_pesanti_senza_graffi": "2026-07-25T15:26:35.567323+00:00",
-    "lucidatura_negozi_chiusura": "2026-06-20T10:25:30.789752+00:00",
+    "lucidatura_negozi_chiusura": "2026-07-26T05:56:03.768929+00:00",
     "marmo_bambini_animali": "2026-06-20T12:12:52.130024+00:00",
     "costo_indicativo_zona": "2026-05-29T05:55:27.571582+00:00",
     "pulizia_quotidiana_60sec": "2026-06-20T15:25:50.293427+00:00",
