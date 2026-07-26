@@ -1,16 +1,6 @@
 {
-  "next_index": 102,
+  "next_index": 103,
   "history": [
-    {
-      "post_id": "daily_20260709_evening_klinker_terrazze",
-      "topic_id": "klinker_terrazze",
-      "slot": "evening",
-      "at": "2026-07-09T15:32:16.270714+00:00",
-      "claimed_by_run": "29029866581",
-      "status": "done",
-      "done_at": "2026-07-09T15:32:26.222624+00:00",
-      "photo_id": 30742339
-    },
     {
       "post_id": "daily_20260710_morning_battiscopa_coordinati",
       "topic_id": "battiscopa_coordinati",
@@ -500,6 +490,14 @@
       "status": "done",
       "done_at": "2026-07-26T05:56:09.842071+00:00",
       "photo_id": 7451917
+    },
+    {
+      "post_id": "daily_20260726_lunch_rivestimenti_verticali",
+      "topic_id": "rivestimenti_verticali",
+      "slot": "lunch",
+      "at": "2026-07-26T10:26:18.870403+00:00",
+      "claimed_by_run": "30198242381",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -511,7 +509,7 @@
     "durata_lucidatura": "2026-06-24T05:55:44.294867+00:00",
     "marmo_bianco_ingiallisce": "2026-07-23T15:25:47.702104+00:00",
     "cera_vs_lucidatura": "2026-07-23T10:26:05.842950+00:00",
-    "rivestimenti_verticali": "2026-06-21T10:25:39.819594+00:00",
+    "rivestimenti_verticali": "2026-07-26T10:26:18.870403+00:00",
     "cemento_lucidato_moderno": "2026-06-23T05:55:24.271731+00:00",
     "marmo_scivoloso": "2026-06-22T15:25:47.994764+00:00",
     "candeggina_aloni": "2026-06-22T05:55:44.289279+00:00",
