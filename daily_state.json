@@ -1,16 +1,6 @@
 {
-  "next_index": 105,
+  "next_index": 106,
   "history": [
-    {
-      "post_id": "daily_20260710_evening_marmo_arancione_cause",
-      "topic_id": "marmo_arancione_cause",
-      "slot": "evening",
-      "at": "2026-07-10T15:25:41.747571+00:00",
-      "claimed_by_run": "29103582890",
-      "status": "done",
-      "done_at": "2026-07-10T15:25:52.952368+00:00",
-      "photo_id": 15315146
-    },
     {
       "post_id": "daily_20260711_morning_cera_candele_yankee",
       "topic_id": "cera_candele_yankee",
@@ -500,6 +490,14 @@
       "status": "done",
       "done_at": "2026-07-27T05:56:04.213929+00:00",
       "photo_id": 27937528
+    },
+    {
+      "post_id": "daily_20260727_lunch_post_cantiere_proteggere",
+      "topic_id": "post_cantiere_proteggere",
+      "slot": "lunch",
+      "at": "2026-07-27T10:26:20.649216+00:00",
+      "claimed_by_run": "30258018833",
+      "status": "claimed"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -542,7 +540,7 @@
     "marmo_bambini_animali": "2026-07-26T15:25:55.678445+00:00",
     "costo_indicativo_zona": "2026-05-29T05:55:27.571582+00:00",
     "pulizia_quotidiana_60sec": "2026-07-27T05:55:54.653696+00:00",
-    "post_cantiere_proteggere": "2026-06-21T05:55:34.524165+00:00",
+    "post_cantiere_proteggere": "2026-07-27T10:26:20.649216+00:00",
     "marmo_dimenticato_cantina": "2026-06-21T15:26:04.813408+00:00",
     "rivendita_immobile_marmo": "2026-06-22T10:25:34.559389+00:00",
     "granito_lavorazione": "2026-06-24T15:25:44.392076+00:00",
