@@ -224,23 +224,20 @@ def _topic_type(t: Dict[str, Any]) -> str:
     return "carousel" if t.get("type") == "carousel" else "single"
 
 
-def _last_done_type(state: Dict[str, Any]) -> str:
-    """Return the post_type of the last successfully done/claimed entry.
-    Defaults to 'single' if no history — so the very first pick prefers carousel
-    when carousel topics exist (kicks off the alternation cycle)."""
-    for entry in reversed(state.get("history", []) or []):
-        pt = entry.get("post_type")
-        if pt and entry.get("status") in ("done", "claimed", "manual_replacement"):
-            return pt
-    return "single"
+def _preferred_type_for_slot(slot: Optional[str]) -> str:
+    """Slot-based content type preference (user request 28/07/2026):
+    evening=carousel (utenti hanno più tempo per contenuti informativi la sera),
+    morning/lunch=single (post rapido da consumare in mobilità)."""
+    return "carousel" if slot == "evening" else "single"
 
 
-def pick_next_topic(topics: List[Dict[str, Any]], state: Dict[str, Any]) -> Dict[str, Any]:
-    """Anti-repeat + single/carousel ALTERNATION topic selection.
+def pick_next_topic(topics: List[Dict[str, Any]], state: Dict[str, Any],
+                    slot: Optional[str] = None) -> Dict[str, Any]:
+    """Anti-repeat + slot-based single/carousel selection.
 
     Strategy:
-      1. Determine preferred type: opposite of the last done post's type
-         (so single→carousel→single→… alternation).
+      1. Determine preferred type from slot:
+         evening → carousel; morning/lunch → single
       2. Filter preferred-type topics that are outside TOPIC_COOLDOWN_DAYS.
       3. Among fresh preferred, pick the least-recently used.
       4. Fallback 1: fresh topic of ANY type (rather than repeat a used one).
@@ -252,9 +249,8 @@ def pick_next_topic(topics: List[Dict[str, Any]], state: Dict[str, Any]) -> Dict
         ts = used.get(t["id"])
         return 99999 if not ts else _days_ago(str(ts))
 
-    last_type = _last_done_type(state)
-    preferred_type = "carousel" if last_type == "single" else "single"
-    log.info(f"alternation: last={last_type} → preferred={preferred_type}")
+    preferred_type = _preferred_type_for_slot(slot)
+    log.info(f"slot={slot} → preferred_type={preferred_type}")
 
     preferred_pool = [t for t in topics if _topic_type(t) == preferred_type]
     fresh_preferred = [t for t in preferred_pool if score(t) >= TOPIC_COOLDOWN_DAYS]
@@ -269,12 +265,15 @@ def pick_next_topic(topics: List[Dict[str, Any]], state: Dict[str, Any]) -> Dict
     if fresh_any:
         fresh_any.sort(key=score, reverse=True)
         chosen = fresh_any[0]
-        log.info(f"picked FRESH ({_topic_type(chosen)}, off-alternation): {chosen['id']}")
+        log.info(f"picked FRESH ({_topic_type(chosen)}, off-preference): {chosen['id']}")
         return chosen
 
-    # Pool exhausted → least-recently used overall
+    # Pool exhausted → least-recently used overall (prefer requested type if tied)
     log.warning(f"all {len(topics)} topics used within {TOPIC_COOLDOWN_DAYS}d — "
                 f"falling back to least-recently-used. Add more topics!")
+    preferred_lru = max((t for t in preferred_pool), key=score, default=None)
+    if preferred_lru is not None:
+        return preferred_lru
     return max(topics, key=score)
 
 
@@ -528,8 +527,8 @@ def _try_claim_slot(today_utc: str, slot: str, topics: List[Dict[str, Any]],
             log.info(f"IDEMPOTENT skip (attempt {attempt+1}): {today_utc}+{slot} already done")
             return None
 
-        # Pick the topic and build claim entry
-        topic = pick_next_topic(topics, state)
+        # Pick the topic and build claim entry (slot-aware: evening→carousel)
+        topic = pick_next_topic(topics, state, slot=slot)
         post_id = f"daily_{today_utc}_{slot}_{topic['id']}"
         now_iso = datetime.now(timezone.utc).isoformat()
 
