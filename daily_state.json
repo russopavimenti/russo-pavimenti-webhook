@@ -1,16 +1,6 @@
 {
-  "next_index": 108,
+  "next_index": 109,
   "history": [
-    {
-      "post_id": "daily_20260711_evening_crepe_assestamento",
-      "topic_id": "crepe_assestamento",
-      "slot": "evening",
-      "at": "2026-07-11T15:26:16.990189+00:00",
-      "claimed_by_run": "29157894145",
-      "status": "done",
-      "done_at": "2026-07-11T15:26:35.305126+00:00",
-      "photo_id": 9579218
-    },
     {
       "post_id": "daily_20260712_morning_marmo_che_suda",
       "topic_id": "marmo_che_suda",
@@ -500,6 +490,15 @@
       "status": "done",
       "done_at": "2026-07-28T05:56:39.251188+00:00",
       "photo_id": 10481158
+    },
+    {
+      "post_id": "daily_20260728_lunch_tenda_scivolamento_marmo",
+      "topic_id": "tenda_scivolamento_marmo",
+      "slot": "lunch",
+      "at": "2026-07-28T10:26:22.862389+00:00",
+      "claimed_by_run": "30350711260",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -614,7 +613,8 @@
     "sopralluogo_come_funziona": "2026-07-07T10:26:02.972629+00:00",
     "marmo_vintage_modern_mix": "2026-07-07T15:26:01.012474+00:00",
     "marmo_donne_imprenditrici": "2026-07-08T05:55:35.433010+00:00",
-    "marmo_anziani_sicurezza_dopo": "2026-07-08T10:26:05.764696+00:00"
+    "marmo_anziani_sicurezza_dopo": "2026-07-08T10:26:05.764696+00:00",
+    "tenda_scivolamento_marmo": "2026-07-28T10:26:22.862389+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
