@@ -1,16 +1,6 @@
 {
-  "next_index": 109,
+  "next_index": 110,
   "history": [
-    {
-      "post_id": "daily_20260712_morning_marmo_che_suda",
-      "topic_id": "marmo_che_suda",
-      "slot": "morning",
-      "at": "2026-07-12T05:55:49.080447+00:00",
-      "claimed_by_run": "29181874879",
-      "status": "done",
-      "done_at": "2026-07-12T05:55:57.009080+00:00",
-      "photo_id": 35850920
-    },
     {
       "post_id": "daily_20260712_lunch_olio_motore_garage",
       "topic_id": "olio_motore_garage",
@@ -501,6 +491,15 @@
       "post_type": "single",
       "done_at": "2026-07-28T10:26:32.339630+00:00",
       "photo_id": 930698
+    },
+    {
+      "post_id": "daily_20260728_evening_carousel_5_detergenti_da_evitare",
+      "topic_id": "carousel_5_detergenti_da_evitare",
+      "slot": "evening",
+      "at": "2026-07-28T15:25:58.681728+00:00",
+      "claimed_by_run": "30373280891",
+      "status": "claimed",
+      "post_type": "carousel"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -616,7 +615,8 @@
     "marmo_vintage_modern_mix": "2026-07-07T15:26:01.012474+00:00",
     "marmo_donne_imprenditrici": "2026-07-08T05:55:35.433010+00:00",
     "marmo_anziani_sicurezza_dopo": "2026-07-08T10:26:05.764696+00:00",
-    "tenda_scivolamento_marmo": "2026-07-28T10:26:22.862389+00:00"
+    "tenda_scivolamento_marmo": "2026-07-28T10:26:22.862389+00:00",
+    "carousel_5_detergenti_da_evitare": "2026-07-28T15:25:58.681728+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
