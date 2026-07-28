@@ -219,31 +219,60 @@ def cleanup_used_tracking(state: Dict[str, Any]) -> None:
         state[key] = d
 
 
+def _topic_type(t: Dict[str, Any]) -> str:
+    """Return 'carousel' or 'single' for a topic dict. Default 'single'."""
+    return "carousel" if t.get("type") == "carousel" else "single"
+
+
+def _last_done_type(state: Dict[str, Any]) -> str:
+    """Return the post_type of the last successfully done/claimed entry.
+    Defaults to 'single' if no history — so the very first pick prefers carousel
+    when carousel topics exist (kicks off the alternation cycle)."""
+    for entry in reversed(state.get("history", []) or []):
+        pt = entry.get("post_type")
+        if pt and entry.get("status") in ("done", "claimed", "manual_replacement"):
+            return pt
+    return "single"
+
+
 def pick_next_topic(topics: List[Dict[str, Any]], state: Dict[str, Any]) -> Dict[str, Any]:
-    """Anti-repeat topic selection.
+    """Anti-repeat + single/carousel ALTERNATION topic selection.
 
     Strategy:
-      1. Filter out topics used within TOPIC_COOLDOWN_DAYS.
-      2. Among fresh ones, pick the one least-recently used (or never used).
-      3. Fallback if pool exhausted: pick globally least-recently used.
-
-    used_topics in state is {topic_id: iso_timestamp_last_used}.
+      1. Determine preferred type: opposite of the last done post's type
+         (so single→carousel→single→… alternation).
+      2. Filter preferred-type topics that are outside TOPIC_COOLDOWN_DAYS.
+      3. Among fresh preferred, pick the least-recently used.
+      4. Fallback 1: fresh topic of ANY type (rather than repeat a used one).
+      5. Fallback 2 (pool exhausted): globally least-recently used topic.
     """
     used = state.get("used_topics") or {}
-    # Score each topic by days_since_last_use (huge if never used)
+
     def score(t: Dict[str, Any]) -> int:
         ts = used.get(t["id"])
-        if not ts:
-            return 99999
-        return _days_ago(str(ts))
+        return 99999 if not ts else _days_ago(str(ts))
 
-    fresh = [t for t in topics if score(t) >= TOPIC_COOLDOWN_DAYS]
-    if fresh:
-        # Among fresh, prefer the least-recently used (gives variety)
-        fresh.sort(key=score, reverse=True)
-        return fresh[0]
+    last_type = _last_done_type(state)
+    preferred_type = "carousel" if last_type == "single" else "single"
+    log.info(f"alternation: last={last_type} → preferred={preferred_type}")
 
-    # All topics recently used — fall back to least-recently used overall
+    preferred_pool = [t for t in topics if _topic_type(t) == preferred_type]
+    fresh_preferred = [t for t in preferred_pool if score(t) >= TOPIC_COOLDOWN_DAYS]
+    if fresh_preferred:
+        fresh_preferred.sort(key=score, reverse=True)
+        chosen = fresh_preferred[0]
+        log.info(f"picked FRESH {preferred_type}: {chosen['id']}")
+        return chosen
+
+    # No fresh of preferred type → try fresh of ANY type
+    fresh_any = [t for t in topics if score(t) >= TOPIC_COOLDOWN_DAYS]
+    if fresh_any:
+        fresh_any.sort(key=score, reverse=True)
+        chosen = fresh_any[0]
+        log.info(f"picked FRESH ({_topic_type(chosen)}, off-alternation): {chosen['id']}")
+        return chosen
+
+    # Pool exhausted → least-recently used overall
     log.warning(f"all {len(topics)} topics used within {TOPIC_COOLDOWN_DAYS}d — "
                 f"falling back to least-recently-used. Add more topics!")
     return max(topics, key=score)
@@ -512,6 +541,7 @@ def _try_claim_slot(today_utc: str, slot: str, topics: List[Dict[str, Any]],
             "at": now_iso,
             "claimed_by_run": run_id,
             "status": "claimed",
+            "post_type": _topic_type(topic),
         })
         state["history"] = state["history"][-50:]
         # Burn the topic ATOMICALLY with the claim. Guarantees no other slot in
@@ -623,6 +653,148 @@ def _set_entry_status(post_id: str, status: str,
     return _commit_state_mutation(mutate, f"{status} {post_id}")
 
 
+def _generate_carousel_slot(post_id: str, topic: Dict[str, Any], slot: str,
+                            state_snapshot: Dict[str, Any]) -> int:
+    """Generate a multi-slide carousel: 3-6 slides, 1 fresh photo per slide,
+    committed as posts/<post_id>_<i>.png. Metadata has type='carousel' and
+    image_urls[]. Preview sent as Telegram album with approve button — the
+    existing app.py _handle_approve routes to publish_carousel on approve.
+    """
+    slides = topic.get("slides") or []
+    if len(slides) < 2 or len(slides) > 10:
+        log.error(f"carousel {topic['id']}: slides={len(slides)}, need 2-10")
+        _set_entry_status(post_id, "failed", {"error": "invalid_slide_count"})
+        return 1
+
+    used_photo_ids = set(
+        str(k) for k in (state_snapshot.get("used_photos") or {}).keys()
+    )
+    picked_photo_ids: List[str] = []  # avoid dup within same carousel
+    image_urls: List[str] = []
+    tmp_files: List[str] = []
+
+    import renderer
+    raw_base = (f"https://raw.githubusercontent.com/{GITHUB_REPO_OWNER}/"
+                f"{GITHUB_REPO_NAME}/{GITHUB_BRANCH}/posts")
+
+    try:
+        for i, slide in enumerate(slides):
+            slide_queries = (slide.get("pexels_queries") or
+                             topic.get("pexels_queries") or [topic["topic"]])
+            local_used = used_photo_ids | set(picked_photo_ids)
+            photo = pexels_search_first(slide_queries, used_photo_ids=local_used)
+            if not photo:
+                log.error(f"carousel slide {i}: no fresh photo")
+                _set_entry_status(post_id, "failed",
+                                  {"error": f"no_fresh_photo_slide_{i}"})
+                return 1
+            picked_photo_ids.append(str(photo["id"]))
+
+            tmp_photo = tempfile.NamedTemporaryFile(suffix=".jpg", delete=False).name
+            tmp_files.append(tmp_photo)
+            if not pexels_download(photo["url"], tmp_photo):
+                _set_entry_status(post_id, "failed",
+                                  {"error": f"download_failed_slide_{i}"})
+                return 1
+
+            tmp_out = tempfile.NamedTemporaryFile(suffix=".png", delete=False).name
+            tmp_files.append(tmp_out)
+            renderer.render(
+                photo_path=tmp_photo,
+                line1=slide["hook_line1"],
+                line2=slide["hook_line2"],
+                output_path=tmp_out,
+                overlay_alpha=slide.get("overlay_alpha",
+                                       topic.get("overlay_alpha", 0.32)),
+                backdrop_intensity=130,
+            )
+
+            slide_filename = f"{post_id}_{i}.png"
+            png_bytes = Path(tmp_out).read_bytes()
+            if not gh_write(f"posts/{slide_filename}", png_bytes,
+                            f"daily carousel slide {i}: {post_id}"):
+                _set_entry_status(post_id, "failed",
+                                  {"error": f"png_commit_slide_{i}"})
+                return 1
+            image_urls.append(f"{raw_base}/{slide_filename}")
+            log.info(f"carousel slide {i+1}/{len(slides)} committed")
+
+        # Build caption (single caption for the whole carousel)
+        caption = (
+            (topic.get("caption_body") or topic.get("caption") or "")
+            + "\n\n" + COMMON_HASHTAGS
+            + " " + topic.get("extra_hashtags", "")
+        )
+
+        # Metadata: type=carousel + image_urls[] (consumed by publish_carousel)
+        metadata = {
+            "post_id": post_id,
+            "type": "carousel",
+            "image_urls": image_urls,
+            "caption": caption,
+            "topic": topic["topic"],
+            "topic_id": topic["id"],
+            "slot": slot,
+            "created_at": datetime.now(timezone.utc).isoformat(),
+            "slide_photo_ids": picked_photo_ids,
+            "slide_count": len(slides),
+        }
+        meta_bytes = (json.dumps(metadata, indent=2, ensure_ascii=False) + "\n").encode("utf-8")
+        if not gh_write(f"posts/{post_id}.json", meta_bytes, f"daily carousel meta: {post_id}"):
+            _set_entry_status(post_id, "failed", {"error": "json_commit_failed"})
+            return 1
+
+        # Telegram album preview + approve/modify/discard buttons
+        cb = int(time.time())
+        tg_call("sendMessage", {
+            "chat_id": TELEGRAM_CHAT_ID,
+            "parse_mode": "HTML",
+            "text": (f"🎠 <b>NUOVO CAROSELLO — slot {slot}</b> "
+                     f"({len(slides)} slide)\n<code>{post_id}</code>"),
+        })
+        media = [{"type": "photo", "media": f"{u}?v={cb}"} for u in image_urls]
+        tg_call("sendMediaGroup", {"chat_id": TELEGRAM_CHAT_ID, "media": media})
+        tg_call("sendMessage", {
+            "chat_id": TELEGRAM_CHAT_ID,
+            "parse_mode": "HTML",
+            "disable_web_page_preview": True,
+            "text": "✏️ <b>Caption proposta:</b>\n\n" + caption,
+            "reply_markup": {
+                "inline_keyboard": [
+                    [{"text": "✅ Approva e pubblica carosello",
+                      "callback_data": f"approve_{post_id}"}],
+                    [{"text": "✏️ Chiedi modifiche",
+                      "callback_data": f"modify_{post_id}"},
+                     {"text": "❌ Scarta",
+                      "callback_data": f"discard_{post_id}"}],
+                ]
+            },
+        })
+
+        # Mark done + register all photos as used
+        extra = {"slide_photo_ids": picked_photo_ids}
+        if not _set_entry_status(post_id, "done", extra):
+            log.warning("could not flip carousel entry to 'done' — preview was sent")
+
+        # Register each photo id in used_photos (persists across future runs)
+        def register_photos(state: Dict[str, Any]) -> None:
+            now_iso = datetime.now(timezone.utc).isoformat()
+            for pid in picked_photo_ids:
+                state.setdefault("used_photos", {})[pid] = now_iso
+            cleanup_used_tracking(state)
+        _commit_state_mutation(register_photos, f"register_carousel_photos {post_id}")
+
+        log.info(f"--- carousel slot {slot} DONE: {post_id} ({len(slides)} slides) ---")
+        return 0
+
+    finally:
+        for f in tmp_files:
+            try:
+                os.unlink(f)
+            except OSError:
+                pass
+
+
 def generate_one_slot(slot: str, today_utc: str, topics: List[Dict[str, Any]]) -> int:
     """Generate + send preview for a single slot. Returns 0 on success, 1 on error,
     2 if skipped (idempotent or lost claim race).
@@ -642,7 +814,16 @@ def generate_one_slot(slot: str, today_utc: str, topics: List[Dict[str, Any]]) -
 
     post_id = claim["post_id"]
     topic = claim["topic"]
-    log.info(f"claim won: topic={topic['id']} post_id={post_id}")
+    log.info(f"claim won: topic={topic['id']} post_id={post_id} type={_topic_type(topic)}")
+
+    # Carousel branch — dedicated multi-slide generation + album preview
+    if _topic_type(topic) == "carousel":
+        try:
+            return _generate_carousel_slot(post_id, topic, slot, claim.get("state", {}))
+        except Exception as e:
+            log.exception(f"carousel slot {slot} crashed: {e}")
+            _set_entry_status(post_id, "failed", {"error": f"carousel_exception: {e}"[:200]})
+            return 1
 
     tmp_photo = None
     tmp_out = None
