@@ -1,16 +1,6 @@
 {
-  "next_index": 110,
+  "next_index": 111,
   "history": [
-    {
-      "post_id": "daily_20260712_lunch_olio_motore_garage",
-      "topic_id": "olio_motore_garage",
-      "slot": "lunch",
-      "at": "2026-07-12T10:25:56.413459+00:00",
-      "claimed_by_run": "29189095551",
-      "status": "done",
-      "done_at": "2026-07-12T10:26:06.831925+00:00",
-      "photo_id": 4116291
-    },
     {
       "post_id": "daily_20260712_evening_marmo_cucina_dietro_fornelli",
       "topic_id": "marmo_cucina_dietro_fornelli",
@@ -509,6 +499,15 @@
         "28576634",
         "33357392"
       ]
+    },
+    {
+      "post_id": "daily_20260729_morning_marmo_cameretta_bambini",
+      "topic_id": "marmo_cameretta_bambini",
+      "slot": "morning",
+      "at": "2026-07-29T05:56:48.199315+00:00",
+      "claimed_by_run": "30426539070",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -625,7 +624,8 @@
     "marmo_donne_imprenditrici": "2026-07-08T05:55:35.433010+00:00",
     "marmo_anziani_sicurezza_dopo": "2026-07-08T10:26:05.764696+00:00",
     "tenda_scivolamento_marmo": "2026-07-28T10:26:22.862389+00:00",
-    "carousel_5_detergenti_da_evitare": "2026-07-28T15:25:58.681728+00:00"
+    "carousel_5_detergenti_da_evitare": "2026-07-28T15:25:58.681728+00:00",
+    "marmo_cameretta_bambini": "2026-07-29T05:56:48.199315+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
