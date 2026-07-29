@@ -1,16 +1,6 @@
 {
-  "next_index": 113,
+  "next_index": 114,
   "history": [
-    {
-      "post_id": "daily_20260713_lunch_marmo_terrazza_estate",
-      "topic_id": "marmo_terrazza_estate",
-      "slot": "lunch",
-      "at": "2026-07-13T10:25:45.862452+00:00",
-      "claimed_by_run": "29242686708",
-      "status": "done",
-      "done_at": "2026-07-13T10:26:09.481338+00:00",
-      "photo_id": 34306265
-    },
     {
       "post_id": "daily_20260713_evening_marmo_inverno_sale",
       "topic_id": "marmo_inverno_sale",
@@ -512,6 +502,15 @@
       "post_type": "carousel",
       "failed_at": "2026-07-29T15:26:57.228873+00:00",
       "error": "carousel_exception: HTTP Error 400: Bad Request"
+    },
+    {
+      "post_id": "daily_20260729_evening_carousel_finiture_confronto",
+      "topic_id": "carousel_finiture_confronto",
+      "slot": "evening",
+      "at": "2026-07-29T16:40:10.986299+00:00",
+      "claimed_by_run": "30471744196",
+      "status": "claimed",
+      "post_type": "carousel"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -630,7 +629,8 @@
     "carousel_5_detergenti_da_evitare": "2026-07-28T15:25:58.681728+00:00",
     "marmo_cameretta_bambini": "2026-07-29T05:56:48.199315+00:00",
     "marmo_ingresso_condominio": "2026-07-29T10:26:05.395035+00:00",
-    "carousel_prima_dopo_trasformazioni": "2026-07-29T15:26:34.963085+00:00"
+    "carousel_prima_dopo_trasformazioni": "2026-07-29T15:26:34.963085+00:00",
+    "carousel_finiture_confronto": "2026-07-29T16:40:10.986299+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
