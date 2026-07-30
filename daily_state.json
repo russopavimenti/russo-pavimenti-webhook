@@ -1,16 +1,6 @@
 {
-  "next_index": 114,
+  "next_index": 115,
   "history": [
-    {
-      "post_id": "daily_20260713_evening_marmo_inverno_sale",
-      "topic_id": "marmo_inverno_sale",
-      "slot": "evening",
-      "at": "2026-07-13T15:26:01.649174+00:00",
-      "claimed_by_run": "29262164328",
-      "status": "done",
-      "done_at": "2026-07-13T15:26:11.075074+00:00",
-      "photo_id": 20404866
-    },
     {
       "post_id": "daily_20260714_morning_geometri_architetti",
       "topic_id": "geometri_architetti",
@@ -519,6 +509,15 @@
         "4709462",
         "7642116"
       ]
+    },
+    {
+      "post_id": "daily_20260730_morning_marmo_studio_yoga",
+      "topic_id": "marmo_studio_yoga",
+      "slot": "morning",
+      "at": "2026-07-30T05:56:23.648007+00:00",
+      "claimed_by_run": "30518024604",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -638,7 +637,8 @@
     "marmo_cameretta_bambini": "2026-07-29T05:56:48.199315+00:00",
     "marmo_ingresso_condominio": "2026-07-29T10:26:05.395035+00:00",
     "carousel_prima_dopo_trasformazioni": "2026-07-29T15:26:34.963085+00:00",
-    "carousel_finiture_confronto": "2026-07-29T16:40:10.986299+00:00"
+    "carousel_finiture_confronto": "2026-07-29T16:40:10.986299+00:00",
+    "marmo_studio_yoga": "2026-07-30T05:56:23.648007+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
