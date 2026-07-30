@@ -518,8 +518,18 @@
       "slot": "evening",
       "at": "2026-07-30T15:25:55.255805+00:00",
       "claimed_by_run": "30556580077",
-      "status": "claimed",
-      "post_type": "carousel"
+      "status": "done",
+      "post_type": "carousel",
+      "done_at": "2026-07-30T15:26:25.983016+00:00",
+      "slide_photo_ids": [
+        "6587837",
+        "4036650",
+        "4281786",
+        "25745509",
+        "28196274",
+        "35220561",
+        "8697885"
+      ]
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
