@@ -1,16 +1,6 @@
 {
-  "next_index": 117,
+  "next_index": 118,
   "history": [
-    {
-      "post_id": "daily_20260714_evening_property_manager_bnb",
-      "topic_id": "property_manager_bnb",
-      "slot": "evening",
-      "at": "2026-07-14T15:25:35.877530+00:00",
-      "claimed_by_run": "29345234255",
-      "status": "done",
-      "done_at": "2026-07-14T15:25:44.715585+00:00",
-      "photo_id": 36353383
-    },
     {
       "post_id": "daily_20260715_morning_studi_dentistici_legali",
       "topic_id": "studi_dentistici_legali",
@@ -530,6 +520,15 @@
         "35220561",
         "8697885"
       ]
+    },
+    {
+      "post_id": "daily_20260731_morning_marmo_gres_convivenza",
+      "topic_id": "marmo_gres_convivenza",
+      "slot": "morning",
+      "at": "2026-07-31T05:56:08.459222+00:00",
+      "claimed_by_run": "30608132033",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -652,7 +651,8 @@
     "carousel_finiture_confronto": "2026-07-29T16:40:10.986299+00:00",
     "marmo_studio_yoga": "2026-07-30T05:56:23.648007+00:00",
     "marmo_walk_in_closet": "2026-07-30T10:26:04.974818+00:00",
-    "carousel_macchie_soluzioni": "2026-07-30T15:25:55.255805+00:00"
+    "carousel_macchie_soluzioni": "2026-07-30T15:25:55.255805+00:00",
+    "marmo_gres_convivenza": "2026-07-31T05:56:08.459222+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
