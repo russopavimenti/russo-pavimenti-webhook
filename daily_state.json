@@ -1,16 +1,6 @@
 {
-  "next_index": 119,
+  "next_index": 120,
   "history": [
-    {
-      "post_id": "daily_20260715_lunch_macchine_silenziose",
-      "topic_id": "macchine_silenziose",
-      "slot": "lunch",
-      "at": "2026-07-15T10:25:45.761320+00:00",
-      "claimed_by_run": "29408053790",
-      "status": "done",
-      "done_at": "2026-07-15T10:25:54.494089+00:00",
-      "photo_id": 36930607
-    },
     {
       "post_id": "daily_20260715_evening_polvere_zero",
       "topic_id": "polvere_zero",
@@ -532,6 +522,15 @@
       "post_type": "single",
       "done_at": "2026-07-31T10:26:52.313985+00:00",
       "photo_id": 8434676
+    },
+    {
+      "post_id": "daily_20260731_evening_carousel_5_domande_marmista",
+      "topic_id": "carousel_5_domande_marmista",
+      "slot": "evening",
+      "at": "2026-07-31T15:26:43.406778+00:00",
+      "claimed_by_run": "30642860231",
+      "status": "claimed",
+      "post_type": "carousel"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -656,7 +655,8 @@
     "marmo_walk_in_closet": "2026-07-30T10:26:04.974818+00:00",
     "carousel_macchie_soluzioni": "2026-07-30T15:25:55.255805+00:00",
     "marmo_gres_convivenza": "2026-07-31T05:56:08.459222+00:00",
-    "marmo_cane_ciotola": "2026-07-31T10:26:42.626737+00:00"
+    "marmo_cane_ciotola": "2026-07-31T10:26:42.626737+00:00",
+    "carousel_5_domande_marmista": "2026-07-31T15:26:43.406778+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
