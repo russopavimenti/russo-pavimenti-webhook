@@ -1,16 +1,6 @@
 {
-  "next_index": 120,
+  "next_index": 121,
   "history": [
-    {
-      "post_id": "daily_20260715_evening_polvere_zero",
-      "topic_id": "polvere_zero",
-      "slot": "evening",
-      "at": "2026-07-15T15:25:56.860139+00:00",
-      "claimed_by_run": "29428005382",
-      "status": "done",
-      "done_at": "2026-07-15T15:26:07.010544+00:00",
-      "photo_id": 804392
-    },
     {
       "post_id": "daily_20260716_morning_tempi_reali_100mq",
       "topic_id": "tempi_reali_100mq",
@@ -540,6 +530,15 @@
         "8413294",
         "8730985"
       ]
+    },
+    {
+      "post_id": "daily_20260801_morning_marmo_cassette_frutta",
+      "topic_id": "marmo_cassette_frutta",
+      "slot": "morning",
+      "at": "2026-08-01T05:56:27.630118+00:00",
+      "claimed_by_run": "30686763891",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -665,7 +664,8 @@
     "carousel_macchie_soluzioni": "2026-07-30T15:25:55.255805+00:00",
     "marmo_gres_convivenza": "2026-07-31T05:56:08.459222+00:00",
     "marmo_cane_ciotola": "2026-07-31T10:26:42.626737+00:00",
-    "carousel_5_domande_marmista": "2026-07-31T15:26:43.406778+00:00"
+    "carousel_5_domande_marmista": "2026-07-31T15:26:43.406778+00:00",
+    "marmo_cassette_frutta": "2026-08-01T05:56:27.630118+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
