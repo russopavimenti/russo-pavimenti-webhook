@@ -1,16 +1,6 @@
 {
-  "next_index": 121,
+  "next_index": 122,
   "history": [
-    {
-      "post_id": "daily_20260716_morning_tempi_reali_100mq",
-      "topic_id": "tempi_reali_100mq",
-      "slot": "morning",
-      "at": "2026-07-16T05:55:52.469831+00:00",
-      "claimed_by_run": "29475195414",
-      "status": "done",
-      "done_at": "2026-07-16T05:56:01.979572+00:00",
-      "photo_id": 14840820
-    },
     {
       "post_id": "daily_20260716_lunch_camminare_dopo_lucidatura",
       "topic_id": "camminare_dopo_lucidatura",
@@ -541,6 +531,15 @@
       "post_type": "single",
       "done_at": "2026-08-01T05:56:36.134693+00:00",
       "photo_id": 36178811
+    },
+    {
+      "post_id": "daily_20260801_lunch_marmo_dopo_tempesta_sabbia",
+      "topic_id": "marmo_dopo_tempesta_sabbia",
+      "slot": "lunch",
+      "at": "2026-08-01T10:26:20.147650+00:00",
+      "claimed_by_run": "30695688582",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -667,7 +666,8 @@
     "marmo_gres_convivenza": "2026-07-31T05:56:08.459222+00:00",
     "marmo_cane_ciotola": "2026-07-31T10:26:42.626737+00:00",
     "carousel_5_domande_marmista": "2026-07-31T15:26:43.406778+00:00",
-    "marmo_cassette_frutta": "2026-08-01T05:56:27.630118+00:00"
+    "marmo_cassette_frutta": "2026-08-01T05:56:27.630118+00:00",
+    "marmo_dopo_tempesta_sabbia": "2026-08-01T10:26:20.147650+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
