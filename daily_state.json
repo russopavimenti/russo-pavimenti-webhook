@@ -1,16 +1,6 @@
 {
-  "next_index": 125,
+  "next_index": 126,
   "history": [
-    {
-      "post_id": "daily_20260717_lunch_graniglia_palladiana",
-      "topic_id": "graniglia_palladiana",
-      "slot": "lunch",
-      "at": "2026-07-17T10:26:24.146400+00:00",
-      "claimed_by_run": "29573435579",
-      "status": "done",
-      "done_at": "2026-07-17T10:26:33.445071+00:00",
-      "photo_id": 9891098
-    },
     {
       "post_id": "daily_20260717_evening_cave_custonaci",
       "topic_id": "cave_custonaci",
@@ -552,6 +542,15 @@
       "post_type": "single",
       "done_at": "2026-08-02T05:56:03.490130+00:00",
       "photo_id": 14825428
+    },
+    {
+      "post_id": "daily_20260802_lunch_marmo_video_tour_immobile",
+      "topic_id": "marmo_video_tour_immobile",
+      "slot": "lunch",
+      "at": "2026-08-02T10:25:39.613093+00:00",
+      "claimed_by_run": "30743703327",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -682,7 +681,8 @@
     "marmo_dopo_tempesta_sabbia": "2026-08-01T10:26:20.147650+00:00",
     "marmo_ombrelloni_terrazza": "2026-08-01T11:37:44.166416+00:00",
     "carousel_marmi_siciliani": "2026-08-01T15:26:24.470901+00:00",
-    "marmo_visita_amico": "2026-08-02T05:55:53.613521+00:00"
+    "marmo_visita_amico": "2026-08-02T05:55:53.613521+00:00",
+    "marmo_video_tour_immobile": "2026-08-02T10:25:39.613093+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
