@@ -1,16 +1,6 @@
 {
-  "next_index": 124,
+  "next_index": 125,
   "history": [
-    {
-      "post_id": "daily_20260717_morning_scale_marmo_usura",
-      "topic_id": "scale_marmo_usura",
-      "slot": "morning",
-      "at": "2026-07-17T05:56:14.404458+00:00",
-      "claimed_by_run": "29558600689",
-      "status": "done",
-      "done_at": "2026-07-17T05:56:23.725141+00:00",
-      "photo_id": 15161797
-    },
     {
       "post_id": "daily_20260717_lunch_graniglia_palladiana",
       "topic_id": "graniglia_palladiana",
@@ -551,6 +541,15 @@
         "37066100",
         "5146920"
       ]
+    },
+    {
+      "post_id": "daily_20260802_morning_marmo_visita_amico",
+      "topic_id": "marmo_visita_amico",
+      "slot": "morning",
+      "at": "2026-08-02T05:55:53.613521+00:00",
+      "claimed_by_run": "30734966802",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -680,7 +679,8 @@
     "marmo_cassette_frutta": "2026-08-01T05:56:27.630118+00:00",
     "marmo_dopo_tempesta_sabbia": "2026-08-01T10:26:20.147650+00:00",
     "marmo_ombrelloni_terrazza": "2026-08-01T11:37:44.166416+00:00",
-    "carousel_marmi_siciliani": "2026-08-01T15:26:24.470901+00:00"
+    "carousel_marmi_siciliani": "2026-08-01T15:26:24.470901+00:00",
+    "marmo_visita_amico": "2026-08-02T05:55:53.613521+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
