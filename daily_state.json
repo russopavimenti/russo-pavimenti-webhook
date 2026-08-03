@@ -1,16 +1,6 @@
 {
-  "next_index": 129,
+  "next_index": 130,
   "history": [
-    {
-      "post_id": "daily_20260718_evening_marmo_negozi_ristoranti",
-      "topic_id": "marmo_negozi_ristoranti",
-      "slot": "evening",
-      "at": "2026-07-18T15:26:23.167746+00:00",
-      "claimed_by_run": "29649966578",
-      "status": "done",
-      "done_at": "2026-07-18T15:26:29.715135+00:00",
-      "photo_id": 5444190
-    },
     {
       "post_id": "daily_20260719_morning_pavimento_anziani_riflesso",
       "topic_id": "pavimento_anziani_riflesso",
@@ -563,6 +553,15 @@
       "post_type": "single",
       "done_at": "2026-08-03T10:26:28.799135+00:00",
       "photo_id": 35011512
+    },
+    {
+      "post_id": "daily_20260803_evening_carousel_stagioni_marmo",
+      "topic_id": "carousel_stagioni_marmo",
+      "slot": "evening",
+      "at": "2026-08-03T15:26:12.836610+00:00",
+      "claimed_by_run": "30827435424",
+      "status": "claimed",
+      "post_type": "carousel"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -697,7 +696,8 @@
     "marmo_video_tour_immobile": "2026-08-02T10:25:39.613093+00:00",
     "carousel_come_lavoriamo": "2026-08-02T15:26:04.121917+00:00",
     "marmo_fumatori_camera": "2026-08-03T05:56:15.784922+00:00",
-    "marmo_camino_no_ma_cornice": "2026-08-03T10:26:20.883062+00:00"
+    "marmo_camino_no_ma_cornice": "2026-08-03T10:26:20.883062+00:00",
+    "carousel_stagioni_marmo": "2026-08-03T15:26:12.836610+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
