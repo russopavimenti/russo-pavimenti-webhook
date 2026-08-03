@@ -1,16 +1,6 @@
 {
-  "next_index": 128,
+  "next_index": 129,
   "history": [
-    {
-      "post_id": "daily_20260718_lunch_marmo_ingresso_traffico",
-      "topic_id": "marmo_ingresso_traffico",
-      "slot": "lunch",
-      "at": "2026-07-18T10:25:57.130535+00:00",
-      "claimed_by_run": "29640815127",
-      "status": "done",
-      "done_at": "2026-07-18T10:26:06.973736+00:00",
-      "photo_id": 13345053
-    },
     {
       "post_id": "daily_20260718_evening_marmo_negozi_ristoranti",
       "topic_id": "marmo_negozi_ristoranti",
@@ -562,6 +552,15 @@
       "post_type": "single",
       "done_at": "2026-08-03T05:56:23.398045+00:00",
       "photo_id": 5971383
+    },
+    {
+      "post_id": "daily_20260803_lunch_marmo_camino_no_ma_cornice",
+      "topic_id": "marmo_camino_no_ma_cornice",
+      "slot": "lunch",
+      "at": "2026-08-03T10:26:20.883062+00:00",
+      "claimed_by_run": "30805537403",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -695,7 +694,8 @@
     "marmo_visita_amico": "2026-08-02T05:55:53.613521+00:00",
     "marmo_video_tour_immobile": "2026-08-02T10:25:39.613093+00:00",
     "carousel_come_lavoriamo": "2026-08-02T15:26:04.121917+00:00",
-    "marmo_fumatori_camera": "2026-08-03T05:56:15.784922+00:00"
+    "marmo_fumatori_camera": "2026-08-03T05:56:15.784922+00:00",
+    "marmo_camino_no_ma_cornice": "2026-08-03T10:26:20.883062+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
