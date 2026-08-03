@@ -1,16 +1,6 @@
 {
-  "next_index": 127,
+  "next_index": 128,
   "history": [
-    {
-      "post_id": "daily_20260718_morning_lavabo_marmo_macchie",
-      "topic_id": "lavabo_marmo_macchie",
-      "slot": "morning",
-      "at": "2026-07-18T05:55:42.074787+00:00",
-      "claimed_by_run": "29633090142",
-      "status": "done",
-      "done_at": "2026-07-18T05:55:48.100762+00:00",
-      "photo_id": 29139295
-    },
     {
       "post_id": "daily_20260718_lunch_marmo_ingresso_traffico",
       "topic_id": "marmo_ingresso_traffico",
@@ -561,6 +551,15 @@
         "6394652",
         "5998138"
       ]
+    },
+    {
+      "post_id": "daily_20260803_morning_marmo_fumatori_camera",
+      "topic_id": "marmo_fumatori_camera",
+      "slot": "morning",
+      "at": "2026-08-03T05:56:15.784922+00:00",
+      "claimed_by_run": "30788550881",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -693,7 +692,8 @@
     "carousel_marmi_siciliani": "2026-08-01T15:26:24.470901+00:00",
     "marmo_visita_amico": "2026-08-02T05:55:53.613521+00:00",
     "marmo_video_tour_immobile": "2026-08-02T10:25:39.613093+00:00",
-    "carousel_come_lavoriamo": "2026-08-02T15:26:04.121917+00:00"
+    "carousel_come_lavoriamo": "2026-08-02T15:26:04.121917+00:00",
+    "marmo_fumatori_camera": "2026-08-03T05:56:15.784922+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
