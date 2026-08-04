@@ -1,16 +1,6 @@
 {
-  "next_index": 132,
+  "next_index": 133,
   "history": [
-    {
-      "post_id": "daily_20260719_evening_macchie_olio_marmo",
-      "topic_id": "macchie_olio_marmo",
-      "slot": "evening",
-      "at": "2026-07-19T15:25:56.547008+00:00",
-      "claimed_by_run": "29692804300",
-      "status": "done",
-      "done_at": "2026-07-19T15:26:04.243417+00:00",
-      "photo_id": 2273536
-    },
     {
       "post_id": "daily_20260720_morning_garanzia_lavoro",
       "topic_id": "garanzia_lavoro",
@@ -572,6 +562,15 @@
       "post_type": "single",
       "done_at": "2026-08-04T10:25:56.173818+00:00",
       "photo_id": 358592
+    },
+    {
+      "post_id": "daily_20260804_evening_carousel_7_marmi_mondo",
+      "topic_id": "carousel_7_marmi_mondo",
+      "slot": "evening",
+      "at": "2026-08-04T15:26:04.434260+00:00",
+      "claimed_by_run": "30924073529",
+      "status": "claimed",
+      "post_type": "carousel"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -709,7 +708,8 @@
     "marmo_camino_no_ma_cornice": "2026-08-03T10:26:20.883062+00:00",
     "carousel_stagioni_marmo": "2026-08-03T15:26:12.836610+00:00",
     "marmo_pavimento_sonoro": "2026-08-04T05:55:32.420342+00:00",
-    "marmo_bagno_ospiti_veloce": "2026-08-04T10:25:47.110580+00:00"
+    "marmo_bagno_ospiti_veloce": "2026-08-04T10:25:47.110580+00:00",
+    "carousel_7_marmi_mondo": "2026-08-04T15:26:04.434260+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
