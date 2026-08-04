@@ -1,16 +1,6 @@
 {
-  "next_index": 131,
+  "next_index": 132,
   "history": [
-    {
-      "post_id": "daily_20260719_lunch_differenza_levigatura_lucidatura",
-      "topic_id": "differenza_levigatura_lucidatura",
-      "slot": "lunch",
-      "at": "2026-07-19T10:25:54.434825+00:00",
-      "claimed_by_run": "29683304208",
-      "status": "done",
-      "done_at": "2026-07-19T10:26:03.486571+00:00",
-      "photo_id": 4705821
-    },
     {
       "post_id": "daily_20260719_evening_macchie_olio_marmo",
       "topic_id": "macchie_olio_marmo",
@@ -571,6 +561,15 @@
       "post_type": "single",
       "done_at": "2026-08-04T05:55:39.377869+00:00",
       "photo_id": 15409437
+    },
+    {
+      "post_id": "daily_20260804_lunch_marmo_bagno_ospiti_veloce",
+      "topic_id": "marmo_bagno_ospiti_veloce",
+      "slot": "lunch",
+      "at": "2026-08-04T10:25:47.110580+00:00",
+      "claimed_by_run": "30900551039",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -707,7 +706,8 @@
     "marmo_fumatori_camera": "2026-08-03T05:56:15.784922+00:00",
     "marmo_camino_no_ma_cornice": "2026-08-03T10:26:20.883062+00:00",
     "carousel_stagioni_marmo": "2026-08-03T15:26:12.836610+00:00",
-    "marmo_pavimento_sonoro": "2026-08-04T05:55:32.420342+00:00"
+    "marmo_pavimento_sonoro": "2026-08-04T05:55:32.420342+00:00",
+    "marmo_bagno_ospiti_veloce": "2026-08-04T10:25:47.110580+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
