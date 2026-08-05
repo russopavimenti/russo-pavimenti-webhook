@@ -1,16 +1,6 @@
 {
-  "next_index": 135,
+  "next_index": 136,
   "history": [
-    {
-      "post_id": "daily_20260720_evening_alcamo_storia_marmo",
-      "topic_id": "alcamo_storia_marmo",
-      "slot": "evening",
-      "at": "2026-07-20T15:26:11.956706+00:00",
-      "claimed_by_run": "29755108938",
-      "status": "done",
-      "done_at": "2026-07-20T15:26:20.522157+00:00",
-      "photo_id": 36802154
-    },
     {
       "post_id": "daily_20260721_morning_preventivo_trasparente",
       "topic_id": "preventivo_trasparente",
@@ -581,6 +571,15 @@
       "post_type": "single",
       "done_at": "2026-08-05T05:56:14.796563+00:00",
       "photo_id": 7656453
+    },
+    {
+      "post_id": "daily_20260805_lunch_marmo_bici_ingresso",
+      "topic_id": "marmo_bici_ingresso",
+      "slot": "lunch",
+      "at": "2026-08-05T10:25:57.723527+00:00",
+      "claimed_by_run": "30997352847",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -721,7 +720,8 @@
     "marmo_bagno_ospiti_veloce": "2026-08-04T10:25:47.110580+00:00",
     "carousel_7_marmi_mondo": "2026-08-04T15:26:04.434260+00:00",
     "carousel_6_zone_casa_marmo": "2026-08-04T17:05:31.401915+00:00",
-    "marmo_giardiniere_terra": "2026-08-05T05:56:07.157737+00:00"
+    "marmo_giardiniere_terra": "2026-08-05T05:56:07.157737+00:00",
+    "marmo_bici_ingresso": "2026-08-05T10:25:57.723527+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
