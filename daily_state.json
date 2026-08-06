@@ -1,16 +1,6 @@
 {
-  "next_index": 137,
+  "next_index": 138,
   "history": [
-    {
-      "post_id": "daily_20260721_lunch_marmo_terrazzo_esterno",
-      "topic_id": "marmo_terrazzo_esterno",
-      "slot": "lunch",
-      "at": "2026-07-21T10:25:59.060898+00:00",
-      "claimed_by_run": "29822156587",
-      "status": "done",
-      "done_at": "2026-07-21T10:26:08.314136+00:00",
-      "photo_id": 34154387
-    },
     {
       "post_id": "daily_20260721_evening_graffi_profondi_marmo",
       "topic_id": "graffi_profondi_marmo",
@@ -593,6 +583,15 @@
         "18448147",
         "38883927"
       ]
+    },
+    {
+      "post_id": "daily_20260806_morning_marmo_scivoloso",
+      "topic_id": "marmo_scivoloso",
+      "slot": "morning",
+      "at": "2026-08-06T05:56:08.509652+00:00",
+      "claimed_by_run": "31075593257",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -606,7 +605,7 @@
     "cera_vs_lucidatura": "2026-07-23T10:26:05.842950+00:00",
     "rivestimenti_verticali": "2026-07-26T10:26:18.870403+00:00",
     "cemento_lucidato_moderno": "2026-06-23T05:55:24.271731+00:00",
-    "marmo_scivoloso": "2026-06-22T15:25:47.994764+00:00",
+    "marmo_scivoloso": "2026-08-06T05:56:08.509652+00:00",
     "candeggina_aloni": "2026-07-28T05:56:30.243831+00:00",
     "marmo_anni60_appartamenti": "2026-06-23T10:25:35.126919+00:00",
     "graniglia_palladiana": "2026-07-17T10:26:24.146400+00:00",
