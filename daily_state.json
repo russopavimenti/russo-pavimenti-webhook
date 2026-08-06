@@ -1,16 +1,6 @@
 {
-  "next_index": 138,
+  "next_index": 139,
   "history": [
-    {
-      "post_id": "daily_20260721_evening_graffi_profondi_marmo",
-      "topic_id": "graffi_profondi_marmo",
-      "slot": "evening",
-      "at": "2026-07-21T15:26:00.200258+00:00",
-      "claimed_by_run": "29843885261",
-      "status": "done",
-      "done_at": "2026-07-21T15:26:11.989773+00:00",
-      "photo_id": 9756786
-    },
     {
       "post_id": "daily_20260722_morning_top_bagno_calcare",
       "topic_id": "top_bagno_calcare",
@@ -594,6 +584,15 @@
       "post_type": "single",
       "done_at": "2026-08-06T05:56:15.408519+00:00",
       "photo_id": 7534569
+    },
+    {
+      "post_id": "daily_20260806_lunch_rivendita_immobile_marmo",
+      "topic_id": "rivendita_immobile_marmo",
+      "slot": "lunch",
+      "at": "2026-08-06T10:26:24.325004+00:00",
+      "claimed_by_run": "31093199542",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -637,7 +636,7 @@
     "pulizia_quotidiana_60sec": "2026-07-27T05:55:54.653696+00:00",
     "post_cantiere_proteggere": "2026-07-27T10:26:20.649216+00:00",
     "marmo_dimenticato_cantina": "2026-07-27T15:26:32.852309+00:00",
-    "rivendita_immobile_marmo": "2026-06-22T10:25:34.559389+00:00",
+    "rivendita_immobile_marmo": "2026-08-06T10:26:24.325004+00:00",
     "granito_lavorazione": "2026-06-24T15:25:44.392076+00:00",
     "quarzite_durezza": "2026-06-25T05:55:21.171713+00:00",
     "onice_retroilluminato": "2026-06-25T10:25:58.226863+00:00",
