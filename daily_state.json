@@ -1,16 +1,6 @@
 {
-  "next_index": 140,
+  "next_index": 141,
   "history": [
-    {
-      "post_id": "daily_20260722_lunch_pavimento_anziano_sicurezza",
-      "topic_id": "pavimento_anziano_sicurezza",
-      "slot": "lunch",
-      "at": "2026-07-22T10:25:43.944462+00:00",
-      "claimed_by_run": "29911825703",
-      "status": "done",
-      "done_at": "2026-07-22T10:25:53.501200+00:00",
-      "photo_id": 6818163
-    },
     {
       "post_id": "daily_20260722_evening_vino_macchie",
       "topic_id": "vino_macchie",
@@ -603,6 +593,15 @@
         "5659588",
         "6200814"
       ]
+    },
+    {
+      "post_id": "daily_20260807_morning_cemento_lucidato_moderno",
+      "topic_id": "cemento_lucidato_moderno",
+      "slot": "morning",
+      "at": "2026-08-07T05:55:52.129759+00:00",
+      "claimed_by_run": "31152173699",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -615,7 +614,7 @@
     "marmo_bianco_ingiallisce": "2026-07-23T15:25:47.702104+00:00",
     "cera_vs_lucidatura": "2026-07-23T10:26:05.842950+00:00",
     "rivestimenti_verticali": "2026-07-26T10:26:18.870403+00:00",
-    "cemento_lucidato_moderno": "2026-06-23T05:55:24.271731+00:00",
+    "cemento_lucidato_moderno": "2026-08-07T05:55:52.129759+00:00",
     "marmo_scivoloso": "2026-08-06T05:56:08.509652+00:00",
     "candeggina_aloni": "2026-07-28T05:56:30.243831+00:00",
     "marmo_anni60_appartamenti": "2026-06-23T10:25:35.126919+00:00",
