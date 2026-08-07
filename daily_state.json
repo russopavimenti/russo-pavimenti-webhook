@@ -1,16 +1,6 @@
 {
-  "next_index": 142,
+  "next_index": 143,
   "history": [
-    {
-      "post_id": "daily_20260723_morning_marmo_pre_vendita",
-      "topic_id": "marmo_pre_vendita",
-      "slot": "morning",
-      "at": "2026-07-23T05:55:56.925777+00:00",
-      "claimed_by_run": "29983476351",
-      "status": "done",
-      "done_at": "2026-07-23T05:56:05.889797+00:00",
-      "photo_id": 8482521
-    },
     {
       "post_id": "daily_20260723_lunch_cera_vs_lucidatura",
       "topic_id": "cera_vs_lucidatura",
@@ -605,6 +595,15 @@
       "post_type": "single",
       "done_at": "2026-08-07T10:26:35.180486+00:00",
       "photo_id": 10488690
+    },
+    {
+      "post_id": "daily_20260807_evening_carousel_marmo_bagno_5_cose",
+      "topic_id": "carousel_marmo_bagno_5_cose",
+      "slot": "evening",
+      "at": "2026-08-07T15:25:50.873864+00:00",
+      "claimed_by_run": "31192504081",
+      "status": "claimed",
+      "post_type": "carousel"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -748,7 +747,8 @@
     "marmo_giardiniere_terra": "2026-08-05T05:56:07.157737+00:00",
     "marmo_bici_ingresso": "2026-08-05T10:25:57.723527+00:00",
     "carousel_8_curiosita_marmo": "2026-08-05T15:26:34.906064+00:00",
-    "carousel_5_errori_clienti": "2026-08-06T15:26:23.899723+00:00"
+    "carousel_5_errori_clienti": "2026-08-06T15:26:23.899723+00:00",
+    "carousel_marmo_bagno_5_cose": "2026-08-07T15:25:50.873864+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
