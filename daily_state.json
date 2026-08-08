@@ -1,16 +1,6 @@
 {
-  "next_index": 145,
+  "next_index": 146,
   "history": [
-    {
-      "post_id": "daily_20260724_morning_marmo_chiesa_storico",
-      "topic_id": "marmo_chiesa_storico",
-      "slot": "morning",
-      "at": "2026-07-24T05:56:13.008345+00:00",
-      "claimed_by_run": "30070769186",
-      "status": "done",
-      "done_at": "2026-07-24T05:56:19.788381+00:00",
-      "photo_id": 34221622
-    },
     {
       "post_id": "daily_20260724_lunch_detergenti_acidi_lista",
       "topic_id": "detergenti_acidi_lista",
@@ -615,6 +605,15 @@
       "post_type": "single",
       "done_at": "2026-08-08T10:25:58.409750+00:00",
       "photo_id": 6636302
+    },
+    {
+      "post_id": "daily_20260808_evening_carousel_5_miti_marmo",
+      "topic_id": "carousel_5_miti_marmo",
+      "slot": "evening",
+      "at": "2026-08-08T15:26:29.764082+00:00",
+      "claimed_by_run": "31264433980",
+      "status": "claimed",
+      "post_type": "carousel"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -759,7 +758,8 @@
     "marmo_bici_ingresso": "2026-08-05T10:25:57.723527+00:00",
     "carousel_8_curiosita_marmo": "2026-08-05T15:26:34.906064+00:00",
     "carousel_5_errori_clienti": "2026-08-06T15:26:23.899723+00:00",
-    "carousel_marmo_bagno_5_cose": "2026-08-07T15:25:50.873864+00:00"
+    "carousel_marmo_bagno_5_cose": "2026-08-07T15:25:50.873864+00:00",
+    "carousel_5_miti_marmo": "2026-08-08T15:26:29.764082+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
