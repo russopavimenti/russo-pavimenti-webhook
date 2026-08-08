@@ -1,16 +1,6 @@
 {
-  "next_index": 143,
+  "next_index": 144,
   "history": [
-    {
-      "post_id": "daily_20260723_lunch_cera_vs_lucidatura",
-      "topic_id": "cera_vs_lucidatura",
-      "slot": "lunch",
-      "at": "2026-07-23T10:26:05.842950+00:00",
-      "claimed_by_run": "29999243048",
-      "status": "done",
-      "done_at": "2026-07-23T10:26:12.306451+00:00",
-      "photo_id": 7078360
-    },
     {
       "post_id": "daily_20260723_evening_marmo_bianco_ingiallisce",
       "topic_id": "marmo_bianco_ingiallisce",
@@ -613,6 +603,15 @@
         "5502226",
         "7166641"
       ]
+    },
+    {
+      "post_id": "daily_20260808_morning_marmocemento_opaco",
+      "topic_id": "marmocemento_opaco",
+      "slot": "morning",
+      "at": "2026-08-08T05:55:33.202253+00:00",
+      "claimed_by_run": "31242749190",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -620,7 +619,7 @@
     "top_bagno_calcare": "2026-07-22T05:56:21.078185+00:00",
     "scale_marmo_usura": "2026-07-17T05:56:14.404458+00:00",
     "top_cucina_acidi": "2026-06-24T10:25:33.757939+00:00",
-    "marmocemento_opaco": "2026-06-23T15:26:24.161195+00:00",
+    "marmocemento_opaco": "2026-08-08T05:55:33.202253+00:00",
     "durata_lucidatura": "2026-06-24T05:55:44.294867+00:00",
     "marmo_bianco_ingiallisce": "2026-07-23T15:25:47.702104+00:00",
     "cera_vs_lucidatura": "2026-07-23T10:26:05.842950+00:00",
