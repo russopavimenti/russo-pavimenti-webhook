@@ -1,16 +1,6 @@
 {
-  "next_index": 147,
+  "next_index": 148,
   "history": [
-    {
-      "post_id": "daily_20260724_evening_travertino_vs_marmo",
-      "topic_id": "travertino_vs_marmo",
-      "slot": "evening",
-      "at": "2026-07-24T15:25:58.026994+00:00",
-      "claimed_by_run": "30105210634",
-      "status": "done",
-      "done_at": "2026-07-24T15:26:04.520847+00:00",
-      "photo_id": 1201821
-    },
     {
       "post_id": "daily_20260725_morning_bagno_padronale_marmo",
       "topic_id": "bagno_padronale_marmo",
@@ -624,6 +614,15 @@
       "post_type": "single",
       "done_at": "2026-08-09T05:56:17.285168+00:00",
       "photo_id": 12354867
+    },
+    {
+      "post_id": "daily_20260809_lunch_granito_lavorazione",
+      "topic_id": "granito_lavorazione",
+      "slot": "lunch",
+      "at": "2026-08-09T10:25:57.225233+00:00",
+      "claimed_by_run": "31308293486",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -668,7 +667,7 @@
     "post_cantiere_proteggere": "2026-07-27T10:26:20.649216+00:00",
     "marmo_dimenticato_cantina": "2026-07-27T15:26:32.852309+00:00",
     "rivendita_immobile_marmo": "2026-08-06T10:26:24.325004+00:00",
-    "granito_lavorazione": "2026-06-24T15:25:44.392076+00:00",
+    "granito_lavorazione": "2026-08-09T10:25:57.225233+00:00",
     "quarzite_durezza": "2026-06-25T05:55:21.171713+00:00",
     "onice_retroilluminato": "2026-06-25T10:25:58.226863+00:00",
     "botticino_classico": "2026-06-25T15:26:16.517243+00:00",
