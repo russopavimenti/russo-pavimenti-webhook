@@ -1,16 +1,6 @@
 {
-  "next_index": 148,
+  "next_index": 149,
   "history": [
-    {
-      "post_id": "daily_20260725_morning_bagno_padronale_marmo",
-      "topic_id": "bagno_padronale_marmo",
-      "slot": "morning",
-      "at": "2026-07-25T05:56:26.361751+00:00",
-      "claimed_by_run": "30146610423",
-      "status": "done",
-      "done_at": "2026-07-25T05:56:32.794180+00:00",
-      "photo_id": 7166637
-    },
     {
       "post_id": "daily_20260725_lunch_mosaico_veneziano_70",
       "topic_id": "mosaico_veneziano_70",
@@ -625,6 +615,15 @@
       "post_type": "single",
       "done_at": "2026-08-09T10:26:04.371427+00:00",
       "photo_id": 3958965
+    },
+    {
+      "post_id": "daily_20260809_evening_carousel_5_lavori_speciali",
+      "topic_id": "carousel_5_lavori_speciali",
+      "slot": "evening",
+      "at": "2026-08-09T15:26:02.334883+00:00",
+      "claimed_by_run": "31321075159",
+      "status": "claimed",
+      "post_type": "carousel"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -770,7 +769,8 @@
     "carousel_8_curiosita_marmo": "2026-08-05T15:26:34.906064+00:00",
     "carousel_5_errori_clienti": "2026-08-06T15:26:23.899723+00:00",
     "carousel_marmo_bagno_5_cose": "2026-08-07T15:25:50.873864+00:00",
-    "carousel_5_miti_marmo": "2026-08-08T15:26:29.764082+00:00"
+    "carousel_5_miti_marmo": "2026-08-08T15:26:29.764082+00:00",
+    "carousel_5_lavori_speciali": "2026-08-09T15:26:02.334883+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
