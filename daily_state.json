@@ -1,16 +1,6 @@
 {
-  "next_index": 149,
+  "next_index": 150,
   "history": [
-    {
-      "post_id": "daily_20260725_lunch_mosaico_veneziano_70",
-      "topic_id": "mosaico_veneziano_70",
-      "slot": "lunch",
-      "at": "2026-07-25T10:26:02.212532+00:00",
-      "claimed_by_run": "30154436745",
-      "status": "done",
-      "done_at": "2026-07-25T10:26:08.622904+00:00",
-      "photo_id": 20158940
-    },
     {
       "post_id": "daily_20260725_evening_mobili_pesanti_senza_graffi",
       "topic_id": "mobili_pesanti_senza_graffi",
@@ -633,6 +623,15 @@
         "16253101",
         "37322389"
       ]
+    },
+    {
+      "post_id": "daily_20260810_morning_quarzite_durezza",
+      "topic_id": "quarzite_durezza",
+      "slot": "morning",
+      "at": "2026-08-10T05:55:51.656602+00:00",
+      "claimed_by_run": "31360123493",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -678,7 +677,7 @@
     "marmo_dimenticato_cantina": "2026-07-27T15:26:32.852309+00:00",
     "rivendita_immobile_marmo": "2026-08-06T10:26:24.325004+00:00",
     "granito_lavorazione": "2026-08-09T10:25:57.225233+00:00",
-    "quarzite_durezza": "2026-06-25T05:55:21.171713+00:00",
+    "quarzite_durezza": "2026-08-10T05:55:51.656602+00:00",
     "onice_retroilluminato": "2026-06-25T10:25:58.226863+00:00",
     "botticino_classico": "2026-06-25T15:26:16.517243+00:00",
     "pietra_ragusa": "2026-07-08T15:25:34.224307+00:00",
