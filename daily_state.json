@@ -1,16 +1,6 @@
 {
-  "next_index": 151,
+  "next_index": 152,
   "history": [
-    {
-      "post_id": "daily_20260726_morning_lucidatura_negozi_chiusura",
-      "topic_id": "lucidatura_negozi_chiusura",
-      "slot": "morning",
-      "at": "2026-07-26T05:56:03.768929+00:00",
-      "claimed_by_run": "30190170734",
-      "status": "done",
-      "done_at": "2026-07-26T05:56:09.842071+00:00",
-      "photo_id": 7451917
-    },
     {
       "post_id": "daily_20260726_lunch_rivestimenti_verticali",
       "topic_id": "rivestimenti_verticali",
@@ -635,6 +625,15 @@
       "post_type": "single",
       "done_at": "2026-08-10T10:26:48.902092+00:00",
       "photo_id": 14662918
+    },
+    {
+      "post_id": "daily_20260810_evening_carousel_5_stili_arredo",
+      "topic_id": "carousel_5_stili_arredo",
+      "slot": "evening",
+      "at": "2026-08-10T15:27:35.052564+00:00",
+      "claimed_by_run": "31403518534",
+      "status": "claimed",
+      "post_type": "carousel"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -781,7 +780,8 @@
     "carousel_5_errori_clienti": "2026-08-06T15:26:23.899723+00:00",
     "carousel_marmo_bagno_5_cose": "2026-08-07T15:25:50.873864+00:00",
     "carousel_5_miti_marmo": "2026-08-08T15:26:29.764082+00:00",
-    "carousel_5_lavori_speciali": "2026-08-09T15:26:02.334883+00:00"
+    "carousel_5_lavori_speciali": "2026-08-09T15:26:02.334883+00:00",
+    "carousel_5_stili_arredo": "2026-08-10T15:27:35.052564+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
