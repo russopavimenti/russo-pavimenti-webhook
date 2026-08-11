@@ -1,16 +1,6 @@
 {
-  "next_index": 154,
+  "next_index": 155,
   "history": [
-    {
-      "post_id": "daily_20260727_morning_pulizia_quotidiana_60sec",
-      "topic_id": "pulizia_quotidiana_60sec",
-      "slot": "morning",
-      "at": "2026-07-27T05:55:54.653696+00:00",
-      "claimed_by_run": "30241120036",
-      "status": "done",
-      "done_at": "2026-07-27T05:56:04.213929+00:00",
-      "photo_id": 27937528
-    },
     {
       "post_id": "daily_20260727_lunch_post_cantiere_proteggere",
       "topic_id": "post_cantiere_proteggere",
@@ -645,6 +635,15 @@
       "post_type": "single",
       "done_at": "2026-08-11T10:26:12.651997+00:00",
       "photo_id": 36507900
+    },
+    {
+      "post_id": "daily_20260811_evening_carousel_marmo_cucina_5_zone",
+      "topic_id": "carousel_marmo_cucina_5_zone",
+      "slot": "evening",
+      "at": "2026-08-11T15:26:11.117098+00:00",
+      "claimed_by_run": "31506941940",
+      "status": "claimed",
+      "post_type": "carousel"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -792,7 +791,8 @@
     "carousel_marmo_bagno_5_cose": "2026-08-07T15:25:50.873864+00:00",
     "carousel_5_miti_marmo": "2026-08-08T15:26:29.764082+00:00",
     "carousel_5_lavori_speciali": "2026-08-09T15:26:02.334883+00:00",
-    "carousel_5_stili_arredo": "2026-08-10T15:27:35.052564+00:00"
+    "carousel_5_stili_arredo": "2026-08-10T15:27:35.052564+00:00",
+    "carousel_marmo_cucina_5_zone": "2026-08-11T15:26:11.117098+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
