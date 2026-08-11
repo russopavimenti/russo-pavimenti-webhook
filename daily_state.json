@@ -1,16 +1,6 @@
 {
-  "next_index": 153,
+  "next_index": 154,
   "history": [
-    {
-      "post_id": "daily_20260726_evening_marmo_bambini_animali",
-      "topic_id": "marmo_bambini_animali",
-      "slot": "evening",
-      "at": "2026-07-26T15:25:55.678445+00:00",
-      "claimed_by_run": "30208160024",
-      "status": "done",
-      "done_at": "2026-07-26T15:26:04.847866+00:00",
-      "photo_id": 8120951
-    },
     {
       "post_id": "daily_20260727_morning_pulizia_quotidiana_60sec",
       "topic_id": "pulizia_quotidiana_60sec",
@@ -644,6 +634,15 @@
       "post_type": "single",
       "done_at": "2026-08-11T05:56:27.714328+00:00",
       "photo_id": 6634151
+    },
+    {
+      "post_id": "daily_20260811_lunch_signora_erice_caso",
+      "topic_id": "signora_erice_caso",
+      "slot": "lunch",
+      "at": "2026-08-11T10:26:03.319391+00:00",
+      "claimed_by_run": "31482126817",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -718,7 +717,7 @@
     "camminare_dopo_lucidatura": "2026-07-16T10:26:06.390208+00:00",
     "pavimenti_misti_giunti": "2026-07-16T15:25:42.449345+00:00",
     "cave_custonaci": "2026-07-17T15:26:11.409894+00:00",
-    "signora_erice_caso": "2026-06-26T05:55:59.185775+00:00",
+    "signora_erice_caso": "2026-08-11T10:26:03.319391+00:00",
     "ristorante_cefalu": "2026-06-26T10:25:51.258458+00:00",
     "bnb_scopello_pavimento": "2026-06-26T15:26:16.533554+00:00",
     "posso_forare_marmo": "2026-06-27T05:55:47.980562+00:00",
