@@ -1,16 +1,6 @@
 {
-  "next_index": 156,
+  "next_index": 157,
   "history": [
-    {
-      "post_id": "daily_20260727_evening_marmo_dimenticato_cantina",
-      "topic_id": "marmo_dimenticato_cantina",
-      "slot": "evening",
-      "at": "2026-07-27T15:26:32.852309+00:00",
-      "claimed_by_run": "30279940423",
-      "status": "done",
-      "done_at": "2026-07-27T15:26:43.420789+00:00",
-      "photo_id": 27906157
-    },
     {
       "post_id": "daily_20260728_morning_candeggina_aloni",
       "topic_id": "candeggina_aloni",
@@ -654,6 +644,15 @@
       "post_type": "single",
       "done_at": "2026-08-12T05:56:00.587190+00:00",
       "photo_id": 38958588
+    },
+    {
+      "post_id": "daily_20260812_lunch_bnb_scopello_pavimento",
+      "topic_id": "bnb_scopello_pavimento",
+      "slot": "lunch",
+      "at": "2026-08-12T10:25:55.949762+00:00",
+      "claimed_by_run": "31587321014",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -730,7 +729,7 @@
     "cave_custonaci": "2026-07-17T15:26:11.409894+00:00",
     "signora_erice_caso": "2026-08-11T10:26:03.319391+00:00",
     "ristorante_cefalu": "2026-08-12T05:55:52.211164+00:00",
-    "bnb_scopello_pavimento": "2026-06-26T15:26:16.533554+00:00",
+    "bnb_scopello_pavimento": "2026-08-12T10:25:55.949762+00:00",
     "posso_forare_marmo": "2026-06-27T05:55:47.980562+00:00",
     "tappeti_su_marmo": "2026-06-27T10:26:08.733264+00:00",
     "marmo_si_e_no_lucidatura": "2026-06-27T15:25:52.669852+00:00",
