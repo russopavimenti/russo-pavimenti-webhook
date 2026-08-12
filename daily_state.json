@@ -1,16 +1,6 @@
 {
-  "next_index": 157,
+  "next_index": 158,
   "history": [
-    {
-      "post_id": "daily_20260728_morning_candeggina_aloni",
-      "topic_id": "candeggina_aloni",
-      "slot": "morning",
-      "at": "2026-07-28T05:56:30.243831+00:00",
-      "claimed_by_run": "30333127826",
-      "status": "done",
-      "done_at": "2026-07-28T05:56:39.251188+00:00",
-      "photo_id": 10481158
-    },
     {
       "post_id": "daily_20260728_lunch_tenda_scivolamento_marmo",
       "topic_id": "tenda_scivolamento_marmo",
@@ -653,6 +643,15 @@
       "claimed_by_run": "31587321014",
       "status": "claimed",
       "post_type": "single"
+    },
+    {
+      "post_id": "daily_20260812_lunch_posso_forare_marmo",
+      "topic_id": "posso_forare_marmo",
+      "slot": "lunch",
+      "at": "2026-08-12T11:13:26.746829+00:00",
+      "claimed_by_run": "31590846206",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -730,7 +729,7 @@
     "signora_erice_caso": "2026-08-11T10:26:03.319391+00:00",
     "ristorante_cefalu": "2026-08-12T05:55:52.211164+00:00",
     "bnb_scopello_pavimento": "2026-08-12T10:25:55.949762+00:00",
-    "posso_forare_marmo": "2026-06-27T05:55:47.980562+00:00",
+    "posso_forare_marmo": "2026-08-12T11:13:26.746829+00:00",
     "tappeti_su_marmo": "2026-06-27T10:26:08.733264+00:00",
     "marmo_si_e_no_lucidatura": "2026-06-27T15:25:52.669852+00:00",
     "pietra_lavica_etna": "2026-06-28T05:55:34.334872+00:00",
