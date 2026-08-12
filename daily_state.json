@@ -1,17 +1,6 @@
 {
-  "next_index": 1,
+  "next_index": 2,
   "history": [
-    {
-      "post_id": "daily_20260729_morning_marmo_cameretta_bambini",
-      "topic_id": "marmo_cameretta_bambini",
-      "slot": "morning",
-      "at": "2026-07-29T05:56:48.199315+00:00",
-      "claimed_by_run": "30426539070",
-      "status": "done",
-      "post_type": "single",
-      "done_at": "2026-07-29T05:56:56.952391+00:00",
-      "photo_id": 7494471
-    },
     {
       "post_id": "daily_20260729_lunch_marmo_ingresso_condominio",
       "topic_id": "marmo_ingresso_condominio",
@@ -643,6 +632,15 @@
       "claimed_by_run": "31616309441",
       "status": "claimed",
       "post_type": "carousel"
+    },
+    {
+      "post_id": "daily_20260812_evening_carousel_5_abitudini_marmo",
+      "topic_id": "carousel_5_abitudini_marmo",
+      "slot": "evening",
+      "at": "2026-08-12T17:48:37.683972+00:00",
+      "claimed_by_run": "31624008773",
+      "status": "claimed",
+      "post_type": "carousel"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -793,7 +791,8 @@
     "carousel_5_stili_arredo": "2026-08-10T15:27:35.052564+00:00",
     "carousel_marmo_cucina_5_zone": "2026-08-11T15:26:11.117098+00:00",
     "carousel_terrazza_estate_6_regole": "2026-08-12T15:25:52.136666+00:00",
-    "carousel_5_marmi_rari": "2026-08-12T16:11:55.519654+00:00"
+    "carousel_5_marmi_rari": "2026-08-12T16:11:55.519654+00:00",
+    "carousel_5_abitudini_marmo": "2026-08-12T17:48:37.683972+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
