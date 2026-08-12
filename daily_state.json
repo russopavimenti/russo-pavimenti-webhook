@@ -1,24 +1,6 @@
 {
-  "next_index": 0,
+  "next_index": 1,
   "history": [
-    {
-      "post_id": "daily_20260728_evening_carousel_5_detergenti_da_evitare",
-      "topic_id": "carousel_5_detergenti_da_evitare",
-      "slot": "evening",
-      "at": "2026-07-28T15:25:58.681728+00:00",
-      "claimed_by_run": "30373280891",
-      "status": "done",
-      "post_type": "carousel",
-      "done_at": "2026-07-28T15:26:22.398036+00:00",
-      "slide_photo_ids": [
-        "6782367",
-        "36423800",
-        "1367232",
-        "5218015",
-        "28576634",
-        "33357392"
-      ]
-    },
     {
       "post_id": "daily_20260729_morning_marmo_cameretta_bambini",
       "topic_id": "marmo_cameretta_bambini",
@@ -652,6 +634,15 @@
       "claimed_by_run": "31612182943",
       "status": "claimed",
       "post_type": "carousel"
+    },
+    {
+      "post_id": "daily_20260812_evening_carousel_5_marmi_rari",
+      "topic_id": "carousel_5_marmi_rari",
+      "slot": "evening",
+      "at": "2026-08-12T16:11:55.519654+00:00",
+      "claimed_by_run": "31616309441",
+      "status": "claimed",
+      "post_type": "carousel"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -801,7 +792,8 @@
     "carousel_5_lavori_speciali": "2026-08-09T15:26:02.334883+00:00",
     "carousel_5_stili_arredo": "2026-08-10T15:27:35.052564+00:00",
     "carousel_marmo_cucina_5_zone": "2026-08-11T15:26:11.117098+00:00",
-    "carousel_terrazza_estate_6_regole": "2026-08-12T15:25:52.136666+00:00"
+    "carousel_terrazza_estate_6_regole": "2026-08-12T15:25:52.136666+00:00",
+    "carousel_5_marmi_rari": "2026-08-12T16:11:55.519654+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
