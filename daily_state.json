@@ -1,25 +1,6 @@
 {
-  "next_index": 7,
+  "next_index": 8,
   "history": [
-    {
-      "post_id": "daily_20260730_evening_carousel_macchie_soluzioni",
-      "topic_id": "carousel_macchie_soluzioni",
-      "slot": "evening",
-      "at": "2026-07-30T15:25:55.255805+00:00",
-      "claimed_by_run": "30556580077",
-      "status": "done",
-      "post_type": "carousel",
-      "done_at": "2026-07-30T15:26:25.983016+00:00",
-      "slide_photo_ids": [
-        "6587837",
-        "4036650",
-        "4281786",
-        "25745509",
-        "28196274",
-        "35220561",
-        "8697885"
-      ]
-    },
     {
       "post_id": "daily_20260731_morning_marmo_gres_convivenza",
       "topic_id": "marmo_gres_convivenza",
@@ -651,6 +632,15 @@
       "post_type": "single",
       "done_at": "2026-08-14T05:55:50.938774+00:00",
       "photo_id": 2881396
+    },
+    {
+      "post_id": "daily_20260814_lunch_cocciopesto_storico",
+      "topic_id": "cocciopesto_storico",
+      "slot": "lunch",
+      "at": "2026-08-14T10:26:28.098603+00:00",
+      "claimed_by_run": "31792187445",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -732,7 +722,7 @@
     "tappeti_su_marmo": "2026-08-13T05:56:09.348979+00:00",
     "marmo_si_e_no_lucidatura": "2026-08-13T10:25:40.369131+00:00",
     "pietra_lavica_etna": "2026-08-14T05:55:43.274020+00:00",
-    "cocciopesto_storico": "2026-06-28T10:26:12.269198+00:00",
+    "cocciopesto_storico": "2026-08-14T10:26:28.098603+00:00",
     "perlato_vs_botticino": "2026-06-28T15:26:22.277976+00:00",
     "bruciatura_pentola": "2026-06-29T05:55:34.612338+00:00",
     "bicchiere_alone_marmo": "2026-06-29T10:25:37.076178+00:00",
