@@ -1,17 +1,6 @@
 {
-  "next_index": 11,
+  "next_index": 12,
   "history": [
-    {
-      "post_id": "daily_20260801_morning_marmo_cassette_frutta",
-      "topic_id": "marmo_cassette_frutta",
-      "slot": "morning",
-      "at": "2026-08-01T05:56:27.630118+00:00",
-      "claimed_by_run": "30686763891",
-      "status": "done",
-      "post_type": "single",
-      "done_at": "2026-08-01T05:56:36.134693+00:00",
-      "photo_id": 36178811
-    },
     {
       "post_id": "daily_20260801_lunch_marmo_dopo_tempesta_sabbia",
       "topic_id": "marmo_dopo_tempesta_sabbia",
@@ -641,6 +630,15 @@
       "post_type": "single",
       "done_at": "2026-08-15T05:55:54.481685+00:00",
       "photo_id": 7307675
+    },
+    {
+      "post_id": "daily_20260815_lunch_bruciatura_pentola",
+      "topic_id": "bruciatura_pentola",
+      "slot": "lunch",
+      "at": "2026-08-15T10:26:37.367678+00:00",
+      "claimed_by_run": "31879494936",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -724,7 +722,7 @@
     "pietra_lavica_etna": "2026-08-14T05:55:43.274020+00:00",
     "cocciopesto_storico": "2026-08-14T10:26:28.098603+00:00",
     "perlato_vs_botticino": "2026-08-15T05:55:46.311539+00:00",
-    "bruciatura_pentola": "2026-06-29T05:55:34.612338+00:00",
+    "bruciatura_pentola": "2026-08-15T10:26:37.367678+00:00",
     "bicchiere_alone_marmo": "2026-06-29T10:25:37.076178+00:00",
     "finitura_satin_opaca": "2026-06-29T15:25:57.174369+00:00",
     "casa_chiusa_estate": "2026-06-30T05:56:21.485826+00:00",
