@@ -1,24 +1,6 @@
 {
-  "next_index": 10,
+  "next_index": 11,
   "history": [
-    {
-      "post_id": "daily_20260731_evening_carousel_5_domande_marmista",
-      "topic_id": "carousel_5_domande_marmista",
-      "slot": "evening",
-      "at": "2026-07-31T15:26:43.406778+00:00",
-      "claimed_by_run": "30642860231",
-      "status": "done",
-      "post_type": "carousel",
-      "done_at": "2026-07-31T15:27:04.030819+00:00",
-      "slide_photo_ids": [
-        "36766676",
-        "37809566",
-        "9462132",
-        "7679733",
-        "8413294",
-        "8730985"
-      ]
-    },
     {
       "post_id": "daily_20260801_morning_marmo_cassette_frutta",
       "topic_id": "marmo_cassette_frutta",
@@ -648,6 +630,15 @@
         "35723857",
         "27567505"
       ]
+    },
+    {
+      "post_id": "daily_20260815_morning_perlato_vs_botticino",
+      "topic_id": "perlato_vs_botticino",
+      "slot": "morning",
+      "at": "2026-08-15T05:55:46.311539+00:00",
+      "claimed_by_run": "31868137572",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -730,7 +721,7 @@
     "marmo_si_e_no_lucidatura": "2026-08-13T10:25:40.369131+00:00",
     "pietra_lavica_etna": "2026-08-14T05:55:43.274020+00:00",
     "cocciopesto_storico": "2026-08-14T10:26:28.098603+00:00",
-    "perlato_vs_botticino": "2026-06-28T15:26:22.277976+00:00",
+    "perlato_vs_botticino": "2026-08-15T05:55:46.311539+00:00",
     "bruciatura_pentola": "2026-06-29T05:55:34.612338+00:00",
     "bicchiere_alone_marmo": "2026-06-29T10:25:37.076178+00:00",
     "finitura_satin_opaca": "2026-06-29T15:25:57.174369+00:00",
