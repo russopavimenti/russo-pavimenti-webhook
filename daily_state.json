@@ -1,24 +1,6 @@
 {
-  "next_index": 14,
+  "next_index": 15,
   "history": [
-    {
-      "post_id": "daily_20260801_evening_carousel_marmi_siciliani",
-      "topic_id": "carousel_marmi_siciliani",
-      "slot": "evening",
-      "at": "2026-08-01T15:26:24.470901+00:00",
-      "claimed_by_run": "30705890884",
-      "status": "done",
-      "post_type": "carousel",
-      "done_at": "2026-08-01T15:26:49.721472+00:00",
-      "slide_photo_ids": [
-        "38073204",
-        "4709032",
-        "11273838",
-        "6944142",
-        "37066100",
-        "5146920"
-      ]
-    },
     {
       "post_id": "daily_20260802_morning_marmo_visita_amico",
       "topic_id": "marmo_visita_amico",
@@ -648,6 +630,15 @@
       "post_type": "single",
       "done_at": "2026-08-16T05:55:59.307316+00:00",
       "photo_id": 23627077
+    },
+    {
+      "post_id": "daily_20260816_lunch_finitura_satin_opaca",
+      "topic_id": "finitura_satin_opaca",
+      "slot": "lunch",
+      "at": "2026-08-16T10:25:36.004517+00:00",
+      "claimed_by_run": "31941605648",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -733,7 +724,7 @@
     "perlato_vs_botticino": "2026-08-15T05:55:46.311539+00:00",
     "bruciatura_pentola": "2026-08-15T10:26:37.367678+00:00",
     "bicchiere_alone_marmo": "2026-08-16T05:55:49.986826+00:00",
-    "finitura_satin_opaca": "2026-06-29T15:25:57.174369+00:00",
+    "finitura_satin_opaca": "2026-08-16T10:25:36.004517+00:00",
     "casa_chiusa_estate": "2026-06-30T05:56:21.485826+00:00",
     "festa_bambini_marmo": "2026-06-30T10:26:11.908851+00:00",
     "marmo_ferragosto": "2026-06-30T15:26:23.981290+00:00",
