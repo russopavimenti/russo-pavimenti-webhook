@@ -626,11 +626,12 @@
       "slot": "evening",
       "at": "2026-08-17T17:04:24.196868+00:00",
       "claimed_by_run": "32048623753",
-      "status": "manual_replacement",
+      "status": "failed",
       "post_type": "single",
       "done_at": "2026-08-17T17:04:31.538802+00:00",
       "photo_id": 4440533,
-      "note": "single arrivato per bug carousel path; sostituito con carousel via retry manuale"
+      "note": "single arrivato per bug carousel path; sostituito con carousel via retry manuale",
+      "failed_reason": "manual_replacement_requested_for_carousel_retry"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
