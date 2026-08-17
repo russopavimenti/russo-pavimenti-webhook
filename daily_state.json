@@ -1,15 +1,6 @@
 {
-  "next_index": 23,
+  "next_index": 24,
   "history": [
-    {
-      "post_id": "daily_20260804_evening_carousel_7_marmi_mondo",
-      "topic_id": "carousel_7_marmi_mondo",
-      "slot": "evening",
-      "at": "2026-08-04T15:26:04.434260+00:00",
-      "claimed_by_run": "30924073529",
-      "status": "claimed",
-      "post_type": "carousel"
-    },
     {
       "post_id": "daily_20260804_evening_carousel_6_zone_casa_marmo",
       "topic_id": "carousel_6_zone_casa_marmo",
@@ -636,6 +627,15 @@
       "post_type": "carousel",
       "failed_at": "2026-08-17T15:51:11.386290+00:00",
       "error": "carousel_exception: HTTP Error 400: Bad Request"
+    },
+    {
+      "post_id": "daily_20260817_evening_marmo_ferragosto",
+      "topic_id": "marmo_ferragosto",
+      "slot": "evening",
+      "at": "2026-08-17T15:51:59.513347+00:00",
+      "claimed_by_run": "32043584959",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -724,7 +724,7 @@
     "finitura_satin_opaca": "2026-08-16T10:25:36.004517+00:00",
     "casa_chiusa_estate": "2026-08-17T05:56:37.456406+00:00",
     "festa_bambini_marmo": "2026-08-17T10:26:08.532045+00:00",
-    "marmo_ferragosto": "2026-06-30T15:26:23.981290+00:00",
+    "marmo_ferragosto": "2026-08-17T15:51:59.513347+00:00",
     "pasqua_pulizia_marmo": "2026-07-01T05:56:01.954661+00:00",
     "natale_decorazioni_marmo": "2026-07-01T10:25:57.338556+00:00",
     "marmo_sotto_laminato": "2026-07-01T15:26:20.581096+00:00",
