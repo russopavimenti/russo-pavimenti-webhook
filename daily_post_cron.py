@@ -743,7 +743,12 @@ def _generate_carousel_slot(post_id: str, topic: Dict[str, Any], slot: str,
             _set_entry_status(post_id, "failed", {"error": "json_commit_failed"})
             return 1
 
-        # Telegram album preview + approve/modify/discard buttons
+        # Telegram album preview + approve/modify/discard buttons.
+        # CRITICAL: GitHub raw CDN has propagation lag (~30-90s) between a
+        # Contents API PUT and public availability. Telegram fetches the media
+        # URLs synchronously — if they 404, sendMediaGroup returns HTTP 400.
+        # Observed 17/08/2026: 6 carousels in a row failed exactly here.
+        # Fix: wait for propagation + retry sendMediaGroup with backoff.
         cb = int(time.time())
         tg_call("sendMessage", {
             "chat_id": TELEGRAM_CHAT_ID,
@@ -751,8 +756,36 @@ def _generate_carousel_slot(post_id: str, topic: Dict[str, Any], slot: str,
             "text": (f"🎠 <b>NUOVO CAROSELLO — slot {slot}</b> "
                      f"({len(slides)} slide)\n<code>{post_id}</code>"),
         })
+
+        # Wait for GitHub raw CDN to propagate the freshly-committed PNGs.
+        # Empirically 30-90s is the typical propagation window.
+        log.info(f"waiting 45s for GitHub raw CDN propagation ({len(image_urls)} slides)")
+        time.sleep(45)
+
+        # Retry sendMediaGroup with backoff (in case CDN still not ready).
         media = [{"type": "photo", "media": f"{u}?v={cb}"} for u in image_urls]
-        tg_call("sendMediaGroup", {"chat_id": TELEGRAM_CHAT_ID, "media": media})
+        media_sent = False
+        last_err = None
+        for attempt in range(1, 5):
+            try:
+                tg_call("sendMediaGroup", {"chat_id": TELEGRAM_CHAT_ID, "media": media})
+                media_sent = True
+                log.info(f"sendMediaGroup succeeded on attempt {attempt}")
+                break
+            except Exception as e:
+                last_err = e
+                log.warning(f"sendMediaGroup attempt {attempt} failed: {e}")
+                if attempt < 4:
+                    wait_s = 20 * attempt  # 20, 40, 60 additional seconds
+                    log.info(f"waiting extra {wait_s}s before retry")
+                    time.sleep(wait_s)
+
+        if not media_sent:
+            log.error(f"sendMediaGroup exhausted 4 attempts; last error: {last_err}")
+            _set_entry_status(post_id, "failed",
+                              {"error": f"telegram_sendMediaGroup: {last_err}"[:200]})
+            return 1
+
         tg_call("sendMessage", {
             "chat_id": TELEGRAM_CHAT_ID,
             "parse_mode": "HTML",
