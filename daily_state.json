@@ -1,17 +1,6 @@
 {
-  "next_index": 21,
+  "next_index": 22,
   "history": [
-    {
-      "post_id": "daily_20260804_morning_marmo_pavimento_sonoro",
-      "topic_id": "marmo_pavimento_sonoro",
-      "slot": "morning",
-      "at": "2026-08-04T05:55:32.420342+00:00",
-      "claimed_by_run": "30882204832",
-      "status": "done",
-      "post_type": "single",
-      "done_at": "2026-08-04T05:55:39.377869+00:00",
-      "photo_id": 15409437
-    },
     {
       "post_id": "daily_20260804_lunch_marmo_bagno_ospiti_veloce",
       "topic_id": "marmo_bagno_ospiti_veloce",
@@ -636,6 +625,15 @@
       "post_type": "carousel",
       "failed_at": "2026-08-17T15:46:10.949189+00:00",
       "error": "carousel_exception: HTTP Error 400: Bad Request"
+    },
+    {
+      "post_id": "daily_20260817_evening_carousel_marmo_ospiti_5_step",
+      "topic_id": "carousel_marmo_ospiti_5_step",
+      "slot": "evening",
+      "at": "2026-08-17T15:48:46.949641+00:00",
+      "claimed_by_run": "32043416521",
+      "status": "claimed",
+      "post_type": "carousel"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -796,7 +794,8 @@
     "carousel_6_macchinari": "2026-08-16T15:26:13.636720+00:00",
     "carousel_5_diff_pro_fai_da_te": "2026-08-17T15:26:33.768744+00:00",
     "carousel_5_manutenzione_professionale": "2026-08-17T15:43:45.884272+00:00",
-    "carousel_marmo_famiglie_bambini": "2026-08-17T15:45:36.833854+00:00"
+    "carousel_marmo_famiglie_bambini": "2026-08-17T15:45:36.833854+00:00",
+    "carousel_marmo_ospiti_5_step": "2026-08-17T15:48:46.949641+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
