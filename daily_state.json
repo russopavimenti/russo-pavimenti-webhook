@@ -1,17 +1,6 @@
 {
-  "next_index": 25,
+  "next_index": 26,
   "history": [
-    {
-      "post_id": "daily_20260805_morning_marmo_giardiniere_terra",
-      "topic_id": "marmo_giardiniere_terra",
-      "slot": "morning",
-      "at": "2026-08-05T05:56:07.157737+00:00",
-      "claimed_by_run": "30979630428",
-      "status": "done",
-      "post_type": "single",
-      "done_at": "2026-08-05T05:56:14.796563+00:00",
-      "photo_id": 7656453
-    },
     {
       "post_id": "daily_20260805_lunch_marmo_bici_ingresso",
       "topic_id": "marmo_bici_ingresso",
@@ -632,6 +621,15 @@
       "photo_id": 4440533,
       "note": "single arrivato per bug carousel path; sostituito con carousel via retry manuale",
       "failed_reason": "manual_replacement_requested_for_carousel_retry"
+    },
+    {
+      "post_id": "daily_20260817_evening_carousel_5_diff_pro_fai_da_te",
+      "topic_id": "carousel_5_diff_pro_fai_da_te",
+      "slot": "evening",
+      "at": "2026-08-17T20:11:23.818811+00:00",
+      "claimed_by_run": "32064372541",
+      "status": "claimed",
+      "post_type": "carousel"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -788,7 +786,8 @@
     "carousel_ciclo_vita_marmo": "2026-08-14T15:25:31.148304+00:00",
     "carousel_marmo_generazioni": "2026-08-14T16:07:49.598838+00:00",
     "carousel_marmo_pareti_verticali": "2026-08-15T15:25:37.473157+00:00",
-    "carousel_6_macchinari": "2026-08-16T15:26:13.636720+00:00"
+    "carousel_6_macchinari": "2026-08-16T15:26:13.636720+00:00",
+    "carousel_5_diff_pro_fai_da_te": "2026-08-17T20:11:23.818811+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
