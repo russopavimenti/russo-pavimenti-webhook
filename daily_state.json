@@ -1,17 +1,6 @@
 {
-  "next_index": 18,
+  "next_index": 19,
   "history": [
-    {
-      "post_id": "daily_20260803_morning_marmo_fumatori_camera",
-      "topic_id": "marmo_fumatori_camera",
-      "slot": "morning",
-      "at": "2026-08-03T05:56:15.784922+00:00",
-      "claimed_by_run": "30788550881",
-      "status": "done",
-      "post_type": "single",
-      "done_at": "2026-08-03T05:56:23.398045+00:00",
-      "photo_id": 5971383
-    },
     {
       "post_id": "daily_20260803_lunch_marmo_camino_no_ma_cornice",
       "topic_id": "marmo_camino_no_ma_cornice",
@@ -642,6 +631,15 @@
       "post_type": "single",
       "done_at": "2026-08-17T10:26:18.057536+00:00",
       "photo_id": 38786113
+    },
+    {
+      "post_id": "daily_20260817_evening_carousel_5_diff_pro_fai_da_te",
+      "topic_id": "carousel_5_diff_pro_fai_da_te",
+      "slot": "evening",
+      "at": "2026-08-17T15:26:32.434734+00:00",
+      "claimed_by_run": "32042308013",
+      "status": "claimed",
+      "post_type": "carousel"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -799,7 +797,8 @@
     "carousel_ciclo_vita_marmo": "2026-08-14T15:25:31.148304+00:00",
     "carousel_marmo_generazioni": "2026-08-14T16:07:49.598838+00:00",
     "carousel_marmo_pareti_verticali": "2026-08-15T15:25:37.473157+00:00",
-    "carousel_6_macchinari": "2026-08-16T15:26:13.636720+00:00"
+    "carousel_6_macchinari": "2026-08-16T15:26:13.636720+00:00",
+    "carousel_5_diff_pro_fai_da_te": "2026-08-17T15:26:32.434734+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
