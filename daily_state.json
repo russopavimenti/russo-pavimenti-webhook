@@ -626,10 +626,11 @@
       "slot": "evening",
       "at": "2026-08-17T17:04:24.196868+00:00",
       "claimed_by_run": "32048623753",
-      "status": "done",
+      "status": "manual_replacement",
       "post_type": "single",
       "done_at": "2026-08-17T17:04:31.538802+00:00",
-      "photo_id": 4440533
+      "photo_id": 4440533,
+      "note": "single arrivato per bug carousel path; sostituito con carousel via retry manuale"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -718,7 +719,6 @@
     "finitura_satin_opaca": "2026-08-16T10:25:36.004517+00:00",
     "casa_chiusa_estate": "2026-08-17T05:56:37.456406+00:00",
     "festa_bambini_marmo": "2026-08-17T10:26:08.532045+00:00",
-    "marmo_ferragosto": "2026-08-17T15:51:59.513347+00:00",
     "pasqua_pulizia_marmo": "2026-08-17T17:04:24.196868+00:00",
     "natale_decorazioni_marmo": "2026-07-01T10:25:57.338556+00:00",
     "marmo_sotto_laminato": "2026-07-01T15:26:20.581096+00:00",
@@ -787,12 +787,7 @@
     "carousel_ciclo_vita_marmo": "2026-08-14T15:25:31.148304+00:00",
     "carousel_marmo_generazioni": "2026-08-14T16:07:49.598838+00:00",
     "carousel_marmo_pareti_verticali": "2026-08-15T15:25:37.473157+00:00",
-    "carousel_6_macchinari": "2026-08-16T15:26:13.636720+00:00",
-    "carousel_5_diff_pro_fai_da_te": "2026-08-17T15:26:33.768744+00:00",
-    "carousel_5_manutenzione_professionale": "2026-08-17T15:43:45.884272+00:00",
-    "carousel_marmo_famiglie_bambini": "2026-08-17T15:45:36.833854+00:00",
-    "carousel_marmo_ospiti_5_step": "2026-08-17T15:48:46.949641+00:00",
-    "carousel_5_prodotti_da_avere": "2026-08-17T15:50:50.647574+00:00"
+    "carousel_6_macchinari": "2026-08-16T15:26:13.636720+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
