@@ -1,17 +1,6 @@
 {
-  "next_index": 16,
+  "next_index": 17,
   "history": [
-    {
-      "post_id": "daily_20260802_lunch_marmo_video_tour_immobile",
-      "topic_id": "marmo_video_tour_immobile",
-      "slot": "lunch",
-      "at": "2026-08-02T10:25:39.613093+00:00",
-      "claimed_by_run": "30743703327",
-      "status": "done",
-      "post_type": "single",
-      "done_at": "2026-08-02T10:25:48.412166+00:00",
-      "photo_id": 8730036
-    },
     {
       "post_id": "daily_20260802_evening_carousel_come_lavoriamo",
       "topic_id": "carousel_come_lavoriamo",
@@ -649,6 +638,15 @@
         "35149473",
         "38262818"
       ]
+    },
+    {
+      "post_id": "daily_20260817_morning_casa_chiusa_estate",
+      "topic_id": "casa_chiusa_estate",
+      "slot": "morning",
+      "at": "2026-08-17T05:56:37.456406+00:00",
+      "claimed_by_run": "31999649767",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -735,7 +733,7 @@
     "bruciatura_pentola": "2026-08-15T10:26:37.367678+00:00",
     "bicchiere_alone_marmo": "2026-08-16T05:55:49.986826+00:00",
     "finitura_satin_opaca": "2026-08-16T10:25:36.004517+00:00",
-    "casa_chiusa_estate": "2026-06-30T05:56:21.485826+00:00",
+    "casa_chiusa_estate": "2026-08-17T05:56:37.456406+00:00",
     "festa_bambini_marmo": "2026-06-30T10:26:11.908851+00:00",
     "marmo_ferragosto": "2026-06-30T15:26:23.981290+00:00",
     "pasqua_pulizia_marmo": "2026-07-01T05:56:01.954661+00:00",
