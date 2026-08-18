@@ -1,17 +1,6 @@
 {
-  "next_index": 26,
+  "next_index": 27,
   "history": [
-    {
-      "post_id": "daily_20260805_lunch_marmo_bici_ingresso",
-      "topic_id": "marmo_bici_ingresso",
-      "slot": "lunch",
-      "at": "2026-08-05T10:25:57.723527+00:00",
-      "claimed_by_run": "30997352847",
-      "status": "done",
-      "post_type": "single",
-      "done_at": "2026-08-05T10:26:05.456246+00:00",
-      "photo_id": 5670134
-    },
     {
       "post_id": "daily_20260805_evening_carousel_8_curiosita_marmo",
       "topic_id": "carousel_8_curiosita_marmo",
@@ -648,6 +637,15 @@
         "34930127",
         "28948920"
       ]
+    },
+    {
+      "post_id": "daily_20260818_morning_marmo_ferragosto",
+      "topic_id": "marmo_ferragosto",
+      "slot": "morning",
+      "at": "2026-08-18T05:56:09.607089+00:00",
+      "claimed_by_run": "32104767652",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -805,7 +803,8 @@
     "carousel_marmo_generazioni": "2026-08-14T16:07:49.598838+00:00",
     "carousel_marmo_pareti_verticali": "2026-08-15T15:25:37.473157+00:00",
     "carousel_6_macchinari": "2026-08-16T15:26:13.636720+00:00",
-    "carousel_5_diff_pro_fai_da_te": "2026-08-17T20:11:23.818811+00:00"
+    "carousel_5_diff_pro_fai_da_te": "2026-08-17T20:11:23.818811+00:00",
+    "marmo_ferragosto": "2026-08-18T05:56:09.607089+00:00"
   },
   "used_photos": {
     "12329142": "2026-05-15T22:16:00.701418+00:00",
