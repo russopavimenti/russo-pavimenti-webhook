@@ -1,17 +1,6 @@
 {
-  "next_index": 31,
+  "next_index": 32,
   "history": [
-    {
-      "post_id": "daily_20260807_morning_cemento_lucidato_moderno",
-      "topic_id": "cemento_lucidato_moderno",
-      "slot": "morning",
-      "at": "2026-08-07T05:55:52.129759+00:00",
-      "claimed_by_run": "31152173699",
-      "status": "done",
-      "post_type": "single",
-      "done_at": "2026-08-07T05:55:58.433279+00:00",
-      "photo_id": 7031409
-    },
     {
       "post_id": "daily_20260807_lunch_marmo_anni60_appartamenti",
       "topic_id": "marmo_anni60_appartamenti",
@@ -638,6 +627,15 @@
       "post_type": "single",
       "done_at": "2026-08-19T05:56:38.263971+00:00",
       "photo_id": 1388944
+    },
+    {
+      "post_id": "daily_20260819_lunch_marmo_sotto_moquette",
+      "topic_id": "marmo_sotto_moquette",
+      "slot": "lunch",
+      "at": "2026-08-19T10:25:57.368025+00:00",
+      "claimed_by_run": "32242587861",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -729,7 +727,7 @@
     "pasqua_pulizia_marmo": "2026-08-17T17:04:24.196868+00:00",
     "natale_decorazioni_marmo": "2026-08-18T10:25:55.433703+00:00",
     "marmo_sotto_laminato": "2026-08-19T05:56:29.393983+00:00",
-    "marmo_sotto_moquette": "2026-07-02T05:55:26.600045+00:00",
+    "marmo_sotto_moquette": "2026-08-19T10:25:57.368025+00:00",
     "impresa_pulizia_coordinamento": "2026-07-02T10:26:05.491606+00:00",
     "idraulico_perdita_marmo": "2026-07-02T12:23:46.418055+00:00",
     "murature_calcina_marmo": "2026-07-02T15:25:53.209818+00:00",
