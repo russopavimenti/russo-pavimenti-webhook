@@ -1,17 +1,6 @@
 {
-  "next_index": 34,
+  "next_index": 35,
   "history": [
-    {
-      "post_id": "daily_20260808_morning_marmocemento_opaco",
-      "topic_id": "marmocemento_opaco",
-      "slot": "morning",
-      "at": "2026-08-08T05:55:33.202253+00:00",
-      "claimed_by_run": "31242749190",
-      "status": "done",
-      "post_type": "single",
-      "done_at": "2026-08-08T05:55:39.583686+00:00",
-      "photo_id": 37532766
-    },
     {
       "post_id": "daily_20260808_lunch_top_cucina_acidi",
       "topic_id": "top_cucina_acidi",
@@ -638,6 +627,15 @@
       "post_type": "single",
       "done_at": "2026-08-20T05:56:24.204718+00:00",
       "photo_id": 6195123
+    },
+    {
+      "post_id": "daily_20260820_lunch_idraulico_perdita_marmo",
+      "topic_id": "idraulico_perdita_marmo",
+      "slot": "lunch",
+      "at": "2026-08-20T10:26:06.737521+00:00",
+      "claimed_by_run": "32358854885",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -731,7 +729,7 @@
     "marmo_sotto_laminato": "2026-08-19T05:56:29.393983+00:00",
     "marmo_sotto_moquette": "2026-08-19T10:25:57.368025+00:00",
     "impresa_pulizia_coordinamento": "2026-08-20T05:56:15.243704+00:00",
-    "idraulico_perdita_marmo": "2026-07-02T12:23:46.418055+00:00",
+    "idraulico_perdita_marmo": "2026-08-20T10:26:06.737521+00:00",
     "murature_calcina_marmo": "2026-07-02T15:25:53.209818+00:00",
     "elettricista_traccia_marmo": "2026-07-03T05:55:53.280597+00:00",
     "prodotti_eco_marmo": "2026-07-03T10:25:38.964597+00:00",
