@@ -1,17 +1,6 @@
 {
-  "next_index": 37,
+  "next_index": 38,
   "history": [
-    {
-      "post_id": "daily_20260809_morning_durata_lucidatura",
-      "topic_id": "durata_lucidatura",
-      "slot": "morning",
-      "at": "2026-08-09T05:56:10.570505+00:00",
-      "claimed_by_run": "31297746472",
-      "status": "done",
-      "post_type": "single",
-      "done_at": "2026-08-09T05:56:17.285168+00:00",
-      "photo_id": 12354867
-    },
     {
       "post_id": "daily_20260809_lunch_granito_lavorazione",
       "topic_id": "granito_lavorazione",
@@ -638,6 +627,15 @@
       "post_type": "single",
       "done_at": "2026-08-21T05:56:59.079668+00:00",
       "photo_id": 32168694
+    },
+    {
+      "post_id": "daily_20260821_lunch_elettricista_traccia_marmo",
+      "topic_id": "elettricista_traccia_marmo",
+      "slot": "lunch",
+      "at": "2026-08-21T10:25:46.700263+00:00",
+      "claimed_by_run": "32472537747",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -733,7 +731,7 @@
     "impresa_pulizia_coordinamento": "2026-08-20T05:56:15.243704+00:00",
     "idraulico_perdita_marmo": "2026-08-20T10:26:06.737521+00:00",
     "murature_calcina_marmo": "2026-08-21T05:56:49.319774+00:00",
-    "elettricista_traccia_marmo": "2026-07-03T05:55:53.280597+00:00",
+    "elettricista_traccia_marmo": "2026-08-21T10:25:46.700263+00:00",
     "prodotti_eco_marmo": "2026-07-03T10:25:38.964597+00:00",
     "marmo_riciclo_recupero": "2026-07-03T15:25:34.737098+00:00",
     "top_cucina_taglio_pesce": "2026-07-04T05:55:42.990667+00:00",
