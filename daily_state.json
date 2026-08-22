@@ -1,17 +1,6 @@
 {
-  "next_index": 40,
+  "next_index": 41,
   "history": [
-    {
-      "post_id": "daily_20260810_morning_quarzite_durezza",
-      "topic_id": "quarzite_durezza",
-      "slot": "morning",
-      "at": "2026-08-10T05:55:51.656602+00:00",
-      "claimed_by_run": "31360123493",
-      "status": "done",
-      "post_type": "single",
-      "done_at": "2026-08-10T05:55:59.185975+00:00",
-      "photo_id": 7031911
-    },
     {
       "post_id": "daily_20260810_lunch_onice_retroilluminato",
       "topic_id": "onice_retroilluminato",
@@ -631,6 +620,15 @@
       "post_type": "single",
       "done_at": "2026-08-22T05:56:14.377888+00:00",
       "photo_id": 30907069
+    },
+    {
+      "post_id": "daily_20260822_lunch_top_cucina_taglio_pesce",
+      "topic_id": "top_cucina_taglio_pesce",
+      "slot": "lunch",
+      "at": "2026-08-22T10:25:53.792641+00:00",
+      "claimed_by_run": "32567552893",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -729,7 +727,7 @@
     "elettricista_traccia_marmo": "2026-08-21T10:25:46.700263+00:00",
     "prodotti_eco_marmo": "2026-08-21T15:26:42.695768+00:00",
     "marmo_riciclo_recupero": "2026-08-22T05:56:05.037762+00:00",
-    "top_cucina_taglio_pesce": "2026-07-04T05:55:42.990667+00:00",
+    "top_cucina_taglio_pesce": "2026-08-22T10:25:53.792641+00:00",
     "marmo_olio_oliva": "2026-07-04T10:25:35.407085+00:00",
     "marmo_animali_domestici_unghie": "2026-07-04T15:26:17.552699+00:00",
     "marmo_terrazza_invernale": "2026-07-05T05:55:55.968062+00:00",
