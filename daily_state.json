@@ -1,17 +1,6 @@
 {
-  "next_index": 41,
+  "next_index": 42,
   "history": [
-    {
-      "post_id": "daily_20260810_lunch_onice_retroilluminato",
-      "topic_id": "onice_retroilluminato",
-      "slot": "lunch",
-      "at": "2026-08-10T10:26:38.921832+00:00",
-      "claimed_by_run": "31379100833",
-      "status": "done",
-      "post_type": "single",
-      "done_at": "2026-08-10T10:26:48.902092+00:00",
-      "photo_id": 14662918
-    },
     {
       "post_id": "daily_20260810_evening_carousel_5_stili_arredo",
       "topic_id": "carousel_5_stili_arredo",
@@ -631,6 +620,15 @@
       "post_type": "single",
       "done_at": "2026-08-22T10:26:01.813525+00:00",
       "photo_id": 10432855
+    },
+    {
+      "post_id": "daily_20260822_evening_marmo_olio_oliva",
+      "topic_id": "marmo_olio_oliva",
+      "slot": "evening",
+      "at": "2026-08-22T15:26:25.580119+00:00",
+      "claimed_by_run": "32581655463",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -730,7 +728,7 @@
     "prodotti_eco_marmo": "2026-08-21T15:26:42.695768+00:00",
     "marmo_riciclo_recupero": "2026-08-22T05:56:05.037762+00:00",
     "top_cucina_taglio_pesce": "2026-08-22T10:25:53.792641+00:00",
-    "marmo_olio_oliva": "2026-07-04T10:25:35.407085+00:00",
+    "marmo_olio_oliva": "2026-08-22T15:26:25.580119+00:00",
     "marmo_animali_domestici_unghie": "2026-07-04T15:26:17.552699+00:00",
     "marmo_terrazza_invernale": "2026-07-05T05:55:55.968062+00:00",
     "marmo_sotto_finestra": "2026-07-05T05:56:24.612918+00:00",
