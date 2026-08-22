@@ -1,24 +1,6 @@
 {
-  "next_index": 39,
+  "next_index": 40,
   "history": [
-    {
-      "post_id": "daily_20260809_evening_carousel_5_lavori_speciali",
-      "topic_id": "carousel_5_lavori_speciali",
-      "slot": "evening",
-      "at": "2026-08-09T15:26:02.334883+00:00",
-      "claimed_by_run": "31321075159",
-      "status": "done",
-      "post_type": "carousel",
-      "done_at": "2026-08-09T15:26:21.103375+00:00",
-      "slide_photo_ids": [
-        "213962",
-        "12715585",
-        "29692582",
-        "30469346",
-        "16253101",
-        "37322389"
-      ]
-    },
     {
       "post_id": "daily_20260810_morning_quarzite_durezza",
       "topic_id": "quarzite_durezza",
@@ -638,6 +620,15 @@
       "post_type": "single",
       "done_at": "2026-08-21T15:26:48.817142+00:00",
       "photo_id": 6612168
+    },
+    {
+      "post_id": "daily_20260822_morning_marmo_riciclo_recupero",
+      "topic_id": "marmo_riciclo_recupero",
+      "slot": "morning",
+      "at": "2026-08-22T05:56:05.037762+00:00",
+      "claimed_by_run": "32555594946",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -735,7 +726,7 @@
     "murature_calcina_marmo": "2026-08-21T05:56:49.319774+00:00",
     "elettricista_traccia_marmo": "2026-08-21T10:25:46.700263+00:00",
     "prodotti_eco_marmo": "2026-08-21T15:26:42.695768+00:00",
-    "marmo_riciclo_recupero": "2026-07-03T15:25:34.737098+00:00",
+    "marmo_riciclo_recupero": "2026-08-22T05:56:05.037762+00:00",
     "top_cucina_taglio_pesce": "2026-07-04T05:55:42.990667+00:00",
     "marmo_olio_oliva": "2026-07-04T10:25:35.407085+00:00",
     "marmo_animali_domestici_unghie": "2026-07-04T15:26:17.552699+00:00",
