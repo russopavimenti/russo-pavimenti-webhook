@@ -1,17 +1,6 @@
 {
-  "next_index": 44,
+  "next_index": 45,
   "history": [
-    {
-      "post_id": "daily_20260811_lunch_signora_erice_caso",
-      "topic_id": "signora_erice_caso",
-      "slot": "lunch",
-      "at": "2026-08-11T10:26:03.319391+00:00",
-      "claimed_by_run": "31482126817",
-      "status": "done",
-      "post_type": "single",
-      "done_at": "2026-08-11T10:26:12.651997+00:00",
-      "photo_id": 36507900
-    },
     {
       "post_id": "daily_20260811_evening_carousel_marmo_cucina_5_zone",
       "topic_id": "carousel_marmo_cucina_5_zone",
@@ -624,6 +613,15 @@
       "post_type": "single",
       "failed_at": "2026-08-23T10:26:18.398048+00:00",
       "error": "exception: HTTP Error 400: Bad Request"
+    },
+    {
+      "post_id": "daily_20260823_lunch_marmo_sotto_finestra",
+      "topic_id": "marmo_sotto_finestra",
+      "slot": "lunch",
+      "at": "2026-08-23T10:45:32.001446+00:00",
+      "claimed_by_run": "32634594318",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -726,7 +724,7 @@
     "marmo_olio_oliva": "2026-08-22T15:26:25.580119+00:00",
     "marmo_animali_domestici_unghie": "2026-08-23T05:56:57.762215+00:00",
     "marmo_terrazza_invernale": "2026-08-23T10:26:10.888516+00:00",
-    "marmo_sotto_finestra": "2026-07-05T05:56:24.612918+00:00",
+    "marmo_sotto_finestra": "2026-08-23T10:45:32.001446+00:00",
     "marmo_alone_calorifero": "2026-07-05T10:26:02.424605+00:00",
     "marmo_decoratore_pittore": "2026-07-05T15:26:14.609455+00:00",
     "marmo_dopo_alluvione": "2026-07-06T05:56:04.675323+00:00",
