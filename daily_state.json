@@ -1,17 +1,6 @@
 {
-  "next_index": 43,
+  "next_index": 44,
   "history": [
-    {
-      "post_id": "daily_20260811_morning_botticino_classico",
-      "topic_id": "botticino_classico",
-      "slot": "morning",
-      "at": "2026-08-11T05:56:20.655000+00:00",
-      "claimed_by_run": "31463280711",
-      "status": "done",
-      "post_type": "single",
-      "done_at": "2026-08-11T05:56:27.714328+00:00",
-      "photo_id": 6634151
-    },
     {
       "post_id": "daily_20260811_lunch_signora_erice_caso",
       "topic_id": "signora_erice_caso",
@@ -624,6 +613,15 @@
       "post_type": "single",
       "done_at": "2026-08-23T05:57:07.006683+00:00",
       "photo_id": 37538165
+    },
+    {
+      "post_id": "daily_20260823_lunch_marmo_terrazza_invernale",
+      "topic_id": "marmo_terrazza_invernale",
+      "slot": "lunch",
+      "at": "2026-08-23T10:26:10.888516+00:00",
+      "claimed_by_run": "32633713327",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -725,7 +723,7 @@
     "top_cucina_taglio_pesce": "2026-08-22T10:25:53.792641+00:00",
     "marmo_olio_oliva": "2026-08-22T15:26:25.580119+00:00",
     "marmo_animali_domestici_unghie": "2026-08-23T05:56:57.762215+00:00",
-    "marmo_terrazza_invernale": "2026-07-05T05:55:55.968062+00:00",
+    "marmo_terrazza_invernale": "2026-08-23T10:26:10.888516+00:00",
     "marmo_sotto_finestra": "2026-07-05T05:56:24.612918+00:00",
     "marmo_alone_calorifero": "2026-07-05T10:26:02.424605+00:00",
     "marmo_decoratore_pittore": "2026-07-05T15:26:14.609455+00:00",
