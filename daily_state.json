@@ -1,24 +1,6 @@
 {
-  "next_index": 45,
+  "next_index": 46,
   "history": [
-    {
-      "post_id": "daily_20260811_evening_carousel_marmo_cucina_5_zone",
-      "topic_id": "carousel_marmo_cucina_5_zone",
-      "slot": "evening",
-      "at": "2026-08-11T15:26:11.117098+00:00",
-      "claimed_by_run": "31506941940",
-      "status": "done",
-      "post_type": "carousel",
-      "done_at": "2026-08-11T15:26:38.017439+00:00",
-      "slide_photo_ids": [
-        "5252536",
-        "6636316",
-        "4992469",
-        "7061429",
-        "6920446",
-        "8092436"
-      ]
-    },
     {
       "post_id": "daily_20260812_morning_ristorante_cefalu",
       "topic_id": "ristorante_cefalu",
@@ -624,6 +606,15 @@
       "post_type": "single",
       "done_at": "2026-08-23T10:45:39.940216+00:00",
       "photo_id": 18820283
+    },
+    {
+      "post_id": "daily_20260823_evening_marmo_alone_calorifero",
+      "topic_id": "marmo_alone_calorifero",
+      "slot": "evening",
+      "at": "2026-08-23T15:26:42.493862+00:00",
+      "claimed_by_run": "32648524761",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -727,7 +718,7 @@
     "marmo_animali_domestici_unghie": "2026-08-23T05:56:57.762215+00:00",
     "marmo_terrazza_invernale": "2026-08-23T10:26:10.888516+00:00",
     "marmo_sotto_finestra": "2026-08-23T10:45:32.001446+00:00",
-    "marmo_alone_calorifero": "2026-07-05T10:26:02.424605+00:00",
+    "marmo_alone_calorifero": "2026-08-23T15:26:42.493862+00:00",
     "marmo_decoratore_pittore": "2026-07-05T15:26:14.609455+00:00",
     "marmo_dopo_alluvione": "2026-07-06T05:56:04.675323+00:00",
     "marmo_chiesa_locale": "2026-07-06T10:26:13.868067+00:00",
