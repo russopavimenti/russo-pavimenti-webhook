@@ -1,17 +1,6 @@
 {
-  "next_index": 48,
+  "next_index": 49,
   "history": [
-    {
-      "post_id": "daily_20260812_lunch_posso_forare_marmo",
-      "topic_id": "posso_forare_marmo",
-      "slot": "lunch",
-      "at": "2026-08-12T11:13:26.746829+00:00",
-      "claimed_by_run": "31590846206",
-      "status": "done",
-      "post_type": "single",
-      "done_at": "2026-08-12T11:13:33.344605+00:00",
-      "photo_id": 8135507
-    },
     {
       "post_id": "daily_20260812_evening_carousel_terrazza_estate_6_regole",
       "topic_id": "carousel_terrazza_estate_6_regole",
@@ -619,6 +608,15 @@
       "post_type": "single",
       "done_at": "2026-08-24T10:26:21.615579+00:00",
       "photo_id": 14823612
+    },
+    {
+      "post_id": "daily_20260824_evening_marmo_chiesa_locale",
+      "topic_id": "marmo_chiesa_locale",
+      "slot": "evening",
+      "at": "2026-08-24T15:26:24.049279+00:00",
+      "claimed_by_run": "32744755648",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -725,7 +723,7 @@
     "marmo_alone_calorifero": "2026-08-23T15:26:42.493862+00:00",
     "marmo_decoratore_pittore": "2026-08-24T05:56:35.960156+00:00",
     "marmo_dopo_alluvione": "2026-08-24T10:26:12.438567+00:00",
-    "marmo_chiesa_locale": "2026-07-06T10:26:13.868067+00:00",
+    "marmo_chiesa_locale": "2026-08-24T15:26:24.049279+00:00",
     "marmo_piscina_zona": "2026-07-06T15:25:39.203864+00:00",
     "marmo_recensione_cliente": "2026-07-07T05:56:27.699655+00:00",
     "sopralluogo_come_funziona": "2026-07-07T10:26:02.972629+00:00",
