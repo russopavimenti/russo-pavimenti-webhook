@@ -1,15 +1,6 @@
 {
-  "next_index": 50,
+  "next_index": 51,
   "history": [
-    {
-      "post_id": "daily_20260812_evening_carousel_5_marmi_rari",
-      "topic_id": "carousel_5_marmi_rari",
-      "slot": "evening",
-      "at": "2026-08-12T16:11:55.519654+00:00",
-      "claimed_by_run": "31616309441",
-      "status": "claimed",
-      "post_type": "carousel"
-    },
     {
       "post_id": "daily_20260812_evening_carousel_5_abitudini_marmo",
       "topic_id": "carousel_5_abitudini_marmo",
@@ -621,6 +612,15 @@
       "post_type": "single",
       "done_at": "2026-08-25T05:56:39.923281+00:00",
       "photo_id": 8910880
+    },
+    {
+      "post_id": "daily_20260825_lunch_marmo_recensione_cliente",
+      "topic_id": "marmo_recensione_cliente",
+      "slot": "lunch",
+      "at": "2026-08-25T10:26:42.607801+00:00",
+      "claimed_by_run": "32837183907",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -729,7 +729,7 @@
     "marmo_dopo_alluvione": "2026-08-24T10:26:12.438567+00:00",
     "marmo_chiesa_locale": "2026-08-24T15:26:24.049279+00:00",
     "marmo_piscina_zona": "2026-08-25T05:56:32.460258+00:00",
-    "marmo_recensione_cliente": "2026-07-07T05:56:27.699655+00:00",
+    "marmo_recensione_cliente": "2026-08-25T10:26:42.607801+00:00",
     "sopralluogo_come_funziona": "2026-07-07T10:26:02.972629+00:00",
     "marmo_vintage_modern_mix": "2026-07-07T15:26:01.012474+00:00",
     "marmo_donne_imprenditrici": "2026-07-08T05:55:35.433010+00:00",
