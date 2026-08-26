@@ -1,17 +1,6 @@
 {
-  "next_index": 52,
+  "next_index": 53,
   "history": [
-    {
-      "post_id": "daily_20260813_morning_tappeti_su_marmo",
-      "topic_id": "tappeti_su_marmo",
-      "slot": "morning",
-      "at": "2026-08-13T05:56:09.348979+00:00",
-      "claimed_by_run": "31671999751",
-      "status": "done",
-      "post_type": "single",
-      "done_at": "2026-08-13T05:56:18.744049+00:00",
-      "photo_id": 8092427
-    },
     {
       "post_id": "daily_20260813_lunch_marmo_si_e_no_lucidatura",
       "topic_id": "marmo_si_e_no_lucidatura",
@@ -616,6 +605,15 @@
       "post_type": "single",
       "done_at": "2026-08-25T15:26:10.316289+00:00",
       "photo_id": 8441820
+    },
+    {
+      "post_id": "daily_20260826_morning_marmo_vintage_modern_mix",
+      "topic_id": "marmo_vintage_modern_mix",
+      "slot": "morning",
+      "at": "2026-08-26T05:56:39.849308+00:00",
+      "claimed_by_run": "32935989607",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -726,7 +724,7 @@
     "marmo_piscina_zona": "2026-08-25T05:56:32.460258+00:00",
     "marmo_recensione_cliente": "2026-08-25T10:26:42.607801+00:00",
     "sopralluogo_come_funziona": "2026-08-25T15:26:02.248290+00:00",
-    "marmo_vintage_modern_mix": "2026-07-07T15:26:01.012474+00:00",
+    "marmo_vintage_modern_mix": "2026-08-26T05:56:39.849308+00:00",
     "marmo_donne_imprenditrici": "2026-07-08T05:55:35.433010+00:00",
     "marmo_anziani_sicurezza_dopo": "2026-07-08T10:26:05.764696+00:00",
     "tenda_scivolamento_marmo": "2026-07-28T10:26:22.862389+00:00",
