@@ -1,17 +1,6 @@
 {
-  "next_index": 60,
+  "next_index": 61,
   "history": [
-    {
-      "post_id": "daily_20260815_morning_perlato_vs_botticino",
-      "topic_id": "perlato_vs_botticino",
-      "slot": "morning",
-      "at": "2026-08-15T05:55:46.311539+00:00",
-      "claimed_by_run": "31868137572",
-      "status": "done",
-      "post_type": "single",
-      "done_at": "2026-08-15T05:55:54.481685+00:00",
-      "photo_id": 7307675
-    },
     {
       "post_id": "daily_20260815_lunch_bruciatura_pentola",
       "topic_id": "bruciatura_pentola",
@@ -611,6 +600,15 @@
       "post_type": "single",
       "done_at": "2026-08-28T10:26:32.556499+00:00",
       "photo_id": 18977040
+    },
+    {
+      "post_id": "daily_20260828_evening_battiscopa_coordinati",
+      "topic_id": "battiscopa_coordinati",
+      "slot": "evening",
+      "at": "2026-08-28T15:25:52.595424+00:00",
+      "claimed_by_run": "33185031419",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -663,7 +661,7 @@
     "cementine_disegno": "2026-08-27T10:25:53.690952+00:00",
     "cotto_artigianale": "2026-08-28T05:56:34.722101+00:00",
     "klinker_terrazze": "2026-08-28T10:26:24.305974+00:00",
-    "battiscopa_coordinati": "2026-07-10T05:55:43.992186+00:00",
+    "battiscopa_coordinati": "2026-08-28T15:25:52.595424+00:00",
     "soglia_davanzale": "2026-07-10T10:25:50.611129+00:00",
     "marmo_arancione_cause": "2026-07-10T15:25:41.747571+00:00",
     "cera_candele_yankee": "2026-07-11T05:55:49.529310+00:00",
