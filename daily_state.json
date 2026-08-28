@@ -1,15 +1,6 @@
 {
-  "next_index": 58,
+  "next_index": 59,
   "history": [
-    {
-      "post_id": "daily_20260814_evening_carousel_ciclo_vita_marmo",
-      "topic_id": "carousel_ciclo_vita_marmo",
-      "slot": "evening",
-      "at": "2026-08-14T15:25:31.148304+00:00",
-      "claimed_by_run": "31814378579",
-      "status": "claimed",
-      "post_type": "carousel"
-    },
     {
       "post_id": "daily_20260814_evening_carousel_marmo_generazioni",
       "topic_id": "carousel_marmo_generazioni",
@@ -616,6 +607,15 @@
         "28576637",
         "6195125"
       ]
+    },
+    {
+      "post_id": "daily_20260828_morning_cotto_artigianale",
+      "topic_id": "cotto_artigianale",
+      "slot": "morning",
+      "at": "2026-08-28T05:56:34.722101+00:00",
+      "claimed_by_run": "33146253398",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -666,7 +666,7 @@
     "botticino_classico": "2026-08-11T05:56:20.655000+00:00",
     "pietra_ragusa": "2026-08-26T16:27:17.399912+00:00",
     "cementine_disegno": "2026-08-27T10:25:53.690952+00:00",
-    "cotto_artigianale": "2026-07-09T10:25:36.438870+00:00",
+    "cotto_artigianale": "2026-08-28T05:56:34.722101+00:00",
     "klinker_terrazze": "2026-07-09T15:32:16.270714+00:00",
     "battiscopa_coordinati": "2026-07-10T05:55:43.992186+00:00",
     "soglia_davanzale": "2026-07-10T10:25:50.611129+00:00",
