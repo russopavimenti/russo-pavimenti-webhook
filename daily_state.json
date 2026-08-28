@@ -1,24 +1,6 @@
 {
-  "next_index": 59,
+  "next_index": 60,
   "history": [
-    {
-      "post_id": "daily_20260814_evening_carousel_marmo_generazioni",
-      "topic_id": "carousel_marmo_generazioni",
-      "slot": "evening",
-      "at": "2026-08-14T16:07:49.598838+00:00",
-      "claimed_by_run": "31817813314",
-      "status": "done",
-      "post_type": "carousel",
-      "done_at": "2026-08-14T16:08:16.024955+00:00",
-      "slide_photo_ids": [
-        "302083",
-        "15250537",
-        "8922392",
-        "3806275",
-        "35723857",
-        "27567505"
-      ]
-    },
     {
       "post_id": "daily_20260815_morning_perlato_vs_botticino",
       "topic_id": "perlato_vs_botticino",
@@ -618,6 +600,15 @@
       "post_type": "single",
       "done_at": "2026-08-28T05:56:44.646168+00:00",
       "photo_id": 38262293
+    },
+    {
+      "post_id": "daily_20260828_lunch_klinker_terrazze",
+      "topic_id": "klinker_terrazze",
+      "slot": "lunch",
+      "at": "2026-08-28T10:26:24.305974+00:00",
+      "claimed_by_run": "33163314750",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -669,7 +660,7 @@
     "pietra_ragusa": "2026-08-26T16:27:17.399912+00:00",
     "cementine_disegno": "2026-08-27T10:25:53.690952+00:00",
     "cotto_artigianale": "2026-08-28T05:56:34.722101+00:00",
-    "klinker_terrazze": "2026-07-09T15:32:16.270714+00:00",
+    "klinker_terrazze": "2026-08-28T10:26:24.305974+00:00",
     "battiscopa_coordinati": "2026-07-10T05:55:43.992186+00:00",
     "soglia_davanzale": "2026-07-10T10:25:50.611129+00:00",
     "marmo_arancione_cause": "2026-07-10T15:25:41.747571+00:00",
