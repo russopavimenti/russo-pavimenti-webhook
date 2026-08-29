@@ -1,17 +1,6 @@
 {
-  "next_index": 64,
+  "next_index": 65,
   "history": [
-    {
-      "post_id": "daily_20260816_lunch_finitura_satin_opaca",
-      "topic_id": "finitura_satin_opaca",
-      "slot": "lunch",
-      "at": "2026-08-16T10:25:36.004517+00:00",
-      "claimed_by_run": "31941605648",
-      "status": "done",
-      "post_type": "single",
-      "done_at": "2026-08-16T10:25:43.902501+00:00",
-      "photo_id": 11285328
-    },
     {
       "post_id": "daily_20260816_evening_carousel_6_macchinari",
       "topic_id": "carousel_6_macchinari",
@@ -604,6 +593,15 @@
       "post_type": "carousel",
       "failed_at": "2026-08-29T15:27:36.834811+00:00",
       "error": "carousel_exception: HTTP Error 400: Bad Request"
+    },
+    {
+      "post_id": "daily_20260829_evening_carousel_finiture_confronto",
+      "topic_id": "carousel_finiture_confronto",
+      "slot": "evening",
+      "at": "2026-08-29T16:41:29.804437+00:00",
+      "claimed_by_run": "33263627101",
+      "status": "claimed",
+      "post_type": "carousel"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -722,7 +720,7 @@
     "marmo_cameretta_bambini": "2026-07-29T05:56:48.199315+00:00",
     "marmo_ingresso_condominio": "2026-07-29T10:26:05.395035+00:00",
     "carousel_prima_dopo_trasformazioni": "2026-08-29T15:26:34.032267+00:00",
-    "carousel_finiture_confronto": "2026-07-29T16:40:10.986299+00:00",
+    "carousel_finiture_confronto": "2026-08-29T16:41:29.804437+00:00",
     "marmo_studio_yoga": "2026-07-30T05:56:23.648007+00:00",
     "marmo_walk_in_closet": "2026-07-30T10:26:04.974818+00:00",
     "carousel_macchie_soluzioni": "2026-07-30T15:25:55.255805+00:00",
