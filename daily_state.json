@@ -1,24 +1,6 @@
 {
-  "next_index": 62,
+  "next_index": 63,
   "history": [
-    {
-      "post_id": "daily_20260815_evening_carousel_marmo_pareti_verticali",
-      "topic_id": "carousel_marmo_pareti_verticali",
-      "slot": "evening",
-      "at": "2026-08-15T15:25:37.473157+00:00",
-      "claimed_by_run": "31892651040",
-      "status": "done",
-      "post_type": "carousel",
-      "done_at": "2026-08-15T15:26:02.010517+00:00",
-      "slide_photo_ids": [
-        "36601416",
-        "6663038",
-        "11296229",
-        "15062097",
-        "7031909",
-        "21038582"
-      ]
-    },
     {
       "post_id": "daily_20260816_morning_bicchiere_alone_marmo",
       "topic_id": "bicchiere_alone_marmo",
@@ -611,6 +593,15 @@
       "post_type": "single",
       "done_at": "2026-08-29T05:56:50.070709+00:00",
       "photo_id": 31597591
+    },
+    {
+      "post_id": "daily_20260829_lunch_marmo_arancione_cause",
+      "topic_id": "marmo_arancione_cause",
+      "slot": "lunch",
+      "at": "2026-08-29T10:26:23.780355+00:00",
+      "claimed_by_run": "33247792033",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -665,7 +656,7 @@
     "klinker_terrazze": "2026-08-28T10:26:24.305974+00:00",
     "battiscopa_coordinati": "2026-08-28T15:25:52.595424+00:00",
     "soglia_davanzale": "2026-08-29T05:56:40.241965+00:00",
-    "marmo_arancione_cause": "2026-07-10T15:25:41.747571+00:00",
+    "marmo_arancione_cause": "2026-08-29T10:26:23.780355+00:00",
     "cera_candele_yankee": "2026-07-11T05:55:49.529310+00:00",
     "marmo_anelli_piante": "2026-07-11T10:25:33.713644+00:00",
     "crepe_assestamento": "2026-07-11T15:26:16.990189+00:00",
