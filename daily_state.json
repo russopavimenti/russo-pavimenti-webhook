@@ -1,17 +1,6 @@
 {
-  "next_index": 66,
+  "next_index": 67,
   "history": [
-    {
-      "post_id": "daily_20260817_morning_casa_chiusa_estate",
-      "topic_id": "casa_chiusa_estate",
-      "slot": "morning",
-      "at": "2026-08-17T05:56:37.456406+00:00",
-      "claimed_by_run": "31999649767",
-      "status": "done",
-      "post_type": "single",
-      "done_at": "2026-08-17T05:56:46.822778+00:00",
-      "photo_id": 30982182
-    },
     {
       "post_id": "daily_20260817_lunch_festa_bambini_marmo",
       "topic_id": "festa_bambini_marmo",
@@ -602,6 +591,15 @@
       "post_type": "single",
       "done_at": "2026-08-30T05:56:44.014512+00:00",
       "photo_id": 3693115
+    },
+    {
+      "post_id": "daily_20260830_lunch_marmo_anelli_piante",
+      "topic_id": "marmo_anelli_piante",
+      "slot": "lunch",
+      "at": "2026-08-30T10:26:36.224377+00:00",
+      "claimed_by_run": "33306460470",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -658,7 +656,7 @@
     "soglia_davanzale": "2026-08-29T05:56:40.241965+00:00",
     "marmo_arancione_cause": "2026-08-29T10:26:23.780355+00:00",
     "cera_candele_yankee": "2026-08-30T05:56:35.016938+00:00",
-    "marmo_anelli_piante": "2026-07-11T10:25:33.713644+00:00",
+    "marmo_anelli_piante": "2026-08-30T10:26:36.224377+00:00",
     "crepe_assestamento": "2026-07-11T15:26:16.990189+00:00",
     "marmo_che_suda": "2026-07-12T05:55:49.080447+00:00",
     "olio_motore_garage": "2026-07-12T10:25:56.413459+00:00",
