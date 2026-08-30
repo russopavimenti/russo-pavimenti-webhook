@@ -1,17 +1,6 @@
 {
-  "next_index": 67,
+  "next_index": 68,
   "history": [
-    {
-      "post_id": "daily_20260817_lunch_festa_bambini_marmo",
-      "topic_id": "festa_bambini_marmo",
-      "slot": "lunch",
-      "at": "2026-08-17T10:26:08.532045+00:00",
-      "claimed_by_run": "32020093495",
-      "status": "done",
-      "post_type": "single",
-      "done_at": "2026-08-17T10:26:18.057536+00:00",
-      "photo_id": 38786113
-    },
     {
       "post_id": "daily_20260817_evening_carousel_5_diff_pro_fai_da_te",
       "topic_id": "carousel_5_diff_pro_fai_da_te",
@@ -602,6 +591,15 @@
       "post_type": "single",
       "done_at": "2026-08-30T10:26:42.774994+00:00",
       "photo_id": 16799768
+    },
+    {
+      "post_id": "daily_20260830_evening_carousel_macchie_soluzioni",
+      "topic_id": "carousel_macchie_soluzioni",
+      "slot": "evening",
+      "at": "2026-08-30T15:26:48.347560+00:00",
+      "claimed_by_run": "33319619349",
+      "status": "claimed",
+      "post_type": "carousel"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -723,7 +721,7 @@
     "carousel_finiture_confronto": "2026-08-29T16:41:29.804437+00:00",
     "marmo_studio_yoga": "2026-07-30T05:56:23.648007+00:00",
     "marmo_walk_in_closet": "2026-07-30T10:26:04.974818+00:00",
-    "carousel_macchie_soluzioni": "2026-07-30T15:25:55.255805+00:00",
+    "carousel_macchie_soluzioni": "2026-08-30T15:26:48.347560+00:00",
     "marmo_gres_convivenza": "2026-07-31T05:56:08.459222+00:00",
     "marmo_cane_ciotola": "2026-07-31T10:26:42.626737+00:00",
     "carousel_5_domande_marmista": "2026-07-31T15:26:43.406778+00:00",
