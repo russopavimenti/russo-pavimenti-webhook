@@ -1,17 +1,6 @@
 {
-  "next_index": 69,
+  "next_index": 70,
   "history": [
-    {
-      "post_id": "daily_20260817_evening_carousel_5_manutenzione_professionale",
-      "topic_id": "carousel_5_manutenzione_professionale",
-      "slot": "evening",
-      "at": "2026-08-17T15:43:45.884272+00:00",
-      "claimed_by_run": "32043152026",
-      "status": "failed",
-      "post_type": "carousel",
-      "failed_at": "2026-08-17T15:44:08.639281+00:00",
-      "error": "carousel_exception: HTTP Error 400: Bad Request"
-    },
     {
       "post_id": "daily_20260817_evening_carousel_marmo_famiglie_bambini",
       "topic_id": "carousel_marmo_famiglie_bambini",
@@ -601,6 +590,15 @@
       "post_type": "single",
       "done_at": "2026-08-31T05:57:05.035129+00:00",
       "photo_id": 17706118
+    },
+    {
+      "post_id": "daily_20260831_lunch_marmo_che_suda",
+      "topic_id": "marmo_che_suda",
+      "slot": "lunch",
+      "at": "2026-08-31T10:26:53.817079+00:00",
+      "claimed_by_run": "33382343436",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -659,7 +657,7 @@
     "cera_candele_yankee": "2026-08-30T05:56:35.016938+00:00",
     "marmo_anelli_piante": "2026-08-30T10:26:36.224377+00:00",
     "crepe_assestamento": "2026-08-31T05:56:55.532234+00:00",
-    "marmo_che_suda": "2026-07-12T05:55:49.080447+00:00",
+    "marmo_che_suda": "2026-08-31T10:26:53.817079+00:00",
     "olio_motore_garage": "2026-07-12T10:25:56.413459+00:00",
     "marmo_cucina_dietro_fornelli": "2026-07-12T15:25:38.840600+00:00",
     "marmo_lavanderia": "2026-07-13T05:56:23.789668+00:00",
