@@ -1,17 +1,6 @@
 {
-  "next_index": 70,
+  "next_index": 71,
   "history": [
-    {
-      "post_id": "daily_20260817_evening_carousel_marmo_famiglie_bambini",
-      "topic_id": "carousel_marmo_famiglie_bambini",
-      "slot": "evening",
-      "at": "2026-08-17T15:45:36.833854+00:00",
-      "claimed_by_run": "32043247437",
-      "status": "failed",
-      "post_type": "carousel",
-      "failed_at": "2026-08-17T15:46:10.949189+00:00",
-      "error": "carousel_exception: HTTP Error 400: Bad Request"
-    },
     {
       "post_id": "daily_20260817_evening_carousel_marmo_ospiti_5_step",
       "topic_id": "carousel_marmo_ospiti_5_step",
@@ -601,6 +590,15 @@
       "post_type": "single",
       "done_at": "2026-08-31T10:27:04.740200+00:00",
       "photo_id": 36781309
+    },
+    {
+      "post_id": "daily_20260831_evening_carousel_5_domande_marmista",
+      "topic_id": "carousel_5_domande_marmista",
+      "slot": "evening",
+      "at": "2026-08-31T15:26:05.322040+00:00",
+      "claimed_by_run": "33408324357",
+      "status": "claimed",
+      "post_type": "carousel"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -725,7 +723,7 @@
     "carousel_macchie_soluzioni": "2026-08-30T15:26:48.347560+00:00",
     "marmo_gres_convivenza": "2026-07-31T05:56:08.459222+00:00",
     "marmo_cane_ciotola": "2026-07-31T10:26:42.626737+00:00",
-    "carousel_5_domande_marmista": "2026-07-31T15:26:43.406778+00:00",
+    "carousel_5_domande_marmista": "2026-08-31T15:26:05.322040+00:00",
     "marmo_cassette_frutta": "2026-08-01T05:56:27.630118+00:00",
     "marmo_dopo_tempesta_sabbia": "2026-08-01T10:26:20.147650+00:00",
     "marmo_ombrelloni_terrazza": "2026-08-01T11:37:44.166416+00:00",
