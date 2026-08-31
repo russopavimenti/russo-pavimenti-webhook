@@ -1,26 +1,6 @@
 {
-  "next_index": 68,
+  "next_index": 69,
   "history": [
-    {
-      "post_id": "daily_20260817_evening_carousel_5_diff_pro_fai_da_te",
-      "topic_id": "carousel_5_diff_pro_fai_da_te",
-      "slot": "evening",
-      "at": "2026-08-17T15:26:33.768744+00:00",
-      "claimed_by_run": "32042304780",
-      "status": "done",
-      "post_type": "carousel",
-      "failed_at": "2026-08-17T15:26:46.476407+00:00",
-      "error": "png_commit_slide_2",
-      "done_at": "2026-08-17T20:12:35.135707+00:00",
-      "slide_photo_ids": [
-        "26578948",
-        "35510200",
-        "12431505",
-        "6195290",
-        "34930127",
-        "28948920"
-      ]
-    },
     {
       "post_id": "daily_20260817_evening_carousel_5_manutenzione_professionale",
       "topic_id": "carousel_5_manutenzione_professionale",
@@ -610,6 +590,15 @@
         "27556624",
         "16317453"
       ]
+    },
+    {
+      "post_id": "daily_20260831_morning_crepe_assestamento",
+      "topic_id": "crepe_assestamento",
+      "slot": "morning",
+      "at": "2026-08-31T05:56:55.532234+00:00",
+      "claimed_by_run": "33362246533",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -667,7 +656,7 @@
     "marmo_arancione_cause": "2026-08-29T10:26:23.780355+00:00",
     "cera_candele_yankee": "2026-08-30T05:56:35.016938+00:00",
     "marmo_anelli_piante": "2026-08-30T10:26:36.224377+00:00",
-    "crepe_assestamento": "2026-07-11T15:26:16.990189+00:00",
+    "crepe_assestamento": "2026-08-31T05:56:55.532234+00:00",
     "marmo_che_suda": "2026-07-12T05:55:49.080447+00:00",
     "olio_motore_garage": "2026-07-12T10:25:56.413459+00:00",
     "marmo_cucina_dietro_fornelli": "2026-07-12T15:25:38.840600+00:00",
