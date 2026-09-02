@@ -1,19 +1,6 @@
 {
-  "next_index": 74,
+  "next_index": 75,
   "history": [
-    {
-      "post_id": "daily_20260817_evening_pasqua_pulizia_marmo",
-      "topic_id": "pasqua_pulizia_marmo",
-      "slot": "evening",
-      "at": "2026-08-17T17:04:24.196868+00:00",
-      "claimed_by_run": "32048623753",
-      "status": "failed",
-      "post_type": "single",
-      "done_at": "2026-08-17T17:04:31.538802+00:00",
-      "photo_id": 4440533,
-      "note": "single arrivato per bug carousel path; sostituito con carousel via retry manuale",
-      "failed_reason": "manual_replacement_requested_for_carousel_retry"
-    },
     {
       "post_id": "daily_20260817_evening_carousel_5_diff_pro_fai_da_te",
       "topic_id": "carousel_5_diff_pro_fai_da_te",
@@ -615,6 +602,15 @@
         "13830194",
         "10945742"
       ]
+    },
+    {
+      "post_id": "daily_20260902_morning_marmo_lavanderia",
+      "topic_id": "marmo_lavanderia",
+      "slot": "morning",
+      "at": "2026-09-02T05:56:31.626003+00:00",
+      "claimed_by_run": "33596673451",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -676,7 +672,7 @@
     "marmo_che_suda": "2026-08-31T10:26:53.817079+00:00",
     "olio_motore_garage": "2026-09-01T05:56:15.511309+00:00",
     "marmo_cucina_dietro_fornelli": "2026-09-01T10:26:27.546445+00:00",
-    "marmo_lavanderia": "2026-07-13T05:56:23.789668+00:00",
+    "marmo_lavanderia": "2026-09-02T05:56:31.626003+00:00",
     "marmo_terrazza_estate": "2026-07-13T10:25:45.862452+00:00",
     "marmo_inverno_sale": "2026-07-13T15:26:01.649174+00:00",
     "geometri_architetti": "2026-07-14T05:56:28.867811+00:00",
