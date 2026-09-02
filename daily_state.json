@@ -1,17 +1,6 @@
 {
-  "next_index": 76,
+  "next_index": 77,
   "history": [
-    {
-      "post_id": "daily_20260818_morning_marmo_ferragosto",
-      "topic_id": "marmo_ferragosto",
-      "slot": "morning",
-      "at": "2026-08-18T05:56:09.607089+00:00",
-      "claimed_by_run": "32104767652",
-      "status": "done",
-      "post_type": "single",
-      "done_at": "2026-08-18T05:56:20.210828+00:00",
-      "photo_id": 29532339
-    },
     {
       "post_id": "daily_20260818_lunch_natale_decorazioni_marmo",
       "topic_id": "natale_decorazioni_marmo",
@@ -606,6 +595,15 @@
       "post_type": "single",
       "done_at": "2026-09-02T10:26:18.791142+00:00",
       "photo_id": 12260512
+    },
+    {
+      "post_id": "daily_20260902_evening_carousel_come_lavoriamo",
+      "topic_id": "carousel_come_lavoriamo",
+      "slot": "evening",
+      "at": "2026-09-02T15:26:11.162221+00:00",
+      "claimed_by_run": "33648426992",
+      "status": "claimed",
+      "post_type": "carousel"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -737,7 +735,7 @@
     "carousel_marmi_siciliani": "2026-09-01T15:26:43.477582+00:00",
     "marmo_visita_amico": "2026-08-02T05:55:53.613521+00:00",
     "marmo_video_tour_immobile": "2026-08-02T10:25:39.613093+00:00",
-    "carousel_come_lavoriamo": "2026-08-02T15:26:04.121917+00:00",
+    "carousel_come_lavoriamo": "2026-09-02T15:26:11.162221+00:00",
     "marmo_fumatori_camera": "2026-08-03T05:56:15.784922+00:00",
     "marmo_camino_no_ma_cornice": "2026-08-03T10:26:20.883062+00:00",
     "carousel_stagioni_marmo": "2026-08-03T15:26:12.836610+00:00",
