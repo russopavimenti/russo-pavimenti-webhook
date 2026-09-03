@@ -1,17 +1,6 @@
 {
-  "next_index": 78,
+  "next_index": 79,
   "history": [
-    {
-      "post_id": "daily_20260818_evening_carousel_5_manutenzione_professionale",
-      "topic_id": "carousel_5_manutenzione_professionale",
-      "slot": "evening",
-      "at": "2026-08-18T15:26:53.302114+00:00",
-      "claimed_by_run": "32154412804",
-      "status": "failed",
-      "post_type": "carousel",
-      "failed_at": "2026-08-18T15:28:05.449315+00:00",
-      "error": "carousel_exception: HTTP Error 400: Bad Request"
-    },
     {
       "post_id": "daily_20260818_evening_carousel_marmo_famiglie_bambini",
       "topic_id": "carousel_marmo_famiglie_bambini",
@@ -613,6 +602,15 @@
       "post_type": "single",
       "done_at": "2026-09-03T05:56:25.342388+00:00",
       "photo_id": 1779250
+    },
+    {
+      "post_id": "daily_20260903_lunch_geometri_architetti",
+      "topic_id": "geometri_architetti",
+      "slot": "lunch",
+      "at": "2026-09-03T10:25:10.926555+00:00",
+      "claimed_by_run": "33744102818",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -677,7 +675,7 @@
     "marmo_lavanderia": "2026-09-02T05:56:31.626003+00:00",
     "marmo_terrazza_estate": "2026-09-02T10:26:09.412881+00:00",
     "marmo_inverno_sale": "2026-09-03T05:56:17.927763+00:00",
-    "geometri_architetti": "2026-07-14T05:56:28.867811+00:00",
+    "geometri_architetti": "2026-09-03T10:25:10.926555+00:00",
     "agenzie_immobiliari": "2026-07-14T10:25:50.922592+00:00",
     "property_manager_bnb": "2026-07-14T15:25:35.877530+00:00",
     "studi_dentistici_legali": "2026-07-15T05:56:27.782298+00:00",
