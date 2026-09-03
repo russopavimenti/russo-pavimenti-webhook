@@ -1,17 +1,6 @@
 {
-  "next_index": 77,
+  "next_index": 78,
   "history": [
-    {
-      "post_id": "daily_20260818_lunch_natale_decorazioni_marmo",
-      "topic_id": "natale_decorazioni_marmo",
-      "slot": "lunch",
-      "at": "2026-08-18T10:25:55.433703+00:00",
-      "claimed_by_run": "32126656030",
-      "status": "done",
-      "post_type": "single",
-      "done_at": "2026-08-18T10:26:03.244212+00:00",
-      "photo_id": 11107741
-    },
     {
       "post_id": "daily_20260818_evening_carousel_5_manutenzione_professionale",
       "topic_id": "carousel_5_manutenzione_professionale",
@@ -613,6 +602,15 @@
         "7045906",
         "30211363"
       ]
+    },
+    {
+      "post_id": "daily_20260903_morning_marmo_inverno_sale",
+      "topic_id": "marmo_inverno_sale",
+      "slot": "morning",
+      "at": "2026-09-03T05:56:17.927763+00:00",
+      "claimed_by_run": "33720920743",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -676,7 +674,7 @@
     "marmo_cucina_dietro_fornelli": "2026-09-01T10:26:27.546445+00:00",
     "marmo_lavanderia": "2026-09-02T05:56:31.626003+00:00",
     "marmo_terrazza_estate": "2026-09-02T10:26:09.412881+00:00",
-    "marmo_inverno_sale": "2026-07-13T15:26:01.649174+00:00",
+    "marmo_inverno_sale": "2026-09-03T05:56:17.927763+00:00",
     "geometri_architetti": "2026-07-14T05:56:28.867811+00:00",
     "agenzie_immobiliari": "2026-07-14T10:25:50.922592+00:00",
     "property_manager_bnb": "2026-07-14T15:25:35.877530+00:00",
