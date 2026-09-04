@@ -1,17 +1,6 @@
 {
-  "next_index": 80,
+  "next_index": 81,
   "history": [
-    {
-      "post_id": "daily_20260819_morning_marmo_sotto_laminato",
-      "topic_id": "marmo_sotto_laminato",
-      "slot": "morning",
-      "at": "2026-08-19T05:56:29.393983+00:00",
-      "claimed_by_run": "32221296255",
-      "status": "done",
-      "post_type": "single",
-      "done_at": "2026-08-19T05:56:38.263971+00:00",
-      "photo_id": 1388944
-    },
     {
       "post_id": "daily_20260819_lunch_marmo_sotto_moquette",
       "topic_id": "marmo_sotto_moquette",
@@ -612,6 +601,15 @@
         "14257854",
         "34252370"
       ]
+    },
+    {
+      "post_id": "daily_20260904_morning_agenzie_immobiliari",
+      "topic_id": "agenzie_immobiliari",
+      "slot": "morning",
+      "at": "2026-09-04T05:56:15.333053+00:00",
+      "claimed_by_run": "33842281471",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -677,7 +675,7 @@
     "marmo_terrazza_estate": "2026-09-02T10:26:09.412881+00:00",
     "marmo_inverno_sale": "2026-09-03T05:56:17.927763+00:00",
     "geometri_architetti": "2026-09-03T10:25:10.926555+00:00",
-    "agenzie_immobiliari": "2026-07-14T10:25:50.922592+00:00",
+    "agenzie_immobiliari": "2026-09-04T05:56:15.333053+00:00",
     "property_manager_bnb": "2026-07-14T15:25:35.877530+00:00",
     "studi_dentistici_legali": "2026-07-15T05:56:27.782298+00:00",
     "macchine_silenziose": "2026-07-15T10:25:45.761320+00:00",
