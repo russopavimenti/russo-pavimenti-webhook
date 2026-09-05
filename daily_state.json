@@ -1,17 +1,6 @@
 {
-  "next_index": 84,
+  "next_index": 85,
   "history": [
-    {
-      "post_id": "daily_20260820_lunch_idraulico_perdita_marmo",
-      "topic_id": "idraulico_perdita_marmo",
-      "slot": "lunch",
-      "at": "2026-08-20T10:26:06.737521+00:00",
-      "claimed_by_run": "32358854885",
-      "status": "done",
-      "post_type": "single",
-      "done_at": "2026-08-20T10:26:16.412725+00:00",
-      "photo_id": 10683234
-    },
     {
       "post_id": "daily_20260820_evening_carousel_5_prodotti_da_avere",
       "topic_id": "carousel_5_prodotti_da_avere",
@@ -614,6 +603,15 @@
       "post_type": "single",
       "done_at": "2026-09-05T05:56:32.698136+00:00",
       "photo_id": 7653461
+    },
+    {
+      "post_id": "daily_20260905_lunch_macchine_silenziose",
+      "topic_id": "macchine_silenziose",
+      "slot": "lunch",
+      "at": "2026-09-05T10:26:44.028409+00:00",
+      "claimed_by_run": "33960637820",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -682,7 +680,7 @@
     "agenzie_immobiliari": "2026-09-04T05:56:15.333053+00:00",
     "property_manager_bnb": "2026-09-04T10:26:49.406792+00:00",
     "studi_dentistici_legali": "2026-09-05T05:56:24.237839+00:00",
-    "macchine_silenziose": "2026-07-15T10:25:45.761320+00:00",
+    "macchine_silenziose": "2026-09-05T10:26:44.028409+00:00",
     "polvere_zero": "2026-07-15T15:25:56.860139+00:00",
     "tempi_reali_100mq": "2026-07-16T05:55:52.469831+00:00",
     "camminare_dopo_lucidatura": "2026-07-16T10:26:06.390208+00:00",
