@@ -1,24 +1,6 @@
 {
-  "next_index": 85,
+  "next_index": 86,
   "history": [
-    {
-      "post_id": "daily_20260820_evening_carousel_5_prodotti_da_avere",
-      "topic_id": "carousel_5_prodotti_da_avere",
-      "slot": "evening",
-      "at": "2026-08-20T15:26:11.261548+00:00",
-      "claimed_by_run": "32386020504",
-      "status": "done",
-      "post_type": "carousel",
-      "done_at": "2026-08-20T15:27:21.234521+00:00",
-      "slide_photo_ids": [
-        "10574130",
-        "5217885",
-        "4202485",
-        "9628804",
-        "4107116",
-        "30448522"
-      ]
-    },
     {
       "post_id": "daily_20260821_morning_murature_calcina_marmo",
       "topic_id": "murature_calcina_marmo",
@@ -614,6 +596,15 @@
       "post_type": "single",
       "done_at": "2026-09-05T10:26:50.799777+00:00",
       "photo_id": 35149474
+    },
+    {
+      "post_id": "daily_20260905_evening_carousel_6_zone_casa_marmo",
+      "topic_id": "carousel_6_zone_casa_marmo",
+      "slot": "evening",
+      "at": "2026-09-05T15:25:52.083644+00:00",
+      "claimed_by_run": "33974730566",
+      "status": "claimed",
+      "post_type": "carousel"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -752,7 +743,7 @@
     "marmo_pavimento_sonoro": "2026-08-04T05:55:32.420342+00:00",
     "marmo_bagno_ospiti_veloce": "2026-08-04T10:25:47.110580+00:00",
     "carousel_7_marmi_mondo": "2026-09-04T15:26:24.270129+00:00",
-    "carousel_6_zone_casa_marmo": "2026-08-04T17:05:31.401915+00:00",
+    "carousel_6_zone_casa_marmo": "2026-09-05T15:25:52.083644+00:00",
     "marmo_giardiniere_terra": "2026-08-05T05:56:07.157737+00:00",
     "marmo_bici_ingresso": "2026-08-05T10:25:57.723527+00:00",
     "carousel_8_curiosita_marmo": "2026-08-05T15:26:34.906064+00:00",
