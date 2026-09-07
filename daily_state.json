@@ -1,17 +1,6 @@
 {
-  "next_index": 91,
+  "next_index": 92,
   "history": [
-    {
-      "post_id": "daily_20260822_evening_marmo_olio_oliva",
-      "topic_id": "marmo_olio_oliva",
-      "slot": "evening",
-      "at": "2026-08-22T15:26:25.580119+00:00",
-      "claimed_by_run": "32581655463",
-      "status": "done",
-      "post_type": "single",
-      "done_at": "2026-08-22T15:26:35.019352+00:00",
-      "photo_id": 1441120
-    },
     {
       "post_id": "daily_20260823_morning_marmo_animali_domestici_unghie",
       "topic_id": "marmo_animali_domestici_unghie",
@@ -625,6 +614,15 @@
       "post_type": "single",
       "done_at": "2026-09-07T10:26:23.156038+00:00",
       "photo_id": 28612022
+    },
+    {
+      "post_id": "daily_20260907_evening_carousel_5_errori_clienti",
+      "topic_id": "carousel_5_errori_clienti",
+      "slot": "evening",
+      "at": "2026-09-07T15:26:26.649711+00:00",
+      "claimed_by_run": "34138232471",
+      "status": "claimed",
+      "post_type": "carousel"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -767,7 +765,7 @@
     "marmo_giardiniere_terra": "2026-08-05T05:56:07.157737+00:00",
     "marmo_bici_ingresso": "2026-08-05T10:25:57.723527+00:00",
     "carousel_8_curiosita_marmo": "2026-09-06T15:26:07.284495+00:00",
-    "carousel_5_errori_clienti": "2026-08-06T15:26:23.899723+00:00",
+    "carousel_5_errori_clienti": "2026-09-07T15:26:26.649711+00:00",
     "carousel_marmo_bagno_5_cose": "2026-08-07T15:25:50.873864+00:00",
     "carousel_5_miti_marmo": "2026-08-08T15:26:29.764082+00:00",
     "carousel_5_lavori_speciali": "2026-08-09T15:26:02.334883+00:00",
