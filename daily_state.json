@@ -1,17 +1,6 @@
 {
-  "next_index": 90,
+  "next_index": 91,
   "history": [
-    {
-      "post_id": "daily_20260822_lunch_top_cucina_taglio_pesce",
-      "topic_id": "top_cucina_taglio_pesce",
-      "slot": "lunch",
-      "at": "2026-08-22T10:25:53.792641+00:00",
-      "claimed_by_run": "32567552893",
-      "status": "done",
-      "post_type": "single",
-      "done_at": "2026-08-22T10:26:01.813525+00:00",
-      "photo_id": 10432855
-    },
     {
       "post_id": "daily_20260822_evening_marmo_olio_oliva",
       "topic_id": "marmo_olio_oliva",
@@ -625,6 +614,15 @@
       "post_type": "single",
       "done_at": "2026-09-07T05:56:37.374601+00:00",
       "photo_id": 26851507
+    },
+    {
+      "post_id": "daily_20260907_lunch_camminare_dopo_lucidatura",
+      "topic_id": "camminare_dopo_lucidatura",
+      "slot": "lunch",
+      "at": "2026-09-07T10:26:12.944774+00:00",
+      "claimed_by_run": "34111350147",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -696,7 +694,7 @@
     "macchine_silenziose": "2026-09-05T10:26:44.028409+00:00",
     "polvere_zero": "2026-09-06T05:56:11.034609+00:00",
     "tempi_reali_100mq": "2026-09-06T10:26:31.574155+00:00",
-    "camminare_dopo_lucidatura": "2026-07-16T10:26:06.390208+00:00",
+    "camminare_dopo_lucidatura": "2026-09-07T10:26:12.944774+00:00",
     "pavimenti_misti_giunti": "2026-07-16T15:25:42.449345+00:00",
     "cave_custonaci": "2026-07-17T15:26:11.409894+00:00",
     "signora_erice_caso": "2026-08-11T10:26:03.319391+00:00",
