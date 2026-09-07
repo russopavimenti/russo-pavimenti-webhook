@@ -1,17 +1,6 @@
 {
-  "next_index": 89,
+  "next_index": 90,
   "history": [
-    {
-      "post_id": "daily_20260822_morning_marmo_riciclo_recupero",
-      "topic_id": "marmo_riciclo_recupero",
-      "slot": "morning",
-      "at": "2026-08-22T05:56:05.037762+00:00",
-      "claimed_by_run": "32555594946",
-      "status": "done",
-      "post_type": "single",
-      "done_at": "2026-08-22T05:56:14.377888+00:00",
-      "photo_id": 30907069
-    },
     {
       "post_id": "daily_20260822_lunch_top_cucina_taglio_pesce",
       "topic_id": "top_cucina_taglio_pesce",
@@ -625,12 +614,21 @@
         "20550204",
         "20851618"
       ]
+    },
+    {
+      "post_id": "daily_20260907_morning_scale_marmo_usura",
+      "topic_id": "scale_marmo_usura",
+      "slot": "morning",
+      "at": "2026-09-07T05:56:28.988113+00:00",
+      "claimed_by_run": "34088653552",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
   "used_topics": {
     "top_bagno_calcare": "2026-07-22T05:56:21.078185+00:00",
-    "scale_marmo_usura": "2026-07-17T05:56:14.404458+00:00",
+    "scale_marmo_usura": "2026-09-07T05:56:28.988113+00:00",
     "top_cucina_acidi": "2026-08-08T10:25:52.090056+00:00",
     "marmocemento_opaco": "2026-08-08T05:55:33.202253+00:00",
     "durata_lucidatura": "2026-08-09T05:56:10.570505+00:00",
