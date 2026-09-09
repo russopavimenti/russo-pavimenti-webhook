@@ -1,17 +1,6 @@
 {
-  "next_index": 96,
+  "next_index": 97,
   "history": [
-    {
-      "post_id": "daily_20260824_morning_marmo_decoratore_pittore",
-      "topic_id": "marmo_decoratore_pittore",
-      "slot": "morning",
-      "at": "2026-08-24T05:56:35.960156+00:00",
-      "claimed_by_run": "32695278859",
-      "status": "done",
-      "post_type": "single",
-      "done_at": "2026-08-24T05:56:44.629243+00:00",
-      "photo_id": 6764263
-    },
     {
       "post_id": "daily_20260824_lunch_marmo_dopo_alluvione",
       "topic_id": "marmo_dopo_alluvione",
@@ -639,6 +628,15 @@
       "post_type": "single",
       "done_at": "2026-09-09T05:56:38.281957+00:00",
       "photo_id": 7195726
+    },
+    {
+      "post_id": "daily_20260909_lunch_marmo_ingresso_traffico",
+      "topic_id": "marmo_ingresso_traffico",
+      "slot": "lunch",
+      "at": "2026-09-09T10:26:18.192774+00:00",
+      "claimed_by_run": "34340110349",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -657,7 +655,7 @@
     "marmo_anni60_appartamenti": "2026-08-07T10:26:27.327496+00:00",
     "graniglia_palladiana": "2026-09-08T10:27:00.637104+00:00",
     "lavabo_marmo_macchie": "2026-09-09T05:56:28.714782+00:00",
-    "marmo_ingresso_traffico": "2026-07-18T10:25:57.130535+00:00",
+    "marmo_ingresso_traffico": "2026-09-09T10:26:18.192774+00:00",
     "marmo_negozi_ristoranti": "2026-07-18T15:26:23.167746+00:00",
     "pavimento_anziani_riflesso": "2026-07-19T05:56:05.421315+00:00",
     "differenza_levigatura_lucidatura": "2026-07-19T10:25:54.434825+00:00",
