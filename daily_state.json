@@ -1,17 +1,6 @@
 {
-  "next_index": 97,
+  "next_index": 98,
   "history": [
-    {
-      "post_id": "daily_20260824_lunch_marmo_dopo_alluvione",
-      "topic_id": "marmo_dopo_alluvione",
-      "slot": "lunch",
-      "at": "2026-08-24T10:26:12.438567+00:00",
-      "claimed_by_run": "32716712657",
-      "status": "done",
-      "post_type": "single",
-      "done_at": "2026-08-24T10:26:21.615579+00:00",
-      "photo_id": 14823612
-    },
     {
       "post_id": "daily_20260824_evening_marmo_chiesa_locale",
       "topic_id": "marmo_chiesa_locale",
@@ -639,6 +628,15 @@
       "post_type": "single",
       "done_at": "2026-09-09T10:26:28.091069+00:00",
       "photo_id": 7542088
+    },
+    {
+      "post_id": "daily_20260909_evening_carousel_5_miti_marmo",
+      "topic_id": "carousel_5_miti_marmo",
+      "slot": "evening",
+      "at": "2026-09-09T15:25:58.598741+00:00",
+      "claimed_by_run": "34370097606",
+      "status": "claimed",
+      "post_type": "carousel"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -783,7 +781,7 @@
     "carousel_8_curiosita_marmo": "2026-09-06T15:26:07.284495+00:00",
     "carousel_5_errori_clienti": "2026-09-07T15:26:26.649711+00:00",
     "carousel_marmo_bagno_5_cose": "2026-09-08T15:26:17.959189+00:00",
-    "carousel_5_miti_marmo": "2026-08-08T15:26:29.764082+00:00",
+    "carousel_5_miti_marmo": "2026-09-09T15:25:58.598741+00:00",
     "carousel_5_lavori_speciali": "2026-08-09T15:26:02.334883+00:00",
     "carousel_5_stili_arredo": "2026-08-10T15:27:35.052564+00:00",
     "carousel_marmo_cucina_5_zone": "2026-08-11T15:26:11.117098+00:00",
