@@ -1,17 +1,6 @@
 {
-  "next_index": 102,
+  "next_index": 103,
   "history": [
-    {
-      "post_id": "daily_20260826_morning_marmo_vintage_modern_mix",
-      "topic_id": "marmo_vintage_modern_mix",
-      "slot": "morning",
-      "at": "2026-08-26T05:56:39.849308+00:00",
-      "claimed_by_run": "32935989607",
-      "status": "done",
-      "post_type": "single",
-      "done_at": "2026-08-26T05:56:50.032006+00:00",
-      "photo_id": 28586202
-    },
     {
       "post_id": "daily_20260826_lunch_marmo_donne_imprenditrici",
       "topic_id": "marmo_donne_imprenditrici",
@@ -653,6 +642,15 @@
       "post_type": "single",
       "done_at": "2026-09-11T05:57:14.629256+00:00",
       "photo_id": 37265184
+    },
+    {
+      "post_id": "daily_20260911_lunch_differenza_levigatura_lucidatura",
+      "topic_id": "differenza_levigatura_lucidatura",
+      "slot": "lunch",
+      "at": "2026-09-11T10:26:48.522642+00:00",
+      "claimed_by_run": "34589169918",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -674,7 +672,7 @@
     "marmo_ingresso_traffico": "2026-09-09T10:26:18.192774+00:00",
     "marmo_negozi_ristoranti": "2026-09-10T10:26:36.067986+00:00",
     "pavimento_anziani_riflesso": "2026-09-11T05:57:04.910213+00:00",
-    "differenza_levigatura_lucidatura": "2026-07-19T10:25:54.434825+00:00",
+    "differenza_levigatura_lucidatura": "2026-09-11T10:26:48.522642+00:00",
     "macchie_olio_marmo": "2026-07-19T15:25:56.547008+00:00",
     "garanzia_lavoro": "2026-07-20T05:56:25.379818+00:00",
     "pavimento_doccia": "2026-07-20T10:25:52.384545+00:00",
