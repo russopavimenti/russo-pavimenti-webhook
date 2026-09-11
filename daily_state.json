@@ -1,17 +1,6 @@
 {
-  "next_index": 101,
+  "next_index": 102,
   "history": [
-    {
-      "post_id": "daily_20260825_evening_sopralluogo_come_funziona",
-      "topic_id": "sopralluogo_come_funziona",
-      "slot": "evening",
-      "at": "2026-08-25T15:26:02.248290+00:00",
-      "claimed_by_run": "32865668498",
-      "status": "done",
-      "post_type": "single",
-      "done_at": "2026-08-25T15:26:10.316289+00:00",
-      "photo_id": 8441820
-    },
     {
       "post_id": "daily_20260826_morning_marmo_vintage_modern_mix",
       "topic_id": "marmo_vintage_modern_mix",
@@ -653,6 +642,15 @@
         "7942132",
         "1233281"
       ]
+    },
+    {
+      "post_id": "daily_20260911_morning_pavimento_anziani_riflesso",
+      "topic_id": "pavimento_anziani_riflesso",
+      "slot": "morning",
+      "at": "2026-09-11T05:57:04.910213+00:00",
+      "claimed_by_run": "34567855969",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -673,7 +671,7 @@
     "lavabo_marmo_macchie": "2026-09-09T05:56:28.714782+00:00",
     "marmo_ingresso_traffico": "2026-09-09T10:26:18.192774+00:00",
     "marmo_negozi_ristoranti": "2026-09-10T10:26:36.067986+00:00",
-    "pavimento_anziani_riflesso": "2026-07-19T05:56:05.421315+00:00",
+    "pavimento_anziani_riflesso": "2026-09-11T05:57:04.910213+00:00",
     "differenza_levigatura_lucidatura": "2026-07-19T10:25:54.434825+00:00",
     "macchie_olio_marmo": "2026-07-19T15:25:56.547008+00:00",
     "garanzia_lavoro": "2026-07-20T05:56:25.379818+00:00",
