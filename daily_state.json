@@ -1,17 +1,6 @@
 {
-  "next_index": 105,
+  "next_index": 106,
   "history": [
-    {
-      "post_id": "daily_20260827_morning_marmo_anziani_sicurezza_dopo",
-      "topic_id": "marmo_anziani_sicurezza_dopo",
-      "slot": "morning",
-      "at": "2026-08-27T05:56:11.101451+00:00",
-      "claimed_by_run": "33044061263",
-      "status": "done",
-      "post_type": "single",
-      "done_at": "2026-08-27T05:56:18.818367+00:00",
-      "photo_id": 31544574
-    },
     {
       "post_id": "daily_20260827_lunch_cementine_disegno",
       "topic_id": "cementine_disegno",
@@ -660,6 +649,15 @@
       "post_type": "single",
       "done_at": "2026-09-12T05:56:18.524089+00:00",
       "photo_id": 7078052
+    },
+    {
+      "post_id": "daily_20260912_lunch_garanzia_lavoro",
+      "topic_id": "garanzia_lavoro",
+      "slot": "lunch",
+      "at": "2026-09-12T10:26:03.236027+00:00",
+      "claimed_by_run": "34688392043",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -683,7 +681,7 @@
     "pavimento_anziani_riflesso": "2026-09-11T05:57:04.910213+00:00",
     "differenza_levigatura_lucidatura": "2026-09-11T10:26:48.522642+00:00",
     "macchie_olio_marmo": "2026-09-12T05:56:11.369055+00:00",
-    "garanzia_lavoro": "2026-07-20T05:56:25.379818+00:00",
+    "garanzia_lavoro": "2026-09-12T10:26:03.236027+00:00",
     "pavimento_doccia": "2026-07-20T10:25:52.384545+00:00",
     "alcamo_storia_marmo": "2026-07-20T15:26:11.956706+00:00",
     "preventivo_trasparente": "2026-07-21T05:55:43.365423+00:00",
