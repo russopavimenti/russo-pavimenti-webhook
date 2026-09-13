@@ -1,17 +1,6 @@
 {
-  "next_index": 108,
+  "next_index": 109,
   "history": [
-    {
-      "post_id": "daily_20260828_morning_cotto_artigianale",
-      "topic_id": "cotto_artigianale",
-      "slot": "morning",
-      "at": "2026-08-28T05:56:34.722101+00:00",
-      "claimed_by_run": "33146253398",
-      "status": "done",
-      "post_type": "single",
-      "done_at": "2026-08-28T05:56:44.646168+00:00",
-      "photo_id": 38262293
-    },
     {
       "post_id": "daily_20260828_lunch_klinker_terrazze",
       "topic_id": "klinker_terrazze",
@@ -660,6 +649,15 @@
       "post_type": "single",
       "done_at": "2026-09-13T05:56:34.824623+00:00",
       "photo_id": 36777906
+    },
+    {
+      "post_id": "daily_20260913_lunch_alcamo_storia_marmo",
+      "topic_id": "alcamo_storia_marmo",
+      "slot": "lunch",
+      "at": "2026-09-13T10:26:36.363760+00:00",
+      "claimed_by_run": "34751819262",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -685,7 +683,7 @@
     "macchie_olio_marmo": "2026-09-12T05:56:11.369055+00:00",
     "garanzia_lavoro": "2026-09-12T10:26:03.236027+00:00",
     "pavimento_doccia": "2026-09-13T05:56:27.345242+00:00",
-    "alcamo_storia_marmo": "2026-07-20T15:26:11.956706+00:00",
+    "alcamo_storia_marmo": "2026-09-13T10:26:36.363760+00:00",
     "preventivo_trasparente": "2026-07-21T05:55:43.365423+00:00",
     "marmo_terrazzo_esterno": "2026-07-21T10:25:59.060898+00:00",
     "graffi_profondi_marmo": "2026-07-21T15:26:00.200258+00:00",
