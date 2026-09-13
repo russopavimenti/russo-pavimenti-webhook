@@ -1,24 +1,6 @@
 {
-  "next_index": 107,
+  "next_index": 108,
   "history": [
-    {
-      "post_id": "daily_20260827_evening_carousel_5_detergenti_da_evitare",
-      "topic_id": "carousel_5_detergenti_da_evitare",
-      "slot": "evening",
-      "at": "2026-08-27T15:26:22.678825+00:00",
-      "claimed_by_run": "33087714534",
-      "status": "done",
-      "post_type": "carousel",
-      "done_at": "2026-08-27T15:27:35.216170+00:00",
-      "slide_photo_ids": [
-        "6903155",
-        "9462202",
-        "952373",
-        "3177257",
-        "28576637",
-        "6195125"
-      ]
-    },
     {
       "post_id": "daily_20260828_morning_cotto_artigianale",
       "topic_id": "cotto_artigianale",
@@ -667,6 +649,15 @@
         "33326580",
         "8082300"
       ]
+    },
+    {
+      "post_id": "daily_20260913_morning_pavimento_doccia",
+      "topic_id": "pavimento_doccia",
+      "slot": "morning",
+      "at": "2026-09-13T05:56:27.345242+00:00",
+      "claimed_by_run": "34741485368",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -691,7 +682,7 @@
     "differenza_levigatura_lucidatura": "2026-09-11T10:26:48.522642+00:00",
     "macchie_olio_marmo": "2026-09-12T05:56:11.369055+00:00",
     "garanzia_lavoro": "2026-09-12T10:26:03.236027+00:00",
-    "pavimento_doccia": "2026-07-20T10:25:52.384545+00:00",
+    "pavimento_doccia": "2026-09-13T05:56:27.345242+00:00",
     "alcamo_storia_marmo": "2026-07-20T15:26:11.956706+00:00",
     "preventivo_trasparente": "2026-07-21T05:55:43.365423+00:00",
     "marmo_terrazzo_esterno": "2026-07-21T10:25:59.060898+00:00",
