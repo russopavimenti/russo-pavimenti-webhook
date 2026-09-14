@@ -1,17 +1,6 @@
 {
-  "next_index": 110,
+  "next_index": 111,
   "history": [
-    {
-      "post_id": "daily_20260828_evening_battiscopa_coordinati",
-      "topic_id": "battiscopa_coordinati",
-      "slot": "evening",
-      "at": "2026-08-28T15:25:52.595424+00:00",
-      "claimed_by_run": "33185031419",
-      "status": "done",
-      "post_type": "single",
-      "done_at": "2026-08-28T15:26:00.613081+00:00",
-      "photo_id": 11949659
-    },
     {
       "post_id": "daily_20260829_morning_soglia_davanzale",
       "topic_id": "soglia_davanzale",
@@ -668,6 +657,15 @@
         "7641000",
         "31154212"
       ]
+    },
+    {
+      "post_id": "daily_20260914_morning_preventivo_trasparente",
+      "topic_id": "preventivo_trasparente",
+      "slot": "morning",
+      "at": "2026-09-14T05:56:29.505061+00:00",
+      "claimed_by_run": "34811392377",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -694,7 +692,7 @@
     "garanzia_lavoro": "2026-09-12T10:26:03.236027+00:00",
     "pavimento_doccia": "2026-09-13T05:56:27.345242+00:00",
     "alcamo_storia_marmo": "2026-09-13T10:26:36.363760+00:00",
-    "preventivo_trasparente": "2026-07-21T05:55:43.365423+00:00",
+    "preventivo_trasparente": "2026-09-14T05:56:29.505061+00:00",
     "marmo_terrazzo_esterno": "2026-07-21T10:25:59.060898+00:00",
     "graffi_profondi_marmo": "2026-07-21T15:26:00.200258+00:00",
     "pavimento_anziano_sicurezza": "2026-07-22T10:25:43.944462+00:00",
