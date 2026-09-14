@@ -1,17 +1,6 @@
 {
-  "next_index": 112,
+  "next_index": 113,
   "history": [
-    {
-      "post_id": "daily_20260829_lunch_marmo_arancione_cause",
-      "topic_id": "marmo_arancione_cause",
-      "slot": "lunch",
-      "at": "2026-08-29T10:26:23.780355+00:00",
-      "claimed_by_run": "33247792033",
-      "status": "done",
-      "post_type": "single",
-      "done_at": "2026-08-29T10:26:32.923286+00:00",
-      "photo_id": 15303090
-    },
     {
       "post_id": "daily_20260829_evening_carousel_prima_dopo_trasformazioni",
       "topic_id": "carousel_prima_dopo_trasformazioni",
@@ -668,6 +657,15 @@
       "post_type": "single",
       "done_at": "2026-09-14T10:27:17.836249+00:00",
       "photo_id": 15791194
+    },
+    {
+      "post_id": "daily_20260914_evening_carousel_5_marmi_rari",
+      "topic_id": "carousel_5_marmi_rari",
+      "slot": "evening",
+      "at": "2026-09-14T15:27:03.791434+00:00",
+      "claimed_by_run": "34862097175",
+      "status": "claimed",
+      "post_type": "carousel"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -817,7 +815,7 @@
     "carousel_5_stili_arredo": "2026-09-11T15:26:02.827043+00:00",
     "carousel_marmo_cucina_5_zone": "2026-09-12T15:26:45.923213+00:00",
     "carousel_terrazza_estate_6_regole": "2026-09-13T15:26:11.652237+00:00",
-    "carousel_5_marmi_rari": "2026-08-12T16:11:55.519654+00:00",
+    "carousel_5_marmi_rari": "2026-09-14T15:27:03.791434+00:00",
     "carousel_5_abitudini_marmo": "2026-08-12T17:48:37.683972+00:00",
     "carousel_prima_ristrutturazione_5_domande": "2026-08-13T15:26:24.551124+00:00",
     "carousel_ristoranti_5_lavori": "2026-08-13T16:11:42.441968+00:00",
