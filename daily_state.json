@@ -1,17 +1,6 @@
 {
-  "next_index": 113,
+  "next_index": 114,
   "history": [
-    {
-      "post_id": "daily_20260829_evening_carousel_prima_dopo_trasformazioni",
-      "topic_id": "carousel_prima_dopo_trasformazioni",
-      "slot": "evening",
-      "at": "2026-08-29T15:26:34.032267+00:00",
-      "claimed_by_run": "33260230942",
-      "status": "failed",
-      "post_type": "carousel",
-      "failed_at": "2026-08-29T15:27:36.834811+00:00",
-      "error": "carousel_exception: HTTP Error 400: Bad Request"
-    },
     {
       "post_id": "daily_20260829_evening_carousel_finiture_confronto",
       "topic_id": "carousel_finiture_confronto",
@@ -675,6 +664,15 @@
         "13377561",
         "9990206"
       ]
+    },
+    {
+      "post_id": "daily_20260915_morning_graffi_profondi_marmo",
+      "topic_id": "graffi_profondi_marmo",
+      "slot": "morning",
+      "at": "2026-09-15T05:56:11.684227+00:00",
+      "claimed_by_run": "34934700544",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -703,7 +701,7 @@
     "alcamo_storia_marmo": "2026-09-13T10:26:36.363760+00:00",
     "preventivo_trasparente": "2026-09-14T05:56:29.505061+00:00",
     "marmo_terrazzo_esterno": "2026-09-14T10:27:08.381547+00:00",
-    "graffi_profondi_marmo": "2026-07-21T15:26:00.200258+00:00",
+    "graffi_profondi_marmo": "2026-09-15T05:56:11.684227+00:00",
     "pavimento_anziano_sicurezza": "2026-07-22T10:25:43.944462+00:00",
     "vino_macchie": "2026-07-22T15:26:34.779509+00:00",
     "marmo_pre_vendita": "2026-07-23T05:55:56.925777+00:00",
