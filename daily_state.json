@@ -1,23 +1,6 @@
 {
-  "next_index": 114,
+  "next_index": 115,
   "history": [
-    {
-      "post_id": "daily_20260829_evening_carousel_finiture_confronto",
-      "topic_id": "carousel_finiture_confronto",
-      "slot": "evening",
-      "at": "2026-08-29T16:41:29.804437+00:00",
-      "claimed_by_run": "33263627101",
-      "status": "done",
-      "post_type": "carousel",
-      "done_at": "2026-08-29T16:42:31.368912+00:00",
-      "slide_photo_ids": [
-        "4705833",
-        "7534571",
-        "36327398",
-        "17088470",
-        "8962527"
-      ]
-    },
     {
       "post_id": "daily_20260830_morning_cera_candele_yankee",
       "topic_id": "cera_candele_yankee",
@@ -675,11 +658,20 @@
       "post_type": "single",
       "done_at": "2026-09-15T05:56:18.622240+00:00",
       "photo_id": 4046753
+    },
+    {
+      "post_id": "daily_20260915_lunch_top_bagno_calcare",
+      "topic_id": "top_bagno_calcare",
+      "slot": "lunch",
+      "at": "2026-09-15T10:26:44.291349+00:00",
+      "claimed_by_run": "34957875657",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
   "used_topics": {
-    "top_bagno_calcare": "2026-07-22T05:56:21.078185+00:00",
+    "top_bagno_calcare": "2026-09-15T10:26:44.291349+00:00",
     "scale_marmo_usura": "2026-09-07T05:56:28.988113+00:00",
     "top_cucina_acidi": "2026-08-08T10:25:52.090056+00:00",
     "marmocemento_opaco": "2026-08-08T05:55:33.202253+00:00",
