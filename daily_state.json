@@ -1,17 +1,6 @@
 {
-  "next_index": 118,
+  "next_index": 119,
   "history": [
-    {
-      "post_id": "daily_20260831_morning_crepe_assestamento",
-      "topic_id": "crepe_assestamento",
-      "slot": "morning",
-      "at": "2026-08-31T05:56:55.532234+00:00",
-      "claimed_by_run": "33362246533",
-      "status": "done",
-      "post_type": "single",
-      "done_at": "2026-08-31T05:57:05.035129+00:00",
-      "photo_id": 17706118
-    },
     {
       "post_id": "daily_20260831_lunch_marmo_che_suda",
       "topic_id": "marmo_che_suda",
@@ -668,6 +657,15 @@
       "post_type": "single",
       "done_at": "2026-09-16T10:26:18.944541+00:00",
       "photo_id": 1101122
+    },
+    {
+      "post_id": "daily_20260916_evening_carousel_prima_ristrutturazione_5_domande",
+      "topic_id": "carousel_prima_ristrutturazione_5_domande",
+      "slot": "evening",
+      "at": "2026-09-16T15:26:16.447572+00:00",
+      "claimed_by_run": "35115203446",
+      "status": "claimed",
+      "post_type": "carousel"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -819,7 +817,7 @@
     "carousel_terrazza_estate_6_regole": "2026-09-13T15:26:11.652237+00:00",
     "carousel_5_marmi_rari": "2026-09-14T15:27:03.791434+00:00",
     "carousel_5_abitudini_marmo": "2026-09-15T15:26:21.018815+00:00",
-    "carousel_prima_ristrutturazione_5_domande": "2026-08-13T15:26:24.551124+00:00",
+    "carousel_prima_ristrutturazione_5_domande": "2026-09-16T15:26:16.447572+00:00",
     "carousel_ristoranti_5_lavori": "2026-08-13T16:11:42.441968+00:00",
     "carousel_ciclo_vita_marmo": "2026-08-14T15:25:31.148304+00:00",
     "carousel_marmo_generazioni": "2026-08-14T16:07:49.598838+00:00",
