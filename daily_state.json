@@ -1,17 +1,6 @@
 {
-  "next_index": 121,
+  "next_index": 122,
   "history": [
-    {
-      "post_id": "daily_20260901_morning_olio_motore_garage",
-      "topic_id": "olio_motore_garage",
-      "slot": "morning",
-      "at": "2026-09-01T05:56:15.511309+00:00",
-      "claimed_by_run": "33475465175",
-      "status": "done",
-      "post_type": "single",
-      "done_at": "2026-09-01T05:56:23.461937+00:00",
-      "photo_id": 30589158
-    },
     {
       "post_id": "daily_20260901_lunch_marmo_cucina_dietro_fornelli",
       "topic_id": "marmo_cucina_dietro_fornelli",
@@ -668,6 +657,15 @@
       "post_type": "single",
       "done_at": "2026-09-17T05:56:46.730207+00:00",
       "photo_id": 30310253
+    },
+    {
+      "post_id": "daily_20260917_lunch_marmo_pre_vendita",
+      "topic_id": "marmo_pre_vendita",
+      "slot": "lunch",
+      "at": "2026-09-17T10:26:02.622556+00:00",
+      "claimed_by_run": "35210362589",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -699,7 +697,7 @@
     "graffi_profondi_marmo": "2026-09-15T05:56:11.684227+00:00",
     "pavimento_anziano_sicurezza": "2026-09-16T05:56:55.400249+00:00",
     "vino_macchie": "2026-09-17T05:56:38.582741+00:00",
-    "marmo_pre_vendita": "2026-07-23T05:55:56.925777+00:00",
+    "marmo_pre_vendita": "2026-09-17T10:26:02.622556+00:00",
     "marmo_chiesa_storico": "2026-07-24T05:56:13.008345+00:00",
     "detergenti_acidi_lista": "2026-07-24T10:26:30.053128+00:00",
     "travertino_vs_marmo": "2026-07-24T15:25:58.026994+00:00",
