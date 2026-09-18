@@ -1,17 +1,6 @@
 {
-  "next_index": 125,
+  "next_index": 126,
   "history": [
-    {
-      "post_id": "daily_20260902_lunch_marmo_terrazza_estate",
-      "topic_id": "marmo_terrazza_estate",
-      "slot": "lunch",
-      "at": "2026-09-02T10:26:09.412881+00:00",
-      "claimed_by_run": "33619370364",
-      "status": "done",
-      "post_type": "single",
-      "done_at": "2026-09-02T10:26:18.791142+00:00",
-      "photo_id": 12260512
-    },
     {
       "post_id": "daily_20260902_evening_carousel_come_lavoriamo",
       "topic_id": "carousel_come_lavoriamo",
@@ -668,6 +657,15 @@
       "post_type": "single",
       "done_at": "2026-09-18T10:26:08.459801+00:00",
       "photo_id": 33527881
+    },
+    {
+      "post_id": "daily_20260918_evening_carousel_marmo_generazioni",
+      "topic_id": "carousel_marmo_generazioni",
+      "slot": "evening",
+      "at": "2026-09-18T15:26:35.746203+00:00",
+      "claimed_by_run": "35362331062",
+      "status": "claimed",
+      "post_type": "carousel"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -822,7 +820,7 @@
     "carousel_prima_ristrutturazione_5_domande": "2026-09-16T15:26:16.447572+00:00",
     "carousel_ristoranti_5_lavori": "2026-09-16T16:50:40.765417+00:00",
     "carousel_ciclo_vita_marmo": "2026-09-17T15:26:51.852706+00:00",
-    "carousel_marmo_generazioni": "2026-08-14T16:07:49.598838+00:00",
+    "carousel_marmo_generazioni": "2026-09-18T15:26:35.746203+00:00",
     "carousel_marmo_pareti_verticali": "2026-08-15T15:25:37.473157+00:00",
     "carousel_6_macchinari": "2026-08-16T15:26:13.636720+00:00",
     "carousel_5_diff_pro_fai_da_te": "2026-08-17T20:11:23.818811+00:00",
