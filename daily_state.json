@@ -1,17 +1,6 @@
 {
-  "next_index": 130,
+  "next_index": 131,
   "history": [
-    {
-      "post_id": "daily_20260904_morning_agenzie_immobiliari",
-      "topic_id": "agenzie_immobiliari",
-      "slot": "morning",
-      "at": "2026-09-04T05:56:15.333053+00:00",
-      "claimed_by_run": "33842281471",
-      "status": "done",
-      "post_type": "single",
-      "done_at": "2026-09-04T05:56:24.301085+00:00",
-      "photo_id": 8730001
-    },
     {
       "post_id": "daily_20260904_lunch_property_manager_bnb",
       "topic_id": "property_manager_bnb",
@@ -669,6 +658,15 @@
       "post_type": "single",
       "done_at": "2026-09-20T05:56:40.451115+00:00",
       "photo_id": 6587859
+    },
+    {
+      "post_id": "daily_20260920_lunch_mosaico_veneziano_70",
+      "topic_id": "mosaico_veneziano_70",
+      "slot": "lunch",
+      "at": "2026-09-20T10:26:48.906972+00:00",
+      "claimed_by_run": "35505050353",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -705,7 +703,7 @@
     "detergenti_acidi_lista": "2026-09-19T05:56:09.873438+00:00",
     "travertino_vs_marmo": "2026-09-19T10:26:54.899999+00:00",
     "bagno_padronale_marmo": "2026-09-20T05:56:31.818625+00:00",
-    "mosaico_veneziano_70": "2026-07-25T10:26:02.212532+00:00",
+    "mosaico_veneziano_70": "2026-09-20T10:26:48.906972+00:00",
     "mobili_pesanti_senza_graffi": "2026-07-25T15:26:35.567323+00:00",
     "lucidatura_negozi_chiusura": "2026-07-26T05:56:03.768929+00:00",
     "marmo_bambini_animali": "2026-07-26T15:25:55.678445+00:00",
