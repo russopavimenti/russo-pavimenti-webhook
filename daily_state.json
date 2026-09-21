@@ -1,26 +1,6 @@
 {
-  "next_index": 132,
+  "next_index": 133,
   "history": [
-    {
-      "post_id": "daily_20260904_evening_carousel_7_marmi_mondo",
-      "topic_id": "carousel_7_marmi_mondo",
-      "slot": "evening",
-      "at": "2026-09-04T15:26:24.270129+00:00",
-      "claimed_by_run": "33889398361",
-      "status": "done",
-      "post_type": "carousel",
-      "done_at": "2026-09-04T15:27:36.090130+00:00",
-      "slide_photo_ids": [
-        "4705923",
-        "3847500",
-        "7018379",
-        "17204378",
-        "6964316",
-        "15122187",
-        "34484896",
-        "4709046"
-      ]
-    },
     {
       "post_id": "daily_20260905_morning_studi_dentistici_legali",
       "topic_id": "studi_dentistici_legali",
@@ -677,6 +657,15 @@
         "7480252",
         "28048720"
       ]
+    },
+    {
+      "post_id": "daily_20260921_morning_mobili_pesanti_senza_graffi",
+      "topic_id": "mobili_pesanti_senza_graffi",
+      "slot": "morning",
+      "at": "2026-09-21T05:56:51.155255+00:00",
+      "claimed_by_run": "35566398272",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -714,7 +703,7 @@
     "travertino_vs_marmo": "2026-09-19T10:26:54.899999+00:00",
     "bagno_padronale_marmo": "2026-09-20T05:56:31.818625+00:00",
     "mosaico_veneziano_70": "2026-09-20T10:26:48.906972+00:00",
-    "mobili_pesanti_senza_graffi": "2026-07-25T15:26:35.567323+00:00",
+    "mobili_pesanti_senza_graffi": "2026-09-21T05:56:51.155255+00:00",
     "lucidatura_negozi_chiusura": "2026-07-26T05:56:03.768929+00:00",
     "marmo_bambini_animali": "2026-07-26T15:25:55.678445+00:00",
     "pulizia_quotidiana_60sec": "2026-07-27T05:55:54.653696+00:00",
