@@ -1,17 +1,6 @@
 {
-  "next_index": 134,
+  "next_index": 135,
   "history": [
-    {
-      "post_id": "daily_20260905_lunch_macchine_silenziose",
-      "topic_id": "macchine_silenziose",
-      "slot": "lunch",
-      "at": "2026-09-05T10:26:44.028409+00:00",
-      "claimed_by_run": "33960637820",
-      "status": "done",
-      "post_type": "single",
-      "done_at": "2026-09-05T10:26:50.799777+00:00",
-      "photo_id": 35149474
-    },
     {
       "post_id": "daily_20260905_evening_carousel_6_zone_casa_marmo",
       "topic_id": "carousel_6_zone_casa_marmo",
@@ -668,6 +657,15 @@
       "post_type": "single",
       "done_at": "2026-09-21T10:26:39.142289+00:00",
       "photo_id": 7045362
+    },
+    {
+      "post_id": "daily_20260921_evening_carousel_5_diff_pro_fai_da_te",
+      "topic_id": "carousel_5_diff_pro_fai_da_te",
+      "slot": "evening",
+      "at": "2026-09-21T15:26:54.597023+00:00",
+      "claimed_by_run": "35618871072",
+      "status": "claimed",
+      "post_type": "carousel"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -825,7 +823,7 @@
     "carousel_marmo_generazioni": "2026-09-18T15:26:35.746203+00:00",
     "carousel_marmo_pareti_verticali": "2026-09-19T15:26:06.364682+00:00",
     "carousel_6_macchinari": "2026-09-20T15:26:14.941533+00:00",
-    "carousel_5_diff_pro_fai_da_te": "2026-08-17T20:11:23.818811+00:00",
+    "carousel_5_diff_pro_fai_da_te": "2026-09-21T15:26:54.597023+00:00",
     "marmo_ferragosto": "2026-08-18T05:56:09.607089+00:00",
     "carousel_5_manutenzione_professionale": "2026-08-18T15:26:53.302114+00:00",
     "carousel_marmo_famiglie_bambini": "2026-08-18T15:49:17.255950+00:00",
