@@ -1,25 +1,6 @@
 {
-  "next_index": 135,
+  "next_index": 136,
   "history": [
-    {
-      "post_id": "daily_20260905_evening_carousel_6_zone_casa_marmo",
-      "topic_id": "carousel_6_zone_casa_marmo",
-      "slot": "evening",
-      "at": "2026-09-05T15:25:52.083644+00:00",
-      "claimed_by_run": "33974730566",
-      "status": "done",
-      "post_type": "carousel",
-      "done_at": "2026-09-05T15:26:58.335003+00:00",
-      "slide_photo_ids": [
-        "7174113",
-        "6903159",
-        "8135496",
-        "6980656",
-        "7045700",
-        "36720713",
-        "10945186"
-      ]
-    },
     {
       "post_id": "daily_20260906_morning_polvere_zero",
       "topic_id": "polvere_zero",
@@ -675,6 +656,15 @@
         "6560285",
         "33694036"
       ]
+    },
+    {
+      "post_id": "daily_20260922_morning_lucidatura_negozi_chiusura",
+      "topic_id": "lucidatura_negozi_chiusura",
+      "slot": "morning",
+      "at": "2026-09-22T05:56:16.835169+00:00",
+      "claimed_by_run": "35692601289",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -713,7 +703,7 @@
     "bagno_padronale_marmo": "2026-09-20T05:56:31.818625+00:00",
     "mosaico_veneziano_70": "2026-09-20T10:26:48.906972+00:00",
     "mobili_pesanti_senza_graffi": "2026-09-21T05:56:51.155255+00:00",
-    "lucidatura_negozi_chiusura": "2026-07-26T05:56:03.768929+00:00",
+    "lucidatura_negozi_chiusura": "2026-09-22T05:56:16.835169+00:00",
     "marmo_bambini_animali": "2026-07-26T15:25:55.678445+00:00",
     "pulizia_quotidiana_60sec": "2026-07-27T05:55:54.653696+00:00",
     "post_cantiere_proteggere": "2026-07-27T10:26:20.649216+00:00",
