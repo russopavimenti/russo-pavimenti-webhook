@@ -1,27 +1,6 @@
 {
-  "next_index": 138,
+  "next_index": 139,
   "history": [
-    {
-      "post_id": "daily_20260906_evening_carousel_8_curiosita_marmo",
-      "topic_id": "carousel_8_curiosita_marmo",
-      "slot": "evening",
-      "at": "2026-09-06T15:26:07.284495+00:00",
-      "claimed_by_run": "34042249896",
-      "status": "done",
-      "post_type": "carousel",
-      "done_at": "2026-09-06T15:27:18.137824+00:00",
-      "slide_photo_ids": [
-        "6788338",
-        "13214152",
-        "6166145",
-        "31568965",
-        "18624456",
-        "3212449",
-        "6634138",
-        "20550204",
-        "20851618"
-      ]
-    },
     {
       "post_id": "daily_20260907_morning_scale_marmo_usura",
       "topic_id": "scale_marmo_usura",
@@ -667,6 +646,15 @@
       "post_type": "carousel",
       "failed_at": "2026-09-22T15:27:58.171566+00:00",
       "error": "carousel_exception: HTTP Error 400: Bad Request"
+    },
+    {
+      "post_id": "daily_20260922_evening_carousel_marmo_famiglie_bambini",
+      "topic_id": "carousel_marmo_famiglie_bambini",
+      "slot": "evening",
+      "at": "2026-09-22T16:54:42.200469+00:00",
+      "claimed_by_run": "35757096921",
+      "status": "claimed",
+      "post_type": "carousel"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -827,7 +815,7 @@
     "carousel_5_diff_pro_fai_da_te": "2026-09-21T15:26:54.597023+00:00",
     "marmo_ferragosto": "2026-08-18T05:56:09.607089+00:00",
     "carousel_5_manutenzione_professionale": "2026-09-22T15:26:47.508174+00:00",
-    "carousel_marmo_famiglie_bambini": "2026-08-18T15:49:17.255950+00:00",
+    "carousel_marmo_famiglie_bambini": "2026-09-22T16:54:42.200469+00:00",
     "carousel_marmo_ospiti_5_step": "2026-08-19T15:26:40.651738+00:00",
     "carousel_5_prodotti_da_avere": "2026-08-20T15:26:11.261548+00:00"
   },
