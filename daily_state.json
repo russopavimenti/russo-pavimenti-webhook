@@ -1,17 +1,6 @@
 {
-  "next_index": 140,
+  "next_index": 141,
   "history": [
-    {
-      "post_id": "daily_20260907_lunch_camminare_dopo_lucidatura",
-      "topic_id": "camminare_dopo_lucidatura",
-      "slot": "lunch",
-      "at": "2026-09-07T10:26:12.944774+00:00",
-      "claimed_by_run": "34111350147",
-      "status": "done",
-      "post_type": "single",
-      "done_at": "2026-09-07T10:26:23.156038+00:00",
-      "photo_id": 28612022
-    },
     {
       "post_id": "daily_20260907_evening_carousel_5_errori_clienti",
       "topic_id": "carousel_5_errori_clienti",
@@ -664,6 +653,15 @@
       "post_type": "single",
       "done_at": "2026-09-23T05:57:04.700575+00:00",
       "photo_id": 4440626
+    },
+    {
+      "post_id": "daily_20260923_lunch_candeggina_aloni",
+      "topic_id": "candeggina_aloni",
+      "slot": "lunch",
+      "at": "2026-09-23T10:26:15.517347+00:00",
+      "claimed_by_run": "35848683270",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -678,7 +676,7 @@
     "rivestimenti_verticali": "2026-09-21T10:26:29.895050+00:00",
     "cemento_lucidato_moderno": "2026-08-07T05:55:52.129759+00:00",
     "marmo_scivoloso": "2026-08-06T05:56:08.509652+00:00",
-    "candeggina_aloni": "2026-07-28T05:56:30.243831+00:00",
+    "candeggina_aloni": "2026-09-23T10:26:15.517347+00:00",
     "marmo_anni60_appartamenti": "2026-08-07T10:26:27.327496+00:00",
     "graniglia_palladiana": "2026-09-08T10:27:00.637104+00:00",
     "lavabo_marmo_macchie": "2026-09-09T05:56:28.714782+00:00",
