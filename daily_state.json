@@ -1,17 +1,6 @@
 {
-  "next_index": 143,
+  "next_index": 144,
   "history": [
-    {
-      "post_id": "daily_20260908_lunch_graniglia_palladiana",
-      "topic_id": "graniglia_palladiana",
-      "slot": "lunch",
-      "at": "2026-09-08T10:27:00.637104+00:00",
-      "claimed_by_run": "34215411731",
-      "status": "done",
-      "post_type": "single",
-      "done_at": "2026-09-08T10:27:11.362902+00:00",
-      "photo_id": 11285512
-    },
     {
       "post_id": "daily_20260908_evening_carousel_marmo_bagno_5_cose",
       "topic_id": "carousel_marmo_bagno_5_cose",
@@ -664,6 +653,15 @@
       "post_type": "single",
       "done_at": "2026-09-24T05:56:18.275740+00:00",
       "photo_id": 4756489
+    },
+    {
+      "post_id": "daily_20260924_lunch_marmo_dimenticato_cantina",
+      "topic_id": "marmo_dimenticato_cantina",
+      "slot": "lunch",
+      "at": "2026-09-24T10:26:26.206858+00:00",
+      "claimed_by_run": "35987114128",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -706,7 +704,7 @@
     "marmo_bambini_animali": "2026-09-22T10:26:11.294306+00:00",
     "pulizia_quotidiana_60sec": "2026-09-23T05:56:57.730183+00:00",
     "post_cantiere_proteggere": "2026-09-24T05:56:11.364071+00:00",
-    "marmo_dimenticato_cantina": "2026-07-27T15:26:32.852309+00:00",
+    "marmo_dimenticato_cantina": "2026-09-24T10:26:26.206858+00:00",
     "rivendita_immobile_marmo": "2026-08-06T10:26:24.325004+00:00",
     "granito_lavorazione": "2026-08-09T10:25:57.225233+00:00",
     "quarzite_durezza": "2026-08-10T05:55:51.656602+00:00",
