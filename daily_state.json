@@ -1,24 +1,6 @@
 {
-  "next_index": 147,
+  "next_index": 148,
   "history": [
-    {
-      "post_id": "daily_20260909_evening_carousel_5_miti_marmo",
-      "topic_id": "carousel_5_miti_marmo",
-      "slot": "evening",
-      "at": "2026-09-09T15:25:58.598741+00:00",
-      "claimed_by_run": "34370097606",
-      "status": "done",
-      "post_type": "carousel",
-      "done_at": "2026-09-09T15:27:07.908935+00:00",
-      "slide_photo_ids": [
-        "8135492",
-        "2100941",
-        "11993597",
-        "36288148",
-        "4792478",
-        "8327745"
-      ]
-    },
     {
       "post_id": "daily_20260910_morning_cave_custonaci",
       "topic_id": "cave_custonaci",
@@ -664,6 +646,15 @@
       "post_type": "single",
       "done_at": "2026-09-25T10:27:18.519752+00:00",
       "photo_id": 7018834
+    },
+    {
+      "post_id": "daily_20260925_evening_marmo_ingresso_condominio",
+      "topic_id": "marmo_ingresso_condominio",
+      "slot": "evening",
+      "at": "2026-09-25T15:26:45.167771+00:00",
+      "claimed_by_run": "36154082327",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -780,7 +771,7 @@
     "tenda_scivolamento_marmo": "2026-09-25T05:56:47.461073+00:00",
     "carousel_5_detergenti_da_evitare": "2026-08-27T15:26:22.678825+00:00",
     "marmo_cameretta_bambini": "2026-09-25T10:27:09.109508+00:00",
-    "marmo_ingresso_condominio": "2026-07-29T10:26:05.395035+00:00",
+    "marmo_ingresso_condominio": "2026-09-25T15:26:45.167771+00:00",
     "carousel_prima_dopo_trasformazioni": "2026-08-29T15:26:34.032267+00:00",
     "carousel_finiture_confronto": "2026-08-29T16:41:29.804437+00:00",
     "marmo_studio_yoga": "2026-07-30T05:56:23.648007+00:00",
