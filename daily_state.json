@@ -1,24 +1,6 @@
 {
-  "next_index": 150,
+  "next_index": 151,
   "history": [
-    {
-      "post_id": "daily_20260910_evening_carousel_5_lavori_speciali",
-      "topic_id": "carousel_5_lavori_speciali",
-      "slot": "evening",
-      "at": "2026-09-10T15:26:04.464713+00:00",
-      "claimed_by_run": "34495492771",
-      "status": "done",
-      "post_type": "carousel",
-      "done_at": "2026-09-10T15:27:18.762388+00:00",
-      "slide_photo_ids": [
-        "14661211",
-        "34281762",
-        "12181763",
-        "19231964",
-        "7942132",
-        "1233281"
-      ]
-    },
     {
       "post_id": "daily_20260911_morning_pavimento_anziani_riflesso",
       "topic_id": "pavimento_anziani_riflesso",
@@ -657,6 +639,15 @@
       "post_type": "single",
       "done_at": "2026-09-26T10:26:58.721563+00:00",
       "photo_id": 7534288
+    },
+    {
+      "post_id": "daily_20260926_evening_carousel_5_detergenti_da_evitare",
+      "topic_id": "carousel_5_detergenti_da_evitare",
+      "slot": "evening",
+      "at": "2026-09-26T15:27:01.785443+00:00",
+      "claimed_by_run": "36251902741",
+      "status": "claimed",
+      "post_type": "carousel"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -771,7 +762,7 @@
     "marmo_donne_imprenditrici": "2026-08-26T10:26:40.947943+00:00",
     "marmo_anziani_sicurezza_dopo": "2026-08-27T05:56:11.101451+00:00",
     "tenda_scivolamento_marmo": "2026-09-25T05:56:47.461073+00:00",
-    "carousel_5_detergenti_da_evitare": "2026-08-27T15:26:22.678825+00:00",
+    "carousel_5_detergenti_da_evitare": "2026-09-26T15:27:01.785443+00:00",
     "marmo_cameretta_bambini": "2026-09-25T10:27:09.109508+00:00",
     "marmo_ingresso_condominio": "2026-09-25T15:26:45.167771+00:00",
     "carousel_prima_dopo_trasformazioni": "2026-08-29T15:26:34.032267+00:00",
