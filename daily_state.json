@@ -1,17 +1,6 @@
 {
-  "next_index": 148,
+  "next_index": 149,
   "history": [
-    {
-      "post_id": "daily_20260910_morning_cave_custonaci",
-      "topic_id": "cave_custonaci",
-      "slot": "morning",
-      "at": "2026-09-10T05:56:11.333233+00:00",
-      "claimed_by_run": "34443007431",
-      "status": "done",
-      "post_type": "single",
-      "done_at": "2026-09-10T05:56:18.094922+00:00",
-      "photo_id": 36499163
-    },
     {
       "post_id": "daily_20260910_lunch_marmo_negozi_ristoranti",
       "topic_id": "marmo_negozi_ristoranti",
@@ -657,6 +646,15 @@
       "post_type": "single",
       "done_at": "2026-09-25T15:26:54.730712+00:00",
       "photo_id": 30484434
+    },
+    {
+      "post_id": "daily_20260926_morning_marmo_studio_yoga",
+      "topic_id": "marmo_studio_yoga",
+      "slot": "morning",
+      "at": "2026-09-26T05:56:46.512140+00:00",
+      "claimed_by_run": "36222226881",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -776,7 +774,7 @@
     "marmo_ingresso_condominio": "2026-09-25T15:26:45.167771+00:00",
     "carousel_prima_dopo_trasformazioni": "2026-08-29T15:26:34.032267+00:00",
     "carousel_finiture_confronto": "2026-08-29T16:41:29.804437+00:00",
-    "marmo_studio_yoga": "2026-07-30T05:56:23.648007+00:00",
+    "marmo_studio_yoga": "2026-09-26T05:56:46.512140+00:00",
     "marmo_walk_in_closet": "2026-07-30T10:26:04.974818+00:00",
     "carousel_macchie_soluzioni": "2026-08-30T15:26:48.347560+00:00",
     "marmo_gres_convivenza": "2026-07-31T05:56:08.459222+00:00",
