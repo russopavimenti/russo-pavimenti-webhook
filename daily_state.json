@@ -1,17 +1,6 @@
 {
-  "next_index": 151,
+  "next_index": 152,
   "history": [
-    {
-      "post_id": "daily_20260911_morning_pavimento_anziani_riflesso",
-      "topic_id": "pavimento_anziani_riflesso",
-      "slot": "morning",
-      "at": "2026-09-11T05:57:04.910213+00:00",
-      "claimed_by_run": "34567855969",
-      "status": "done",
-      "post_type": "single",
-      "done_at": "2026-09-11T05:57:14.629256+00:00",
-      "photo_id": 37265184
-    },
     {
       "post_id": "daily_20260911_lunch_differenza_levigatura_lucidatura",
       "topic_id": "differenza_levigatura_lucidatura",
@@ -657,6 +646,15 @@
         "4008518",
         "4176411"
       ]
+    },
+    {
+      "post_id": "daily_20260927_morning_marmo_gres_convivenza",
+      "topic_id": "marmo_gres_convivenza",
+      "slot": "morning",
+      "at": "2026-09-27T05:56:24.686684+00:00",
+      "claimed_by_run": "36298586957",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -779,7 +777,7 @@
     "marmo_studio_yoga": "2026-09-26T05:56:46.512140+00:00",
     "marmo_walk_in_closet": "2026-09-26T10:26:51.242537+00:00",
     "carousel_macchie_soluzioni": "2026-08-30T15:26:48.347560+00:00",
-    "marmo_gres_convivenza": "2026-07-31T05:56:08.459222+00:00",
+    "marmo_gres_convivenza": "2026-09-27T05:56:24.686684+00:00",
     "marmo_cane_ciotola": "2026-07-31T10:26:42.626737+00:00",
     "carousel_5_domande_marmista": "2026-08-31T15:26:05.322040+00:00",
     "marmo_cassette_frutta": "2026-08-01T05:56:27.630118+00:00",
