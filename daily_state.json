@@ -1,24 +1,6 @@
 {
-  "next_index": 153,
+  "next_index": 154,
   "history": [
-    {
-      "post_id": "daily_20260911_evening_carousel_5_stili_arredo",
-      "topic_id": "carousel_5_stili_arredo",
-      "slot": "evening",
-      "at": "2026-09-11T15:26:02.827043+00:00",
-      "claimed_by_run": "34615995014",
-      "status": "done",
-      "post_type": "carousel",
-      "done_at": "2026-09-11T15:27:12.069555+00:00",
-      "slide_photo_ids": [
-        "39017609",
-        "36369407",
-        "6934239",
-        "4703",
-        "19368872",
-        "15172241"
-      ]
-    },
     {
       "post_id": "daily_20260912_morning_macchie_olio_marmo",
       "topic_id": "macchie_olio_marmo",
@@ -657,6 +639,15 @@
       "post_type": "single",
       "done_at": "2026-09-27T10:27:10.311979+00:00",
       "photo_id": 8057550
+    },
+    {
+      "post_id": "daily_20260927_evening_marmo_cassette_frutta",
+      "topic_id": "marmo_cassette_frutta",
+      "slot": "evening",
+      "at": "2026-09-27T15:26:35.754966+00:00",
+      "claimed_by_run": "36329492541",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -782,7 +773,7 @@
     "marmo_gres_convivenza": "2026-09-27T05:56:24.686684+00:00",
     "marmo_cane_ciotola": "2026-09-27T10:27:00.350702+00:00",
     "carousel_5_domande_marmista": "2026-08-31T15:26:05.322040+00:00",
-    "marmo_cassette_frutta": "2026-08-01T05:56:27.630118+00:00",
+    "marmo_cassette_frutta": "2026-09-27T15:26:35.754966+00:00",
     "marmo_dopo_tempesta_sabbia": "2026-08-01T10:26:20.147650+00:00",
     "marmo_ombrelloni_terrazza": "2026-08-01T11:37:44.166416+00:00",
     "carousel_marmi_siciliani": "2026-09-01T15:26:43.477582+00:00",
