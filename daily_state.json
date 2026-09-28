@@ -1,17 +1,6 @@
 {
-  "next_index": 155,
+  "next_index": 156,
   "history": [
-    {
-      "post_id": "daily_20260912_lunch_garanzia_lavoro",
-      "topic_id": "garanzia_lavoro",
-      "slot": "lunch",
-      "at": "2026-09-12T10:26:03.236027+00:00",
-      "claimed_by_run": "34688392043",
-      "status": "done",
-      "post_type": "single",
-      "done_at": "2026-09-12T10:26:10.941249+00:00",
-      "photo_id": 36870376
-    },
     {
       "post_id": "daily_20260912_evening_carousel_marmo_cucina_5_zone",
       "topic_id": "carousel_marmo_cucina_5_zone",
@@ -650,6 +639,15 @@
       "post_type": "single",
       "failed_at": "2026-09-28T05:56:39.051854+00:00",
       "error": "exception: HTTP Error 400: Bad Request"
+    },
+    {
+      "post_id": "daily_20260928_morning_marmo_ombrelloni_terrazza",
+      "topic_id": "marmo_ombrelloni_terrazza",
+      "slot": "morning",
+      "at": "2026-09-28T10:26:48.087345+00:00",
+      "claimed_by_run": "36409625540",
+      "status": "claimed",
+      "post_type": "single"
     }
   ],
   "pinned_note": "next_index pinned by Nino on 2026-05-15 23:43 UTC: forza top_bagno_calcare con marmo giallo al prossimo slot cron",
@@ -777,7 +775,7 @@
     "carousel_5_domande_marmista": "2026-08-31T15:26:05.322040+00:00",
     "marmo_cassette_frutta": "2026-09-27T15:26:35.754966+00:00",
     "marmo_dopo_tempesta_sabbia": "2026-09-28T05:56:31.114715+00:00",
-    "marmo_ombrelloni_terrazza": "2026-08-01T11:37:44.166416+00:00",
+    "marmo_ombrelloni_terrazza": "2026-09-28T10:26:48.087345+00:00",
     "carousel_marmi_siciliani": "2026-09-01T15:26:43.477582+00:00",
     "marmo_visita_amico": "2026-08-02T05:55:53.613521+00:00",
     "marmo_video_tour_immobile": "2026-08-02T10:25:39.613093+00:00",
